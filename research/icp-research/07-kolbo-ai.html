@@ -1,0 +1,326 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Kolbo.AI - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>Kolbo.AI - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được.</p>
+<h2>A. Tóm tắt</h2>
+<p>Kolbo.AI (https://kolbo.ai) là workspace gộp hơn 100 model AI (chat, ảnh, video, nhạc, giọng, 3D) vào một thuê bao tính theo credit, kèm Flow, Review, plugin biên tập, MCP, app di động. Chân trang tự nhận "dành cho content creator và marketing agency"; người trả tiền thực tế là creator, editor, studio nhỏ đang trả 3-4 gói AI riêng lẻ. TrustMRR (bên thứ ba, nói xác minh qua Stripe, đồng bộ 31/10/2026 06:48 UTC) ghi MRR 38.521 USD, 674 gói, MRR +28,6%/30 ngày, tức 57,15 USD mỗi gói. Một người sáng lập (Zohar Vanunu, Israel), tự lực; tăng trưởng nhờ video AI lan truyền và affiliate (do họ khai).</p>
+<p>Kết luận: đáng học, không đáng chép. Nhu cầu "gộp nhiều gói AI làm một" đã được trả tiền thật và tăng nhanh (doanh thu tháng 10/2026 gấp 9,1 lần tháng 1/2026: 89.939 / 9.847). Nhưng đây là bán lại API của người khác, có ít nhất 9 đối thủ niêm yết giá (D.1), và giá trị của Kolbo là LÀM creative, ngoài việc của owner. Cái đáng lấy là một tín hiệu: theo bảng giá của Kolbo, một biến thể nay chỉ tốn khoảng 0,16 USD (ảnh) đến 1,5 USD (clip 5 giây), nên nút thắt dịch sang "biến thể nào đáng chi tiền media", đúng nghề owner. Đó là giả thuyết [UNVERIFIED], cần 5 cuộc nói chuyện và một backtest (D) để xác nhận.</p>
+<p><strong>Lưu ý trung thực:</strong> không có tài liệu gốc riêng cho Kolbo. Dữ kiện lấy từ dòng CSV, mục ICP trong icp-winning-10, rồi tôi đọc lại trang thật ngày 31/10 (giá và MRR trong CSV khớp). Nhiều trang đọc qua công cụ tóm tắt. Không tìm thấy đánh giá độc lập nào về Kolbo, nên tiếng nói người dùng dựa vào đối thủ gần nhất.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:460px"><colgroup><col style="width:135px"><col style="width:325px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>Kolbo.AI - https://kolbo.ai ; app: https://app.kolbo.ai [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Workspace theo dự án cho 100+ model (Flux, Kling, Midjourney, Suno, ElevenLabs, Seedance...): Creative Director (một ý tưởng thành 2-8 cảnh), Visual DNA (nhân vật nhất quán), Flow, Review, stock có nhạc bản quyền, plugin biên tập, MCP. Giao diện Anh/Do Thái/Ả Rập. Nói tạo qua API trả phí, không dùng dữ liệu của bạn để huấn luyện nếu bạn không đồng ý. [CONFIRMED trang chủ; lời hứa là VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Thuê bao tháng/năm cấp credit hằng tháng + gói credit lẻ; không phí theo ghế. Gói tổ chức: ví credit chung, thành viên không giới hạn, đăng nhập mang thương hiệu, giảm 20% khi mua thêm credit; không niêm yết giá. [CONFIRMED - kolbo.ai/organizations]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>Free 0 (50 credit); Lite 27 USD (2.500 credit); Standard 45 (4.500); Professional 89 (9.500); gói cao hơn tới Max 999 (125.000). Trả năm giảm 20%. Gói lẻ: 15 USD/1.000, 35/3.000, 110/11.000, 220/22.000. Credit gói cộng dồn tối đa 3 kỳ; credit lẻ không hết hạn. [CONFIRMED - https://kolbo.ai/pricing-facts, kiểm 31/10/2026 09:28 UTC]. "Lần tạo lỗi không trừ credit" ở FAQ trang chủ [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 38.521 USD; 674 gói; MRR +28,6%/30 ngày; doanh thu xác minh 30 ngày 88.888 USD (cùng trang còn ghi snapshot 89.663); 3 tháng 185.129; 12 tháng 353.804; từ trước tới nay 365.832. Đồng bộ 2026-10-31T06:48:44Z, không có dòng "expired". [SECONDARY - https://trustmrr.com/startup/kolbo-ai.md ; Stripe là lời của TrustMRR, tôi không tự kiểm được]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Zohar Vanunu, Founder và CEO (trang chủ [CONFIRMED]). TrustMRR: Israel, thành lập 17/01/2025, bootstrapped. Starter Story: làm một mình, 0 nhân viên, sáu năm tự học đạo diễn/dựng/3D [VENDOR-CLAIMED]. App Store: "Zohar Vanunu Productions, LLC" [CONFIRMED]. X: @zoharvanunu.</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Logo Samsung Israel, Sapir College, SCE Sami Shamoon, Webtalent, ReachPlayers; vài lời chứng thực có tên và 6 trích dẫn giấu tên. [VENDOR-CLAIMED, không số liệu hay case study]. Không có agency quốc tế nào được nêu tên.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Những điều nguồn nói chưa khớp hoặc chưa chắc</strong></p>
+<ol>
+<li><strong>MRR và doanh thu 30 ngày lệch xa.</strong> 88.888 / 38.521 = 2,31 lần; phần không phải MRR = 88.888 - 38.521 = 50.367 USD, tức 56,7%. Khả năng: credit lẻ, gói năm trả trước (MRR chia 12, doanh thu tính một lần), hoặc cả hai; nếu phần lớn là credit lẻ thì khách dùng hết credit gói nhanh hơn dự tính. Suy luận của tôi, [UNVERIFIED]. Hệ quả: ARR Club (28/10/2026) nói "1 triệu USD ARR", khớp doanh thu 30 ngày họ ghi 83.915 x 12 = 1.006.980, không khớp MRR x 12 = 462.252.</li>
+<li><strong>Ngày bắt đầu có ba phiên bản.</strong> TrustMRR: thành lập 17/01/2025. Starter Story: bắt đầu 12/2025. Bài r/MachineLearning 07/01/2025 (đã xoá) đã có tên Kolbo.AI. Tổng doanh thu trừ 12 tháng gần nhất = 365.832 - 353.804 = 12.028 USD trước tháng 11/2025: dự án có từ 01/2025, thu tiền đáng kể từ 11/2025. [UNVERIFIED]</li>
+<li><strong>Giá tăng, credit không đổi.</strong> Bài Reddit 10/08/2026 (người đăng hưởng hoa hồng) ghi Lite 24 / Standard 40 / Professional 79 USD với 2.500 / 4.500 / 9.500 credit; nay là 27 / 45 / 89, cùng số credit: +12,5%, +12,5%, +12,7%. [SECONDARY / UNVERIFIED]. TrustMRR ghi "giảm tới 37% khi trả năm", catalog chỉ 20%.</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<p><strong>1. Sản phẩm dành cho ai?</strong></p>
+<p>Người làm nội dung AI hằng tuần để kiếm tiền, đang đóng tiền cho nhiều công cụ riêng.</p>
+<ul>
+<li>Vai trò: creator tự do, editor/đạo diễn, "AI creator" nhận việc khách, chủ studio nhỏ, marketing một người. [VENDOR-CLAIMED, từ lời chứng thực]</li>
+<li>Quy mô: 1-10 người; gói tổ chức cho đội lớn hơn, nhưng khách nêu tên đều là tổ chức Israel.</li>
+<li>Ngành: video/quảng cáo, mạng xã hội, giáo dục; 78-79% đăng ký mới nói đến từ ngoài Israel. [VENDOR-CLAIMED]</li>
+<li>Ngân sách: 27-89 USD/tháng (trung bình 38.521 / 674 = 57,15) cộng gói credit 15-220 USD khi hết: mức prosumer, chưa phải ngân sách agency. [SECONDARY]</li>
+</ul>
+<p><strong>2. Họ gặp vấn đề gì?</strong></p>
+<p>Phân mảnh: mỗi hãng một gói, một ví credit, một luật hết hạn; tải lại tài sản mọi nơi; nhân vật lệch giữa các model. Nỗi đau thứ hai nằm ở đối thủ, chưa thấy ở Kolbo: không biết một video ngốn bao nhiêu credit trước khi bấm (D.2).</p>
+<p><strong>3. Họ đang làm bằng tay thế nào?</strong></p>
+<ul>
+<li>Chồng gói rẻ nhất của từng hãng. Tôi tự cộng: Runway Standard 15 + OpenArt Starter 14 + Higgsfield Starter 15 + Leonardo Essential 12 = 56 USD/tháng, so với Kolbo Standard 45: rẻ hơn khoảng 11 USD (20%), nhưng credit không so trực tiếp được. [phép tính của tôi; giá trong D.1]</li>
+<li>Trả theo lượng dùng ở nhà cung cấp gốc (fal.ai, Replicate) nếu biết kỹ thuật.</li>
+<li>Chi phí hiện tại: thuê bao chồng chéo, credit hết hạn bỏ phí (Krea, Runway), thời gian chuyển qua lại.</li>
+</ul>
+<p><strong>4. Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</strong></p>
+<p>Không chép Kolbo: bán lại token là cuộc đua giá với hãng có vốn, và làm creative không phải thế mạnh của owner. Lối đi: <strong>lớp phán đoán đứng trước chi tiêu</strong>. Khi 15-59 clip mỗi tháng chỉ tốn 27-89 USD, thứ khan hiếm là biết biến thể nào xứng đáng nhận ngân sách media. Bản của chủ nhận 10-50 biến thể từ bất kỳ công cụ nào, chấm và xếp hạng kèm lý do, khuyến nghị cái nào chi, cái nào bỏ; chạy đầu tiên trên dữ liệu chiến dịch của 3 agency để kiểm phán đoán có "đỉnh" thật không. Giả thuyết [UNVERIFIED]: chưa ai nói họ trả tiền cho việc này.</p>
+<p><strong>Câu chốt</strong></p>
+<p>Cho agency và đội marketing đang dùng AI tạo hàng chục biến thể creative nhưng không biết biến thể nào đáng chi tiền media, [tên bản của chủ] là dịch vụ chấm và chọn creative trước khi chi, khác Kolbo và các công cụ tạo ở chỗ không tạo gì mà trả lời "cái nào đáng chi" bằng phán đoán và dữ liệu chiến dịch thật.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<p><strong>Mục tiêu một câu</strong></p>
+<p>Tôi cần biết thị trường "một thuê bao cho nhiều model AI tạo ảnh/video" đã đông tới đâu, khách phàn nàn gì, và còn chỗ nào để một người bán phán đoán (không làm creative) chen vào, để quyết định có dựng dịch vụ chọn creative trước khi chi tiền hay không.</p>
+<h3>1. Đối thủ và giá</h3>
+<p>Giá đọc 31/10/2026. Credit mỗi hãng là một đơn vị riêng, không so thẳng số credit.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:1212px"><colgroup><col style="width:135px"><col style="width:162px"><col style="width:226px"><col style="width:165px"><col style="width:165px"><col style="width:195px"><col style="width:164px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Mô hình</th>
+<th>Điểm mạnh</th>
+<th>Khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kolbo.AI</td>
+<td>kolbo.ai/pricing-facts</td>
+<td>Free 50 credit; 27 / 45 / 89 USD; Max 999; gói lẻ 15-220</td>
+<td>Thuê bao credit + gói lẻ</td>
+<td>Cộng dồn 3 kỳ, plugin biên tập, MCP</td>
+<td>Không đánh giá độc lập; giá tăng ~12,5%; không chấm hiệu quả</td>
+<td>[CONFIRMED]; chính sách [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Higgsfield</td>
+<td>higgsfield.ai/pricing</td>
+<td>Starter 15 (trả năm, 200 credit); Plus 49 hoặc 39 (trả năm), 1.000 credit; Ultra 129 hoặc 99, 3.000-9.000 credit (cách ghép chưa kiểm); đội từ 65/ghế</td>
+<td>Thuê bao credit + "unlimited" có thời hạn</td>
+<td>Cinema Studio, Trustpilot 4/5</td>
+<td>Unlimited không dùng trên MCP/CLI; khách chê hết credit</td>
+<td>[CONFIRMED] (trình duyệt thật)</td>
+</tr>
+<tr>
+<td>OpenArt</td>
+<td>openart.ai/pricing</td>
+<td>Starter 14 (4.000 credit), Plus 34 (12.000), Pro 56 (24.000), Wonder 240 (106.000); trả năm 13/27/44/175</td>
+<td>Thuê bao credit, agent "Director"</td>
+<td>100+ model, MCP</td>
+<td>Chat với agent bị trừ credit; Trustpilot 3,5/5</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Magnific (ex-Freepik)</td>
+<td>magnific.com/pricing</td>
+<td>Premium 15 EUR (10,50 trả năm), Premium+ 34 (25,50), Pro Starter 83 (62,25); credit hạn 1 năm; hoàn tiền 30 ngày</td>
+<td>Thuê bao, ví credit năm</td>
+<td>250M+ stock</td>
+<td>Chưa gồm VAT</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Krea</td>
+<td>krea.ai/pricing</td>
+<td>Basic 9 / Pro 35 / Max 105 / Business 200 (giá gạch); trả năm 5 / 21 / 63 / 160</td>
+<td>Thuê bao, không cộng dồn (gói thấp)</td>
+<td>Realtime, nodes, đội tới 50 ghế</td>
+<td>Trang tự mâu thuẫn</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Runway</td>
+<td>runway.com/pricing</td>
+<td>Standard 15 (625 credit), Pro 35 (2.250), Max 95 (9.500); trả năm 12 / 28 / 76</td>
+<td>Thuê bao; chỉ Max cộng dồn 1 tháng</td>
+<td>Model riêng; "Runway Ads": tạo, thử, đăng quảng cáo</td>
+<td>Gần tầng chọn creative; credit gói không cộng dồn</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Leonardo</td>
+<td>leonardo.ai/pricing</td>
+<td>Essential 12 (8.500 token), Premium 30 (25.000), Ultimate 60 (60.000); chưa gồm thuế</td>
+<td>Thuê bao token, có cộng dồn</td>
+<td>Nhiều model</td>
+<td>Công tắc tháng/năm không rõ</td>
+<td>[CONFIRMED] (Bright Data)</td>
+</tr>
+<tr>
+<td>fal.ai, Replicate (dev)</td>
+<td>fal.ai/pricing, replicate.com/pricing</td>
+<td>fal: Nano Banana 2 0,08 USD/ảnh, Kling v3 Pro 0,14/giây. Replicate: flux-1.1-pro 0,04/ảnh, wan-2.1 720p 0,25/giây</td>
+<td>API trả theo đầu ra hoặc giây chạy</td>
+<td>Giá gốc</td>
+<td>Không giao diện cho marketer; Replicate không liệt kê Seedance/Kling</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>CreativeClaw</td>
+<td>creativeclaw.co</td>
+<td>10 USD = 1.000 credit, không thuê bao, không hết hạn; Nano Banana 2 = 16 credit. TrustMRR: MRR 11.840, 224 gói, doanh thu 30 ngày 106.772</td>
+<td>MCP cắm vào Claude/ChatGPT</td>
+<td>Credit không hết hạn</td>
+<td>Mới (01/04/2026); tháng 9 nhảy từ 5.254 lên 92.894 USD chưa giải thích được</td>
+<td>giá [CONFIRMED]; doanh thu [SECONDARY]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Phép so cùng đầu ra duy nhất làm được là ảnh Nano Banana 2: Kolbo 17 credit (2K, 1:1) = 17 x 27 / 2.500 = 0,18 USD ở Lite, 17 x 89 / 9.500 = 0,16 USD ở Professional; CreativeClaw 0,16; fal.ai 0,08 nhưng trang không nói độ phân giải. Nếu cùng thiết lập, Kolbo Lite đắt gấp khoảng 2,3 lần giá gốc [UNVERIFIED]. Cả 9 hàng bán credit hoặc lượt tạo, không ai bán kết quả; Runway Ads là hàng gần nhất với việc chọn creative. (Bảng chỉ gồm các trang tôi mở được, không phải kiểm kê đầy đủ; thiếu Artlist, Midjourney, Weavy.)</p>
+<h3>2. Tiếng nói người dùng</h3>
+<p><strong>Về Kolbo: không có tiếng nói độc lập.</strong></p>
+<ul>
+<li>Trustpilot: kolbo.ai không có trang (trình duyệt thật trả "page could not be found"; read.sh bị chặn, scroll-read ra chữ). [CONFIRMED]</li>
+<li>App Store: "chưa đủ đánh giá để hiển thị". [CONFIRMED]</li>
+<li>G2: 0 đánh giá theo kết quả tìm kiếm, tôi không mở G2. Product Hunt, X: không thấy Kolbo; X chưa kiểm. [SECONDARY / UNVERIFIED]</li>
+<li>Reddit (kho PullPush; reddit.com bị chặn từ mạng này, kho chập chờn): bài 10/08/2026 trên r/AIVideoAdvertising của u/TuttiFrutiz khen Kolbo nhưng tự ghi có quan hệ affiliate (mã TD2026), và cùng tài khoản đăng thử thách có giải là credit Kolbo: quảng cáo, không phải đánh giá. Bình luận 10/06/2026 trên r/Seedance_AI (ẩn danh): "kolbo has been pretty clean in my experience, less friction than most wrappers". [SECONDARY, đều có thể là quảng bá]</li>
+</ul>
+<p><strong>Về đối thủ gần nhất, phàn nàn tập trung đúng vào credit.</strong> Trustpilot đọc 31/10/2026 qua bậc <code>jina</code> của read.sh (đánh giá 22-30/10/2026):</p>
+<ul>
+<li>OpenArt (3,5/5): một khách trả 14 USD lấy 4.000 credit, lập kế hoạch một video khoảng 90 giây thì mất 3.197 credit (80%), lịch sử ghi nhiều lần "Director - Agent Conversation" (chat với AI cũng bị trừ), rồi báo render 480p cần 6.900, 720p 14.700 credit; lúc huỷ phải tick "tài sản sẽ bị xoá khi huỷ" (30/10). Khách khác: "qua 4 ảnh đã hết hơn nửa credit", báo cần 19.000 credit cho một video ngắn, không được hoàn tiền (29/10). Cũng có đánh giá khen hỗ trợ. [CONFIRMED - trustpilot.com/review/openart.ai]</li>
+<li>Higgsfield (4/5): "I run out of credit a lot and topping up is not so easy and cheap" (23/10); đánh giá 1 sao: "Unlimited" chỉ chạy một tác vụ một lúc, một video mất 45 phút đến vài giờ, dùng credit thì 2-3 phút. Cũng có khách khen được hoàn credit lỗi. [CONFIRMED - trustpilot.com/review/higgsfield.ai]</li>
+<li>Artlist: bán gói năm khoảng 500 USD "unlimited Seedance 2.5", vài ngày sau gỡ model, đổi sang credit. [SECONDARY - CineD 14/08/2026]</li>
+</ul>
+<p>Điều rút ra: khách vẫn chê vì (a) không biết trước một đầu ra tốn bao nhiêu credit, (b) credit mất khi huỷ, hoàn tiền khó, (c) "unlimited" có điều kiện. Kolbo công bố chính sách ngược lại cả ba (báo giá trước khi tạo, cộng dồn, lỗi không trừ, credit lẻ không hết hạn), nhưng đó là lời hãng, chưa có khách độc lập xác nhận.</p>
+<p>Tự tính theo bảng của Kolbo: một clip Seedance 2.0, 720p, 5 giây = 160 credit, nên Lite chỉ được 2.500 / 160 = 15 clip. Giả định của tôi [UNVERIFIED]: quảng cáo 30 giây = 6 cảnh x 3 lần thử = 18 clip x 160 = 2.880 credit, lớn hơn kỳ cấp Lite (2.500) và bằng 2.880 / 9.500 = 30% kỳ cấp Professional. Đó là lý do khả dĩ cho 50.367 USD doanh thu không-MRR, chưa chứng minh được.</p>
+<h3>3. Kích thước thị trường</h3>
+<p>Số của người khác, chỉ để kiểm chéo: thị trường tạo ảnh 15,18 tỉ USD năm 2026, video 0,95 tỉ, generative AI cả ngành 47-67 tỉ; nhiều hãng, chưa rõ phương pháp, dự báo 2034 chênh từ 3,76 tỉ đến 225,6 tỉ. [SECONDARY, đọc từ trang kết quả tìm kiếm, tin cậy thấp]</p>
+<p><strong>TAM / SAM / SOM</strong> (USD mỗi năm, chi thuê bao và credit của cá nhân và đội nhỏ cho công cụ AI tạo media; số tự tính)</p>
+<div class="tw"><table style="table-layout:fixed;min-width:511px"><colgroup><col style="width:156px"><col style="width:220px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>50.000.000 creator chuyên và bán chuyên x 10% có trả thuê bao = 5.000.000 người; x 40 USD x 12 = 480 USD/năm</td>
+<td>2.400.000.000 USD</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>5.000.000 x 12% (dùng web, thích gộp model, tiếp cận được bằng nội dung và affiliate) = 600.000 người; x 480</td>
+<td>288.000.000 USD</td>
+</tr>
+<tr>
+<td>SOM 12 tháng (người mới kiểu aggregator)</td>
+<td>600.000 x 0,33% = 2.000 gói; x 480</td>
+<td>960.000 USD</td>
+</tr>
+<tr>
+<td>SOM bản của chủ (lớp phán đoán)</td>
+<td>20 tài khoản agency x 500 USD/tháng x 12</td>
+<td>120.000 USD</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>50 triệu creator chuyên/bán chuyên: Goldman Sachs 2023 qua bài viết thứ hai, chưa mở báo cáo gốc; ước tính khác từ 120 triệu (Citi) đến trên 200 triệu. Lấy số thấp. [SECONDARY / UNVERIFIED]</li>
+<li>10% có trả thuê bao AI tạo media; 12% đúng phân khúc tiếp cận được: ước lượng của tôi [UNVERIFIED].</li>
+<li>40 USD/tháng: giữa các gói tầm trung niêm yết (Leonardo Premium 30, OpenArt Plus 34, Runway Pro 35, Higgsfield Plus 39-49), thấp hơn Kolbo thực tế 57,15.</li>
+<li>0,33% = 2.000 / 600.000: số gói một người mới đạt được nếu rất thuận lợi.</li>
+<li>20 agency x 500 USD/tháng: giá và số lượng là giả thuyết, kiểm bằng cách xác thực số 3.</li>
+</ol>
+<p>Kiểm chéo:</p>
+<ul>
+<li>TAM 2,4 tỉ USD = 2.400 / 15.180 = 15,8% thị trường ảnh, 2.400 / 47.000 = 5,1% cả generative AI, và 2.400 / 946,4 = 2,5 lần thị trường video riêng: hợp lý cho "thuê bao prosumer", không đối chiếu chính xác được.</li>
+<li>SOM của tôi (960.000) xấp xỉ doanh thu 30 ngày của Kolbo x 12 (1.066.656) và gấp đôi MRR x 12 (462.252). Kolbo mất chừng 10 tháng đã đạt mức tôi coi là kịch bản rất thuận lợi cho người mới, nên vào sau khó hơn con số gợi ý. Kolbo chiếm 1.066.656 / 288.000.000 = 0,37% SAM (0,16% theo MRR): không thiếu chỗ, nhưng có 9 đối thủ.</li>
+</ul>
+<p><strong>Số bị từ chối in</strong></p>
+<ul>
+<li>"1 triệu USD ARR trong 10 tháng" (ARR Club): là doanh thu 30 ngày x 12, gồm gói năm trả trước và credit lẻ; theo MRR chỉ 462.252. Dẫn bài tự đăng của người sáng lập, không xác minh.</li>
+<li>"60K USD/tháng, 720K USD/năm" (Starter Story) và "59 triệu" / "71 triệu lượt xem trong 30 ngày" (hai nguồn, hai số): tự khai, không truy được gốc.</li>
+<li>Doanh thu 30 ngày 88.888 hay 89.663 của TrustMRR (hai số trên một trang) làm doanh thu thuê bao: gồm tiền không định kỳ. Chỉ dùng MRR 38.521, nhãn SECONDARY.</li>
+<li>Logo Samsung Israel và "100+ model": lời hãng. Giá Reddit tháng 8 làm giá hiện hành, số thị trường ở trên làm TAM của tôi: khác định nghĩa và phương pháp.</li>
+</ul>
+<h3>Khoảng trống và lối đi riêng</h3>
+<ol>
+<li>Cả 9 hàng bán credit hoặc lượt tạo; không ai bán "biến thể nào đáng chi", dù công cụ tạo càng rẻ thì biến thể càng nhiều.</li>
+<li>Review của Kolbo (phản hồi mốc thời gian, duyệt) là duyệt chủ quan, không dự đoán hiệu quả. [mô tả công dụng là của tôi]</li>
+<li>Nỗi đau credit chưa ai giải xong; Kolbo hứa tốt nhưng chưa có bằng chứng ngoài thực tế.</li>
+<li>Rủi ro: Runway Ads đã đi vào đúng tầng này; hãng khác có thể thêm chấm điểm; phán đoán một người khó mở rộng. Lợi thế duy nhất là phán đoán có bằng chứng và dữ liệu chiến dịch thật của 3 agency, phải chứng minh bằng backtest.</li>
+</ol>
+<h3>Ba cách xác thực rẻ nhất trước khi build</h3>
+<ol>
+<li><strong>Nói chuyện với 5 người</strong> (3 giám đốc agency của owner, 2 người ngoài đang dùng Kolbo/Higgsfield/OpenArt): chi bao nhiêu mỗi tháng cho công cụ tạo, mỗi chiến dịch tạo bao nhiêu biến thể, ai chọn cái nào chạy quảng cáo, lần gần nhất chọn nhầm mất bao nhiêu. Ngưỡng đi tiếp: ít nhất 3/5 nói chọn biến thể tốn thời gian hoặc đã gây mất tiền (ngưỡng do tôi đặt).</li>
+<li><strong>Backtest mù:</strong> lấy 20 creative cũ của 3 agency đã có số kết quả, owner xếp hạng trước khi xem số, so top 5 với top 5 thực tế. Ngưỡng: đúng ít nhất 3/5 (do tôi đặt). Dưới một ngày.</li>
+<li><strong>Bán thử thủ công:</strong> chào "lô chấm 20 biến thể" giá thử 500 USD (giả thuyết) cho 3 khách đang có. Ít nhất 2 trả trong 3 tuần thì nhu cầu và giá có thật; không thì dừng.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p><strong>Nguồn (đã đọc 31/10/2026)</strong></p>
+<ul>
+<li>Kolbo: https://trustmrr.com/startup/kolbo-ai.md ; https://kolbo.ai/ , /organizations, /pricing-facts (curl; app.kolbo.ai/pricing chỉ trả metadata nên bỏ); https://apps.apple.com/us/app/kolbo-ai/id6759002854 ; https://www.starterstory.com/stories/kolbo-aihttps (URL đúng như kết quả tìm kiếm trả về; ngày đăng không đọc được); https://www.arr.club/signal/kolbo-ai-hit-1m-arr-in-10-months-solo (28/10/2026).</li>
+<li>Giá đối thủ: các trang /pricing ghi ở bảng D.1 và https://trustmrr.com/startup/creativeclaw.md ; Higgsfield: WebFetch ra vỏ rỗng, scroll-read ra chữ; Leonardo: WebFetch 403, read.sh bậc Bright Data ra chữ.</li>
+<li>Tiếng nói: https://www.trustpilot.com/review/openart.ai và /higgsfield.ai (read.sh bậc jina); /kolbo.ai (scroll-read, trang 404); Reddit qua PullPush (https://www.reddit.com/r/AIVideoAdvertising/comments/1vl0tdw/after_the_artlisthiggsfield_unlimited_fallout_i/ và bình luận r/Seedance_AI); https://www.cined.com/artlist-sold-a-year-of-unlimited-seedance-2-5-for-500-and-delivered-a-week/ (chỉ đọc 100.000 ký tự đầu).</li>
+<li>Số thị trường và số creator: chỉ đọc trang kết quả tìm kiếm, chưa mở báo cáo gốc.</li>
+</ul>
+<p><strong>Chưa kiểm được</strong></p>
+<ul>
+<li>G2, Product Hunt, Capterra, X: không mở (G2 đã hạn chế IP này hôm nay). "Credit cạn nhanh ở Kolbo" chỉ là tính từ bảng giá của họ, chưa có khách xác nhận.</li>
+<li>Stripe: MRR chỉ là lời của TrustMRR; không biết doanh thu in-app có trong số hay không; không biết biên lợi nhuận hay chi phí API của Kolbo.</li>
+<li>Chưa so được giá cùng đầu ra với Higgsfield, OpenArt, Runway. Công cụ đọc trang trả bản tóm tắt. Mã KOLBO30, TD2026 chưa kiểm. Không đăng ký thử, không nhập thanh toán.</li>
+</ul>
+<p><strong>Giả định chính</strong>
+Các giả định ở D.3, cộng quảng cáo 30 giây = 6 cảnh x 3 lần thử, ngưỡng "3/5" và "2 khách trả trong 3 tuần" do tôi đặt. Tất cả là ước lượng, không phải số công khai.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li><strong>Nên theo đuổi: không dựng bản sao Kolbo; có điều kiện cho lối "lớp phán đoán trước khi chi".</strong> Kolbo chứng minh người ta trả tiền thật để gộp công cụ AI tạo media (MRR 38.521 USD, 674 gói, SECONDARY), nhưng cuộc chơi bán lại API này đã có ít nhất 9 đối thủ. Chỉ đi tiếp nếu đạt cả hai ngưỡng: 3/5 người nói chọn biến thể là nỗi đau, và backtest mù đúng ít nhất 3/5.</li>
+<li><strong>Rủi ro lớn nhất:</strong> (a) nền tảng tạo tự thêm chấm điểm hiệu quả (Runway Ads đã thử và đăng quảng cáo); (b) phán đoán một người khó mở rộng và chưa chứng minh bằng số; (c) với bản aggregator, biên mỏng và phụ thuộc giá API của hãng khác.</li>
+<li><strong>Bước tiếp theo rẻ nhất:</strong> trong tuần này làm 5 cuộc nói chuyện và backtest 20 creative (D, cách 1 và 2). Chưa viết mã.</li>
+</ol>
+<p><strong>Hợp với hồ sơ owner.</strong> Owner bán phán đoán media nào đáng chi tiền trước khi khách chi, không làm creative thủ công, agency là người mua (3 công ty là bàn đạp). Bản thân Kolbo chỉ "vừa" (đúng CSV): nó SẢN XUẤT creative, đúng thứ owner không bán, và người mua của nó là cá nhân (57 USD/tháng) chứ chưa phải agency. Nó hữu ích ở ba chỗ: (1) bằng chứng cầu, vì chi phí một biến thể rơi xuống 0,16-1,5 USD làm số biến thể phình ra và việc chọn thành nút thắt, nơi owner có 10 năm nghề; (2) nhà cung cấp mà 3 agency có thể dùng; (3) bài học định giá: khách ghét bất ngờ về credit, nên dịch vụ của owner nên báo giá trọn gói theo lô.</p>
+<p><strong>Site đáng lưu cho sites.md:</strong></p>
+<ul>
+<li>https://kolbo.ai/pricing-facts - catalog giá và chính sách credit dạng máy đọc được, kèm chi phí mỗi đầu ra; mẫu giá minh bạch.</li>
+<li>https://www.trustpilot.com/review/openart.ai - phàn nàn mới (22-30/10/2026) về credit bị trừ khi chat, xoá tài sản khi huỷ; đọc được bằng bậc jina.</li>
+<li>https://www.cined.com/artlist-sold-a-year-of-unlimited-seedance-2-5-for-500-and-delivered-a-week/ - phép tính biên của gói "unlimited", vụ Artlist rút lời hứa.</li>
+<li>https://www.arr.club/signal/kolbo-ai-hit-1m-arr-in-10-months-solo - kênh tăng trưởng của người làm một mình.</li>
+<li>https://creativeclaw.co/ - credit không hết hạn qua MCP; doanh thu 30 ngày cao hơn Kolbo với 1/3 số gói.</li>
+<li>https://runway.com/pricing - có "Runway Ads": đang tiến vào tầng chọn creative.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/07-kolbo-ai.md</code> (bản .md cho agent đọc)</div></main></body></html>

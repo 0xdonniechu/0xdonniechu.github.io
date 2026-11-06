@@ -1,0 +1,304 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>10-appbird-ai.md</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><p>AppBird AI - Bài tập tuần 1 (ICP + Research Market)</p>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được.</p>
+<h2>A. Tóm tắt</h2>
+<p>AppBird AI (https://appbird.ai) là công cụ theo dõi App Store, Google Play và Steam cho dev indie, studio nhỏ và nhà phát hành: app/game mới mỗi ngày, bảng xếp hạng, app đổi chủ, kho quảng cáo, báo cáo "X-Ray" tháo build game, kèm API và MCP. Giá niêm yết Pro 199 USD/tháng (chỉ "dùng cá nhân"), Elite 399 USD/tháng (bắt buộc cho dùng doanh nghiệp), Team báo giá. TrustMRR (bên thứ ba, nói xác minh qua Stripe, đồng bộ 31/10/2026 06:25 UTC) ghi MRR 25.420 USD, 64 gói, nhưng tiền thật thu trong 30 ngày chỉ 11.683 USD (giảm 55,2%), cộng dồn từ 03/2026 là 146.327 USD. Hai số lệch nhau 2,18 lần.</p>
+<p>Kết luận: nhu cầu có thật (dev indie nói thẳng Sensor Tower và AppMagic quá đắt) nhưng thị trường không trống: ít nhất 5 công cụ rẻ hơn hoặc miễn phí đang chen vào, AppBird không có ước tính doanh thu iOS (thứ người dùng Reddit đòi nhiều nhất), và dòng tiền 30 ngày đang đi xuống. Không nên chép. Nếu đi tiếp, bán phán đoán trên dữ liệu có sẵn, không xây hạ tầng dữ liệu.</p>
+<p>Lưu ý trung thực: không có tài liệu gốc cho sản phẩm này. Dữ kiện lấy từ <code>winning-10-linh-vuc-2026-10-31.csv</code> và mục 10 của <code>icp-winning-10-2026-10-31.md</code>, rồi tôi đọc lại trang thật ngày 31/10/2026. Bản <code>.md</code> của TrustMRR có "Revenue last synced: 2026-10-31T06:25:26Z", không có dòng "expired". Tôi không đăng ký hay dùng thử nên chưa thấy bên trong sản phẩm.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:448px"><colgroup><col style="width:135px"><col style="width:313px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>AppBird AI, https://appbird.ai [CONFIRMED]; TrustMRR: https://trustmrr.com/startup/appbird [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Feed app/game mới theo ngày, lọc theo tag (ví dụ Shooter + Idle) và nhà phát hành đáng theo dõi; Top Apps; Timeline phiên bản; app đổi chủ; kho quảng cáo; Daily Radar; X-Ray Lab; Ideas (AI); Alerts; Steam; API/MCP; thông tin liên hệ nhà phát triển. [CONFIRMED - trang chủ, /pricing, /llms.txt]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Thuê bao tháng ("Billed every month"), giới hạn dùng theo ngày, add-on Steam và API; không thấy gói năm; phí không hoàn lại; khách chưa trả xem trước 5 ngày. [CONFIRMED - /pricing, /terms]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>Pro 199 USD (gạch 299), "Personal use only", 20 lượt tìm/ngày, 100 lượt xem app/ngày. Elite 399 USD (gạch 699), 1 người dùng, 50 tìm/ngày, 300 xem/ngày. Team báo giá. Add-on Steam +79 USD/tháng (gốc 129); add-on API 10.000 yêu cầu/tháng và "Steam Only Access": giá chưa hiện. [CONFIRMED - appbird.ai/pricing, đọc bằng trình duyệt thật vì giá Steam nạp bằng JS]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 25.420 USD (+23,1%), 64 gói; 30 ngày 11.683 USD (-55,2%); 3 tháng 87.913; tích luỹ 146.327. Theo tháng (USD): 03 528, 04 1.542, 05 9.252, 06 22.257, 07 24.832, 08 50.155, 09 20.075, 10 17.683 (đến 31/10). [SECONDARY - trustmrr.com/startup/appbird.md; TrustMRR nói lấy từ khoá Stripe API, tôi không tự kiểm được]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Điều khoản: AppBird Technologies, Inc., công ty Delaware, Mỹ [CONFIRMED - /terms]. TrustMRR: 2 đến 5 người, tự bỏ vốn, thành lập 01/03/2026, kênh chính LinkedIn, không ghi tên founder [SECONDARY]. Founder: chưa kiểm được (một thư mục nêu tên Yash Shah ở Ahmedabad, không có nguồn thứ hai và có thể là công ty khác trùng tên, tôi không dùng) [UNVERIFIED].</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Không có logo khách, lời chứng thực hay đánh giá; chỉ có số kho dữ liệu (6,7 triệu app + 1,44 triệu game) [VENDOR-CLAIMED]. TrustMRR ghi "estimated user count 302.900", không nêu cách tính [UNVERIFIED].</td>
+</tr>
+</tbody>
+</table></div>
+<p>Những điều nguồn nói chưa khớp hoặc chưa chắc</p>
+<ol>
+<li>MRR gấp 2,18 lần tiền thật. 25.420 / 11.683 = 2,18. Nếu 64 gói trả hàng tháng với giá trung bình 25.420 / 64 = 397,19 USD, tiền thu 30 ngày phải gần 25.420 USD; thực tế 11.683 / 64 = 182,55 USD mỗi gói. Run-rate tiền thật 11.683 x 12 = 140.196 USD, MRR x 12 = 305.040 USD. Bản <code>.md</code> tự mâu thuẫn (MRR +23,1% nhưng doanh thu 30 ngày -55,2%), và tiêu đề trang TrustMRR lấy "11.683 last 30 days". Tôi dùng 11.683 USD làm mốc. [UNVERIFIED - phép tính của tôi; chưa rõ cách TrustMRR tính MRR]</li>
+<li>397 USD mỗi gói cao hơn giá Pro 199 USD, tôi chỉ giải thích được một phần. Pro bị chặn dùng cho doanh nghiệp, Elite 399 USD, và 64 x 399 = 25.536 USD, lệch 116 USD (0,5%) so với 25.420 USD: MRR khớp với "gần như toàn bộ là Elite theo giá niêm yết". Nhưng tiền thật không khớp: trong 30 ngày có 5 ngày thu đúng 99 USD, 3 ngày 199 USD, 1 ngày 399 USD. Mức 99 USD không có trên trang giá hiện tại; AlternativeTo (28/07/2026, người dùng gửi) ghi "from $99 to $399" [SECONDARY]; điều khoản cho phép gói cũ và gói giữ giá. Có thể MRR tính theo giá niêm yết trong khi thực thu thấp hơn vì giảm giá hoặc thanh toán lỗi; không đủ dữ liệu để chọn. [UNVERIFIED]</li>
+<li>Tiền về theo cục. Tháng 10 là 17.683 USD, các ngày 02 đến 31/10 cộng lại 11.683 USD, nên riêng ngày 01/10 là 17.683 - 11.683 = 6.000 USD, số tròn, có vẻ một khoản lớn một lần [UNVERIFIED]. Tháng 08 là 50.155 USD, gấp 50.155 / 24.832 = 2,02 lần tháng 07 rồi rơi về 20.075 USD. Kiểm: 50.155 + 20.075 + 17.683 = 87.913, khớp ô "3 tháng".</li>
+<li>Ngày bắt đầu. TrustMRR ghi thành lập 01/03/2026, nhưng có bài quảng bá "AppBird Insights" (phân tích game di động) trên Reddit từ 18/11/2025, nội dung đã bị gỡ. Có thể cùng đội làm lại, có thể không liên quan. [UNVERIFIED]</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<h3>1. Sản phẩm dành cho ai?</h3>
+<p>Hai lớp người trả tiền, lớp thứ hai là chỗ tiền chạy:</p>
+<ul>
+<li>Dev indie một mình, đang chọn ý tưởng hoặc theo dõi đối thủ, dùng Pro 199 USD. Pro bị chặn dùng cho công ty, nên lớp này nhỏ và nhạy giá. [CONFIRMED - /pricing]</li>
+<li>Studio nhỏ 2 đến 20 người, nhà phát hành đi tìm game, người làm BD hoặc UA, dùng Elite 399 USD (cộng Steam 79 USD nếu làm game PC: 399 + 79 = 478 USD/tháng). Phép tính MRR ở phần B cho thấy phần lớn gói nằm ở đây. [SECONDARY / suy ra]</li>
+<li>Nhà đầu tư: CSV và TrustMRR ghi, trang không nêu. [UNVERIFIED]</li>
+</ul>
+<p>Thông tin liên hệ nhà phát triển và lọc "không hoạt động" có ngay ở Pro [CONFIRMED - /pricing]: đó là bộ công cụ tạo danh sách tiếp cận, nên người mua còn có thể là bên bán dịch vụ cho dev (agency UA, nhà cung cấp SDK). Suy luận, chưa ai xác nhận. [UNVERIFIED]</p>
+<p>Ngân sách: 199 đến 478 USD/tháng (2.388 đến 5.736 USD/năm).</p>
+<h3>2. Họ gặp vấn đề gì?</h3>
+<p>Không biết app/game nào đang lên trước khi nó hiển nhiên, và không mua nổi công cụ chuẩn của ngành. TrustMRR mô tả "Manual scouting is slow and fragmented" [VENDOR-CLAIMED]; người dùng thật nói về giá: "cant afford the 5,000 usd pricetag each have" (r/gamedev, 17/02/2026), "$30,000/year wtf" (r/AppBusiness, 17/08/2026). Trích đủ ở D2.</p>
+<h3>3. Họ đang làm bằng tay thế nào?</h3>
+<ul>
+<li>Đếm lượt đánh giá rồi suy ngược tải về: "reviews are about 1-2% of downloads" (r/iOSAppsMarketing, 09/05/2026). [SECONDARY]</li>
+<li>Nhờ người có tài khoản Sensor Tower hoặc AppMagic xem hộ (hai bài r/gamedev, 06/2024 và 02/2026). [CONFIRMED]</li>
+<li>Dùng gói miễn phí hoặc rẻ (GameRefinery, Appfigures, AppKittie 49 đến 79 USD/tháng), hoặc hỏi cộng đồng và nhận 5 đến 7 tên công cụ, một phần từ chính chủ công cụ.</li>
+<li>Chi phí: thời gian, và rủi ro quyết định theo số ước tính sai.</li>
+</ul>
+<h3>4. Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</h3>
+<p>Không chép AppBird. Dựa trên điểm yếu quan sát được:</p>
+<ol>
+<li>Bán câu trả lời "nên làm cái nào" thay vì danh sách. AppBird, AppKittie, Sensor Tower đều bán dữ liệu và bộ lọc; người đăng r/GameDevelopment (18/04/2026) nói dữ liệu doanh thu và tải về chỉ phản ánh quyết định từ nhiều tháng trước. Bản của chủ: bản tin tuần có phán đoán ("đáng fast-follow không, chi UA tối đa bao nhiêu"), dùng dữ liệu mua sẵn, không dựng hạ tầng. Giả thuyết, chưa ai trả tiền. [UNVERIFIED]</li>
+<li>Đánh vào chỗ AppBird thiếu: blog của họ nói số liệu iOS là "ranking and trend signals", đừng coi như ước tính tải hay doanh thu iOS [CONFIRMED - appbird.ai/blog], trong khi người dùng Reddit nói "Downloads and Sales comps are probably the most important".</li>
+<li>Không giới hạn theo ngày: Pro chỉ 20 lượt tìm mỗi ngày, AppKittie ghi "Unlimited" ở 79 USD.</li>
+<li>Nhà phát hành ngoài Mỹ, ví dụ Việt Nam (iKame, Funtap): giả thuyết, cần phỏng vấn. [UNVERIFIED]</li>
+</ol>
+<h3>Câu chốt</h3>
+<p>Cho dev game/app indie và studio nhỏ đang chọn thứ làm tiếp nhưng không có 30.000 USD/năm cho Sensor Tower, [tên bản của chủ] là bản tin phán đoán hằng tuần, mỗi mục kết luận rõ "làm / không làm / chi UA tối đa bao nhiêu", khác AppBird ở chỗ trả lời câu hỏi quyết định thay vì đưa danh sách app mới, và không có hạn mức tìm kiếm mỗi ngày.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<h3>Mục tiêu một câu</h3>
+<p>Tôi cần biết thị trường công cụ tình báo app/game cho dev indie còn chỗ trống không và mức giá người dùng chịu trả, để quyết định xây bản riêng, chỉ dùng như công cụ, hay bán phán đoán trên dữ liệu của người khác.</p>
+<h3>1. Đối thủ và giá</h3>
+<p>Đọc ngày 31/10/2026. "Đọc HTML": tôi tải trang và đối chiếu số trong mã nguồn, vì công cụ tóm tắt trang từng gán nhầm giá tháng và năm của AppTweak.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:912px"><colgroup><col style="width:165px"><col style="width:172px"><col style="width:233px"><col style="width:177px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AppBird</td>
+<td>appbird.ai/pricing</td>
+<td>Pro 199, Elite 399, Team báo giá; Steam +79; thuê bao tháng</td>
+<td>Không ước tính doanh thu iOS; hạn mức ngày thấp; chưa có đánh giá độc lập</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Sensor Tower</td>
+<td>sensortower.com/pricing</td>
+<td>Không công bố ("We customize pricing plans for each customer"). Blog đối thủ ước 30.000 đến 70.000 USD/năm cho nhóm nhỏ; Reddit nói "30.000/năm", "40k/năm"</td>
+<td>Quá đắt cho indie</td>
+<td>Không giá: [CONFIRMED]; giá ước: [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>AppMagic (Sensor Tower mua 12/05/2026, làm bản SMB); data.ai (Sensor Tower mua 2024, không còn độc lập)</td>
+<td>appmagic.rocks/pricing</td>
+<td>Trang giá nay chuyển sang form xin demo; "từ 150 USD/tháng" chỉ ở nguồn thứ hai</td>
+<td>Mất giá công khai</td>
+<td>Chuyển trang: [CONFIRMED]; 150 USD: [UNVERIFIED]; data.ai: [SECONDARY]</td>
+</tr>
+<tr>
+<td>Appfigures</td>
+<td>appfigures.com/pricing</td>
+<td>Analytics/ASO 9,99 / 44,99 / 149,99 / 599,99 / 1.399,99 USD/tháng; Market Intelligence: Scout 599,99 (năm 499,99), Pathfinder 1.249,99, Scale 2.499,99; có gói miễn phí</td>
+<td>Gần AppBird nhất; gói tình báo đắt hơn Elite 1,5 lần (599,99 / 399)</td>
+<td>[CONFIRMED] đọc HTML</td>
+</tr>
+<tr>
+<td>AppTweak</td>
+<td>apptweak.com/en/pricing</td>
+<td>ASO Essential 99 USD/tháng, hoặc 79 USD/tháng trả năm (949/năm); thử 7 ngày</td>
+<td>Thiên về ASO; gói Grow, Expand chưa đối chiếu</td>
+<td>[CONFIRMED] Essential, đọc HTML</td>
+</tr>
+<tr>
+<td>Mobile Action</td>
+<td>mobileaction.co/pricing</td>
+<td>ASO: Lite 15, Basic 69, Pro 239 USD/tháng (năm 12,5 / 59 / 199); tình báo thị trường báo giá</td>
+<td>Thiên về ASO</td>
+<td>[CONFIRMED] đọc HTML</td>
+</tr>
+<tr>
+<td>AppKittie</td>
+<td>appkittie.com/pricing</td>
+<td>79 USD/tháng, hoặc 49 USD/tháng trả năm; 4,5 triệu app, kho quảng cáo, 5.000 API credit/tháng</td>
+<td>Rẻ hơn AppBird 2,5 đến 8 lần (199 / 79; 399 / 49); độ chính xác chưa kiểm</td>
+<td>[CONFIRMED] qua jina</td>
+</tr>
+<tr>
+<td>GameRefinery (Liftoff)</td>
+<td>gamerefinery.com</td>
+<td>Miễn phí xem doanh thu và tải về 100.000+ game ở 33 thị trường; gói trả phí 45.000 đến 51.000 USD/năm theo trang so sánh của một đối thủ (ngày không rõ)</td>
+<td>Không hướng indie</td>
+<td>Miễn phí: [CONFIRMED]; trả phí: [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Cá thể nhỏ</td>
+<td>trendapps.dev, appstorestatistics.com</td>
+<td>Trend Apps có gói miễn phí; App Store Statistics "20 USD trọn đời" (chủ tự nói trên Reddit, 05/2026)</td>
+<td>Chưa mở trang giá</td>
+<td>[VENDOR-CLAIMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Business of Apps (businessofapps.com) là trang danh mục và tin, không có giá; trang trả 403, bậc brightdata chỉ ra menu: chưa kiểm được.</p>
+<p>Nhận xét: AppBird đứng giữa: rẻ hơn Appfigures Market Intelligence và Sensor Tower, đắt gấp 2,5 đến 8 lần AppKittie, lại cạnh tranh với dữ liệu doanh thu miễn phí của GameRefinery. Điểm riêng: Steam, X-Ray, MCP. Sensor Tower mua AppMagic (12/05/2026) và rút giá công khai làm nhóm "độc lập, giá rõ ràng" mỏng đi. Không phải kiểm kê đầy đủ.</p>
+<h3>2. Tiếng nói người dùng</h3>
+<p>Về AppBird: không tìm thấy đánh giá độc lập. AlternativeTo có 0 đánh giá; Trustpilot không có trang appbird.ai (404, scroll-read.mjs); Hacker News không có kết quả; các bài "AppBird Insights" trên Reddit 11/2025 đều bị gỡ. Product Hunt: mọi bậc của read.sh bị chặn. G2: không thử vì IP này đã bị hạn chế hôm nay. Capterra: bậc cuối lỗi, không ra chữ. X: không tìm được bài nào. [UNVERIFIED]</p>
+<p>Về đối thủ gần nhất (đọc qua kho lưu trữ Reddit arctic-shift, bậc của read.sh; kho có thể trễ):</p>
+<ul>
+<li>"does anyone have access to appmagic or sensor tower tools? ... cant afford the 5,000 usd pricetag each have" - u/asata-io, r/gamedev, 17/02/2026 (bài sau bị mod gỡ vì quy tắc nhóm). [CONFIRMED]</li>
+<li>"the pricing feels pretty high (like $30,000/year wtf) for a solo/indie developer" - r/AppBusiness, 17/08/2026; trả lời gợi ý AppKittie, MobileAction, Appfigures. [CONFIRMED]</li>
+<li>"sensor tower ... absurdly expensive"; trả lời "$40k/year"; "[they] dont estimate the apps under 10K accurately"; "appkittie is too expensive if you live in the global south" - r/AppStoreOptimization, 19/05/2026. [CONFIRMED]</li>
+<li>"access is expensive for smaller studios and indies" - người đăng r/GameDevelopment, 18/04/2026, tự nói đang làm sản phẩm trong lĩnh vực này nên có lợi ích riêng. Trả lời: "Downloads and Sales comps are probably the most important"; "The info that Sensor Tower and AppMagic have is more or less what we want." [CONFIRMED]</li>
+<li>r/iOSAppsMarketing, 09/05/2026: "Sensor Tower ... is pretty expensive for an indie dev"; trả lời có chủ công cụ tự giới thiệu. [CONFIRMED; mang tính quảng cáo]</li>
+<li>Trustpilot Sensor Tower: 1 đánh giá, 3,2/5, "very pushy to close deals. You only hear back from them when it is time to renew" (17/03/2026). Đọc bằng bậc cuối scroll-read.mjs vì read.sh thất bại cả ba bậc; một đánh giá gần như không có trọng lượng. [CONFIRMED]</li>
+</ul>
+<p>Rút ra: (a) cái khó chịu là giá của hàng chuẩn ngành; (b) người hỏi muốn ước tính tải và doanh thu, thứ AppBird không có cho iOS; (c) ước tính cho app nhỏ bị chê kém chính xác; (d) một thread đã có 5 đến 7 công cụ được giới thiệu.</p>
+<h3>3. Kích thước thị trường</h3>
+<p>Đơn vị: USD doanh thu thuê bao mỗi năm của công cụ tình báo cho dev indie và studio nhỏ. Số tự tính, không trích lại.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:426px"><colgroup><col style="width:90px"><col style="width:201px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>200.000 dev/studio nhỏ đang hoạt động x 2.190 USD/năm</td>
+<td>438.000.000 USD</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>200.000 x 5% = 10.000 đội trả tiền cho công cụ x 2.190 USD</td>
+<td>21.900.000 USD</td>
+</tr>
+<tr>
+<td>SOM (12 tháng)</td>
+<td>10.000 x 0,5% = 50 gói x 2.190 USD</td>
+<td>109.500 USD</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>200.000 dev/studio nhỏ đang hoạt động: ước lượng của tôi, [UNVERIFIED]. 42matters ghi 808.370 nhà xuất bản "đã từng đăng app" trên Google Play (cập nhật 31/10/2026, [SECONDARY]); giả định 25% còn phát hành thương mại: 808.370 x 25% = 202.093, làm tròn 200.000. Số gốc là "đã từng đăng"; tôi bỏ qua dev chỉ có iOS.</li>
+<li>2.190 USD/năm mỗi gói = 11.683 / 64 x 12 = 2.190,6, từ tiền thật 30 ngày của AppBird (phần B), không dùng giá niêm yết hay MRR. [SECONDARY]</li>
+<li>5% mua công cụ trả phí, nói tiếng Anh, chịu giá từ 150 USD/tháng: ước lượng của tôi, [UNVERIFIED]; thận trọng vì người trong thread Reddit chủ yếu chọn công cụ miễn phí hoặc rẻ.</li>
+<li>0,5% là mức một đội mới có thể chiếm trong 12 tháng đầu.</li>
+</ol>
+<p>Kiểm chéo với số lớn hơn: TAM 438 triệu USD bằng 438 / 167.000 = 0,26% chi tiêu trong app toàn cầu 2025 là 167 tỉ USD (Sensor Tower, qua PocketGamer.biz, [SECONDARY]), hoặc 438 / 81.800 = 0,54% chi tiêu game di động 81,8 tỉ USD, hợp lý cho một công cụ nghiên cứu. Kiểm chéo với AppBird: run-rate tiền thật 140.196 USD bằng 140.196 / 21.900.000 = 0,64% SAM, đạt sau 8 tháng; SOM 0,5% của tôi hơi thấp hơn, hợp lý cho người vào sau. Run-rate theo MRR (305.040 USD) ra 1,4% SAM, tôi coi là lạc quan. Lớp doanh nghiệp (Sensor Tower, [VENDOR-CLAIMED]) không tính vào TAM này.</p>
+<p>Số bị từ chối in:</p>
+<ul>
+<li>MRR 25.420 USD và "397 USD mỗi gói" như doanh thu: không khớp tiền thật 30 ngày.</li>
+<li>"Estimated user count 302.900" (TrustMRR): không có cách tính.</li>
+<li>"8,1 triệu app và game", "300.000+ quảng cáo", "99,9% uptime", "leading independent alternative": AppBird tự công bố; trang chủ còn hiện lỗi "(999.9M+)".</li>
+<li>"Sensor Tower: người mua trung vị trả 74.415 USD/năm (Vendr)", "GameRefinery 45.000 đến 51.000 USD/năm", "AppMagic từ 150 USD/tháng": qua blog hoặc trang so sánh của đối thủ, không mở được gốc.</li>
+</ul>
+<h3>Khoảng trống và lối đi riêng</h3>
+<ol>
+<li>Không công cụ nào trong bảng bán "kết luận nên làm gì": ai cũng bán dữ liệu và bộ lọc. Khớp nghề của chủ, nhưng chưa ai trả tiền để kiểm.</li>
+<li>Dữ liệu doanh thu và tải về là thứ người dùng đòi, nhưng đang miễn phí (GameRefinery) hoặc rẻ (AppKittie 49 USD), nên bán đúng thứ đó là cuộc đua giá.</li>
+<li>Rủi ro: Sensor Tower đẩy bản SMB giá thấp; điều khoản AppBird cấm cào hàng loạt nên dựng bản sao bằng cào store có rủi ro pháp lý và vận hành; doanh thu của chính AppBird giảm 55,2% trong 30 ngày.</li>
+</ol>
+<h3>Ba cách xác thực rẻ nhất trước khi build</h3>
+<ol>
+<li>Nói chuyện với 5 người: người hỏi trong các thread Reddit trên (u/javialvarez142, u/asata-io) và vài studio nhỏ trên LinkedIn (kênh AppBird tự dùng). Hỏi: lần gần nhất bạn quyết định làm hoặc bỏ một game, bạn dựa vào gì, trả bao nhiêu, bỏ công cụ nào vì giá. Ngưỡng đi tiếp: ít nhất 3 trên 5 người nói đã trả hoặc muốn trả cho câu trả lời "nên làm cái nào" (ngưỡng tôi đặt, [UNVERIFIED]).</li>
+<li>Bán trước thủ công: bản tin phán đoán tuần giá thử 99 USD/tháng (giữa AppKittie 79 và AppBird 199; giả thuyết, [UNVERIFIED]), làm tay từ dữ liệu miễn phí, chào 10 người. Nếu ít nhất 3 người trả trong 3 tuần thì nhu cầu thật; không thì dừng trước khi viết mã.</li>
+<li>Chủ tự mua Elite một tháng (399 USD, bước duy nhất cần thanh toán, do chủ làm) để đo: 50 lượt tìm mỗi ngày có đủ không, có ước tính doanh thu iOS không, đầu ra có đủ làm nguyên liệu cho bản tin không. Trước đó đọc thử các trang công khai <code>appbird.ai/md/</code>.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p>Nguồn (đã đọc 31/10/2026, trừ khi ghi khác)</p>
+<ul>
+<li>AppBird: https://appbird.ai/ , /pricing (trình duyệt thật), /terms, /llms.txt, /blog/app-analytics-comparison-indie-developers/; https://trustmrr.com/startup/appbird.md; https://alternativeto.net/software/appbird/about/ (28/07/2026)</li>
+<li>Đối thủ: https://sensortower.com/pricing ; press release Sensor Tower mua AppMagic (https://sensortower.com/press/press-release-sensor-tower-acquires-appmagic-adding-dedicated-smb-solution-to-comprehensive-suite-of-digital-intelligence, 12/05/2026); https://appmagic.rocks/pricing và https://www.appkittie.com/pricing (qua jina); https://appfigures.com/pricing , https://www.apptweak.com/en/pricing , https://www.mobileaction.co/pricing/ (đối chiếu HTML); https://www.gamerefinery.com (qua công cụ tóm tắt)</li>
+<li>Cỡ thị trường: https://www.42matters.com/google-play-statistics-and-trends (808.370 nhà xuất bản, 31/10/2026). Chi tiêu app 2025 (Sensor Tower qua PocketGamer.biz, TechCrunch 21/01/2026): chỉ đọc qua kết quả tìm kiếm, chưa mở báo cáo gốc.</li>
+<li>Reddit qua arctic-shift: r/gamedev 1r6wrms, r/AppBusiness 1vqxomf, r/AppStoreOptimization 1thtxvx, r/GameDevelopment 1sozp9q, r/iOSAppsMarketing 1t85xkw; https://www.trustpilot.com/review/sensortower.com (scroll-read.mjs)</li>
+</ul>
+<p>Chưa kiểm được</p>
+<ul>
+<li>Cách TrustMRR tính MRR, lý do của 397 USD mỗi gói, khoản 6.000 USD ngày 01/10; tôi không xem được Stripe.</li>
+<li>Giá add-on API, "Steam Only Access", gói 99 USD; founder; liên hệ với "AppBird Insights" 2025.</li>
+<li>Giá trả phí của Sensor Tower, AppMagic, GameRefinery; gói Grow, Expand của AppTweak; trang giá của cá thể nhỏ.</li>
+<li>Product Hunt, Capterra, G2, X, Business of Apps: không đọc được hoặc không thử.</li>
+<li>Công cụ tóm tắt trang từng gán sai nhãn (AppTweak); Appfigures, AppTweak, Mobile Action đã đối chiếu HTML, GameRefinery và Sensor Tower thì chưa.</li>
+<li>Độ chính xác ước tính tải và doanh thu của mọi công cụ.</li>
+</ul>
+<p>Giả định chính: bốn giả định ở D3, ngưỡng 3 trên 5 phỏng vấn, 3 gói trong 3 tuần, giá thử 99 USD/tháng. Tất cả là ước lượng của tôi, không phải số công khai.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li>Nên theo đuổi: có điều kiện, và không bằng cách chép AppBird. Chỉ đi tiếp nếu 3 trên 5 người được hỏi nói họ trả tiền cho kết luận "nên làm cái nào" và bán trước thủ công được ít nhất 3 gói trong 3 tuần.</li>
+<li>Rủi ro lớn nhất: (a) cuộc đua giá, vì dữ liệu doanh thu đang miễn phí hoặc 49 USD ở nơi khác; (b) MRR của AppBird gấp 2,18 lần tiền thật và tiền 30 ngày giảm 55,2%, nên "winning product" này yếu hơn con số trên bảng xếp hạng; (c) phụ thuộc dữ liệu store.</li>
+<li>Bước tiếp theo rẻ nhất: 5 cuộc nói chuyện trong tuần này; chưa viết mã, chưa trả tiền cho công cụ nào.</li>
+</ol>
+<p>Hợp với hồ sơ owner: hồ sơ (<code>winning-product.config.md</code>) là bán phán đoán media nào đáng chi tiền, không làm creative, khách trả tiền là Enterprise, SMB và celeb qua 3 agency. CSV chấm "vừa" vì đây là nghiên cứu xu hướng. Tôi đồng ý một nửa và hạ xuống "thấp đến vừa". Hợp: kỹ năng đoán xu hướng, kinh nghiệm SaaS đã exit, và "phán đoán chi UA cho studio game" nằm gần việc chọn media đáng chi tiền. Không hợp: người mua là dev app/game, không phải khách của 3 agency; sản phẩm là hạ tầng dữ liệu (8 triệu app, tháo build game), không phải một người bán phán đoán; chủ chưa có bằng chứng về phán đoán game di động. Dùng AppBird hay AppKittie làm nguyên liệu cho dịch vụ phán đoán thì hợp, xây bản sao thì không.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://trustmrr.com/startup/appbird.md - bản máy đọc có doanh thu theo ngày và tháng; lộ chênh lệch MRR và tiền thật.</li>
+<li>https://appbird.ai/llms.txt - AppBird tự mô tả giá, phạm vi dữ liệu, lời so với đối thủ; kèm https://appbird.ai/md/index.md (markdown công khai cho agent).</li>
+<li>https://appbird.ai/pricing - giá Steam (+79 USD) và add-on API chỉ hiện khi chạy JS; phải dùng scroll-read.mjs.</li>
+<li>https://www.appkittie.com/pricing - đối thủ 79/49 USD, đọc được qua jina; mốc giá thấp cho indie.</li>
+<li>https://appmagic.rocks/pricing - chuyển sang form demo sau khi Sensor Tower mua; bằng chứng giá công khai bị rút.</li>
+<li>https://www.gamerefinery.com - Liftoff; xem doanh thu và tải về 100.000+ game miễn phí.</li>
+<li>https://www.42matters.com/google-play-statistics-and-trends - số nhà xuất bản và app mới, có ngày cập nhật.</li>
+<li>https://alternativeto.net/software/appbird/about/ - bản đăng có ngày (28/07/2026) lộ mức giá cũ 99 USD.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/10-appbird-ai.md</code> (bản .md cho agent đọc)</div></main></body></html>

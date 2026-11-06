@@ -1,0 +1,120 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Deep community voice: Reddit, Hacker News, X (read 2026-10-31)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Deep community voice: Reddit, Hacker News, X (read 2026-10-31)</h1>
+<p>Purpose: what real users say outside review sites about 12 competitors of Distraction Foundry (DF).
+Method and limits are stated first because they cap every number below.</p>
+<h2>Read this first: method, limits, honesty notes</h2>
+<ul>
+<li>Tools used: <code>read.sh</code> for Reddit thread URLs (resolved via the arctic-shift archive) and one X status (via jina); the HN Algolia API; pullpush and arctic-shift search APIs.</li>
+<li><code>read.sh</code> calls: 16 of 40 allowed. scroll-read: 0. Bright Data rung: not needed.</li>
+<li>The pullpush search API hit a rate limit ("Rate limit exceeded", HTTP 429) partway through. The arctic-shift search then timed out for comment body search (it needs a subreddit filter, and body search returned nothing or timed out). Result: search coverage is UNEVEN. Where a product shows "not read" or a low count, that is a coverage gap, not evidence the product has no users talking.</li>
+<li>The WebSearch tool refuses reddit.com, so I could not use it to find more URLs.</li>
+<li>"Threads read in full" means I read the post and its comments through <code>read.sh</code>. "Snippets" means I saw only a search hit (up to ~600 characters of one comment) and did not open the thread.</li>
+<li>Reddit search by body text is fuzzy and surfaces mostly recent promo. Real-user experience posts were rare. All counts are of what I actually saw, not of what exists.</li>
+<li>Vendor and affiliate flags are stated per product. Vendor or affiliate text is NOT counted as user evidence.</li>
+<li>Confidence labels: high = several independent users, read in full; medium = 2 to 4 users or partial reads; low = one user or snippet only.</li>
+<li>Inference is marked "INFERENCE" and kept apart from what users said.</li>
+</ul>
+<h2>Per product</h2>
+<h3>1. Holo (tryholo.ai)</h3>
+<p>Moved to <code>providers/holo/README.md</code> (2026-10-31, unchanged).</p>
+<h3>2. Native (native.no, formerly Wepost per a user)</h3>
+<p>Moved to <code>providers/native/README.md</code> (2026-10-31, unchanged).</p>
+<h3>3. Postiz</h3>
+<p>Moved to <code>providers/postiz/README.md</code> (2026-10-31, unchanged).</p>
+<h3>4. Post Bridge</h3>
+<p>Moved to <code>providers/post-bridge/README.md</code> (2026-10-31, unchanged).</p>
+<h3>5. Repurpose.io</h3>
+<p>Moved to <code>providers/repurpose-io/README.md</code> (2026-10-31, unchanged).</p>
+<h3>6. Marky (mymarky.ai)</h3>
+<p>Moved to <code>providers/marky/README.md</code> (2026-10-31, unchanged).</p>
+<h3>7. Nuelink</h3>
+<p>Moved to <code>providers/nuelink/README.md</code> (2026-10-31, unchanged).</p>
+<h3>8. Predis.ai</h3>
+<p>Moved to <code>providers/predis/README.md</code> (2026-10-31, unchanged).</p>
+<h3>9. Blaze (blaze.ai)</h3>
+<p>Moved to <code>providers/blaze/README.md</code> (2026-10-31, unchanged).</p>
+<h3>10. Sintra</h3>
+<p>Moved to <code>providers/sintra/README.md</code> (2026-10-31, unchanged).</p>
+<h3>11. Marblism</h3>
+<p>Moved to <code>providers/marblism/README.md</code> (2026-10-31, unchanged).</p>
+<h3>12. Ocoya</h3>
+<p>Moved to <code>providers/ocoya/README.md</code> (2026-10-31, unchanged).</p>
+<h2>Cross-product section</h2>
+<h3>Five most repeated complaints (counts are distinct user mentions across products; small numbers, so treat as direction)</h3>
+<ol>
+<li>Generic or off-brand output that needs editing ("AI slop", personas feel the same): Sintra 3, Blaze 2, Holo 1, plus SideProject thread (see below). About 7. </li>
+<li>Cost and credit/usage anxiety: Sintra 4, Holo 1, Repurpose.io 1 ("steep"), Postiz hosting cost implied 1. About 7.</li>
+<li>Setup and platform-connection pain (developer apps, API approvals, self-hosting): Postiz about 10, Sintra 1. About 11. This one is the most repeated but sits mostly in one product.</li>
+<li>Unreliable tool or poor support (bugs, lost work, unresponsive help): Sintra 7, Postiz outage/security 2. About 9.</li>
+<li>Cross-posting hurts reach / one-size-fits-all content: Repurpose.io 1 strong user plus 3 agreeing commenters (two of them pitching their own tools); SideProject and content_marketing threads also say per-platform adaptation matters ("A caption that technically fits LinkedIn and Instagram at once usually works for neither", r/content_marketing, 2026-08-18, https://reddit.com/r/content_marketing/comments/1vqnacf/title_would_creators_pay_for_a_tool_that/p4drbih/). About 5.</li>
+</ol>
+<ul>
+<li>Ranking by count: setup pain (11), unreliability/support (9), generic output (7), cost/credits (7), cross-post reach (5). Counts are not statistically meaningful.</li>
+</ul>
+<h3>Three most repeated reasons people switch (from the few stories seen)</h3>
+<ol>
+<li>Credit/usage cost versus value (Own-Job988 left Sintra for Claude/ChatGPT; Flying1984 worries after leaving Marblism; KaredaLotus reverted to the old chat). 3 stories.</li>
+<li>Unpredictable quality and lost work, so they went back to a general chatbot (Own-Job988; btk667 "looking for alternatives"; TCMchefraphael "Void it"). 3.</li>
+<li>Platform reach hurt by the tool (csraithe left Repurpose.io). 1 only. Next candidate, with 1 each: a simpler tool because the first looked like enterprise software (Postiz to another scheduler, low-confidence source).</li>
+</ol>
+<ul>
+<li>Confidence: low. Few stories, mostly from one product's own subreddit.</li>
+</ul>
+<h3>What people say they wish a tool did (user words, with sources above unless noted)</h3>
+<ul>
+<li>Know my business and remember it, so I do not re-explain (SideProject, r/SintraAI_ 2026-05-27 asker "I have to re-explain context every time").</li>
+<li>Tell me what to post: "'what do I even post?' was the bigger blocker"; wants "3 post ideas for this week" and a nudge ("Reply to this review today, post this before 5pm") (Melodic_Command_26, r/SideProject, 2026-04-14) https://www.reddit.com/r/SideProject/comments/1skzpb6/i_talked_to_5_local_business_owners_last_week_and/</li>
+<li>Approve before it posts: "I'd want to approve anything it posted before it posted. Having an approval button that optionally re-rolls on 'no'" (lgastako, same thread).</li>
+<li>Avoid the last few percent of bad posts: "the AI can generate great posts 95% of the time, but ... 5% already too big of a risk for the business owners" (elsasze, same thread). A second view: owners are blocked by "publishing fear" more than typing (Deep_Ad1959, same thread; may itself be a promo-style comment).</li>
+<li>Proof it produced calls or sales, not likes: "I'd need 'proof' that it resulted in a sale or at least a phone call" (MagicBradPresents, same thread).</li>
+<li>Real analytics (btk667), native per-platform adaptation (Repurpose.io thread), TikTok support (Marblism user), auto clip extraction (Nuelink asker).</li>
+</ul>
+<h3>Does anyone ask for a done-for-you or managed option?</h3>
+<ul>
+<li>Not as a plain request in anything I read. Closest signals: a Marblism user asked for a hands-off result and accepted that the AI "employees" do "the work I either am not able or just don't want to do"; owners in r/SideProject say they lack time or do not know what to say and want fewer choices; a marketer user of Native (Tushano) values it for automating "the whole process" including planning. Nobody I read said "I want an agency or a person to do it for me."</li>
+<li>Counter-signals: the Sintra vendor admits its tool takes upfront setup ("a lot of work upfront", btk667) and customisation (shiauresvejas), i.e. buyers are doing training work they did not expect.</li>
+<li>INFERENCE (mine, not user words): a managed service that handles the knowledge setup, approval and brand fit might address the "needs a lot of input" and "off-brand 5%" complaints. This is unverified by the sources above and no one asked for it by name.</li>
+</ul>
+<h2>Not read, for the record</h2>
+<ul>
+<li>X search pages (not available through the tool); only one X status (Postiz founder) read.</li>
+<li>Hacker News: Nuelink Show HN threads, Predis Show HN comments, Blaze Show HN, Postiz Show HN comment trees (only the Ask HN thread and selected comments).</li>
+<li>Reddit threads for Holo (r/ShareAiPrompts review), Marky, Ocoya, Post Bridge users, Predis users: not found or not opened.</li>
+<li>r/SocialMediaMarketing AutoModerator Nuelink claim: seen as snippets only; the underlying claim is not verified.</li>
+</ul><div class="src">Nguồn: <code>research/deep-community-voice.md</code> (bản .md cho agent đọc)</div></main></body></html>

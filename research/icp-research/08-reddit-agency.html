@@ -1,0 +1,293 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reddit Agency - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>Reddit Agency - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được. Trang hãng mở được chỉ làm [CONFIRMED] rằng hãng nói vậy, không làm kết quả của hãng thành thật.</p>
+<h2>A. Tóm tắt</h2>
+<p>Reddit Agency (https://redditagency.com) là agency làm trọn gói trên Reddit do Sabyr Nurgaliyev dẫn: viết và đăng bài, bình luận, xoá hoặc "đè" bài tiêu cực, để brand hiện trong câu trả lời của ChatGPT và Google. Trang chủ hứa "hoặc bạn không trả tiền". Người mua là founder hoặc trưởng marketing của brand (SaaS, app, DTC), trả retainer vài nghìn USD mỗi tháng. TrustMRR (nói xác minh qua Stripe, đồng bộ 31/10/2026 08:38 UTC, không có dòng "expired") ghi MRR 38.000 USD, 8 gói thuê bao, MRR 30 ngày giảm 12,6%.</p>
+<p>Kết luận: nhu cầu có thật, có tiền, nhưng không nên sao chép. Bốn lý do: (1) 8 khách, mỗi khách trung bình 12,5% MRR; (2) lõi giao hàng là viết và đăng nội dung bằng tay, đúng chỗ owner yếu; (3) rủi ro nền tảng: Reddit công bố 6/7/2026 đã dùng mô hình ngôn ngữ bắt hành vi giả phối hợp, còn site chị em novantro.com nói dùng "1000+ tài khoản cũ, karma cao"; (4) mức Reddit được ChatGPT trích dẫn dao động rất mạnh (Semrush). Lối đi hợp owner hơn: bán phần phán đoán (thread nào đáng chi tiền, đo bằng câu hỏi mua hàng của khách), không bán sản xuất nội dung.</p>
+<p>Lưu ý trung thực: dữ liệu có sẵn chỉ là một dòng CSV và một mục ICP viết sáng nay từ trang chủ; tôi đọc lại trang gốc nên vài chỗ lệch (xem B). Không có đánh giá độc lập nào về redditagency.com; G2, Capterra, Clutch không mở (G2 đã hạn chế IP này hôm nay). Chưa phỏng vấn ai.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:415px"><colgroup><col style="width:135px"><col style="width:280px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>Reddit Agency - https://redditagency.com [CONFIRMED]. Sitemap không có trang giá</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Làm trọn gói trên Reddit: nghiên cứu subreddit, viết, đăng, tương tác, theo dõi, báo cáo; xoá hoặc đè bài tiêu cực; nội dung "để AI và Google trích dẫn". Khách chỉ duyệt. Tuyên bố "zero automation" [CONFIRMED rằng hãng nói vậy]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Retainer qua Stripe (8 gói) cộng khoản thu không đều; site chị em ghi tối thiểu 3 tháng, "đa số khách thích trả trước" [CONFIRMED - novantro.com]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>redditagency.com chỉ có "Book a Call", không số tiền [CONFIRMED]. Airefs (đối thủ, sửa 1/10/2026) ghi Growth 3.000 và Premium 5.000 USD/tháng [SECONDARY]. novantro.com niêm yết 5.000-10.000 USD/tháng [CONFIRMED]. Sabyr viết trên X 9/5/2026 "bây giờ tôi tính 10 đến 20 nghìn USD" [CONFIRMED - x.com/tech_nurgaliyev/status/2053076858082918694]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 38.000 USD; 8 gói; MRR 30 ngày -12,6%; doanh thu 30 ngày 73.500 (-20,6%); 12 tháng 588.195; tích luỹ 624.340; lập 3/2/2025. [SECONDARY - trustmrr.com/startup/reddit-agency.md, "Revenue last synced 2026-10-31T08:38:19Z"; TrustMRR nói lấy từ Stripe API, tôi không tự kiểm được]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Sabyr Nurgaliyev, 24 tuổi, Kazakhstan, X @tech_nurgaliyev 7.035 người theo dõi [CONFIRMED - api.fxtwitter.com]. Trang tự xếp hạng của hãng ghi "5 nhân sự" [VENDOR-CLAIMED]. Ông kể trên X đang thuê closer, account manager, đội nội dung [CONFIRMED - tweet 2116211345821770105]</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>"Trusted by" không logo hay tên; case study chỉ là ảnh; lời chứng thực là ảnh Slack [VENDOR-CLAIMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Những điều nguồn nói chưa khớp hoặc chưa chắc (phép tính in kèm):</p>
+<ol>
+<li>Mất bao nhiêu khách. MRR trước = 38.000 / (1 - 0,126) = 43.478 USD; giảm 5.478. Chia cho trung bình mỗi gói 38.000 / 8 = 4.750 ra 1,15 gói: khoảng một khách rời (hơi lớn hơn trung bình), hoặc rời kèm giảm giá. Tập trung: 4.750 / 38.000 = 12,5% MRR mỗi gói; mất thêm hai gói là mất 25%. [UNVERIFIED - phép tính của tôi]</li>
+<li>MRR không phải doanh thu. 73.500 / 38.000 = 1,93 lần. Tháng 10/2026 có 10 khoản thu từ 3.000 đến 12.750 USD (trung bình 7.350), không phải 8 khoản bằng nhau. Doanh thu tháng: 135.700 (7/2026) so với 40.350 (8/2026), gấp 3,4 lần. MRR x 12 = 456.000 thấp hơn doanh thu 12 tháng 588.195, nên có khoản trả trước hoặc dự án nằm ngoài "MRR". [SECONDARY, suy luận UNVERIFIED]</li>
+<li>Bảo đảm không thống nhất. Trang chủ: "ChatGPT và Google gợi ý brand hoặc không trả". Trang /apply (meta): "50.000+ USD doanh thu mới trong 90 ngày hoặc không trả". Cả hai không định nghĩa "gợi ý" hay cách đo, trong khi hãng thu retainer. Điều khoản hoàn tiền: chưa thấy. Bốn nguồn giá cho bốn mức (trang chủ không giá; Airefs 3.000-5.000; novantro 5.000-10.000; Sabyr 10.000-20.000) trong khi thực thu trung bình 4.750.</li>
+<li>Một hay hai doanh nghiệp. novantro.com cùng người sáng lập, cùng câu bảo đảm, cùng đoạn "4.000+ người theo dõi"; bio X trỏ novantro.com; /red-removal ghi "Copyright 2025 Trust Reviews", thương hiệu thứ ba. Chưa rõ doanh thu TrustMRR có gồm Novantro. [điểm trùng CONFIRMED; "cùng một doanh nghiệp" UNVERIFIED]</li>
+<li>Lời kể doanh thu. Bài r/microsaas 20/5/2026 nói "20 nghìn USD/tháng, biên 70%, CAC 300"; TrustMRR ghi doanh thu tháng 5/2026 là 63.574. TrustMRR ghi biên 50%; Sabyr viết ngân sách tăng "từ 1k một ngày lên 2k một ngày" (không nói loại). Nếu là quảng cáo: 2.000 x 30 = 60.000, biên (73.500 - 60.000) / 73.500 = 18%, không phải 50%. [UNVERIFIED]</li>
+<li>Mục ICP sáng nay ghi "trả theo kết quả"; Stripe cho thấy thuê bao và khoản thu 3.000-12.750 USD, nên đó là lời hứa trên trang. Chấm "cao" trong CSV cần xét lại (xem F).</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<h3>1. Sản phẩm dành cho ai?</h3>
+<p>Founder hoặc trưởng marketing/growth của brand đã có doanh thu, bán sản phẩm mà người mua hay hỏi trên Reddit hoặc hỏi AI.</p>
+<ul>
+<li>Ngành: SaaS và AI là trọng tâm (sitemap toàn r/saas, r/indiehackers, r/startups [CONFIRMED]); ngoài ra app, DTC, dịch vụ địa phương.</li>
+<li>Quy mô: trả được tối thiểu 3.000 USD/tháng trong 3 tháng (cam kết 9.000 USD). Karma Captain nhận cả startup chưa có doanh thu "miễn là có vốn" [CONFIRMED]. Doanh thu năm từ 1 triệu USD là ước lượng của tôi [UNVERIFIED].</li>
+<li>Ngân sách: giá thấp nhất đã công bố của năm agency là 2.500 / 3.500 / 5.000 / 8.500 / 10.000 USD/tháng, trung vị 5.000 (D1); thực thu trung bình của Reddit Agency 4.750.</li>
+</ul>
+<h3>2. Họ gặp vấn đề gì?</h3>
+<p>Hãng dán bốn câu như lời founder: tài khoản bị ban hoặc báo spam; kết quả số một khi tìm tên brand là "is [brand] a scam"; muốn hiện trong câu trả lời LLM mà không biết làm sao; "nói tiếng Reddit mà không bị ban" [VENDOR-CLAIMED]. Bằng chứng độc lập: bài r/DigitalMarketing 7/6/2026 của một brand tìm agency Reddit, và một trả lời "mod rất gắt, một khi bị gắn cờ gần như vĩnh viễn" [CONFIRMED - Arctic Shift].</p>
+<h3>3. Họ đang làm bằng tay thế nào?</h3>
+<ul>
+<li>Tự làm: một bình luận r/DigitalMarketing kể được 3-5 lead mỗi tuần (lời một người, SECONDARY).</li>
+<li>Công cụ tìm thread: Redreach, Airefs (từ 24 USD/tháng); GummySearch đã đóng 30/11/2025 [CONFIRMED].</li>
+<li>Thuê agency (bảng D1): 2.500-20.000 USD/tháng, thường tối thiểu 3 tháng.</li>
+</ul>
+<h3>4. Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</h3>
+<p>Không bán sản xuất nội dung. Bán phán đoán trước khi chi: "Phán quyết Reddit và AI", giá cố định, giao trong 5 ngày.</p>
+<ol>
+<li>Lấy 30-50 câu hỏi mua hàng thật của khách.</li>
+<li>Chạy trên ChatGPT, Google AI Mode, Perplexity; ghi thread và subreddit nào được trích dẫn, bao nhiêu phần trăm câu có Reddit.</li>
+<li>Phán quyết: nên chi cho Reddit hay không, vào thread nào, chi phí ước tính mỗi lần được trích dẫn; không dùng tài khoản giả.</li>
+<li>Lặp hằng tháng vì tỷ lệ này dao động (D2).</li>
+</ol>
+<p>Giá thử 500 USD một lần (đề xuất của tôi, UNVERIFIED; research/seo.md gợi ý 300-500). So với cam kết 9.000 USD (3.000 x 3 tháng) của agency rẻ nhất: 500 / 9.000 = 5,6% rủi ro. Việc này dùng phán đoán media và dữ liệu chiến dịch của ba agency, không viết bài tay.</p>
+<h3>Câu chốt</h3>
+<p>Cho founder hoặc trưởng marketing đang cân nhắc trả 3.000-10.000 USD/tháng cho agency để được AI nhắc tới qua Reddit nhưng chưa biết thread nào thật sự được trích dẫn và sợ bị ban, [tên bản của owner] là gói phán quyết 500 USD trong 5 ngày cho biết có nên chi cho Reddit hay không và chi vào đâu, khác Reddit Agency ở chỗ đo trước khi bạn trả, không đăng bài hộ, không tài khoản giả, và "được AI nhắc" được định nghĩa bằng số.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<h3>Mục tiêu một câu</h3>
+<p>Tôi cần biết dịch vụ làm Reddit để AI gợi ý brand có bao nhiêu người bán, giá bao nhiêu, rủi ro nền tảng ra sao, để quyết định có bán bản "đo và phán quyết" thay vì làm hộ, và định giá bao nhiêu.</p>
+<h3>1. Đối thủ và giá</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:800px"><colgroup><col style="width:189px"><col style="width:226px"><col style="width:220px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Tên / link</th>
+<th>Giá (nguồn, ngày)</th>
+<th>Mô hình, điểm mạnh, khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reddit Agency - redditagency.com</td>
+<td>Trang không giá; Airefs: 3.000 / 5.000 USD/tháng (sửa 1/10/2026)</td>
+<td>Retainer, "không đạt thì không trả"; 8 khách, bảo đảm không định nghĩa</td>
+<td>[CONFIRMED] không giá; [SECONDARY] mức giá</td>
+</tr>
+<tr>
+<td>Novantro (cùng người sáng lập) - novantro.com</td>
+<td>2.000/bài xoá; 5.000-10.000/tháng (10-20 bài + 50-100 bình luận); 4.500-7.500 subreddit; tối thiểu 3 tháng</td>
+<td>Retainer; Trustpilot 4,5 (28). FAQ: "1000+ tài khoản cũ để tránh bị phát hiện AI"</td>
+<td>[CONFIRMED] giá</td>
+</tr>
+<tr>
+<td>Just Reddit Agency - justreddagency.com</td>
+<td>Từ 2.500/tháng, tối thiểu 3 tháng; subreddit từ 5.000; uy tín từ 4.500; AI add-on 150-3.000</td>
+<td>Giá công khai, cam kết viết rõ; "800+ tài khoản cũ"; không nêu tên khách</td>
+<td>[CONFIRMED] giá; cam kết [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Karma Captain - karmacaptain.com</td>
+<td>10.000/tháng (~15 bài + 300 bình luận); 20.000 (~30 + 600); không tối thiểu. Sculpt (wearesculpt.com): từ 3.500/tháng</td>
+<td>Karma Captain: retainer phẳng, nêu tên khách, không bảo đảm. Sculpt: tài khoản công khai, không hứa AI</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Discovered Labs - discoveredlabs.com</td>
+<td>7.995 EUR/tháng (6.995 nếu cam kết 6 tháng); 12.995 EUR (bài 21/7/2026)</td>
+<td>Theo tháng, rời được nếu tỷ lệ trích dẫn không tăng</td>
+<td>[CONFIRMED] giá; dải 3.000-12.500 của họ [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Single Grain / Page One Power</td>
+<td>Single Grain: trang Reddit không giá, Clutch ghi tối thiểu 10.000+ (qua tìm kiếm). Page One Power: không thấy dịch vụ Reddit</td>
+<td>Agency tổng hợp</td>
+<td>[SECONDARY] / [UNVERIFIED]</td>
+</tr>
+<tr>
+<td>Airefs - getairefs.com/pricing</td>
+<td>Công cụ 24 / 49 / 83 USD (trả năm), 29 / 59 / 99 (trả tháng); làm hộ từ 349/tháng</td>
+<td>Phần mềm + dịch vụ; tự xếp hạng 3 trong bài so sánh của mình</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Peec AI (peec.ai/pricing); Rank Prompt (rankprompt.com/pricing); Profound (tryprofound.com/pricing)</td>
+<td>Peec 95 / 245 / 495 USD/tháng. Rank Prompt 39-239 (trả năm); FAQ ghi giá khác, seo.md 30/10 ghi 150-2.000: lệch. Profound: thử 7 ngày, Enterprise tuỳ chỉnh</td>
+<td>Chỉ đo AI visibility, không làm Reddit</td>
+<td>[CONFIRMED] thẻ giá</td>
+</tr>
+</tbody>
+</table></div>
+<p>Redreach (công cụ tìm thread, bạn tự đăng): trang không có giá, nguồn khác ghi 19-29, 39-99 và 140 USD/tháng, mâu thuẫn [UNVERIFIED]. Red-Engage (agency GEO + Reddit): không giá, Clutch 4,9 / G2 4,8 tự khai [VENDOR-CLAIMED]. GummySearch đã đóng "as of 11/30/2025" [CONFIRMED]. "ReddiReach": không tìm thấy sản phẩm hay agency tên này ngày 31/10/2026. Nhận xét: không đối thủ nào đồng thời công khai giá, định nghĩa "được AI nhắc" bằng số, và cho khách thấy trước thread nào đáng chi; bên đo không làm Reddit, bên làm Reddit không đo trước. Không phải kiểm kê đầy đủ: các danh sách xếp hạng tôi mở đều do chính agency viết.</p>
+<h3>2. Tiếng nói người dùng</h3>
+<p>Không có đánh giá độc lập nào về redditagency.com (Airefs cũng không thấy hồ sơ G2/Clutch/Trustpilot) [UNVERIFIED]. Phần còn lại chủ yếu về Novantro, cùng người sáng lập:</p>
+<ul>
+<li>Trustpilot Novantro: 4,5/5, 28 đánh giá, 92% năm sao, đều "ý kiến tự nguyện", không nhãn "đã xác minh" [CONFIRMED - pt.trustpilot.com/review/novantro.com]. Trong 20 đánh giá trang đầu, 16 viết trong 5 ngày 25-29/4/2026. Một sao (29/4/2026): "chạy chiến dịch bot tự động, bị r/DeadInternetTheory vạch"; công ty phủ nhận; tôi không tìm được thread đó. Đợt dồn chưa chứng minh đánh giá mua.</li>
+<li>r/growmybusiness thread 1sgz28m (kho PullPush): 12-21/4/2026 có năm bình luận nhắc Novantro (bốn khen), hai cái gần giống từng chữ cách nhau một ngày (13 và 14/4: "Went through a few options and Novantro came up..."). Ngày 17/5 một người đã gọi onboarding: "không thuyết phục, đội không phải người bản ngữ nên khó hợp Reddit", rồi chọn Karma Captain. Ngày 28/5: "không thấy gì ngoài Trustpilot". Không chứng minh được ai viết; mẫu giống bình luận gieo nên không coi là bằng chứng độc lập.</li>
+<li>r/marketing 18/6/2026 (ngành game): "vài nghìn USD/tháng, đều có kỳ hạn tối thiểu"; "đa số chỉ là vòng upvote và bình luận có kịch bản"; link theo dõi bị mod xoá thì đo thế nào. r/startups 19/11/2024 (điểm 118, về agency Kosily), bình luận hàng đầu (46): "Don't use anything that calls itself a Reddit agency, period." [CONFIRMED - Arctic Shift]</li>
+</ul>
+<p>Bậc đọc: Trustpilot redditagency.com: read.sh (direct, jina, brightdata) và scroll-read.mjs --headless đều bị chặn, không ra chữ; Trustpilot Novantro: ra chữ qua WebFetch. Reddit: bậc arctic-shift, PullPush. X: bậc jina(x), api.fxtwitter.com.</p>
+<p>Rủi ro nền tảng và pháp lý (không phải ý kiến pháp lý):</p>
+<ul>
+<li>Luật Reddit: Rule 2 "tham gia chân thực... không spam hay hành vi gây rối (gồm thao túng nội dung)"; Rule 5 "chân thực... không cố ý đánh lạc hướng hay mạo danh"; xử lý gồm đình chỉ tài khoản [CONFIRMED - redditinc.com/policies/reddit-rules]. Dùng "1000+ tài khoản cũ để tránh bị phát hiện" đi ngược hai điều này [lập luận của tôi].</li>
+<li>Reddit công bố 6/7/2026 (Bloomberg qua The Star, 7/7/2026): bắt 25.000 bài và bình luận spam mỗi ngày trong quý 1, dùng mô hình ngôn ngữ bắt "hành vi giả phối hợp"; một chủ agency nói có bài của cô bị Reddit gỡ [CONFIRMED - thestar.com.my; lời chủ agency VENDOR-CLAIMED].</li>
+<li>FTC, quy tắc cuối cùng 14/8/2024: cấm đánh giá giả, đánh giá của người trong cuộc không công bố quan hệ, mua bán chỉ số ảnh hưởng giả [CONFIRMED - ftc.gov]. Hiệu lực khoảng 21/10/2024, phạt tối đa khoảng 51.744 USD mỗi vi phạm theo các hãng luật [SECONDARY, nguồn lệch nhau]. Bình luận Reddit có là "đánh giá" hay không: câu hỏi cho luật sư.</li>
+<li>Reddit được AI trích dẫn dao động. Semrush 26/8/2026: thị phần trích dẫn Reddit trong ChatGPT từ 3,8% (18/7-7/8) xuống 0,5% (14-17/8), giảm 86%; Promptwatch gọi là tạm thời, không loại trừ lỗi dữ liệu; OpenAI nói vẫn trích Reddit [CONFIRMED trang Semrush; số liệu VENDOR-CLAIMED]. Semrush 10/11/2025: ChatGPT trích Reddit trong gần 60% câu trả lời đầu tháng 8/2025, còn khoảng 10% giữa tháng 9/2025. Hai lần sụt trong 12 tháng (thước đo khác nhau).</li>
+</ul>
+<h3>3. Kích thước thị trường</h3>
+<p>Số lớn hơn để đối chiếu: Reddit thu 895 triệu USD quý 3/2026, quảng cáo 847 triệu (+54%); người dùng hằng ngày ở Mỹ giảm 2% [CONFIRMED - sec.gov 8-K 29/10/2026]. Quảng cáo quý 3 x 4 = 3.388 triệu USD/năm (tự tính, mức sàn vì quý 4 thường cao hơn). Dịch vụ Reddit organic không có báo cáo độc lập nào tôi mở được; không dùng số của agency.</p>
+<p>TAM / SAM / SOM</p>
+<p>Đơn vị: USD doanh thu agency mỗi năm; số tự tính.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:399px"><colgroup><col style="width:135px"><col style="width:174px"><col style="width:90px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>100.000 brand x 36.000 USD/năm</td>
+<td>3,6 tỷ USD</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>100.000 x 40% x 25% x 30% = 3.000 brand; x 36.000</td>
+<td>108 triệu USD</td>
+</tr>
+<tr>
+<td>SOM (12 tháng, owner)</td>
+<td>5 khách x 3.000 USD x 12 tháng</td>
+<td>180.000 USD</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>33.200 công ty SaaS toàn cầu [SECONDARY, trang tổng hợp dẫn lại nhau, dao động 30.000-42.000]. Nhân 3 để thêm app, DTC, dịch vụ: 99.600, làm tròn 100.000 [UNVERIFIED, hệ số của tôi].</li>
+<li>36.000 USD/năm = 3.000 x 12; chọn mức thấp trong dải đã công bố (thấp nhất 2.500; trung vị 5.000) để thận trọng.</li>
+<li>40% ở thị trường nói tiếng Anh tiếp cận được; 25% đủ sức trả từ 36.000 USD/năm; 30% thuộc ngành mà người mua tra Reddit hoặc AI và chịu thuê ngoài. Cả ba [UNVERIFIED, ước lượng của tôi].</li>
+<li>SOM: 5 khách là kịch bản thận trọng cho người có danh sách khách từ ba agency, phễu 20 bản audit ra 5 retainer (25%, UNVERIFIED). Để so: Reddit Agency cần khoảng 21 tháng (3/2/2025 đến 31/10/2026) để có 8 gói, với đội bán hàng, quảng cáo và 7.035 người theo dõi.</li>
+</ol>
+<p>Kiểm chéo: TAM 3,6 tỷ = 1,06 lần doanh thu quảng cáo hằng năm của cả Reddit (3,6 / 3,388), quá lớn cho dịch vụ organic; coi TAM là trần giả định mọi brand đều mua, không dùng dự báo. SAM 108 triệu = 3,2% doanh thu quảng cáo Reddit (108 / 3.388), có lý. Reddit Agency (588.195 USD doanh thu 12 tháng) chiếm 0,54% SAM (588.195 / 108.000.000). SOM 180.000 USD = 0,17% SAM (5 / 3.000 brand).</p>
+<p>Số bị từ chối in</p>
+<ul>
+<li>"Triệu lượt hiển thị", "hàng trăm bài", "Trusted by" không logo, case study chỉ là ảnh: hãng tự nói, không truy được.</li>
+<li>"20 nghìn USD/tháng, biên 70%, CAC 300" (r/microsaas, founderbase.ai): lệch với doanh thu xác minh 63.574 USD cùng tháng; CAC không có trên trang gốc.</li>
+<li>"92% thành công" (Just Reddit Agency), "60-80%" (Novantro): hãng tự công bố.</li>
+<li>"Reddit chiếm 21% trích dẫn Google AI Overviews, 47% Perplexity" (Parse): công ty bán đo AI viết, không ngày, không nguồn gốc.</li>
+<li>Các bảng "agency Reddit tốt nhất": agency tự viết, tự xếp mình (Airefs hạng 3; Reddit Agency hạng 1).</li>
+</ul>
+<h3>Khoảng trống và lối đi riêng</h3>
+<ol>
+<li>Chưa ai đo trước khi bán: bên làm Reddit không cho khách thấy thread nào được AI trích dẫn trước khi ký 3 tháng.</li>
+<li>Các bảo đảm "không đạt thì không trả" không có định nghĩa; chỗ đi vào là chỉ số đo được (tỷ lệ câu mua hàng có brand được nhắc trên ba nền tảng, đo trước và sau).</li>
+<li>Nỗi sợ ban và bị lộ là thật (D2); cam kết không tài khoản giả hợp với khách lớn và người nổi tiếng, nơi rủi ro danh tiếng nặng hơn lợi ích.</li>
+<li>Rủi ro: bản đo dễ chép (Peec, Rank Prompt có thể thêm chiều Reddit); lớp phán quyết khó chép hơn vì cần phán đoán. Nếu Reddit mất vị trí trong câu trả lời AI, nhu cầu cả nhóm giảm.</li>
+</ol>
+<h3>Ba cách xác thực rẻ nhất trước khi build</h3>
+<ol>
+<li>Tự chạy phán quyết trên 5 khách của ba agency: 30 câu hỏi x 3 nền tảng mỗi khách, đo tỷ lệ câu có Reddit và có brand; lặp mỗi tuần 4 tuần để thấy dao động. Chi phí gần bằng 0. Ngưỡng đi tiếp: ít nhất 2 trong 5 khách nói trả 500 USD (ngưỡng do tôi đặt, UNVERIFIED).</li>
+<li>Nói chuyện với 5 người đã thuê agency Reddit; tìm họ trong thread r/growmybusiness 1sgz28m và r/DigitalMarketing tháng 6/2026. Hỏi: trả bao nhiêu, có được AI nhắc không, đo bằng gì, có bị ban không. Ngưỡng: từ 3 trong 5 người không chứng minh được kết quả hoặc từng bị gỡ bài thì nỗi đau là thật.</li>
+<li>Bán trước 5 bản phán quyết 500 USD, không viết mã: gửi 20 brand đang chạy agency Reddit, bán bằng DM thủ công. Bán được ít nhất 3 trong 3 tuần thì giá và nhu cầu thật; không thì dừng.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p>Nguồn (đọc 31/10/2026 trừ khi ghi khác)</p>
+<ul>
+<li>redditagency.com (/apply, /red-removal, /best-reddit-marketing-agencies, sitemap-0.xml), novantro.com; https://trustmrr.com/startup/reddit-agency.md (đồng bộ 08:38 UTC)</li>
+<li>X: x.com/tech_nurgaliyev, tweet 2053076858082918694 và 2116211345821770105; https://pt.trustpilot.com/review/novantro.com</li>
+<li>Arctic Shift, PullPush: reddit.com/r/startups/comments/1gv46ts, r/marketing/comments/1u9dzov, r/DigitalMarketing/comments/1tzot7y, r/growmybusiness/comments/1sgz28m</li>
+<li>Giá đối thủ: các trang trong bảng D1; bài so sánh thiên lệch (SECONDARY): getairefs.com/blog/top-reddit-marketing-agencies-2026, fixaeo.com, parse.gl</li>
+<li>https://www.redditinc.com/policies/reddit-rules; https://www.thestar.com.my/tech/tech-news/2026/07/07/reddit-is-cracking-down-on-ai-marketing-slop-with-its-own-ai; https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials</li>
+<li>https://www.semrush.com/blog/reddits-citations-in-chatgpt-fall/ (26/8/2026); https://www.semrush.com/blog/most-cited-domains-ai/ (10/11/2025)</li>
+<li>https://www.sec.gov/Archives/edgar/data/0001713445/000171344526000114/earningspressreleaseq326.htm; research/seo.md</li>
+</ul>
+<p>Chưa kiểm được</p>
+<ul>
+<li>Điều khoản hoàn tiền thật và cách đo "ChatGPT gợi ý"; redditagency.com và novantro.com có là một doanh nghiệp không.</li>
+<li>Giá thật khách trả (chỉ có trung bình 4.750 USD); ai viết các bình luận và đánh giá khen Novantro.</li>
+<li>Thread r/DeadInternetTheory; G2, Capterra, Clutch; Trustpilot redditagency.com; giá gốc Redreach; giá Reddit của Single Grain.</li>
+<li>Nhiều trang đọc qua WebFetch (bản tóm tắt).</li>
+</ul>
+<p>Giả định chính</p>
+<p>100.000 brand (33.200 x 3); 36.000 USD/năm mỗi khách; 40% x 25% x 30% ra SAM 3.000 brand; 5 khách trong 12 tháng (25% từ 20 audit); các ngưỡng 2/5, 3/5, 3 trong 3 tuần do tôi đặt; Reddit vẫn được AI trích dẫn.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li>Nên theo đuổi: có điều kiện, và chỉ bản "đo và phán quyết", không phải bản làm hộ. Điều kiện: ít nhất 3 trong 20 brand mua phán quyết 500 USD trong 3 tuần.</li>
+<li>Rủi ro lớn nhất: nền tảng. Reddit bắt hành vi giả phối hợp bằng mô hình ngôn ngữ (6/7/2026), tỷ lệ Reddit được ChatGPT trích dẫn sụt hai lần trong 12 tháng, và mô hình "tài khoản cũ" đi ngược Rule 2 và 5. Kế đó là tập trung khách: 8 khách, tháng vừa rồi mất khoảng một.</li>
+<li>Bước tiếp theo rẻ nhất: tuần này chạy phán quyết trên 5 khách của ba agency và nói chuyện với 5 người đã thuê agency Reddit; chưa viết mã.</li>
+</ol>
+<p>Hợp với hồ sơ owner: owner bán phán đoán media nào đáng chi tiền, không làm creative thủ công. CSV chấm "cao" vì "bán đúng phán đoán và chiến lược phân phối, không làm creative". Kiểm lại thì chỉ đúng một nửa. Reddit Agency thật sự bán sản xuất: gói Novantro ghi 10-20 bài và 50-100 bình luận mỗi tháng mỗi khách, Karma Captain 15 bài và 300 bình luận. Nếu cả 8 khách dùng gói cỡ Novantro thì mỗi tháng khoảng 80-160 bài và 400-800 bình luận (8 x 10-20; 8 x 50-100; UNVERIFIED), cần đội viết và quản tài khoản, đúng điểm yếu "làm creative bằng tay". Phần phán đoán (thread nào, có nên chi) là phần agency này gần như không bán. Chấm đúng: "vừa" nếu sao chép bản làm hộ; "cao" chỉ với bản đo và phán quyết (C4). Khách celeb và Enterprise khó nhận bản làm hộ vì rủi ro danh tiếng khi lộ tài khoản giả; SMB hợp hơn.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://justreddagency.com/ - agency Reddit có bảng giá công khai (từ 2.500 USD/tháng); chuẩn để so giá.</li>
+<li>https://karmacaptain.com/ - retainer phẳng 10.000 và 20.000 USD/tháng; mốc giá cao.</li>
+<li>https://novantro.com/ - site chị em của Reddit Agency; FAQ nói thẳng dùng "1000+ tài khoản cũ để tránh bị phát hiện AI".</li>
+<li>https://www.semrush.com/blog/reddits-citations-in-chatgpt-fall/ - theo dõi mức Reddit được ChatGPT trích dẫn, dữ liệu cho bản "đo".</li>
+<li>https://www.thestar.com.my/tech/tech-news/2026/07/07/reddit-is-cracking-down-on-ai-marketing-slop-with-its-own-ai - Reddit siết hành vi giả phối hợp, 6/7/2026.</li>
+<li>https://pt.trustpilot.com/review/novantro.com - đợt đánh giá dồn 5 ngày; đọc được qua WebFetch dù read-blocked bị chặn.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/08-reddit-agency.md</code> (bản .md cho agent đọc)</div></main></body></html>

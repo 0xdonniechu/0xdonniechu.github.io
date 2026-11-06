@@ -1,0 +1,356 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Benchmark thời gian và công sức làm content thủ công (cho before/after của DF), 2026-11-01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Benchmark thời gian và công sức làm content thủ công (cho before/after của DF), 2026-11-01</h1>
+<p>Mục đích: số liệu thị trường (không phải số của owner) để dựng so sánh kiểu adside.ai. Mọi số kèm nguồn + ngày đọc (2026-11-01). Không đọc được = để trống. Độ tin: HIGH (khảo sát có phương pháp), MED (nguồn ngành, phương pháp mỏng), LOW (blog vendor/tự khai).
+Cách đọc: WebFetch trực tiếp cho mọi trang; Sprout PDF tải bằng curl + pdftotext (WebFetch vượt giới hạn dung lượng). Không cần read-blocked.</p>
+<h2>1. Thời gian theo bước / mỗi asset</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:684px"><colgroup><col style="width:146px"><col style="width:183px"><col style="width:220px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Bước</th>
+<th>Số</th>
+<th>Nguồn (ngày trang)</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Viết 1 bài blog</td>
+<td>3 giờ 20 phút trung bình (đỉnh 4 giờ 10 năm 2022); 92,4% dùng AI; n=1.042</td>
+<td>Orbit Media blogging statistics, khảo sát 2026, https://www.orbitmedia.com/blog/blogging-statistics/</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Viết copy 1 post social</td>
+<td>25–35 phút (chỉ phần viết, chưa gồm ý tưởng/sửa)</td>
+<td>Trích lại "MarketingProfs" trên blog thứ cấp, chưa đọc được bản gốc</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Thiết kế carousel</td>
+<td>3–5 giờ; 2–4 giờ; "1–3 giờ tối thiểu" (3 blog vendor AI)</td>
+<td>https://postnitro.ai/blog/post/ai-carousel-generator-vs-manual-design, https://blog.chatplace.io/en/stop-wasting-hours-use-an-ai-carousel-maker-to-create-expert-instagram-posts/ (tóm tắt search)</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Turnaround carousel freelancer</td>
+<td>bản nháp 48 giờ (Fiverr); 3 ngày (Contra)</td>
+<td>fiverr.com, contra.com (tóm tắt search)</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Dựng video</td>
+<td>30–60 phút dựng / 1 phút thành phẩm; outsource short 24–48 giờ turnaround</td>
+<td>Tasty Edits, cập nhật 2026-09-17, https://www.tastyedits.com/how-long-does-it-take-to-edit-a-video/</td>
+<td>MED (công ty dựng, có lợi ích)</td>
+</tr>
+<tr>
+<td>Dựng video (dải chung)</td>
+<td>talking-head/social 20–30 phút/phút; phức tạp 1–2 giờ/phút; motion graphics 8 giờ/30 giây</td>
+<td>tổng hợp search: beverlyboy.com, veedyou.com, cyberfilmschool.com</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Viết kịch bản</td>
+<td></td>
+<td>không tìm được nguồn</td>
+<td>trống</td>
+</tr>
+<tr>
+<td>Repurpose sang từng nền tảng</td>
+<td></td>
+<td>không tìm được nguồn đo giờ</td>
+<td>trống</td>
+</tr>
+<tr>
+<td>Lên lịch/đăng</td>
+<td></td>
+<td>không tìm được nguồn đo giờ</td>
+<td>trống</td>
+</tr>
+<tr>
+<td>Duyệt / sửa</td>
+<td>8 ngày + 3 phiên bản để duyệt 1 nội dung</td>
+<td>Filestage, https://filestage.io/insights (không ghi phương pháp/ngày)</td>
+<td>LOW (vendor)</td>
+</tr>
+<tr>
+<td>Duyệt / sửa</td>
+<td>4,5 ngày từ v1 đến duyệt cuối</td>
+<td>Filestage ROI, https://filestage.io/roi/ (tóm tắt search)</td>
+<td>LOW (vendor)</td>
+</tr>
+<tr>
+<td>Vòng duyệt</td>
+<td>58% dự án qua ≥5 vòng; 14% ≥10 vòng</td>
+<td>Workfront + Brand Republic, qua CMI https://contentmarketinginstitute.com/articles/accelerate-content-approval/ (khảo sát cũ, năm chưa rõ)</td>
+<td>MED</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. Thời gian hằng tháng: chiến lược, báo cáo (Sprout Social)</h2>
+<p>Nguồn: Sprout Social, The Social Media Productivity Report 2024, https://media.sproutsocial.com/uploads/2024/02/The-social-media-productivity-report_2024.pdf. Cint khảo sát &gt;500 social marketer US/UK, công ty ≥500 nhân sự, 14–28/12/2023. HIGH.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:426px"><colgroup><col style="width:166px"><col style="width:135px"><col style="width:125px"></colgroup>
+<thead>
+<tr>
+<th>Việc (social marketer full-time)</th>
+<th>Giờ/tuần</th>
+<th>×4,33 = giờ/tháng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tạo content + xin duyệt</td>
+<td>5</td>
+<td>21,7</td>
+</tr>
+<tr>
+<td>Phân tích dữ liệu + báo cáo</td>
+<td>3,8</td>
+<td>16,5</td>
+</tr>
+<tr>
+<td>Lập kế hoạch chiến lược</td>
+<td>3,6</td>
+<td>15,6</td>
+</tr>
+<tr>
+<td>Họp với lãnh đạo/team khác</td>
+<td>3,4</td>
+<td>14,7</td>
+</tr>
+<tr>
+<td>Trả lời khách</td>
+<td>3,5</td>
+<td>15,2</td>
+</tr>
+<tr>
+<td>Nghiên cứu khán giả</td>
+<td>3,1</td>
+<td>13,4</td>
+</tr>
+<tr>
+<td>Tổng giờ làm social</td>
+<td>~40 (có người &gt;60), chưa tính admin/họp</td>
+<td>~173</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lưu ý: 5 giờ/tuần cho "tạo content + duyệt" thấp so với các số theo asset ở mục 1; có thể vì team lớn chia việc cho designer/editor. Dùng làm sàn, không phải trần.</p>
+<h2>3. Công sức, burnout, việc thủ công</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:685px"><colgroup><col style="width:165px"><col style="width:165px"><col style="width:220px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Chỉ số</th>
+<th>Số</th>
+<th>Nguồn</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thấy burnout</td>
+<td>63%</td>
+<td>Sprout 2024 (trên)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Định bỏ nghề social trong 2 năm</td>
+<td>42%; muốn đổi nghề trong 12 tháng: 20%</td>
+<td>Sprout Pulse Q2 2023, trong báo cáo Sprout 2024</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Chỉ "thỉnh thoảng/hiếm khi" đủ thời gian</td>
+<td>48%</td>
+<td>Sprout 2024</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Có tool chuyên dụng → "thường đủ thời gian"</td>
+<td>59% vs 30% không tool</td>
+<td>Sprout 2024</td>
+<td>HIGH (vendor tự khảo sát)</td>
+</tr>
+<tr>
+<td>Giờ/ngày cho việc thủ công, hành chính, vận hành</td>
+<td>4 giờ</td>
+<td>HubSpot State of Marketing 2024 (n&gt;1.400, 9/2023), qua Jasper 2024-03-24 https://www.jasper.ai/blog/ai-insights-hubspot-report</td>
+<td>MED (thứ cấp)</td>
+</tr>
+<tr>
+<td>Social manager làm 41–59 giờ/tuần</td>
+<td></td>
+<td>Institute for PR, https://instituteforpr.org/dmrc-challenges-sm-professional (tóm tắt search, năm chưa rõ)</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Việt Nam</td>
+<td>không tìm được khảo sát giờ/asset; chỉ bài định tính (Brands Vietnam, Advertising Vietnam)</td>
+<td>https://advertisingvietnam.com/article/5-buoc-rut-ngan-thoi-gian-quan-ly-de-toi-uu-hoa-san-xuat-noi-dung-social-media-p23167</td>
+<td>trống</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. AI tiết kiệm bao nhiêu và đối thủ trình bày before/after</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:658px"><colgroup><col style="width:138px"><col style="width:220px"><col style="width:135px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Nguồn</th>
+<th>Tuyên bố</th>
+<th>Loại</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HubSpot 2024 (qua Jasper)</td>
+<td>GenAI tiết kiệm 3 giờ/1 nội dung, 2,5 giờ/ngày</td>
+<td>khảo sát</td>
+<td>MED</td>
+</tr>
+<tr>
+<td>HubSpot "6,1 giờ/tuần", "10–14 giờ/tuần"</td>
+<td>số trích lại mâu thuẫn nhau, chưa thấy bản gốc</td>
+<td>thứ cấp</td>
+<td>LOW, không dùng</td>
+</tr>
+<tr>
+<td>Orbit Media 2026</td>
+<td>92,4% blogger dùng AI nhưng thời gian viết vẫn 3h20</td>
+<td>khảo sát</td>
+<td>HIGH (gợi ý: AI chưa tự rút ngắn nếu vẫn làm tay)</td>
+</tr>
+<tr>
+<td>adside.ai</td>
+<td>"4.5 hours of manual work becomes 3.5 minutes": dựng campaign 2h→2 phút, viết copy 1,5h→1 phút, resize 1h→30 giây</td>
+<td>vendor, không nguồn</td>
+<td>LOW; mẫu trình bày: bảng theo bước, cộng tổng</td>
+</tr>
+<tr>
+<td>Predis.ai</td>
+<td>"75%" giảm giờ; testimonial "saved me an hour and a half"</td>
+<td>vendor</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Ocoya</td>
+<td>"Months of calendar in minutes"; so với agency retainer $2.500–5.000/tháng</td>
+<td>vendor</td>
+<td>LOW; khung so với chi phí agency, không theo giờ</td>
+</tr>
+<tr>
+<td>Holo</td>
+<td>holo.ai là domain đang rao bán; tài liệu Holo trong repo: "audit + strategy in minutes" (research/deep-holo-native.md)</td>
+<td>vendor</td>
+<td>LOW</td>
+</tr>
+<tr>
+<td>Jasper, Canva</td>
+<td>chưa đọc</td>
+<td></td>
+<td>trống</td>
+</tr>
+</tbody>
+</table></div>
+<h2>5. Mô hình "before" (làm tay) theo tháng</h2>
+<p>Giả định cơ cấu (của bài này, không phải số thị trường): 50% post ảnh + caption, 25% carousel, 25% video ngắn ~1 phút. Bước không có nguồn (kịch bản, repurpose, lên lịch, thiết kế ảnh đơn, giờ sửa) tính = 0, nên model là SÀN.</p>
+<p>Theo asset (giờ):</p>
+<ul>
+<li>Post ảnh: copy 0,4–0,6 (LOW, MarketingProfs trích lại); thiết kế ảnh đơn: trống → 0.</li>
+<li>Carousel: 2–5 (LOW, blog vendor).</li>
+<li>Video 1 phút: copy/kịch bản 0,5 (tạm dùng mức copy, LOW) + dựng 0,5–1 (Tasty Edits, MED) = 1,0–1,5.</li>
+<li>Trung bình có trọng số: thấp 0,5×0,4 + 0,25×2 + 0,25×1,0 = 0,95; cao 0,5×0,6 + 0,25×5 + 0,25×1,5 = 1,93 giờ/asset.</li>
+<li>Đối chiếu: HubSpot nói AI tiết kiệm 3 giờ/nội dung → làm tay thật có thể &gt;3 giờ/asset; model dưới đây có thể thấp.</li>
+</ul>
+<p>Theo tháng, cộng chiến lược 15,6 + báo cáo 16,5 = 32,1 giờ (Sprout, 1 người, 1 thương hiệu):</p>
+<div class="tw"><table style="table-layout:fixed;min-width:890px"><colgroup><col style="width:90px"><col style="width:105px"><col style="width:135px"><col style="width:135px"><col style="width:125px"><col style="width:135px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Gói</th>
+<th>Asset/tháng</th>
+<th>Sản xuất (×0,95–1,93)</th>
+<th>+ chiến lược &amp; báo cáo</th>
+<th>Tổng giờ/tháng</th>
+<th>≈ FTE (173 giờ/tháng)</th>
+<th>Thời gian chờ duyệt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>30</td>
+<td>28,5–57,9</td>
+<td>32,1</td>
+<td>60,6–90,0</td>
+<td>0,35–0,52</td>
+<td>4,5–8 ngày/asset, 3 phiên bản (Filestage, LOW)</td>
+</tr>
+<tr>
+<td>M</td>
+<td>90</td>
+<td>85,5–173,7</td>
+<td>32,1</td>
+<td>117,6–205,8</td>
+<td>0,68–1,19</td>
+<td>như trên</td>
+</tr>
+<tr>
+<td>L</td>
+<td>150</td>
+<td>142,5–289,5</td>
+<td>32,1</td>
+<td>174,6–321,6</td>
+<td>1,01–1,86</td>
+<td>như trên</td>
+</tr>
+</tbody>
+</table></div>
+<p>Độ tin của bảng: LOW–MED (phần chiến lược/báo cáo HIGH; phần theo asset dựa blog vendor). Không đưa giờ duyệt/sửa vào vì không có nguồn đo giờ.</p>
+<h2>6. Công sức không quy được ra giờ</h2>
+<ul>
+<li>Nhiều vai, nhiều lần chuyển tay: copywriter, designer, video editor, social manager, người duyệt (brand/lãnh đạo). Số vai trung bình: chưa tìm được nguồn.</li>
+<li>Vòng sửa: 3 phiên bản/nội dung (Filestage, LOW); 58% dự án ≥5 vòng (Workfront, MED).</li>
+<li>Chờ duyệt kéo lịch: 4,5–8 ngày (Filestage, LOW); duyệt qua email/bảng tính rời (Sprout 2024 nêu định tính).</li>
+<li>Nhảy giữa nhiều nền tảng, bảng tính, email (Sprout 2024, định tính).</li>
+<li>Burnout 63%, 42% định bỏ nghề trong 2 năm → rủi ro mất người, tuyển lại, đào tạo lại (Sprout 2024, HIGH).</li>
+<li>48% không đủ thời gian → phần chiến lược và phân tích bị cắt trước (Sprout 2024).</li>
+<li>Tuyển dụng ở VN: lương/thời gian tuyển content, designer, editor chưa nghiên cứu ở đây (trống).</li>
+</ul>
+<h2>Chỗ trống cần lấp tiếp</h2>
+<p>Giờ cho kịch bản, repurpose, lên lịch, ảnh đơn; số vai trong team; dữ liệu VN; Jasper, Canva before/after; CoSchedule, Hootsuite, Buffer bản gốc.</p><div class="src">Nguồn: <code>research/content-time-effort-benchmarks-2026-11-01.md</code> (bản .md cho agent đọc)</div></main></body></html>

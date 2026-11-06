@@ -1,0 +1,564 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MagentX case (2026-11-01)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>MagentX case (2026-11-01)</h1>
+<p>Nguồn chính: website magentx.ai (curl trực tiếp, 2026-11-01) và TikTok (read-blocked <code>read.sh</code>, rung jina/direct; <code>@magentx.studio</code> qua <code>scroll-read.mjs</code>). Facebook, YouTube: không đọc được số (để trống).</p>
+<h2>1. Định danh (độ tin: CAO)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:503px"><colgroup><col style="width:90px"><col style="width:233px"><col style="width:180px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên</td>
+<td>Công ty TNHH MagentX, MST 0319629360, cấp lần đầu 07/07/2026, Sở Tài chính TP.HCM; 23 Đường C2, Tây Thạnh, Tân Phú</td>
+<td>footer https://magentx.ai/ (2026-11-01). Chưa đối chiếu được trên masothue (tìm MST không ra kết quả)</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>magentx.vn, magentx.com.vn đều chuyển về magentx.ai</td>
+<td>curl 2026-11-01</td>
+</tr>
+<tr>
+<td>Định vị</td>
+<td>"AI Visual Company của người Việt": Academy + Production + Community, mảng AI image/video sáng tạo (không phải AI agent hay content engine)</td>
+<td>https://magentx.ai/</td>
+</tr>
+<tr>
+<td>Trùng tên khác</td>
+<td>MagnetX_AI (X, "unified layer for AI agents", Web3/token), MGX/MetaGPT X, Magentic-One (Microsoft): không liên quan VN marketing</td>
+<td>WebSearch 2026-11-01</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. Bán gì, giá bao nhiêu (FACT, https://magentx.ai/course-detail, 2026-11-01)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:614px"><colgroup><col style="width:179px"><col style="width:165px"><col style="width:135px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Sản phẩm</th>
+<th>Định dạng</th>
+<th>Giá (VND)</th>
+<th>Khai giảng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Media Mastery L1 Foundation</td>
+<td>Zoom, 1 ngày 2 buổi, 3 skill</td>
+<td>599K</td>
+<td>17/10</td>
+</tr>
+<tr>
+<td>L2 Creator &amp; Commercial (performance ads, AI hook)</td>
+<td>Zoom 1 ngày, 5 skill</td>
+<td>4.900K</td>
+<td>18/10</td>
+</tr>
+<tr>
+<td>L3 Brand Production ("phổ biến nhất")</td>
+<td>1 buổi Zoom + 2 ngày offline HCM/HN, 10 skill</td>
+<td>12.900K</td>
+<td>20/10</td>
+</tr>
+<tr>
+<td>L4 AI Filmmaker (TVC, phim ngắn)</td>
+<td>4 ngày offline HCM</td>
+<td>25.900K</td>
+<td>15/11</td>
+</tr>
+<tr>
+<td>Combo 3 khóa; "bảo lưu 100% học phí khi nâng level"; học thử miễn phí trên TikTok</td>
+<td></td>
+<td>combo: không ghi giá</td>
+<td></td>
+</tr>
+<tr>
+<td>Đào tạo riêng cho tổ chức</td>
+<td>báo giá riêng</td>
+<td>thỏa thuận</td>
+<td>https://magentx.ai/chinh-sach-gia</td>
+</tr>
+<tr>
+<td>MagentX Studio (Production)</td>
+<td>TVC AI 2–3 tuần; vận hành kênh bằng AI theo tháng; concept/KV 1–2 tuần; content series theo gói</td>
+<td>không công bố</td>
+<td>https://magentx.ai/ , /studio-hero</td>
+</tr>
+<tr>
+<td>Prompt Bank/SkillBank</td>
+<td>prompt miễn phí (Higgsfield, Seedream, Seedance, Kling)</td>
+<td>free</td>
+<td>https://magentx.ai/skillbank</td>
+</tr>
+<tr>
+<td>Membership, mentorship 1:1, workshop offline</td>
+<td>có trong menu</td>
+<td>không ghi</td>
+<td>footer</td>
+</tr>
+</tbody>
+</table></div>
+<p>Khách: cá nhân creator/marketer (khóa), thương hiệu (studio), tổ chức (đào tạo in-house).</p>
+<h2>3. Người và tín hiệu quy mô</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:724px"><colgroup><col style="width:135px"><col style="width:220px"><col style="width:165px"><col style="width:204px"></colgroup>
+<thead>
+<tr>
+<th>Chỉ số</th>
+<th>Giá trị</th>
+<th>Nguồn</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trainer chính</td>
+<td>Trần Minh Hiếu (@iamhhieu): "CEO M'Growth Media, đồng sáng lập MagentX", R&amp;D Lead; đạo diễn phim AI "Understone" (CapCut Festival)</td>
+<td>/course-detail</td>
+<td>TB (tự khai, không tìm thấy nguồn ngoài)</td>
+</tr>
+<tr>
+<td>"Founder"</td>
+<td>thư ngỏ ký "Minh Nguyễn · Founder MagentX · 08.2026"</td>
+<td>trang chủ</td>
+<td>THẤP (lệch với "Hiếu" là đồng sáng lập; có thể là cùng người hoặc placeholder)</td>
+</tr>
+<tr>
+<td>TikTok @iamhhieu</td>
+<td>147.6K followers, 2.3M likes</td>
+<td>https://www.tiktok.com/@iamhhieu (read.sh, 2026-11-01)</td>
+<td>CAO (khớp 148.2K site tự khai)</td>
+</tr>
+<tr>
+<td>TikTok @magentx.ai</td>
+<td>1,636 followers, 6,102 likes</td>
+<td>https://www.tiktok.com/@magentx.ai (read.sh, 2026-11-01)</td>
+<td>CAO</td>
+</tr>
+<tr>
+<td>Site tự khai TikTok</td>
+<td>footer 18.4K; trang Studio 128K, 9.4M views, @magentx.studio 68K</td>
+<td>/studio-hero</td>
+<td>THẤP: <code>@magentx.studio</code> "Couldn't find this account" (scroll-read 2026-11-01)</td>
+</tr>
+<tr>
+<td>Học viên</td>
+<td>"600+ học viên" (banner) / "2.400+ người đi cùng" (community) / "2.800+ học viên active" (tuyển dụng)</td>
+<td>magentx.ai, /tuyen-dung</td>
+<td>THẤP (3 con số tự mâu thuẫn)</td>
+</tr>
+<tr>
+<td>Thương hiệu</td>
+<td>"11+ thương hiệu"; case Kotex (Kimberly-Clark) TVC AI 2.1M views; logo Highlands, The Coffee House, Phúc Long, Fahasa; Thiên Mộc Hương</td>
+<td>/, /studio-hero</td>
+<td>THẤP: không có nguồn ngoài; case "Tết 2027" và tin "Midjourney v8", "Creative AI Night 09.2026" trông như nội dung mẫu</td>
+</tr>
+<tr>
+<td>Team</td>
+<td>8 vị trí mở (AI Creative 15tr+, CSKH 10tr+, sale ca tối 5tr+, kế toán, intern 2,5tr+); trainer chuyên gia chia 40–60% doanh thu cohort</td>
+<td>/tuyen-dung</td>
+<td>CAO cho tin tuyển dụng; danh sách 12 "thành viên" tên chung chung: THẤP</td>
+</tr>
+<tr>
+<td>Funding, doanh thu</td>
+<td>không tìm thấy</td>
+<td></td>
+<td>trống</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Kênh hút khách (FACT từ site + SUY LUẬN)</h2>
+<p>Fact: TikTok cá nhân founder (147.6K) là kênh lớn duy nhất kiểm được; lớp học thử trên TikTok; nhóm Zalo cộng đồng; newsletter thứ Sáu; Prompt Bank miễn phí; ladder 599K → 4,9tr → 12,9tr → 25,9tr; nút "Book tư vấn 1-1" và "Gửi brief campaign" ngay trên trang khóa học.
+Suy luận: phễu = founder-led TikTok → L1 599K (≈ 23 USD, gần đúng mốc 20 USD của DF) → upsell L3/L4 → học viên giỏi thành "Pro Track nhận job thật"/nhân sự studio → studio bán cho brand. Agency M'Growth Media của founder có lẽ là nguồn deal thật; MagentX là nhãn giáo dục mới (pháp nhân 3,5 tháng tuổi).</p>
+<h2>5. Timeline</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:352px"><colgroup><col style="width:90px"><col style="width:172px"><col style="width:90px"></colgroup>
+<thead>
+<tr>
+<th>Ngày</th>
+<th>Sự kiện</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~2024</td>
+<td>Hiếu "hai năm" làm AI Creative</td>
+<td>/course-detail</td>
+</tr>
+<tr>
+<td>07/07/2026</td>
+<td>Đăng ký pháp nhân</td>
+<td>footer</td>
+</tr>
+<tr>
+<td>08/2026</td>
+<td>Thư ngỏ founder</td>
+<td>trang chủ</td>
+</tr>
+<tr>
+<td>01/10/2026</td>
+<td>Chính sách giá có hiệu lực</td>
+<td>/chinh-sach-gia</td>
+</tr>
+<tr>
+<td>17–20/10/2026</td>
+<td>Khai giảng L1–L3; L4 15/11</td>
+<td>/course-detail</td>
+</tr>
+</tbody>
+</table></div>
+<h2>6. Bài học cho DF</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:450px"><colgroup><col style="width:230px"><col style="width:220px"></colgroup>
+<thead>
+<tr>
+<th>Học</th>
+<th>Tránh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ladder giá rõ, L1 ~23 USD 1 ngày Zoom, L3 hybrid là "phổ biến nhất": khớp funnel 20→400 USD của DF</td>
+<td>Số liệu tự mâu thuẫn (600/2.400/2.800; 18.4K/128K) và logo brand không kiểm chứng: với khách enterprise, một số sai là mất uy tín. DF chỉ ghi số có thể chứng minh</td>
+</tr>
+<tr>
+<td>Gắn CTA "gửi brief" ngay trong trang khóa: giáo dục là demo năng lực studio</td>
+<td>Để nội dung mẫu/placeholder trên site đang bán</td>
+</tr>
+<tr>
+<td>Prompt Bank miễn phí làm lead magnet; mô hình chia 40–60% cho trainer để mở rộng giảng viên</td>
+<td>Phụ thuộc 1 KOL founder: tài khoản thương hiệu chỉ 1.6K followers</td>
+</tr>
+<tr>
+<td>Khoảng trống: MagentX bán sản xuất visual theo dự án, không bán "content engine hằng ngày" có hệ thống đo lường; DF khác biệt ở vận hành liên tục + dữ liệu</td>
+<td>Cạnh tranh trực tiếp mảng AI video/TVC: thị trường này đông và giá xuống nhanh</td>
+</tr>
+</tbody>
+</table></div>
+<p>Kết luận (SUY LUẬN, độ tin TB): MagentX là studio AI visual + academy mới (2026), founder-led trên TikTok, quy mô thật còn nhỏ; đáng theo dõi như đối thủ cạnh về phễu khóa học, không phải về AI agent hay enterprise content ops.</p>
+<hr />
+<h2>Vòng 2 (2026-11-01): phễu social → khóa → service, kiểm chứng khách A-brand</h2>
+<p>Cách đọc: HTML + JS bundle magentx.ai bằng curl (2026-11-01); TikTok bằng <code>read.sh</code> (rung jina) và <code>scroll-read.mjs</code> (Chromium, chưa đăng nhập); Instagram ra trang đăng nhập; Facebook <code>read.sh</code> trả rỗng; DuckDuckGo chặn bằng challenge (dừng, không thử lại). Ngày đăng video tính từ ID video TikTok (ID &gt;&gt; 32 = Unix time).</p>
+<h3>2.1 Social (độ tin: số theo dõi CAO, nội dung THẤP vì không xem được lưới video)</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:587px"><colgroup><col style="width:175px"><col style="width:220px"><col style="width:192px"></colgroup>
+<thead>
+<tr>
+<th>Tài khoản</th>
+<th>Đọc được</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TikTok @iamhhieu</td>
+<td>147.6K followers, 2.3M likes, 235 following, "No bio yet" (không có link bio)</td>
+<td>https://www.tiktok.com/@iamhhieu (scroll-read, 2026-11-01)</td>
+</tr>
+<tr>
+<td>Video thấy được khi chưa đăng nhập (chỉ 2)</td>
+<td>"Ngoi lên sau 5 năm ở ẩn…" #aiart, 2026-03-12, số hiển thị 1.760; "Nói chung cũng oke" #pov #vlog, 2025-09-19, 914</td>
+<td>cùng nguồn. Không rõ số hiển thị là lượt xem hay lượt thích</td>
+</tr>
+<tr>
+<td>TikTok @magentx.ai</td>
+<td>1.636 followers, 6.102 likes; bio "Cộng đồng AI Visual &amp; Creative… Education × Production × Community. magentX.ai"</td>
+<td>https://www.tiktok.com/@magentx.ai (read.sh, 2026-11-01)</td>
+</tr>
+<tr>
+<td>Instagram, Facebook, YouTube, Threads</td>
+<td>không đọc được (đăng nhập hoặc trả rỗng)</td>
+<td>trống</td>
+</tr>
+</tbody>
+</table></div>
+<p>Top 10 video, nhịp đăng, hook, CTA từng video: <strong>không đọc được</strong> (TikTok chỉ hiện 2 video khi chưa đăng nhập; không đăng nhập theo luật repo). Để trống. Video top mà site tự khai (1.2M "Nhân bản Creative trong 15 phút", 2.1M "KOC ảo 100% AI tập 04", 2.8M "Brand kit 1 ngày"…) gắn với @magentx.studio, mà TikTok báo tài khoản này không tồn tại: độ tin THẤP.
+Suy luận (THẤP): hashtag #aiart cùng video 2026-03 "sau 5 năm ở ẩn" cho thấy Hiếu chuyển kênh cá nhân sang AI art khoảng tháng 3/2026; lượng 147.6K followers có lẽ tích từ thời làm KOL trước đó (site ghi "cựu KOL tại Hàn Quốc", JS bundle <code>introB</code>).</p>
+<h3>2.2 Social → khóa (FACT từ site, trừ khi ghi khác)</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:469px"><colgroup><col style="width:90px"><col style="width:239px"><col style="width:140px"></colgroup>
+<thead>
+<tr>
+<th>Bước</th>
+<th>Có gì</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lead magnet</td>
+<td>Prompt Bank/SkillBank miễn phí, copy prompt không cần đăng ký; newsletter thứ Sáu ("1 bài, 3 case Việt, lịch workshop")</td>
+<td>/skillbank, footer</td>
+</tr>
+<tr>
+<td>Học thử</td>
+<td>"Lớp học thử miễn phí: Học thử ngay trên TikTok" (nhiều khả năng là live, chưa kiểm được)</td>
+<td>/course-detail</td>
+</tr>
+<tr>
+<td>Thu lead</td>
+<td>Nhóm Zalo (zalo.me/g/…), nút "Vào cộng đồng"; form tên + "Email hoặc Zalo"; ghi chú form "team gửi lịch học chi tiết + hợp đồng qua Zalo trong 24h. Giữ chỗ chỉ mất 30 giây"</td>
+<td>trang chủ, JS bundle</td>
+</tr>
+<tr>
+<td>Cửa vào</td>
+<td>L1 599K, 1 ngày Zoom</td>
+<td>/course-detail</td>
+</tr>
+<tr>
+<td>Upsell</td>
+<td>L2 4,9tr → L3 12,9tr → L4 25,9tr; "bảo lưu 100% học phí khi nâng level"; combo 3 khóa; "Tiết kiệm 3.497K" (giá gạch 4.096K)</td>
+<td>/course-detail</td>
+</tr>
+<tr>
+<td>Khan hiếm, gấp</td>
+<td>dải ticker "Mở đăng ký"; "Bạn và 26 người khác đang xem khóa này"; cấu hình JS có <code>offer:{countdown:"course"}</code> và cờ <code>trialCountdown</code>; "Nhận brief tháng này · Số lượng dự án giới hạn"</td>
+<td>trang chủ, JS bundle</td>
+</tr>
+<tr>
+<td>Khóa khác</td>
+<td>"Photo Direction for Brands" với photographer Studio, bài tập là "brand thật của chính bạn"</td>
+<td>JS bundle</td>
+</tr>
+</tbody>
+</table></div>
+<p>Suy luận (TB): bộ đếm "26 người đang xem" có lẽ là số tĩnh/giả lập; nếu đúng, đây là chiêu khan hiếm mà khách enterprise sẽ thấy ngay.</p>
+<h3>2.3 Khóa → service</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:600px"><colgroup><col style="width:155px"><col style="width:220px"><col style="width:135px"><col style="width:90px"></colgroup>
+<thead>
+<tr>
+<th>Điểm nối</th>
+<th>Có gì</th>
+<th>Nguồn</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch tới học viên</td>
+<td>Showcase trộn sản phẩm "học viên và MagentX AI Studio"; "Pro Track: portfolio nhận job thật"; tuyển trainer chia 40–60% doanh thu cohort + dự án</td>
+<td>trang chủ, /tuyen-dung</td>
+<td>CAO (lời site)</td>
+</tr>
+<tr>
+<td>Pitch tới brand</td>
+<td>"Đối tác sáng tạo", quy trình 5 bước (Direction → Art → Asset System → AI Production → Delivery), "Gửi brief campaign", "Book tư vấn 1-1"</td>
+<td>/studio-hero</td>
+<td>CAO</td>
+</tr>
+<tr>
+<td>Form brief</td>
+<td>/lien-he?chu-de=production: tên, Email hoặc Zalo, nội dung; phản hồi 24h</td>
+<td>/lien-he, JS</td>
+<td>CAO</td>
+</tr>
+<tr>
+<td>Đào tạo tổ chức</td>
+<td>giá theo hợp đồng riêng</td>
+<td>/chinh-sach-gia</td>
+<td>CAO</td>
+</tr>
+<tr>
+<td>Học viên đưa công ty mình thành khách</td>
+<td>bài tập trên "brand thật của chính bạn" là cầu nối; chưa có bằng chứng ca nào thành hợp đồng</td>
+<td>JS bundle</td>
+<td>suy luận THẤP</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.4 Khách A-brand: kiểm chứng</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:616px"><colgroup><col style="width:165px"><col style="width:231px"><col style="width:220px"></colgroup>
+<thead>
+<tr>
+<th>Thương hiệu</th>
+<th>Bằng chứng tìm thấy</th>
+<th>Kết luận</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MoMo</td>
+<td>Chỉ là logo trong dải "Đồng hành cùng thương hiệu Việt" trên /studio-hero (alt="MoMo", biến <code>logoMomo</code> trong JS). Không có case, video, bài báo hay post gắn tag nào</td>
+<td><strong>CHƯA KIỂM CHỨNG</strong>. WebSearch "MagentX MoMo", "iamhhieu MoMo" (2026-11-01) không ra gì</td>
+</tr>
+<tr>
+<td>Vinamilk, PNJ, Yody, Katinat, Phúc Long, Fahasa, Biti's, Highlands, The Coffee House</td>
+<td>Cùng dải logo, không case</td>
+<td>CHƯA KIỂM CHỨNG</td>
+</tr>
+<tr>
+<td>Kotex (Kimberly-Clark)</td>
+<td>Case duy nhất có tên + số: "TVC AI · brand production", "2.1M Views TVC Kotex", "Hậu trường TVC Kotex AI"; JS: "Anh [Hiếu] sản xuất TVC cho Kotex"</td>
+<td>Tự khai, CHƯA KIỂM CHỨNG. Báo ngành chỉ ghi agency Kotex là Mindshare/Ogilvy (https://advertisingvietnam.com/article/kotex-bien-ap-luc-kinh-nguyet-thanh-suc-manh-cua-nguoi-phu-nu-voi-chien-dich-lam-chu-dong-chay-cua-b , ngày bài không rõ); không tìm thấy TVC AI Kotex 2026</td>
+</tr>
+<tr>
+<td>Thiên Mộc Hương</td>
+<td>Ví dụ trong quy trình 5 bước</td>
+<td>CHƯA KIỂM CHỨNG</td>
+</tr>
+<tr>
+<td>M'Growth Media</td>
+<td>Ghi là agency của Hiếu ("Video Ads, chiến dịch TikTok") và là một ô showcase "Performance ads · TikTok"</td>
+<td>Không tìm thấy web, pháp nhân hay hồ sơ nào bên ngoài (WebSearch 2026-11-01)</td>
+</tr>
+<tr>
+<td>Understone (CapCut AI Festival)</td>
+<td>Site ghi là phim AI 10 phút "dự thi"; CapCut CRE[AI]TE 2026 có thật, hạn nộp 10/08/2026 (https://www.studentcompetitions.com/competitions/capcut-ai-festival-creaite-2026)</td>
+<td>Chỉ "dự thi", không có tên trong danh sách giải đã tìm</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Giả thuyết "quan hệ brand đến từ M'Growth Media, không từ pháp nhân mới"</strong>: ỦNG HỘ MỘT PHẦN (độ tin TB). Fact: case có tên duy nhất (Kotex) được ghi là việc của Hiếu, đặt trong phần lý lịch trainer, cạnh chức danh CEO M'Growth; pháp nhân MagentX mới 4 tháng (07/07/2026). Không kiểm chứng được: chính các quan hệ đó, kể cả MoMo. Dải logo nhiều khả năng là "logo wall" vay uy tín: cá nhân hoặc agency từng làm, hoặc mục tiêu.</p>
+<h3>2.5 Bài học cho DF (enterprise, agency trước)</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:454px"><colgroup><col style="width:234px"><col style="width:220px"></colgroup>
+<thead>
+<tr>
+<th>Học</th>
+<th>Tránh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vay uy tín bằng <strong>người</strong>, không bằng logo: đặt case của founder/agency cũ ngay trong trang khóa, ghi rõ "làm dưới tên agency X"</td>
+<td>Logo wall không có case đi kèm: khách enterprise (MoMo, Vinamilk) kiểm được, và một logo không thật làm hỏng cả deal</td>
+</tr>
+<tr>
+<td>Ladder giá + "bảo lưu học phí khi nâng level" làm giảm rủi ro mua bậc cao</td>
+<td>Bộ đếm "26 người đang xem" và countdown: hợp B2C, phản tác dụng với giám đốc marketing</td>
+</tr>
+<tr>
+<td>Đặt form brief/Zalo ngay trong trang khóa: mỗi học viên là một lead dịch vụ</td>
+<td>Số social tự khai không khớp số thật (128K so với 1.6K)</td>
+</tr>
+<tr>
+<td>Bài tập trên brand thật của học viên = demo dịch vụ không tốn phí</td>
+<td>Dựa vào một KOL cá nhân; tài khoản thương hiệu không lớn lên</td>
+</tr>
+<tr>
+<td>Cho DF: mỗi case agency của owner (10 năm, 3 agency) cần một trang có tên client, phạm vi, năm, và sự đồng ý của client; pháp nhân DF ghi rõ là đơn vị con hoặc đối tác của agency để kế thừa hồ sơ năng lực</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2>Vòng 3: AI influencer "Ayni Có Gu" (owner gửi link, đọc 2026-11-01)</h2>
+<p>Nguồn: owner gửi https://vt.tiktok.com/ZSgwktDPP/ → https://www.tiktok.com/@aynineee/video/7676072798678256914. Đọc bằng read-blocked <code>read.sh</code> (rung: jina), không đăng nhập. Ngày video tính từ ID video.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:543px"><colgroup><col style="width:158px"><col style="width:220px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+<th>Độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tài khoản</td>
+<td>Ayni Có Gu (@aynineee)</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Followers / Likes / Following</td>
+<td>10.3K / 272.2K / 40</td>
+<td>A (TikTok, 2026-11-01)</td>
+</tr>
+<tr>
+<td>Video owner gửi</td>
+<td>đăng 2026-08-20; caption "Hẹn hò thì ai nên là người trả? #aynicogu #magentx #outfitideas"; 1,3M view, 113,1K tim, 34,3K share, 690 bình luận</td>
+<td>A (TikTok embed API, 2026-11-01)</td>
+</tr>
+<tr>
+<td>Brand trong video</td>
+<td><strong>MoMo, tính năng Quỹ Nhóm</strong>: khung cuối hiện chữ "Cùng lập Quỹ Nhóm với MoMo", logo MoMo, màn hình app; caption không gắn tên MoMo</td>
+<td>A (xem clip: tải bằng yt-dlp, cắt khung bằng ffmpeg, nghe bằng whisper, 2026-11-01)</td>
+</tr>
+<tr>
+<td>Video thấy được khi chưa đăng nhập</td>
+<td>2026-09-08, 1.590 view, caption gắn #aynicogu #magentx #outfitideas</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Do MagentX tạo</td>
+<td>owner nói; hashtag #magentx ủng hộ</td>
+<td>B</td>
+</tr>
+</tbody>
+</table></div>
+<p>Suy luận [UNVERIFIED]: MagentX dùng một AI influencer làm bằng chứng sống cho năng lực studio (tạo nhân vật AI, outfit/lifestyle), vừa là nội dung kéo học viên, vừa là sản phẩm mẫu để bán cho brand (KOL ảo thay KOL thật). Clip MoMo (1,3M view, gấp khoảng 126 lần số followers 10,3K) cho thấy brand lớn đã trả tiền cho KOL ảo của MagentX, và lượt xem đến từ đề xuất của TikTok chứ không từ tệp followers. Brand không gắn tag trong caption: có thể là quảng cáo lồng ghép.</p>
+<h3>Xem clip (60 giây)</h3>
+<p>Cách xem: yt-dlp tải clip, ffmpeg cắt 1 khung mỗi 1-2 giây, whisper (model small, tiếng Việt) chép lời. Phụ đề trên clip dùng để sửa chỗ whisper nghe sai ("quỹ").</p>
+<div class="tw"><table style="table-layout:fixed;min-width:490px"><colgroup><col style="width:90px"><col style="width:225px"><col style="width:175px"></colgroup>
+<thead>
+<tr>
+<th>Giây</th>
+<th>Nội dung</th>
+<th>Vai trò</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-2</td>
+<td>Chữ lớn "ANH LÀ CON TRAI" chồng lên cảnh nhà hàng, phục vụ bưng tráng miệng</td>
+<td>Hook: gợi tranh cãi giới</td>
+</tr>
+<tr>
+<td>2-40</td>
+<td>Hẹn hò, cãi nhau ai trả: "anh là con trai để anh trả", "kiểu như em không tự trả nổi", "hay là sợ người ta nói con trai để bạn gái trả tiền", "hông thì share bill đi"; phục vụ chen: "ai trả cũng được, quan trọng là có trả"</td>
+<td>Xung đột kéo bình luận và share</td>
+</tr>
+<tr>
+<td>40-52</td>
+<td>Anh lấy điện thoại: "Anh trả bằng QUỸ"; cô "muốn làm gì làm đi"</td>
+<td>Sản phẩm đến như lời giải</td>
+</tr>
+<tr>
+<td>52-56</td>
+<td>Màn hình app, chữ "Cùng lập Quỹ Nhóm với MoMo", logo MoMo, hình minh hoạ hai người</td>
+<td>Lộ brand, khoảng 7% thời lượng cuối</td>
+</tr>
+<tr>
+<td>56-60</td>
+<td>Cô: "Góp QUỸ thôi!!!"; phục vụ: "Vậy nãy giờ cãi cho vui à?"</td>
+<td>Twist hài, chốt thông điệp</td>
+</tr>
+</tbody>
+</table></div>
+<p>Đọc clip (suy luận của tôi):</p>
+<ul>
+<li>Đây là quảng cáo lồng trong mini drama: 52 giây đầu không có brand, chỉ có tranh cãi đời thường mà ai cũng có ý kiến. Đó là lý do 34,3K share trên 1,3M view.</li>
+<li>Brand chỉ xuất hiện ở khoảng 8 giây cuối, như lời giải cho xung đột, nên người xem không lướt qua vì "thấy quảng cáo".</li>
+<li>Hình ảnh chất lượng phim, nhiều nhân vật, nhiều góc máy; nếu toàn bộ do AI tạo (owner nói Ayni là AI influencer) thì chi phí sản xuất thấp hơn nhiều so với quay thật. Tôi không xác minh được clip nào là AI hoàn toàn.</li>
+</ul><div class="src">Nguồn: <code>research/magentx-case-2026-11-01.md</code> (bản .md cho agent đọc)</div></main></body></html>

@@ -1,0 +1,385 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Bộ chạy hai thử nghiệm DF (2026-11-02)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Bộ chạy hai thử nghiệm DF (2026-11-02)</h1>
+<p>Hai thử nghiệm này lấy từ mục 7 của <a href="../research/sweep-winning-business-majors-full-2026-11-02.html"><code>research/sweep-winning-business-majors-full-2026-11-02.md</code></a>. Mỗi thử nghiệm ghi rõ ai làm bước nào.</p>
+<ul>
+<li><strong>Owner làm:</strong> đăng nhập, cấp quyền trang, nhắn hoặc gọi khách, nhận cọc. Đây là các bước ra bên ngoài hoặc cần tài khoản thật.</li>
+<li><strong>Agent làm:</strong> chuẩn bị, ghi số liệu, tính kết quả.</li>
+</ul>
+<p>Ngưỡng đạt và ngưỡng dừng được chốt ngay từ đầu. Không đổi ngưỡng sau khi đã thấy số.</p>
+<h2>Thử nghiệm 1: reach khi đăng qua API so với đăng tay</h2>
+<p><strong>Giả thuyết.</strong> Đăng qua đường của DF vẫn giữ được reach.</p>
+<ul>
+<li>Đạt: reach qua DF bằng ít nhất 80% reach khi đăng tay.</li>
+<li>Dừng: dưới 50%.</li>
+<li>Từ 50% đến 80%: chỉnh cách đăng rồi chạy lại một vòng.</li>
+</ul>
+<p><strong>Thiết kế:</strong></p>
+<ul>
+<li>Dùng 3 trang Facebook. Ưu tiên trang của khách thử. Nếu chưa có khách, dùng trang của owner hoặc trang của một đối tác thân.</li>
+<li>Chạy 2 tuần, mỗi trang 1 bài mỗi ngày, tổng 14 bài mỗi trang.</li>
+<li>Chia bài theo cặp. Hai bài trong một cặp cùng dạng (ảnh đơn, carousel hoặc reel) và cùng độ dài. Trong cặp, một bài đăng tay trên app hoặc Meta Business Suite, bài kia đăng qua Graph API, tức đường DF hoặc Postiz.</li>
+<li>Tung đồng xu để chọn bài nào đi đường nào. Cặp sau đảo lại.</li>
+<li>Đăng ở cùng khung giờ, ngày chẵn và ngày lẻ xen kẽ, để giờ đăng không làm lệch kết quả.</li>
+<li>Không chạy quảng cáo cho bài nào trong thời gian thử. Không nhờ người tương tác.</li>
+<li><strong>Tuân thủ 5 nguyên tắc vệ sinh file gốc &amp; làm ấm tài khoản (cập nhật 2026-11-04):</strong> Xem chi tiết tại <a href="../research/df-guideline-multiplatform-originality-2026-11-04.html"><code>research/df-guideline-multiplatform-originality-2026-11-04.md</code></a> (chỉ dùng file Master sạch không watermark, căn chữ trong vùng an toàn chung, viết lại caption theo nền tảng, đăng đồng thời, và chỉ gắn API vào tài khoản đã đăng tay &gt;1–2 tuần đạt &gt;1.000 views/bài).</li>
+</ul>
+<p><strong>Chỉ số:</strong></p>
+<ul>
+<li>Chỉ số chính: reach (số người tiếp cận) sau 48 giờ, đọc trong Meta Business Suite &gt; Insights.</li>
+<li>Chỉ số phụ: lượt tương tác và lượt xem 3 giây (với reel).</li>
+<li>Cách tính: lấy trung vị của tỉ lệ reach đường API chia reach đường tay, theo từng cặp, trên cả 3 trang.</li>
+</ul>
+<p><strong>Bảng ghi</strong> (file <code>research/df-exp1-reach-log.csv</code>, agent tạo khi có bài đầu tiên):</p>
+<p><code>Trang, Cặp, Ngày, Giờ đăng, Dạng bài, Đường (tay/API), Công cụ API, Reach 48h, Tương tác 48h, View 3s, Ghi chú</code></p>
+<p><strong>Ai làm gì:</strong></p>
+<div class="tw"><table style="table-layout:fixed;min-width:341px"><colgroup><col style="width:176px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Bước</th>
+<th>Ai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chọn 3 trang, cấp quyền admin, nối Graph API (Meta app hoặc Postiz)</td>
+<td>Owner</td>
+</tr>
+<tr>
+<td>Soạn 42 bài theo cặp (14 cặp × 3 trang)</td>
+<td>Agent hoặc DF engine, owner duyệt</td>
+</tr>
+<tr>
+<td>Đăng bài tay theo lịch</td>
+<td>Owner hoặc người của khách</td>
+</tr>
+<tr>
+<td>Đăng bài qua API</td>
+<td>Agent chạy lịch, chỉ sau khi owner đã cấp token</td>
+</tr>
+<tr>
+<td>Đọc reach 48 giờ và ghi vào bảng</td>
+<td>Owner chụp màn hình Insights; agent chép số vào bảng</td>
+</tr>
+<tr>
+<td>Tính kết quả, kết luận đạt, dừng hay chạy lại</td>
+<td>Agent</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Rủi ro:</strong></p>
+<ul>
+<li>Mẫu nhỏ: 42 cặp. Kết quả chỉ là tín hiệu, chưa phải kết luận thống kê.</li>
+<li>Facebook có thể đổi thuật toán trong thời gian thử. Thời gian thử đã có ghi trong bảng.</li>
+</ul>
+<h2>Thử nghiệm 2: chào DF Partner gói S cho 20 khách ICP</h2>
+<p><strong>Giả thuyết.</strong> Doanh nghiệp và agency Việt Nam trả 12–15 triệu VND/tháng cho gói S, khoảng 30 asset mỗi tháng (giá đề xuất trong <a href="../research/df-partner-pricing-2026-11-01.html"><code>research/df-partner-pricing-2026-11-01.md</code></a>).</p>
+<ul>
+<li>Đạt: ít nhất 3 khách đặt cọc.</li>
+<li>Dừng: 0 khách sau 20 cuộc chào.</li>
+<li>1 hoặc 2 khách: giữ giá, chỉnh lời chào, chào tiếp 20 khách nữa.</li>
+</ul>
+<p><strong>Danh sách khách.</strong> File <code>research/df-partner-prospects-2026-11-02.csv</code> gồm 10 agency và 10 brand, chỉ ghi thông tin liên hệ mà công ty tự công bố. Owner duyệt danh sách trước khi chào.</p>
+<p><strong>Lời chào</strong> (owner gửi qua kênh công khai của công ty):</p>
+<blockquote>
+<p>Chào anh/chị [tên], em là [tên owner] bên DF.
+Em thấy trang [tên trang] [tín hiệu cụ thể, ví dụ "hai tuần nay chưa có bài mới"].
+DF làm content đăng mỗi ngày cho doanh nghiệp: AI làm chính, người duyệt. Gói S có 30 bài mỗi tháng, giá 12–15 triệu, rẻ hơn khoảng 40–50% so với thuê agency.
+Em làm thử miễn phí 5 bài cho trang của anh/chị trong tuần này. Nếu anh/chị ưng thì mình bắt đầu tháng đầu bằng một khoản cọc.
+Anh/chị có 15 phút nói chuyện không ạ?</p>
+</blockquote>
+<p>Với agency, câu thứ ba đổi thành: "DF chạy content dưới thương hiệu của agency, tính phí theo mỗi brand." Đây là kênh white label.</p>
+<p><strong>Phễu và cách ghi</strong> (file <code>research/df-exp2-pipeline.csv</code>):</p>
+<p><code>Tên, Loại, Ngày chào, Kênh, Trả lời (có/không), Gọi (có/không), Nhận bài thử, Lý do từ chối (câu nguyên văn), Cọc (VND), Ngày cọc</code></p>
+<p>Câu từ chối được chép nguyên văn. Đây là bằng chứng khách hàng mà báo cáo đang thiếu (mục 4).</p>
+<p><strong>Ai làm gì:</strong></p>
+<div class="tw"><table style="table-layout:fixed;min-width:350px"><colgroup><col style="width:175px"><col style="width:175px"></colgroup>
+<thead>
+<tr>
+<th>Bước</th>
+<th>Ai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lập danh sách 20 khách</td>
+<td>Agent, xong ngày 2026-11-02</td>
+</tr>
+<tr>
+<td>Duyệt danh sách và lời chào</td>
+<td>Owner</td>
+</tr>
+<tr>
+<td>Gửi lời chào, gọi, nhận cọc</td>
+<td>Owner. Agent không liên hệ khách</td>
+</tr>
+<tr>
+<td>Làm 5 bài thử cho khách nhận lời</td>
+<td>DF engine, owner duyệt</td>
+</tr>
+<tr>
+<td>Ghi phễu, gom lý do từ chối, kết luận</td>
+<td>Agent, từ ghi chú owner gửi lại</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Thời gian:</strong> 2 tuần, chạy song song với thử nghiệm 1. Khách nhận bài thử có thể dùng luôn làm trang cho thử nghiệm 1.</p>
+<h2>Sau hai tuần</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:338px"><colgroup><col style="width:135px"><col style="width:203px"></colgroup>
+<thead>
+<tr>
+<th>Kết quả</th>
+<th>Quyết định</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Đạt cả hai</td>
+<td>Mở bán gói S, chuẩn bị gói M</td>
+</tr>
+<tr>
+<td>TN1 đạt, TN2 dừng</td>
+<td>Có công nghệ, chưa có người mua ở mức giá này: xem lại ICP hoặc giá</td>
+</tr>
+<tr>
+<td>TN1 dừng, TN2 đạt</td>
+<td>Bán được, nhưng phải đăng tay hoặc qua người: tính lại biên lợi nhuận</td>
+</tr>
+<tr>
+<td>Dừng cả hai</td>
+<td>Quay lại câu hỏi gốc trong thesis</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Phụ lục: danh sách 20 khách (chờ owner duyệt)</h2>
+<p>Agent soạn từ nguồn công khai ngày 2026-11-02. Chưa kiểm tần suất đăng bài vì Facebook chặn trình đọc, và chưa kiểm số nhân viên. Tín hiệu lấy từ website. Chưa liên hệ khách nào.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:1011px"><colgroup><col style="width:136px"><col style="width:90px"><col style="width:135px"><col style="width:91px"><col style="width:220px"><col style="width:173px"><col style="width:166px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Loại</th>
+<th>Ngành</th>
+<th>Thành phố</th>
+<th>Tín hiệu</th>
+<th>Liên hệ công khai</th>
+<th>Nguồn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GOBRANDING JSC</td>
+<td>agency</td>
+<td>Marketing/social</td>
+<td>TP.HCM</td>
+<td>Bán "Dịch vụ Mạng xã hội" và "Content Social" cho khách hàng</td>
+<td>KD 0919 95 73 79; CSKH 0249 9999 179; contact@gobranding.com.vn</td>
+<td>https://gobranding.com.vn/lien-he/</td>
+</tr>
+<tr>
+<td>Fanscom Agency</td>
+<td>agency</td>
+<td>Social/content</td>
+<td>TP.HCM</td>
+<td>Dịch vụ Brand Channels (content, vận hành kênh) cho nhiều brand lớn (Unilever, Coca-Cola, PNJ...)</td>
+<td>028 3535 7356; phi@fanscom.vn (email duy nhất trên web)</td>
+<td>https://fanscom.vn/</td>
+</tr>
+<tr>
+<td>CleverAds</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>Hà Nội</td>
+<td>Case study ghi rõ dịch vụ "Quản lý Fanpage" cho khách (Reski Hotpot)</td>
+<td>HN +84 919 01 8448; HCM +84 919 02 8448; contact@cleverads.vn</td>
+<td>https://cleverads.vn/</td>
+</tr>
+<tr>
+<td>SOTA Group</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>TP.HCM</td>
+<td>Bán gói quản trị fanpage 3,49-8,2 triệu (10-30 bài) - giá thấp, có thể cần nguồn content</td>
+<td>0939 857 111; info@sotagroup.vn</td>
+<td>https://sotagroup.vn/quan-tri-fanpage</td>
+</tr>
+<tr>
+<td>VIRA Việt Nam</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>TP.HCM</td>
+<td>Gói quản trị fanpage 3,79-9,79 triệu/tháng (10-25 bài)</td>
+<td>0923 966 579; 1900 2206; info@vira.vn</td>
+<td>https://www.vira.vn/dich-vu-quan-tri-fanpage/</td>
+</tr>
+<tr>
+<td>ITIFY Marketing Agency</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>Đà Nẵng</td>
+<td>Gói quản trị fanpage 15-26 bài/tháng; bảng giá trên web ghi sai số</td>
+<td>0858 205 205; 0825 156 156</td>
+<td>https://itify.vn/dich-vu-quan-tri-fanpage/</td>
+</tr>
+<tr>
+<td>DYM Vietnam</td>
+<td>agency</td>
+<td>Marketing (Nhật)</td>
+<td>TP.HCM</td>
+<td>Gói vận hành fanpage thuê ngoài trọn gói, giá VN thương lượng</td>
+<td>028 3838 6675</td>
+<td>https://www.dym-vietnam.com/services/snsoa/facebookoa/</td>
+</tr>
+<tr>
+<td>Peak Agency</td>
+<td>agency</td>
+<td>Marketing/social</td>
+<td>Hà Nội</td>
+<td>Gói quản trị fanpage 2-8 triệu/tháng gồm 15-25 bài + video</td>
+<td>0948 399 636; peakagency68@gmail.com (email công ty đăng trên web)</td>
+<td>https://peakagency.vn/quan-tri-fanpage/</td>
+</tr>
+<tr>
+<td>ADSMO</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>Hải Phòng</td>
+<td>Gói quản trị fanpage 3,5-7,5 triệu, hợp đồng tối thiểu 3 tháng</td>
+<td>0356 105 388; kinhdoanh@adsmo.vn; info@adsmo.vn</td>
+<td>https://adsmo.vn/en/quote/facebook-fanpage-management-quote/</td>
+</tr>
+<tr>
+<td>KL Marketing</td>
+<td>agency</td>
+<td>Digital marketing</td>
+<td>TP.HCM</td>
+<td>Gói chăm sóc fanpage 10-30 content/tháng</td>
+<td>0369 322 022; admin@klmarketing.vn</td>
+<td>https://klmarketing.vn/dich-vu-cham-soc-fanpage-facebook/</td>
+</tr>
+<tr>
+<td>Sao Thái Dương</td>
+<td>brand</td>
+<td>Mỹ phẩm/dược</td>
+<td>Hà Nội</td>
+<td>Có FB + TikTok; mục tin tức trên web không hiện ngày đăng</td>
+<td>1800 1799; lienhe@thaiduong.com.vn</td>
+<td>https://saothaiduong.com.vn/</td>
+</tr>
+<tr>
+<td>Cỏ Mềm</td>
+<td>brand</td>
+<td>Mỹ phẩm</td>
+<td>Hà Nội</td>
+<td>Không liên kết TikTok trên web; tin mới nhất 10/08/2026</td>
+<td>1800 646 890</td>
+<td>https://comem.vn/</td>
+</tr>
+<tr>
+<td>Cocoon (Công ty CP Y&amp;B)</td>
+<td>brand</td>
+<td>Mỹ phẩm</td>
+<td>TP.HCM</td>
+<td>Blog mới nhất 18/06/2026 (&gt;4 tháng); web không liên kết TikTok; nút Liên hệ trỏ về trang chủ</td>
+<td>1900 9300</td>
+<td>https://www.cocoonvietnam.com/</td>
+</tr>
+<tr>
+<td>Jaxtina English Center</td>
+<td>brand</td>
+<td>Giáo dục</td>
+<td>Hà Nội</td>
+<td>Khoảng 9-11 cơ sở HN/HCM, có FB + TikTok; cỡ vừa</td>
+<td>1900 63 65 64; support@jaxtina.com</td>
+<td>https://jaxtina.com/</td>
+</tr>
+<tr>
+<td>Langmaster</td>
+<td>brand</td>
+<td>Giáo dục</td>
+<td>Hà Nội</td>
+<td>Có FB + TikTok; mục tin tức không hiện bài có ngày</td>
+<td>0962 154 139; info@langmaster.edu.vn</td>
+<td>https://langmaster.edu.vn/</td>
+</tr>
+<tr>
+<td>Ms Hoa Giao Tiếp (IMAP Việt Nam)</td>
+<td>brand</td>
+<td>Giáo dục</td>
+<td>Hà Nội</td>
+<td>Nút TikTok trên web trỏ nhầm sang ảnh prnt.sc - dấu hiệu thiếu người quản lý kênh</td>
+<td>0934 489 666</td>
+<td>https://mshoagiaotiep.com/</td>
+</tr>
+<tr>
+<td>Bobapop Tea Bar</td>
+<td>brand</td>
+<td>F&amp;B</td>
+<td>TP.HCM</td>
+<td>Hơn 150 cửa hàng nhưng icon social ở footer để link mẫu "http://url", email "your@email"</td>
+<td>096 8603588</td>
+<td>https://bobapop.com.vn/</td>
+</tr>
+<tr>
+<td>Cơm tấm Cali (Ngọc Lễ F&amp;B)</td>
+<td>brand</td>
+<td>F&amp;B</td>
+<td>TP.HCM</td>
+<td>Tin tức trên web dừng ở sự kiện 2023 (Tết Quý Mão); không có TikTok</td>
+<td>1900 2254; info@comtamcali.com</td>
+<td>https://comtamcali.vn/</td>
+</tr>
+<tr>
+<td>An Gia (BĐS An Gia)</td>
+<td>brand</td>
+<td>Bất động sản</td>
+<td></td>
+<td>Chỉ liên kết Facebook, không có TikTok trên web</td>
+<td>1900 0280; 0916 770 880; info@angia.com.vn; cskh@angia.com.vn</td>
+<td>https://angia.com.vn/vi/lien-he.html</td>
+</tr>
+<tr>
+<td>YaMe VN</td>
+<td>brand</td>
+<td>Bán lẻ thời trang</td>
+<td>TP.HCM</td>
+<td>Hơn 40 cửa hàng; có FB, TikTok, YouTube, Instagram - cỡ vừa, nhiều kênh cần nội dung</td>
+<td>(028) 3868 4857; (028) 7307 1441; cskh@yame.vn</td>
+<td>https://yame.vn/</td>
+</tr>
+</tbody>
+</table></div><div class="src">Nguồn: <code>research/decision-df-experiments-2026-11-02.md</code> (bản .md cho agent đọc)</div></main></body></html>

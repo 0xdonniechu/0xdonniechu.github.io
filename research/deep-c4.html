@@ -1,0 +1,117 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Deep dive, candidate 4: expert-led judgment as a service or replica (2026-10-30)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Deep dive, candidate 4: expert-led judgment as a service or replica (2026-10-30)</h1>
+<p>Method: public pages only, no sign-up, no trial, no payment; X pages skipped. Fetched with a page-to-markdown tool, so figures are as the tool returned them and not re-checked at source. Blank = not readable. Confidence: H = verified on the primary page, M = one source or simple arithmetic on a verified figure, L = inference.</p>
+<p>TrustMRR figures are Stripe-verified, but the key can expire (VirtualJK's did on 2026-10-23).</p>
+<h2>Teardowns</h2>
+<h3>Windmill Growth (windmillgrowth.com)</h3>
+<ul>
+<li>Sold: done-for-you LinkedIn ghostwriting plus outbound for B2B founders (pre-seed to Series B) and multi-founder teams. [H, site]</li>
+<li>Price per month: Growth $650, LinkedIn Outbound $999, Founder OS $3,999 (most popular), Enterprise custom. [H]</li>
+<li>Delivery: study the client's past content, map the buyer, match a writer from a bench by industry ("vetted by us"), build a lead list on traxy.ai, then execute. Client gives one 45-minute weekly interview; 5 posts a week come from it; inbox handled, meetings placed. Expert judgment sits in strategy and writer matching; writing is done by human bench writers. Automation level: not stated. [H]</li>
+<li>Implied clients: the $117k MRR figure comes from the owner's brief; its TrustMRR page returned 404 under three slugs, so it is unverified here (blank). If all clients were on Founder OS: about 29. The site says "30 clients on the books at a time", which matches that. [M]</li>
+<li>Team: four named bench writers plus "Ben" as contact; no headcount or founder bio. [H for names, rest blank]</li>
+<li>Founder authority: case studies of client results ($479K traced revenue, $500K ARR, 30M impressions), "185+ founders worked with". Founder's own audience: blank. [H for claims, unverified as results]</li>
+<li>Scale limit: the site itself caps intake ("three new clients a month" and also "forty founders a month": contradictory). Writers are people, so it scales with writer hours. [M]</li>
+<li>Weakness: the promised result depends on the client's own interview and ideas; commodity competition in LinkedIn ghostwriting; no guarantee stated. [M]</li>
+</ul>
+<h3>VirtualJK (virtualjk.com)</h3>
+<ul>
+<li>Sold: an AI "replicant" of James Kemp, trained on about $25M of consulting sales, helping coaches and consultants build offers, landing pages and content. [H, TrustMRR]</li>
+<li>Price: $97 per week or $5,000 per year; profile text also mentions a $3k offer build, $3k-per-week campaign, $3k-per-day strategy (human or premium upsells, not confirmed). [H]</li>
+<li>Delivery: the replica is the product; the expert's judgment is encoded once as training and then sold many times. Site is an app behind a loading screen, so the interface is unread (blank). [H for claim, rest blank]</li>
+<li>Implied clients: 93 active subscriptions (verified); $48,492 / 93 = about $521 average per subscription per month, so a mix of weekly and annual plans. [M]</li>
+<li>Numbers to keep in view: founded 2026-01-01; all-time $3.39M; last 12 months $841,650; 95% margin; MRR -1.6% and revenue -9.9% over 30 days; Stripe key expired, so MRR may be stale. All-time of $3.39M against a 12-month figure of $0.84M and a January 2026 start is inconsistent on the face of it (maybe earlier revenue under another account); not resolved. [H on figures, inconsistency flagged]</li>
+<li>Team: one named founder, James Kemp, based in Singapore. No other staff listed. [H]</li>
+<li>Founder authority: the $25M consulting-sales record is the product's pitch. His X following is small (1,288), so the customers did not come from audience size alone. How they come: blank. [H on follower count]</li>
+<li>Scale limit: a replica scales with software, not with his hours; the limit is how much unique judgment he has and churn. [L]</li>
+<li>Weakness: slight decline; "replicant of a person" is easy to copy by any expert; claim of $25M is self-reported. [M]</li>
+</ul>
+<h3>Brevilabs (brevilabs.com)</h3>
+<ul>
+<li>Sold: AI product consulting for "ambitious teams": a four-week sprint at $45k and retainers from $45k per month (3-month term), optional outcome fee. [H, site]</li>
+<li>Verified revenue does NOT match the $45k offer: TrustMRR shows MRR $17,747, 1,347 active subscriptions, 12-month revenue $481,782, peak month $66,646 (Feb 2026), recent months about $29k-$34k, last 30 days $19k. [H] 1,347 subscriptions at that MRR implies about $13 each, which looks like a consumer or prosumer product (the site lists Copilot for Obsidian, miyo, OpenArtifacts), not sprints. [L, inference; the page does not say which product earns it]</li>
+<li>Implied clients of the $45k offer: cannot be derived; no case studies, testimonials or client names on the site. [H for absence]</li>
+<li>Delivery / team: "ex-Google and ex-Uber AI engineers", no headcount, no process described. Founder Logan Yang (2,169 X followers). [H]</li>
+<li>Founder authority: product reputation of the open-source tools (inferred) rather than a personal brand. [L]</li>
+<li>Scale limit / weakness: it is an engineering shop, not a judgment business; declining revenue (-40.7% revenue in 30 days). Poor fit as a model for candidate 4. [M]</li>
+</ul>
+<h3>White Glove Content (whiteglovecontent.com)</h3>
+<ul>
+<li>Sold: subscription production of faceless videos (script, AI voice, edit, thumbnails) for YouTube, TikTok, Reels, Facebook; buyer is anyone wanting faceless channels in "100+ niches". [H]</li>
+<li>Price per month: $54 / $124 / $284 mixed; $77 / $155 / $314 long-form; $86 / $184 / $354 multi-channel. Month to month, "all sales are final". [H]</li>
+<li>Delivery: onboarding in 10 minutes, batches in about 5 business days; production appears automated. No expert judgment is sold. [H]</li>
+<li>Implied clients: 517 active subscriptions; $62,500 / 517 = about $121 each. [M]</li>
+<li>Team: 2-5 people (TrustMRR); founder unnamed; bootstrapped. Founded 2026-04-17; $300,738 all-time; 65% margin; MRR -4.6% over 30 days; listed for sale at $2.5M since 2026-09-16. [H]</li>
+<li>Founder authority: none visible; customers come from traffic (15,818 visitors in 30 days, $4.25 per visitor). [H on the figures]</li>
+<li>Weakness: a content-volume product, not judgment; for-sale listing and a dip after the September peak. Useful only as a contrast. [M]</li>
+</ul>
+<h2>Answers</h2>
+<ol>
+<li>
+<p>What gets an expert-judgment business to $50k-$120k MRR. From these four, only two are expert-led (Windmill, VirtualJK) and they get there by opposite routes. Windmill: about 30 clients at about $4k each, a bench doing the labour, the expert's value being the strategy and the match. VirtualJK: about 93 subscribers at about $520 average, judgment encoded once. Common features: a defined buyer with budget (B2B founders, coaches), a recurring price, a proof story with the client's money in it, and a hard cap or a software layer so the founder's hours are not the unit. Brevilabs and White Glove show the other two outcomes (labour sold at $45k with no proof; volume content with no expert). [M: n=2 relevant rows]</p>
+</li>
+<li>
+<p>Personal brand dependence. Not clearly. VirtualJK's founder has only 1,288 X followers and still shows 93 subscriptions, so audience size is not the only path; his sold asset is a track record ($25M of consulting sales), self-reported. Windmill sells the bench and case studies of clients, and the site names no founder. So the owner's track record can plausibly replace a following if it is stated as checkable numbers: 10 years of calling viral media, 3 agencies, a SaaS exit. The three agencies add something neither row shows: their own campaign history as proof and as first buyers. How each row's buyers actually arrive (outbound, content, referrals) is not in public data. [L]</p>
+</li>
+<li>
+<p>Three product shapes and first paid offers (prices are guesses, not from the research):</p>
+<ul>
+<li>Service: "go / test / kill" verdict on a planned campaign or piece of media before the spend, delivered in 48 hours with a one-page decision. First offer: $300-$500 per verdict, sold to 5 existing clients of the 3 agencies this month. The owner judges; the agents scan and draft.</li>
+<li>Replica: an AI trained on the owner's viral-judgment calls (scored examples), that scores a draft and says why. First offer: a weekly paid plan in the VirtualJK style, but only after 30-50 owner-scored items exist; before that, a paid pilot of $97-$500 on manual scoring.</li>
+<li>Software + service: a scoring workspace plus a monthly review by the owner for agencies (retainer-like, Windmill's tiering: a low tier with the tool, a high tier with the owner's call). First offer: one agency, a 30-day paid pilot at about $1,000-$2,000, tool output reviewed by the owner each week.
+   All three fit the filter in <code>principles.md</code> (small, sold by hand, taste is the moat); the replica is most at risk of the "model makes the judgment" failure until the owner's scoring is the training data.</li>
+</ul>
+</li>
+<li>
+<p>Past one person (the YC angle). Windmill is the only row with evidence of a team (named bench writers; labour-bound, capped intake). VirtualJK has no team on the page and one founder. So in these rows the company is one expert plus either a bench or a model; no row shows several experts. The federation model in <code>thesis.md</code> would be new, not copied. An honest claim: the product can grow past the founder only if judgment is encoded (replica, scoring data) or if a bench of vetted judges is built; both are unproven here. [L]</p>
+</li>
+<li>
+<p>Biggest assumption to test: that a buyer will pay repeatedly for the owner's judgment of media, as a verdict, when nothing in this sweep found anyone selling it (Viral Validator in the synthesis showed $2 all-time). Cheapest test: sell the verdict to 5 agency clients at a fixed price and see whether 3 come back for a second one within 30 days. Rows here do not test it, because they sell writing, a coach replica, and video volume, not a verdict.</p>
+</li>
+<li>
+<p>Confidence summary: row facts H where quoted from the pages; all arithmetic M; the Brevilabs revenue-source reading L; questions 2, 4 L; question 1 M; question 5 reasoning M, outcome unknown.</p>
+</li>
+</ol>
+<h2>Gaps</h2>
+<ul>
+<li>Windmill Growth TrustMRR page: 404 on <code>windmill-growth</code>, <code>windmillgrowth</code>, <code>windmill</code>; web search found nothing; MRR, start date and founder are blank here.</li>
+<li>VirtualJK app interface unread (loading screen only).</li>
+<li>Customer acquisition channel for all four: not in public data.</li>
+<li>Only four rows; two are not expert-led.</li>
+</ul><div class="src">Nguồn: <code>research/deep-c4.md</code> (bản .md cho agent đọc)</div></main></body></html>

@@ -1,0 +1,328 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>traxy.ai - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>traxy.ai - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được. Mọi link đọc ngày 31/10/2026 trừ khi ghi khác.</p>
+<h2>A. Tóm tắt</h2>
+<p>traxy.ai (https://www.traxy.ai) là công cụ "nghe" LinkedIn cho bán hàng B2B: bạn khai chân dung khách lý tưởng và danh sách hồ sơ cần theo dõi (mình, đối thủ, người có tiếng); traxy kiểm tra ai thích, bình luận, đăng lại bài của họ (2 giờ một lần), chấm khớp 1 đến 100%, đẩy người vượt ngưỡng thành lead kèm email đã xác minh; gói cao có agent viết tin mở đầu bằng chính tín hiệu đó. Người mua là founder, đội growth và chủ agency bán dịch vụ giá trị cao trên LinkedIn (12 trong 14 đánh giá G2 là doanh nghiệp từ 50 người trở xuống). TrustMRR (bên thứ ba, nói là xác minh qua Stripe, đồng bộ 31/10/2026 06:13 UTC) ghi MRR 52.885 USD, 245 gói, bình quân khoảng 216 USD mỗi gói; doanh thu bắt đầu tháng 3/2026 (545 USD) và đạt 56.920 USD trong tháng 10 (chưa hết tháng).</p>
+<p>Kết luận: nhu cầu "lead từ tín hiệu LinkedIn" có thật và đã được trả bằng tiền, nhưng ngách đông, rủi ro dữ liệu LinkedIn chưa rõ, và Trigify (đối thủ tín hiệu lâu năm) vừa bị HubSpot gom và đóng cửa ngày 22/10/2026. Với owner, traxy hợp làm công cụ và đối tác cho 3 agency hơn là mục tiêu sao chép; nếu build, chỉ đáng build lớp phán đoán nằm trên (nghe ai, nhắn ai trước), sau khi xác thực rẻ ở phần D.</p>
+<p>Lưu ý trung thực: dữ liệu có sẵn chỉ là một dòng CSV và một mục ICP viết sáng 31/10/2026; tôi mở lại trang gốc nên vài số lệch nhẹ (CSV: 246 gói, 53.034 USD; đọc lại: 245 gói, 52.885 USD). Ngoài G2, không có đánh giá độc lập nào về traxy; vài bình luận khen traxy trên Reddit có thể do người của hãng viết.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:475px"><colgroup><col style="width:135px"><col style="width:340px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>traxy.ai - https://www.traxy.ai [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Quét tương tác LinkedIn quanh ICP và danh sách hồ sơ theo dõi, chấm điểm, chỉ hiện lead trên ngưỡng, email đã xác minh; gói Advanced thêm Outbound agent viết tin kết nối, tin nhắn, InMail; đẩy lead sang Slack, Clay, HeyReach, CRM hoặc MCP. Chỉ LinkedIn; nói "không đăng nhập LinkedIn" của bạn để tìm lead. [CONFIRMED - www.traxy.ai, traxy.ai/faq.md]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Thuê bao tháng hoặc năm theo số "lead mới đủ điều kiện" mỗi tháng; số điện thoại là phụ phí; làm hộ (done-for-you) 1.099 USD/tháng; đối tác agency giảm 30% mỗi tài khoản. [CONFIRMED - traxy.ai/pricing, /managed, /agency]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>Pro 149 USD/tháng (119 nếu trả năm), tới 500 lead. Advanced 399 (319), tới 1.500, có Outbound agent. Scale 1.099 (879), tới 5.000, có chuyên viên phụ trách. Dùng thử 7 ngày; trả năm giảm 20% (149 x 0,8 = 119,2). Giá mỗi lead ở hạn mức đầy: 149/500 = 0,298; 399/1.500 = 0,266; 1.099/5.000 = 0,220 USD. Không thấy chính sách hoàn tiền. [CONFIRMED - https://www.traxy.ai/pricing]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 52.885 USD; 245 gói; 30 ngày 56.472 USD (bảng) và 56.621 (ảnh chụp); 3 tháng 123.192; tổng từ đầu 155.220. Theo tháng (USD): 3/2026 545; 4: 3.436; 5: 5.761; 6: 10.182; 7: 11.955; 8: 21.415; 9: 45.007; 10: 56.920 (tổng 155.221, khớp 155.220). MRR +9,5% trong 30 ngày; doanh thu 30 ngày +25,8%. Revenue last synced 2026-10-31T06:13:35Z. [SECONDARY - https://trustmrr.com/startup/traxy-ai.md; TrustMRR nói xác minh bằng khoá Stripe API, đó là lời của TrustMRR, tôi không tự kiểm được]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Ben Buaron (New York theo X), đội 2-5 người, tự có vốn, thành lập 30/01/2026. Ben cũng điều hành Windmill Growth LLC, agency viết bài LinkedIn và outbound cho founder B2B (TrustMRR: MRR 117.097 USD, 74 gói, đồng bộ 31/10/2026 00:17 UTC). Ben kể trên X: cold email 0,04% trả lời, script đánh dấu người tương tác mỗi giờ nâng lên 4-5%. [CONFIRMED về tên; SECONDARY - TrustMRR; VENDOR-CLAIMED - tỉ lệ]</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Logo Profound, Meow, Sardine, Skio, Superfiliate, Haven, Outersignal; "dùng bởi 1.000+ đội B2B"; "Rated 5.0 on G2"; Superfiliate "10-20 cuộc họp đủ chuẩn mỗi tháng"; Merino Partners "hơn 2 triệu USD pipeline trong 2 tháng đầu"; Platter "47% chấp nhận, 35% trả lời". [VENDOR-CLAIMED, hãng chọn đăng, không có dữ liệu gốc]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Những điều nguồn nói chưa khớp hoặc chưa chắc (phép tính của tôi):</p>
+<ol>
+<li>"1.000+ đội" so với 245 gói trả tiền: 245 / 1.000 = 24,5%. Có thể gồm dùng thử hoặc đã huỷ; tôi dùng 245 làm số khách. [UNVERIFIED]</li>
+<li>Doanh thu vượt MRR và tăng nhanh hơn: 56.472 - 52.885 = 3.587 USD (6,8% MRR); +25,8% so với +9,5%. MRR 30 ngày trước khoảng 52.885 / 1,095 = 48.297, tăng ròng 4.588 USD, khoảng 21 gói (4.588 / 216). Phần dư có thể là trả năm trả trước hoặc phụ phí; ngày 13/10 thu 9.490 USD, trung vị ngày là 1.414 USD. [UNVERIFIED]</li>
+<li>MRR bình quân cao hơn giá thấp nhất: 52.885 / 245 = 215,9 USD. Nếu cả 245 đều Pro 149 thì MRR chỉ 36.505; khoảng 31% MRR (16.380 / 52.885) phải đến từ gói cao hơn (ví dụ 180 Pro + 65 Advanced: 149 x 179,5 + 399 x 65,5 = 52.885). Không mâu thuẫn, nhưng cơ cấu gói không công khai; TrustMRR chỉ liệt kê "Pro 149 / Enterprise" và G2 ghi "Scale 299 USD" (chính thức: 1.099), nên trang bên thứ ba đã cũ. [UNVERIFIED]</li>
+<li>Số liệu dao động: 52.736 USD (sweep 30/10), 53.034 (CSV 31/10), 52.885 (đọc lại). Hai số 30 ngày trên cùng trang chênh 56.621 - 56.472 = 149 USD, và 53.034 - 52.885 cũng đúng 149, bằng giá một gói Pro: có thể một gói Pro vừa huỷ. [UNVERIFIED]</li>
+<li>Số tự báo khớp TrustMRR: bài Reddit 13/05/2026 của u/Middle-Thanks5587 (viết "the product is traxy", nhiều khả năng người của hãng) nói 28 gói trả tiền, 211 người dùng hoạt động. Doanh thu tháng 5 là 5.761 USD, 5.761 / 28 = 206 USD mỗi gói, gần 216 hiện nay; từ 28 lên 245 gói là gấp 8,75 lần trong khoảng 5,5 tháng. [SECONDARY - Reddit qua arctic-shift; danh tính tác giả UNVERIFIED]</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<h3>1. Sản phẩm dành cho ai?</h3>
+<p>Founder, chủ agency hoặc người phụ trách growth của doanh nghiệp nhỏ bán dịch vụ hay phần mềm giá trị cao cho doanh nghiệp, dùng LinkedIn làm kênh chính:</p>
+<ul>
+<li>Vai trò: founder/CEO, chủ agency, head of growth (G2: CEO công ty tuyển dụng B2B, founder agency, head of growth marketing). [CONFIRMED - g2.com/products/traxy/reviews]</li>
+<li>Quy mô: 1 đến 50 người (12/14 đánh giá G2; 12/14 ở Bắc Mỹ). [CONFIRMED - G2]</li>
+<li>Ngành: agency (marketing, tuyển dụng, tư vấn), SaaS nhỏ, martech thương mại điện tử (ICP mẫu trên trang chủ: "marketing leaders in ecommerce"). [CONFIRMED]</li>
+<li>Điều kiện: đã đăng bài LinkedIn đều và đã làm outbound.</li>
+<li>Ngân sách: 149 đến 399 USD/tháng; bình quân thực tế khoảng 216 USD/gói (phần B, [UNVERIFIED] về cơ cấu). Người dùng cũng là người trả tiền.</li>
+</ul>
+<h3>2. Họ gặp vấn đề gì?</h3>
+<p>Danh sách lead nguội và không biết ai đang để ý đến mình. G2: "spent hours manually scrolling LinkedIn trying to figure out who engaged with our content" (CEO công ty tuyển dụng, 11/04/2026); LinkedIn "generating engagement but no clear pipeline" (founder agency, 15/05/2026). Vấn đề thứ hai là nhiễu: tương tác đến từ đối thủ cùng ngành, sinh viên, người không có quyền mua.</p>
+<h3>3. Họ đang làm bằng tay thế nào?</h3>
+<ul>
+<li>Mua Sales Navigator: Core 119,99 USD/tháng (1.079,88 nếu trả năm) mỗi ghế. [CONFIRMED - business.linkedin.com/sales-solutions/compare-plans] Danh sách theo chức danh, không theo hành vi.</li>
+<li>Ghép công cụ: bình luận r/startups 02/09/2026: "Sales Nav và Trigify dựng danh sách active, Clay làm giàu, HeyReach/Aimfox gửi". [SECONDARY - Reddit qua pullpush]</li>
+<li>Tự cuộn danh sách người thích bài, hoặc thuê BDR/SDR (một người dùng G2 nói đã thay BDR, 09/04/2026).</li>
+<li>Chi phí hiện tại: giờ làm tay và tỉ lệ trả lời thấp.</li>
+</ul>
+<h3>4. Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</h3>
+<p>Không sao chép traxy. Hai lối đi cho owner, rủi ro tăng dần:</p>
+<ol>
+<li>Dùng traxy làm công cụ và kênh: Agency Partners giảm 30% mỗi tài khoản (Advanced 399 x 0,7 = 279,3 USD, ví dụ trên trang), cho bán lại dịch vụ làm hộ. 3 agency dùng cho outbound của chính mình và bán "báo cáo người đang quan tâm" cho khách. [CONFIRMED - traxy.ai/agency]</li>
+<li>Bán lớp phán đoán nằm trên công cụ, giao bằng tay trước: chọn danh sách đáng nghe (đối thủ nào, người có tiếng nào có khán giả là người mua chứ không phải đồng nghiệp), đặt ngưỡng, xếp lead đáng nhắn trước. Lý do: traxy tự động phần chấm điểm, còn chọn nguồn nghe là việc của khách, đúng chỗ khách kêu nhiễu. Giá tham chiếu: làm hộ của traxy 1.099 USD/tháng, Agency của HeyReach 999; giá của owner cần thử, [UNVERIFIED].</li>
+<li>Cam kết hoàn tiền rõ: ngách có khiếu nại lặp lại về bị trừ tiền sau dùng thử (Gojiberry, Trustpilot 21/10 và 30/10/2026); traxy không nêu hoàn tiền.</li>
+</ol>
+<h3>Câu chốt</h3>
+<p>Cho chủ agency và founder B2B bán dịch vụ giá trị cao trên LinkedIn nhưng đang nhắn cho danh sách nguội và tốn giờ lọc nhiễu, [tên bản của chủ] là dịch vụ chọn nguồn nghe và xếp thứ tự lead theo phán đoán của người có 10 năm đọc truyền thông, chạy trên công cụ như traxy, khác traxy ở chỗ quyết định nghe ai và nhắn ai trước thay vì chỉ chấm điểm tự động, kèm cam kết hoàn tiền rõ.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<h3>Mục tiêu một câu</h3>
+<p>Tôi cần biết thị trường công cụ lead từ tín hiệu LinkedIn còn chỗ trống không, đối thủ tính giá thế nào, và owner nên dùng, hợp tác hay build lớp nào, để quyết định có đầu tư thời gian hay không.</p>
+<h3>1. Đối thủ và giá</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:1117px"><colgroup><col style="width:90px"><col style="width:165px"><col style="width:220px"><col style="width:165px"><col style="width:165px"><col style="width:165px"><col style="width:147px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Mô hình</th>
+<th>Điểm mạnh</th>
+<th>Khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>traxy.ai</td>
+<td>traxy.ai/pricing</td>
+<td>149 / 399 / 1.099 USD/tháng (119 / 319 / 879 nếu trả năm)</td>
+<td>Thuê bao theo số lead</td>
+<td>Chấm ICP trên tương tác LinkedIn; tích hợp Clay, HeyReach, MCP</td>
+<td>Chỉ LinkedIn; không thấy hoàn tiền</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Gojiberry</td>
+<td>gojiberry.ai/pricing</td>
+<td>Pro 99 USD/tháng (2 agent, tới 1.800 prospect liên hệ/tháng); Custom hỏi giá</td>
+<td>Thuê bao; agent tự chọn người</td>
+<td>Rẻ; "3.500+ đội"; Trustpilot 4,4 (105)</td>
+<td>Trừ tiền ngày 7 dùng thử, tin nhắn sai ngữ cảnh</td>
+<td>Giá [CONFIRMED]; số khách [VENDOR-CLAIMED]</td>
+</tr>
+<tr>
+<td>Trigify</td>
+<td>trigify.io/pricing</td>
+<td>Không còn giá: trang là thông báo gia nhập HubSpot (23/09/2026), đóng 22/10/2026</td>
+<td>Lớp tín hiệu (LinkedIn, X, Reddit, YouTube theo Reddit)</td>
+<td>Từng là chuẩn ngách</td>
+<td>Đã đóng, khách không được chuyển sang</td>
+<td>Đóng [CONFIRMED]; mô tả [SECONDARY]</td>
+</tr>
+<tr>
+<td>Octolens</td>
+<td>octolens.com/pricing</td>
+<td>Pro 159 USD/tháng (trả năm), 15.000 mention; Scale 499</td>
+<td>Theo mention</td>
+<td>Nghe Reddit, X, LinkedIn, HN; thử 7 ngày</td>
+<td>Không chấm ICP, không ra lead</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Lemlist</td>
+<td>lemlist.com/pricing</td>
+<td>Email 55 USD/người/tháng (69 nếu tháng); Multichannel 87 (109); tín hiệu mua 21 (29) cho 100 tín hiệu</td>
+<td>Theo ghế</td>
+<td>Email + LinkedIn; thử 14 ngày</td>
+<td>Tín hiệu là add-on nhỏ</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>HeyReach</td>
+<td>heyreach.io/pricing</td>
+<td>79 USD/tháng mỗi tài khoản gửi (64 nếu năm); Agency 999; Unlimited 2.999</td>
+<td>Theo tài khoản gửi</td>
+<td>Gửi LinkedIn quy mô, whitelabel</td>
+<td>Không tạo lead</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Clay</td>
+<td>clay.com/pricing</td>
+<td>Free 0; Launch từ 60 (54 nếu năm); Growth từ 205 (185); tiêu đề 167 / 446 và FAQ 185 / 495 tự mâu thuẫn</td>
+<td>Theo hành động, tín dụng</td>
+<td>Làm giàu dữ liệu</td>
+<td>Khó dựng, giá khó đoán</td>
+<td>[CONFIRMED] giá bậc</td>
+</tr>
+<tr>
+<td>Warmly</td>
+<td>warmly.ai/pricing</td>
+<td>10.000 / 20.000 / 30.000 USD mỗi năm</td>
+<td>Hợp đồng năm</td>
+<td>Nhận diện khách ghé web</td>
+<td>Khác loại tín hiệu; số quý không khớp (4 x 4.875 = 19.500, không phải 10.000)</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Sales Navigator</td>
+<td>business.linkedin.com/sales-solutions/compare-plans</td>
+<td>Core 119,99 USD/tháng; Advanced 159,99</td>
+<td>Theo ghế</td>
+<td>Dữ liệu gốc, độ phủ lớn</td>
+<td>Lọc theo chức danh</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Kondo</td>
+<td>trykondo.com/pricing</td>
+<td>28 / 36 / 52 USD/người/tháng (trả năm)</td>
+<td>Theo ghế</td>
+<td>Hộp thư LinkedIn chung</td>
+<td>Không tạo lead</td>
+<td>[CONFIRMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nhận xét: không ai vừa chấm tín hiệu theo ICP từ tương tác LinkedIn, vừa có hoàn tiền rõ, vừa có lớp phán đoán chọn nguồn nghe; traxy gần nhất ở điểm đầu. Bảng không phải kiểm kê đầy đủ.</p>
+<h3>2. Tiếng nói người dùng</h3>
+<ul>
+<li>G2, traxy (14 đánh giá, 5,0; đọc 10 cái ở trang 1, một lần duy nhất, bậc brightdata(web unlocker) của read-blocked) [CONFIRMED - https://www.g2.com/products/traxy/reviews]. Khen: "Without [ICP scoring], social listening surfaces a ton of noise: students, people in the wrong geography, junior employees who can't buy anything" (CEO công ty tuyển dụng, 11/04/2026); "works much better after using it compared to Trigify" (founder, 09/04/2026). Chưa hài lòng: muốn gửi tin ngay trong traxy, muốn thêm Instagram và X, "overwhelming to keep up with the amount of leads". Lưu ý: cả 10 đều 5/5, 5 cái cùng ngày 09/04/2026, 2 cái cùng ngày 15/05/2026, dấu hiệu đợt xin đánh giá; không cái nào chê chất lượng lead.</li>
+<li>Reddit r/agencynewbies, 15/05/2026 (arctic-shift, bản lưu trữ): người hỏi "Has anyone actually closed deals using traxy.ai...", chưa ai trả lời bằng một thương vụ. u/WorkLoopie: "I find LinkedIn engagements misleading. Most of the time it's people in my same industry I'm competing against." u/OkSelf4711 đáp traxy lọc được nhiễu, không dẫn bằng chứng, không rõ có liên quan hãng [UNVERIFIED]. Phản biện đúng vào giả thuyết cốt lõi.</li>
+<li>Reddit r/sales_intelligence, 21/09/2026, về Gojiberry: "the message was random and not at all contextualized to the prospect" (u/regandelaney); người khác viết "All these platforms are bad" nhưng nói đang làm sản phẩm cạnh tranh, thiên lệch. [SECONDARY]</li>
+<li>Trustpilot, Gojiberry (105 đánh giá, 4,4; qua jina) [CONFIRMED]: phần lớn khen hỗ trợ; khiếu nại gần nhất là tiền: "charged on day 7 of your free trial" (30/10/2026), "took 3 payments and they continue to take payments" (21/10/2026).</li>
+<li>Reddit r/SaaS, 24/09/2026: người làm growth của một đối thủ kể Trigify đóng, "customers don't move over"; sau một ngày 0 cuộc đặt lịch. [SECONDARY]</li>
+<li>Không đọc được: Trustpilot của traxy.ai, Product Hunt, Capterra/GetApp (chưa mở), X (chỉ đọc trang founder qua jina, toàn bài tự đăng). [UNVERIFIED]</li>
+</ul>
+<p>Điều rút ra: khách khen tốc độ thiết lập và chất lượng lọc, nhưng bằng chứng "tương tác dẫn tới doanh thu" hầu như chỉ do hãng và đánh giá nhỏ, tập trung ngày nói; phản biện về nhiễu có thật; cả ngách bị chê ở thanh toán và tin nhắn AI.</p>
+<h3>3. Kích thước thị trường</h3>
+<p>Sales intelligence toàn cầu 2026: 4,99 tỉ USD, 9,15 tỉ năm 2031, tăng 12,89%/năm, gồm phần mềm lẫn dịch vụ (Mordor Intelligence, trang cập nhật 22/01/2026) [SECONDARY, đã mở trang gốc]; hãng khác ước 4,0 đến 5,4 tỉ [SECONDARY, chỉ qua tìm kiếm]. LinkedIn tự nêu 71 triệu công ty, không ghi ngày (https://news.linkedin.com/about-us) [VENDOR-CLAIMED].</p>
+<p><strong>TAM / SAM / SOM</strong></p>
+<p>Đơn vị: doanh thu thuê bao mỗi năm (USD) của công cụ lead từ tín hiệu LinkedIn. Số tự tính. ARPA (doanh thu bình quân mỗi đội) = 52.885 x 12 / 245 = 2.590 USD/năm (số của traxy, [SECONDARY]).</p>
+<div class="tw"><table style="table-layout:fixed;min-width:475px"><colgroup><col style="width:90px"><col style="width:220px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>71.000.000 công ty x 2% (B2B có chuyển động bán hàng) = 1.420.000; x 25% (dùng LinkedIn để bán) = 355.000 đội; x 2.590</td>
+<td>919.450.000 USD</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>355.000 x 40% (tiếng Anh, vừa giá 149-1.099 USD, tự mua) = 142.000 đội; x 2.590</td>
+<td>367.780.000 USD</td>
+</tr>
+<tr>
+<td>SOM (12 tháng)</td>
+<td>142.000 x 0,1% = 142 đội trả tiền; x 2.590</td>
+<td>367.780 USD (nếu toàn Pro: 142 x 149 x 12 = 253.896)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm): (1) 71 triệu công ty là số LinkedIn tự nêu, gồm cả công ty không hoạt động; (2) 2% B2B có chuyển động bán hàng, [UNVERIFIED]; (3) 25% dùng LinkedIn làm kênh bán chính, [UNVERIFIED]; (4) 40% đúng phân khúc, [UNVERIFIED]; (5) 0,1% là mức người vào sau chiếm được trong 12 tháng, [UNVERIFIED]; (6) ARPA lấy từ traxy có thể cao hơn thực tế của người mới. Mọi tỉ lệ là ước lượng của tôi.</p>
+<p>Kiểm chéo: TAM 919,45 triệu = 18,4% của 4,99 tỉ USD (919,45 / 4.990), hợp lý cho một lát "tín hiệu LinkedIn" của sales intelligence. Hai ứng viên dẫn đầu trên TrustMRR cộng lại (52.885 + 424.368) x 12 = 5.727.036 USD, chỉ 0,62% TAM: hoặc còn nhiều chỗ, hoặc TAM quá rộng, nên đọc nó là cận trên. SOM 142 đội = 58% số gói traxy hiện có (142 / 245), mà traxy mất 8 tháng kể từ tháng doanh thu đầu để đạt 245; vào sau khó hơn nên mức này là khiêm tốn.</p>
+<p><strong>Số bị từ chối in</strong></p>
+<ul>
+<li>"Dùng bởi 1.000+ đội" và "Rated 5.0 on G2": số đầu không khớp 245 gói, số sau là 14 đánh giá tập trung ngày. Không dùng làm bằng chứng.</li>
+<li>"47% chấp nhận, 35% trả lời", "chấp nhận từ 2% lên 20%", "3 lần số trả lời so với Sales Navigator", "2 triệu USD pipeline", "lời 15 lần", "10-20 cuộc họp", và "trong 1 giờ 50-70% chấp nhận, sau 48 giờ khoảng 15%" (Reddit 13/05/2026): khách hoặc founder tự đăng, không có mẫu, thời gian hay cách tính. Không dùng.</li>
+<li>Gojiberry MRR 424.368 USD / 3.944 gói: TrustMRR đồng bộ lần cuối 14/08/2026, cũ 78 ngày (sweep-trustmrr.md ngày 30/10 dùng cùng số cũ); trang chủ Gojiberry còn hiện bộ đếm hỏng ("0+", "&lt;0mins"). Chỉ làm bậc độ lớn, không coi là hiện tại.</li>
+<li>Giá tiêu đề Launch 167 / Growth 446 của Clay và số quý của Warmly: tự mâu thuẫn trong cùng trang. Không dùng.</li>
+</ul>
+<p><strong>Khoảng trống và lối đi riêng</strong></p>
+<ol>
+<li>Chọn nguồn nghe vẫn là việc của khách (G2 và Reddit đều nhắc nhiễu); chưa thấy ai bán phán đoán này như dịch vụ.</li>
+<li>Khiếu nại lặp lại về thanh toán sau dùng thử và tin nhắn AI sai ngữ cảnh; chưa ai nhấn vào hoàn tiền rõ.</li>
+<li>Nghe đa nền tảng: traxy chỉ LinkedIn, Trigify đã đóng, Octolens không ra lead.</li>
+<li>Rủi ro: traxy nói "không đăng nhập LinkedIn" nhưng không giải thích đọc tương tác thế nào; LinkedIn kiện ProAPIs (báo The Record ngày 03/10/2025) vì thu thập dữ liệu bằng tài khoản giả, khách trả tới 15.000 USD/tháng [SECONDARY, đã mở bài]. Mức tuân thủ điều khoản của traxy chưa được đánh giá. HubSpot mua Trigify cho thấy tín hiệu có thể thành tính năng của CRM lớn.</li>
+</ol>
+<p><strong>Ba cách xác thực rẻ nhất trước khi build</strong></p>
+<ol>
+<li>Thử 7 ngày miễn phí của traxy (owner tự làm, tôi không đăng ký) với watchlist của một khách agency; lấy 100 lead đầu có điểm từ 70%, owner chấm tay bao nhiêu là người mua thật, không phải đối thủ cùng ngành. Đáng đi tiếp nếu từ 30/100 (ngưỡng tôi đặt, [UNVERIFIED]). Chi phí: 0 USD, khoảng 2 giờ.</li>
+<li>Nói chuyện với 5 người: 3 người từng dùng Trigify hoặc Gojiberry (tìm ở thread r/SaaS 24/09/2026, Trustpilot), 2 reviewer G2 của traxy. Hỏi: tín hiệu nào từng ra cuộc họp, ai chọn danh sách theo dõi, trả bao nhiêu.</li>
+<li>Bán trước thủ công 5 "báo cáo nguồn nghe" cho khách của 3 agency, giá thử 500 USD mỗi báo cáo (giá tôi đặt, [UNVERIFIED]): 20 hồ sơ nên theo dõi, 20 lead nhắn trước, lý do từng cái, hoàn tiền nếu không dùng được. Thành công nếu ít nhất 2 trong 5 trả tiền và 1 mua lần hai trong 4 tuần; không thì dừng trước khi viết mã.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p>Nguồn (đọc ngày 31/10/2026)</p>
+<ul>
+<li>traxy: https://www.traxy.ai/ (bản tải sẵn và đọc lại), /pricing, /agency, /managed, /scoreboard, /case-studies/superfiliate, https://traxy.ai/faq.md</li>
+<li>TrustMRR: .../startup/traxy-ai.md (synced 2026-10-31T06:13Z), .../superfruits.md (Gojiberry, synced 2026-08-14), .../windmill-growth-llc.md</li>
+<li>Đánh giá: https://www.g2.com/products/traxy/reviews (bậc brightdata), https://www.trustpilot.com/review/gojiberry.ai (jina), Reddit qua arctic-shift và pullpush (r/agencynewbies 1tdmw8d, r/sales_intelligence 1wm78ys, r/SaaS 1wp6zmh và 1tbsu5r), https://x.com/benbuaron_ (jina)</li>
+<li>Giá đối thủ: các trang /pricing ở bảng D1</li>
+<li>Thị trường: https://www.mordorintelligence.com/industry-reports/sales-intelligence-market, https://news.linkedin.com/about-us, https://therecord.media/linkedin-sues-data-scraping-company</li>
+</ul>
+<p>Chưa kiểm được</p>
+<ul>
+<li>Dữ liệu Stripe và churn: MRR chỉ là lời của TrustMRR; không có cơ cấu gói.</li>
+<li>Cách traxy lấy dữ liệu tương tác LinkedIn và mức tuân thủ điều khoản LinkedIn.</li>
+<li>Trang 2 của G2, Trustpilot của traxy, Capterra/GetApp, Product Hunt, bài X độc lập.</li>
+<li>Các trang hãng được đọc qua công cụ trả về bản tóm tắt, không phải nguyên văn; giá đối thủ chưa đối chiếu lần hai.</li>
+<li>Danh tính u/Middle-Thanks5587 và u/OkSelf4711.</li>
+<li>Tôi không đăng ký dùng thử, không nhập thanh toán.</li>
+</ul>
+<p>Giả định chính
+ARPA 2.590 USD/năm; 2% / 25% / 40% / 0,1% ở bảng TAM-SAM-SOM; ngưỡng 30/100 người mua thật; giá thử 500 USD; ngưỡng 2/5 người mua. Tất cả là ước lượng của tôi, không phải số công khai.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li>Nên theo đuổi: có điều kiện. Không build bản sao traxy. Dùng traxy và chương trình agency cho 3 agency ngay; chỉ build lớp phán đoán nếu bán trước thủ công (ít nhất 2 trong 5 báo cáo trả tiền) chứng minh khách trả tiền cho việc chọn nguồn nghe, và thử 100 lead cho thấy lớp tự động còn nhiễu đủ nhiều.</li>
+<li>Rủi ro lớn nhất: dữ liệu LinkedIn (kiện, chặn, đổi điều khoản) và nền tảng lớn hấp thụ ngách (HubSpot mua Trigify); bằng chứng tín hiệu dẫn tới doanh thu mới là lời hãng và 14 đánh giá G2 tập trung ngày.</li>
+<li>Bước tiếp theo rẻ nhất: owner mở thử 7 ngày với một khách agency, chấm tay 100 lead đầu (khoảng 2 giờ), song song hỏi 5 người từng dùng Trigify; chưa viết mã.</li>
+</ol>
+<p>Hợp với hồ sơ owner: hồ sơ (winning-product.config.md) là bán phán đoán media nào đáng chi tiền, không làm creative, 3 agency truyền thông, quảng cáo, social listening. CSV chấm "cao"; tôi đồng ý về khách hàng và kênh, không đồng ý về build. Hợp: (a) chủ agency chính là chân dung khách của traxy, có Agency Partners giảm 30%, nên 3 agency vừa là nơi thử thật vừa là kênh bán "báo cáo người đang quan tâm" cho khách Enterprise và SMB; (b) không cần làm creative; (c) trang Scoreboard của traxy xếp 287 người sáng tạo nội dung LinkedIn theo điểm "pipeline" (cột "Leads" không định nghĩa), đúng kiểu phán đoán "nguồn nào đáng nghe", nơi kinh nghiệm 10 năm của owner có thể hơn (giả thuyết, [UNVERIFIED]). Không hợp: traxy bán số lượng lead B2B chứ không bán phán đoán chi tiền media, nên bản sao không dùng được lợi thế của owner; ngách cũng không phục vụ nhóm celeb. Ben đi từ agency sang script rồi SaaS, mô hình đáng học; sản phẩm này để dùng, không để chép.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://trustmrr.com/startup/traxy-ai.md - bản máy đọc của TrustMRR, có "Revenue last synced" và doanh thu ngày, tháng.</li>
+<li>https://www.g2.com/products/traxy/reviews - đánh giá có xác minh; đọc được qua read-blocked bậc brightdata.</li>
+<li>https://www.trustpilot.com/review/gojiberry.ai - đọc được qua jina; lộ khiếu nại thanh toán sau dùng thử.</li>
+<li>https://arctic-shift.photon-reddit.com - lưu trữ Reddit đọc được khi reddit.com bị chặn.</li>
+<li>https://traxy.ai/faq.md - FAQ dạng markdown của traxy; nhiều site SaaS mới có bản .md tương tự.</li>
+<li>https://www.trigify.io/pricing - thông báo HubSpot mua và đóng Trigify (23/09/2026).</li>
+<li>https://octolens.com/pricing - giá công cụ nghe Reddit, X, LinkedIn.</li>
+<li>https://www.mordorintelligence.com/industry-reports/sales-intelligence-market - mở được, có số thị trường kèm ngày cập nhật.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/04-traxy-ai.md</code> (bản .md cho agent đọc)</div></main></body></html>

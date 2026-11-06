@@ -1,0 +1,315 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Audn.AI - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>Audn.AI - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được. Mọi link đọc ngày 31/10/2026 trừ khi ghi khác.</p>
+<h2>A. Tóm tắt</h2>
+<p>Audn.AI (https://www.audn.ai) bán kiểm thử xâm nhập tự động kiểu hộp đen cho hệ thống AI, nhất là agent chữ và giọng nói: tấn công thử (prompt injection, rò rỉ dữ liệu, lừa qua giọng nói), chứng minh trong sandbox được cấp phép, đề xuất bản vá, chạy lại. Cùng công ty còn bán nhánh thứ hai: PenClaw và Pingu Unchained, các mô hình "abliterated" (gỡ cơ chế từ chối) cho người làm pentest, giá 20 đến 999 USD/tháng, bắt buộc xác minh danh tính (KYC). TrustMRR (bên thứ ba, nói xác minh qua Stripe API; đồng bộ 31/10/2026 03:43 UTC, không có dòng "expired") ghi MRR 29.596 USD, 107 gói, MRR +89,4% trong 30 ngày, doanh thu từ đầu 93.742 USD, 94,1% của nó đến từ ba tháng 8 đến 10/2026.</p>
+<p>Kết luận: tiền thật có và tăng nhanh, nhưng chưa rõ ai trả. Dấu hiệu (suy luận của tôi, không có dữ liệu Stripe theo sản phẩm) là phần lớn tiền mới đến từ "chỗ" 999 USD dùng mô hình không bị từ chối, không phải từ CISO công ty AI như trang chủ và mục ICP trước đó giả định. Thị trường khai báo (kiểm thử agent AI) đã có Promptfoo vào OpenAI, Lakera vào Check Point, Protect AI vào Palo Alto, XBOW gọi 120 triệu USD; phần lớn giá nằm sau nút "demo", nên giá công khai 99/299 USD của Audn là điểm hiếm. Với owner: ngoài ngành, độ hợp thấp.</p>
+<p>Lưu ý trung thực: dữ liệu có sẵn (một dòng CSV và một mục ICP viết sáng 31/10/2026) chỉ dựa vào trang chủ và TrustMRR, chưa thấy nhánh PenClaw/999 USD; tôi mở lại trang gốc. Tôi không xem được Stripe, nên mọi chia tách doanh thu theo sản phẩm là suy luận. Trang giá audn.ai đọc qua công cụ tóm tắt; penclaw.ai, necromicon và TrustMRR đọc nguyên văn.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:475px"><colgroup><col style="width:135px"><col style="width:340px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>Audn.AI - https://www.audn.ai [CONFIRMED]. Nhánh liên quan: penclaw.ai, pingu.audn.ai, platform.audn.ai (API), audn.ai/necromicon</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Vòng "Recon, Learn, Dig in, Exploit, Prove in sandbox, Patch, Deploy, Retest"; đội đỏ/xanh bằng AI; gắn nhãn OWASP LLM Top 10, NIST AI RMF, EU AI Act, MITRE ATLAS, ISO 42001. Công cụ: Audn Sec QA (agent chữ và giọng nói), Pingu Unchained (mô hình không từ chối), PenClaw (agent pentest qua Slack, Signal...), AudnCode (fork Claude Code, KYC), quét whitebox (lọc dương tính giả của SAST/DAST). [CONFIRMED - trang chủ]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Thuê bao tháng (Free, Starter, Pro); quét lẻ; PenClaw thuê bao cộng gói bổ sung; "chỗ" mô hình 999 USD (một tháng hoặc thuê bao, thẻ hoặc crypto); API trả theo token; Enterprise/MSSP liên hệ. [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>audn.ai/pricing: Free 0 (10 test/tháng); Starter 99 (100 test, 5 agent giọng nói); Pro 299 (500 test, 14 ngày dùng thử); Enterprise liên hệ; không thấy chính sách hoàn tiền. Quét whitebox 99 USD/lần ("giảm giá ra mắt tạm thời", giá 299). penclaw.ai: Pro 20/tháng, bổ sung GODZILLA +79 và NECROMICON +179, Ultimate 999 ("charged immediately, strictly no refunds"), dùng thử 1 ngày, node riêng 20.448 USD/tháng. [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 29.596 USD; 107 gói; 30 ngày 53.074 USD (bảng) và 53.132 (ảnh chụp), +161,7%; 3 tháng 88.217; từ đầu 93.742. Theo tháng (USD): 1/2026 400; 3: 1.187; 4: 984; 5: 768; 6: 784; 7: 1.363; 8: 14.789; 9: 20.161; 10: 53.307 (tổng 93.743, khớp). Revenue last synced 2026-10-31T03:43:26Z; không có dòng "expired". [SECONDARY - https://trustmrr.com/startup/audn-ai.md, read.sh bậc direct; TrustMRR nói xác minh bằng khoá Stripe API, tôi không tự kiểm được]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Ozgur Ozkan (CEO, London, X @ozgurozkan123), Arun Baby (CTO), Sanchali Sharma (Enterprise PM). Pháp nhân: Audn Corporation (Mỹ), Albumera LTD (Anh; thẻ tính qua Albumera, crypto qua Audn Corporation). [CONFIRMED - trang chủ, necromicon] Tiểu sử (Wayve.AI, Samsung, Cisco, Microsoft, Meta) là [VENDOR-CLAIMED]. TrustMRR: thành lập 21/08/2025, đội 2-5 người, "VC-backed", 715 người theo dõi X; tôi không tìm thấy thông báo gọi vốn. [SECONDARY / UNVERIFIED]</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Chỉ hai đối tác thiết kế: Freya (voice AI) và InTouchNow, không có lời chứng thực ghi tên người. penclaw.ai nói "50+ verified customers" và một mẫu pentest "YC S25 startup" không nêu tên; necromicon nói đợt trước "hơn 10 khách" (tweet 09/09/2026). [VENDOR-CLAIMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Những điều nguồn nói chưa khớp hoặc chưa chắc (phép tính của tôi):</p>
+<ol>
+<li>Hai sản phẩm trong một dòng doanh thu. TrustMRR ghi giá "$999/mo, unlimited" (Ultimate của PenClaw), còn CSV và mục ICP lấy "Starter 99 USD". 29.596 / 107 = 276,6 USD mỗi gói, gần Pro 299 nhưng cũng là mức pha trộn giữa nhiều gói 20 USD và vài chục gói 999 USD. Cơ cấu gói không công khai. [UNVERIFIED]</li>
+<li>Doanh thu 30 ngày gấp 1,79 lần MRR: 53.074 / 29.596 = 1,793; phần dư 23.478 USD là tiền không lặp lại (chỗ 999 mua một lần, quét lẻ 99/299, nạp token 20 USD; trang cho phép các hình thức này). [UNVERIFIED]</li>
+<li>Bộ đếm trên audn.ai/necromicon báo "53 / 120 active $999 accessors" và "23 of 100 seats in this cohort". 53 x 999 = 52.947 USD, bằng 99,8% doanh thu 30 ngày (52.947 / 53.074). Nhưng nếu 107 gói đều từ 20 USD thì tối đa (29.596 - 20 x 107) / (999 - 20) = 28 gói là 999 USD hằng tháng, nên ít nhất 25 trong 53 người "đang có quyền" không nằm trong MRR (mua một lần, trả crypto không qua Stripe, hoặc bộ đếm tính khác). Starter và quét lẻ cũng góp, nên chỉ kết luận "cùng bậc độ lớn". [VENDOR-CLAIMED bộ đếm / UNVERIFIED suy luận]</li>
+<li>MRR +89,4% do đâu: 29.596 / 1,894 = 15.626 USD cách đây 30 ngày, tăng ròng 13.970 USD, xấp xỉ 14 x 999 (13,98). Doanh thu tháng 9 gấp 1,36 lần tháng 8 (20.161 / 14.789), tháng 10 gấp 2,64 lần tháng 9 (53.307 / 20.161). Trùng thời điểm WARLOCK/Necromicon ra mắt: banner "Now live" trên trang chủ, tweet ghim (nhắc sự kiện ngày 30/9) mời dùng thử 1 ngày tại audn.ai/necromicon, đợt "hơn 10 khách" ngày 9/9. Đây là giả thuyết mạnh nhất, chưa phải kết luận. [UNVERIFIED]</li>
+<li>Lời công ty đổi theo thời gian. Reddit (trước 07/11/2025, founder): "I don't have a charging system for any of the products"; HN 08/11/2025: "min required monthly subscription is $200"; Product Hunt: PenClaw "flat $200"; nay 20/79/179/999. Reddit r/LocalLLaMA (khoảng 02/2026): mô hình "will never be open for a long while"; trang chủ nay nói công bố trọng số có kiểm soát trên Hugging Face, còn tweet ghim nói ngày 15/9 Hugging Face đã gỡ bản GLM5.3. Tỉ lệ giao nội dung có hại của cùng "live build" là 79,7% ở trang chủ nhưng 85,9% (158/184) ở trang necromicon. [CONFIRMED trích dẫn; ý nghĩa là suy luận]</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<p><strong>1. Sản phẩm dành cho ai?</strong></p>
+<p>Hai chân dung; tách ra vì tiền có vẻ không đến từ chân dung thứ nhất.</p>
+<ul>
+<li>ICP khai báo (trang chủ, audn.ai/pricing, bài HN 11/2025): đội kỹ sư và bảo mật ở công ty làm agent chữ hoặc giọng nói, nhất là voice AI cho bảo hiểm, y tế, tài chính; người duyệt là CISO hoặc trưởng mảng AI. Ngân sách theo giá niêm yết 1.188 (Starter 99 x 12) đến 3.588 USD/năm (Pro 299 x 12); Enterprise không nêu giá. [CONFIRMED giá; tả người mua là suy ra]</li>
+<li>ICP có dấu hiệu trả nhiều nhất: người làm pentest, red team, nhà nghiên cứu bảo mật, cần mô hình không từ chối giữa chừng, mua chỗ 999 USD hoặc gói 20 đến 179 USD. Trang gọi người mua là "researchers" và chặn bằng KYC. [UNVERIFIED]</li>
+</ul>
+<p><strong>2. Họ gặp vấn đề gì?</strong></p>
+<p>Chân dung 1: agent bị lừa tiết lộ dữ liệu, khó kiểm thử tay mỗi khi đổi mô hình, kiểm toán đòi bằng chứng (OWASP, NIST, EU AI Act, ISO 42001). Chân dung 2: mô hình thương mại từ chối tác vụ tấn công hợp lệ; founder viết trên HN (07/11/2025): "Every public LLM refused legitimate 'red team' prompts". [CONFIRMED - lời founder]</p>
+<p><strong>3. Họ đang làm bằng tay thế nào?</strong></p>
+<ul>
+<li>Công cụ mã nguồn mở miễn phí: Promptfoo (tới 10k probe/tháng), Garak (NVIDIA, Apache-2.0), Giskard; tự viết kịch bản tấn công. [CONFIRMED]</li>
+<li>Thuê pentest thủ công: giá điển hình 4.000 USD/lần theo Aikido [CONFIRMED]; công cụ doanh nghiệp như Pentera ước 35.000 đến 120.000 USD/năm [SECONDARY].</li>
+<li>Chân dung 2: mô hình mở đã gỡ từ chối, miễn phí; một người dùng HN: "jinx has a bunch of helpful only models that you don't have to sign up for" (07/11/2025). [CONFIRMED]</li>
+</ul>
+<p><strong>4. Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</strong></p>
+<p>Không chép Audn: nhánh mô hình không kiểm duyệt kéo theo rủi ro nền tảng, thanh toán, pháp lý. Nếu vẫn vào ngách này: kiểm thử đối kháng agent giọng nói cho ngành bị quản lý, giá cố định công khai, độc lập với hãng mô hình và hãng bảo mật lớn, báo cáo có bằng chứng tái hiện và bản đồ tuân thủ. Giả thuyết, [UNVERIFIED]; chưa hỏi ai.</p>
+<p><strong>Câu chốt</strong></p>
+<p>Cho đội kỹ thuật ở công ty làm voice agent trong ngành bị quản lý (bảo hiểm, y tế, tài chính) mà chưa ai tấn công thử agent mỗi lần đổi mô hình, [tên bản của chủ] là dịch vụ kiểm thử đối kháng độc lập, giá cố định công khai, mỗi phát hiện kèm cuộc gọi tái hiện và bản đồ ISO 42001/EU AI Act, khác Audn ở chỗ không bán mô hình không kiểm duyệt và không đo giá bằng số test trong một gói thuê bao.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<p><strong>Mục tiêu một câu</strong></p>
+<p>Tôi cần biết thị trường kiểm thử đối kháng agent AI (đặc biệt giọng nói) còn chỗ trống không và Audn thật sự kiếm tiền từ đâu, để quyết định có bỏ công build một bản riêng hay không.</p>
+<h3>1. Đối thủ và giá</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:1037px"><colgroup><col style="width:135px"><col style="width:162px"><col style="width:220px"><col style="width:212px"><col style="width:165px"><col style="width:143px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Mô hình và điểm đáng chú ý</th>
+<th>Khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audn.AI</td>
+<td>audn.ai/pricing</td>
+<td>Free 0; Starter 99; Pro 299/tháng; quét whitebox 99 (giá 299); PenClaw 20/79/179/999</td>
+<td>Thuê bao và quét lẻ; công khai giá</td>
+<td>Chưa có đánh giá độc lập; ranh giới sản phẩm lẫn</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Promptfoo</td>
+<td>promptfoo.dev/pricing</td>
+<td>Community 0, tới 10k probe/tháng; Enterprise, On-Premise "Custom"</td>
+<td>OpenAI công bố mua 09/03/2026; hãng nói 350k+ dev, 25%+ Fortune 500 (promptfoo.dev/blog/promptfoo-joining-openai)</td>
+<td>Mạnh ở CI; sau thương vụ khó là bên "độc lập"</td>
+<td>[CONFIRMED] giá; [VENDOR-CLAIMED] người dùng</td>
+</tr>
+<tr>
+<td>Garak, Giskard</td>
+<td>github.com/NVIDIA/garak; giskard.ai/pricing</td>
+<td>Garak miễn phí, Apache-2.0, 9,8k sao. Giskard: mã nguồn mở 0, Enterprise không công khai giá</td>
+<td>Bộ quét lỗ hổng LLM; Giskard có red team liên tục, 50+ probe</td>
+<td>Không có báo cáo tuân thủ, không dịch vụ</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Lakera (Check Point)</td>
+<td>platform.lakera.ai/pricing</td>
+<td>Trang giá không hiện nội dung khi tôi đọc; "Community 0, 10k request/tháng" theo blog Giskard (đối thủ)</td>
+<td>Chặn runtime và Red; Check Point "hoàn tất mua" (CRN Asia, không nêu ngày)</td>
+<td>Nghiêng phòng thủ hơn pentest</td>
+<td>[SECONDARY]</td>
+</tr>
+<tr>
+<td>Protect AI (Palo Alto)</td>
+<td>paloaltonetworks.com</td>
+<td>Không công khai; CostBench ước 25.000 đến 100.000+ USD/năm</td>
+<td>PANW hoàn tất mua 22/07/2025 (qua tóm tắt tìm kiếm)</td>
+<td>Đã bị mua, giá ẩn</td>
+<td>[SECONDARY]</td>
+</tr>
+<tr>
+<td>Mindgard</td>
+<td>mindgard.ai/pricing</td>
+<td>Không công khai, "Book a Demo"</td>
+<td>Red team AI liên tục</td>
+<td>Giá ẩn</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>XBOW</td>
+<td>xbow.com/pricing</td>
+<td>Không công khai, "usage-based, scoped to your environment"; Series C 120 triệu USD ngày 18/03/2026, định giá hơn 1 tỉ, tổng 237 triệu (SecurityWeek)</td>
+<td>Pentester tự động hộp đen, rộng hơn AI agent</td>
+<td>Vốn lớn, bán cho doanh nghiệp lớn</td>
+<td>[CONFIRMED] giá; [SECONDARY] vốn</td>
+</tr>
+<tr>
+<td>Pentera</td>
+<td>pentera.io</td>
+<td>/pricing trả 404; ước 35.000 đến 120.000 USD/năm (PeerSpot, CostBench)</td>
+<td>Xác thực an ninh tự động, hợp đồng năm</td>
+<td>Không chuyên AI agent</td>
+<td>[SECONDARY]</td>
+</tr>
+<tr>
+<td>Aikido</td>
+<td>aikido.dev/pricing</td>
+<td>Basic 300; Pro 600; Advanced 600/tháng (10 người dùng; trang không ghi tiền tệ); pentest điển hình 4.000; pentest AI tính bằng credit</td>
+<td>Bảo mật ứng dụng cho dev</td>
+<td>Không chuyên agent giọng nói</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Cekura</td>
+<td>cekura.ai/pricing</td>
+<td>Trả theo dùng 0,25 USD/phút test giọng; Startup 500 USD/tháng (~2.000 phút); Enterprise tuỳ</td>
+<td>QA và giám sát voice agent; hàng "Red teaming" ở hai gói đầu là gạch ngang</td>
+<td>Gần Audn nhất ở mảng giọng nói, nhưng là QA</td>
+<td>[CONFIRMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nhận xét: không đối thủ nào vừa chuyên kiểm thử đối kháng agent giọng nói, vừa công khai giá, vừa độc lập sở hữu. HiddenLayer, Hamming cũng chỉ báo giá qua liên hệ (hiddenlayer.com, hamming.ai/pricing). Bảng không phải bản kiểm kê đầy đủ.</p>
+<h3>2. Tiếng nói người dùng</h3>
+<p>Không có đánh giá của người trả tiền về Audn ở nơi nào tôi đọc được. Những gì có:</p>
+<ul>
+<li>Reddit r/cybersecurity (điểm 369; founder dẫn lại trên HN, đăng trước 07/11/2025), qua Arctic Shift (kho lưu Reddit): "Looks like an extremely contrived baby level prompt injection scenario" (điểm -27); "I read the transcript but only saw a six digit number being extracted. Not a key. And how can you be sure the api key just wasn't made up?" (18). Founder đáp: "I agree it's GPT-2 level currently". [SECONDARY - https://reddit.com/r/cybersecurity/comments/1nukeiw/yesterday_i_was_using_ai_to_persuade_another_ai/; điểm là ảnh chụp của kho lưu]</li>
+<li>HN, Show HN Pingu Unchained (07/11/2025, 11 điểm, 6 bình luận), đọc qua API Algolia. boratac: "What about pricing? You didn't mention it here." andy99: "Just a signup page? These aren't allowed for show HN, you don't show anything", kèm gợi ý mô hình miễn phí không cần đăng ký. [CONFIRMED - https://news.ycombinator.com/item?id=45851102]</li>
+<li>Show HN Penclaw (25/02/2026): 4 điểm, 0 bình luận. Product Hunt PenClaw: 0 đánh giá, 7 người theo dõi. [CONFIRMED]</li>
+<li>Reddit r/selfhosted: bài "PenClaw / penclaw.ai / Audn.ai trial..." có tiêu đề nói câu FAQ "nothing sent to third-party APIs" không khớp trải nghiệm ("Runtime is Venice.ai 402. OpenClaw agent dead"). Nội dung đã bị gỡ ([removed]), người đăng nói soạn bằng Grok; chỉ có tiêu đề nên không kiểm chứng được. [UNVERIFIED - https://reddit.com/r/selfhosted/comments/1vvqrj6/, Arctic Shift]</li>
+<li>Trustpilot: không có trang cho audn.ai (scroll-read.mjs, bậc cuối). G2, Capterra: chưa mở vì G2 đã hạn chế IP này hôm nay; Gartner Peer Insights trả trang xác minh. [chưa kiểm được]</li>
+<li>Đối thủ gần nhất, Promptfoo, HN 09/03/2026: "You guys absolutely rock. You've built an industry standard with Promptfoo", "I've been using it from the very beginning and it's been great", kèm lo "I really really hope the open source project stays maintained". [CONFIRMED - https://news.ycombinator.com/item?id=47312492]</li>
+</ul>
+<p>Điều rút ra: (a) người đọc không tin kết quả không kiểm chứng được; (b) có sẵn lựa chọn miễn phí tốt (Promptfoo, Garak, mô hình mở), nên tiền chỉ đến khi có độ tin cậy, báo cáo, tuân thủ; (c) chưa ai độc lập xác nhận Audn hoạt động như quảng cáo.</p>
+<h3>3. Kích thước thị trường</h3>
+<p>Số lớn để kiểm chéo: Gartner dự báo chi cho "securing AI" là 2.835 triệu USD năm 2026 và 4.783 triệu năm 2027 (4.783 / 2.835 = 1,69, khớp "+68,7%"), gần 7,7 tỉ năm 2028, gồm bảo mật ứng dụng, kiểm soát sử dụng, quản trị, cổng. [SECONDARY - https://cxotoday.com/research/gartner-forecasts-securing-ai-market-to-hit-4-8-billion-by-2027/, ngày 26/08/2026; gartner.com chặn]. Thị trường pentest chung: 2,72 tỉ USD năm 2026 (Mordor Intelligence). [CONFIRMED]</p>
+<p><strong>TAM / SAM / SOM</strong></p>
+<p>Đơn vị: USD doanh thu mỗi năm theo giá niêm yết, cho ICP khai báo (kiểm thử agent AI). Số tự tính, không trích lại.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:488px"><colgroup><col style="width:90px"><col style="width:256px"><col style="width:142px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>A: 10.095 startup AI x 40% có agent chạm khách = 4.038 x 3.588 (Pro 299 x 12) = 14.488.344. B: 2.000 doanh nghiệp x 40% = 800 x 20.000 = 16.000.000</td>
+<td>30,5 triệu USD</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>A: 14.488.344 x 61,8% (Mỹ và Anh trong 10 nước đầu, (5.509 + 727) / 10.095) = 8.949.907. B: 16.000.000 x 33% ((593 + 67) / 2.000) = 5.280.000</td>
+<td>14,2 triệu USD</td>
+</tr>
+<tr>
+<td>SOM (12 tháng)</td>
+<td>A: 4.038 x 61,8% = 2.494 công ty x 1% = 25 khách x 3.588 = 89.700. B: 3 hợp đồng x 20.000 = 60.000</td>
+<td>khoảng 150 nghìn USD</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>10.095 startup AI: số Stanford AI Index 2024 cho 10 nước đầu, qua ascendixtech.com (không phải bản gốc). [SECONDARY] Là mức thấp; các trang tổng hợp nêu 10.000 đến 58.000 hoặc 70.000, không nguồn. Dùng 70.000: 70.000 x 40% x 3.588 = 100,5 triệu USD cho nhóm A (cận trên, không dùng).</li>
+<li>40% có agent chạm khách: ước lượng của tôi, giữa 31% và 57% trong các khảo sát doanh nghiệp (qua trang tổng hợp; "production" định nghĩa không thống nhất). [UNVERIFIED]</li>
+<li>3.588 USD/năm là giá Pro niêm yết. 20.000 USD/năm cho doanh nghiệp là giả định của tôi, thấp hơn mốc 35.000 của Pentera vì phạm vi hẹp hơn. [UNVERIFIED]</li>
+<li>2.000 doanh nghiệp là Forbes Global 2000; Mỹ 593, Anh 67 theo Wikipedia bản 2026. [SECONDARY]</li>
+<li>SOM: 1% công ty trong SAM nhóm A và 3 hợp đồng doanh nghiệp là giả định cho đội 2 đến 5 người. [UNVERIFIED]</li>
+<li>Bỏ ngoài: công ty ngoài ngành AI gắn chatbot lên website (không có mẫu số tin được) và nhánh mô hình 999 USD.</li>
+</ol>
+<p>Kiểm chéo: TAM 30,5 triệu USD là 1,1% của 2.835 triệu USD (Gartner 2026) và 1,1% của 2,72 tỉ USD (pentest chung), hợp lý cho một lát hẹp. SOM khoảng 150 nghìn USD bằng 42% run-rate MRR của Audn (29.596 x 12 = 355.152; 149.700 / 355.152); Audn kiếm gấp khoảng 2,4 lần SOM thận trọng cho ICP khai báo, củng cố giả thuyết tiền đến từ chỗ khác.</p>
+<p>Nhánh mô hình 999 USD: không tính TAM vì không có mẫu số tin được. Chỉ có trần theo số của họ: 120 chỗ x 999 x 12 = 1.438.560 USD/năm (100 chỗ: 1.198.800). [VENDOR-CLAIMED, suy ra]</p>
+<p><strong>Số bị từ chối in</strong></p>
+<ul>
+<li>"#1 Refusal-Benchmark 87% compliance", "79,7%", "85,9%", "777 tok/s", "nhanh hơn Modal 20%", "#1 CTF nội bộ của Wayve.AI": hãng tự công bố, hai tỉ lệ cho cùng "live build" lệch nhau, không có bộ dữ liệu độc lập.</li>
+<li>"50+ verified customers", "50 operators", "$36K worth of tokens", "Used in production by teams shipping AI": hãng tự nói, không tên, không chứng thực.</li>
+<li>"Revenue per visitor 51,50 USD" của TrustMRR: 1.016 khách ghé chỉ đo audn.ai (Search Console), người mua có thể đến từ X hoặc penclaw.ai.</li>
+<li>70.000 và 90.904 công ty AI (ascendixtech): không nguồn, lệch nhau.</li>
+<li>Giá ước CostBench cho HiddenLayer (0 đến 150.000 USD/năm), mốc giữ chỗ 5.000.000 USD trên AWS Marketplace, định giá 86 triệu USD của Promptfoo (nguồn lỗi ngày).</li>
+</ul>
+<p><strong>Khoảng trống và lối đi riêng</strong></p>
+<ol>
+<li>Giá công khai cho kiểm thử đối kháng agent: Mindgard, HiddenLayer, Protect AI, Giskard, XBOW, Hamming đều giấu giá; chỉ Audn, Aikido, Cekura và công cụ mã nguồn mở có số. Khoảng trống ở khách nhỏ và vừa.</li>
+<li>Tính độc lập sau ba thương vụ: khách kiểm toán có thể muốn bên kiểm thử không thuộc hãng mô hình hay hãng phòng thủ. Suy luận, chưa khách nào nói ra.</li>
+<li>Giọng nói: Cekura và Hamming bán QA, không thấy red team trong trang giá; Promptfoo đang thêm giọng nói (cofounder, HN 14/12/2025). Chỗ trống sẽ đóng nhanh.</li>
+<li>Rủi ro: Audn đã đứng ở đó và doanh thu của họ có vẻ không đến từ đó, nên nhu cầu trả tiền ở nhóm này chưa được chứng minh.</li>
+</ol>
+<p><strong>Ba cách xác thực rẻ nhất trước khi build</strong></p>
+<ol>
+<li>Theo dõi công khai 14 ngày, miễn phí: mỗi ngày ghi bộ đếm "accessors" trên audn.ai/necromicon và MRR, doanh thu ngày trên TrustMRR. Nếu số chỗ x 999 chiếm từ 70% doanh thu 30 ngày thì ICP CISO chưa có tiền chứng minh (ngưỡng do tôi đặt, [UNVERIFIED]).</li>
+<li>Nói chuyện với 5 người phụ trách bảo mật hoặc AI ở công ty làm voice agent: lần gần nhất bạn thuê hoặc chạy kiểm thử đối kháng, ai ký, chi bao nhiêu, đổi gì sau đó?</li>
+<li>Bán trước một báo cáo kiểm thử đối kháng giá cố định (ví dụ 1.500 USD) cho 3 công ty, làm thủ công bằng công cụ mã nguồn mở và văn bản uỷ quyền. Có ít nhất 1 công ty trả tiền trong 3 tuần thì mới đáng đi tiếp.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p>Nguồn (đọc ngày 31/10/2026):</p>
+<ul>
+<li>https://trustmrr.com/startup/audn-ai.md - doanh thu, MRR, doanh thu ngày, "Revenue last synced" (read.sh, bậc direct).</li>
+<li>https://www.audn.ai/, https://www.audn.ai/pricing, https://penclaw.ai, https://audn.ai/necromicon (WebFetch và curl); https://x.com/ozgurozkan123 (read.sh, bậc jina).</li>
+<li>HN qua API Algolia (item 45851102, 47312492); Reddit qua Arctic Shift (link ở D2); https://www.producthunt.com/p/penclaw-ai-openclaw-for-pentesting (bậc brightdata).</li>
+<li>Trang giá và GitHub của đối thủ (promptfoo.dev, giskard.ai, mindgard.ai, xbow.com, aikido.dev, cekura.ai, github.com/NVIDIA/garak); https://www.securityweek.com/autonomous-offensive-security-firm-xbow-raises-120m-at-1b-valuation/; https://www.crnasia.com/india/news-network/news/check-point-software-technologies-completes-acquisition-of-lakera/.</li>
+<li>Thị trường và mẫu số: cxotoday.com (Gartner), mordorintelligence.com, ascendixtech.com, en.wikipedia.org/wiki/Forbes_Global_2000.</li>
+</ul>
+<p>Chưa kiểm được:</p>
+<ul>
+<li>Stripe và cơ cấu doanh thu theo sản phẩm; mọi chia tách ở mục B là suy luận.</li>
+<li>Giá Protect AI, HiddenLayer, Pentera chỉ qua kết quả tìm kiếm tổng hợp (CostBench, PeerSpot); thương vụ Palo Alto chưa mở bản gốc (paloaltonetworks.com trả 403). Giá Lakera: trang giá không trả nội dung.</li>
+<li>G2, Capterra, Gartner Peer Insights: không đọc được; không thấy đánh giá xác minh nào của khách Audn.</li>
+<li>Freya, InTouchNow, "YC S25 startup": chỉ do hãng và mô tả của TrustMRR nói. "VC-backed": không tìm thấy thông báo gọi vốn.</li>
+<li>Ngày chính xác WARLOCK ra mắt; bộ đếm chỗ có thể là bộ đếm tiếp thị. Rủi ro thanh toán, Hugging Face, pháp lý của nhánh không kiểm duyệt chỉ suy từ tweet ghim và cách bán.</li>
+</ul>
+<p>Giả định chính: 10.095 startup AI; 40% có agent chạm khách; 3.588 và 20.000 USD/năm; 1% và 3 hợp đồng trong SOM; ngưỡng 70% để bác ICP CISO. Tất cả là ước lượng, không phải số công khai.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li>Nên theo đuổi: không. Audn có doanh thu verified thật và tăng nhanh (MRR 29.596 USD, +89,4%), nhưng phần lớn dường như đến từ nhánh bán mô hình không kiểm duyệt 999 USD, không phải ngách kiểm thử agent mà bài này phân tích; nhánh ấy dễ vỡ vì nền tảng, thanh toán, pháp lý. Chỉ nên theo dõi công khai 14 ngày (cách 1, phần D).</li>
+<li>Rủi ro lớn nhất: (a) không tách được tiền theo sản phẩm nên ICP chưa chứng minh; (b) phụ thuộc Hugging Face và nhà cung cấp mô hình; (c) ba đối thủ đã được tập đoàn mua, XBOW có vốn lớn.</li>
+<li>Bước kế rẻ nhất: ghi bộ đếm công khai và doanh thu TrustMRR mỗi ngày trong 14 ngày, trước khi nói chuyện với ai.</li>
+</ol>
+<p><strong>Hợp với hồ sơ owner.</strong> Owner bán phán đoán media nào đáng chi tiền và không làm creative thủ công; Audn là bảo mật, ngoài ngành, không dùng quan hệ agency hay 10 năm truyền thông (độ hợp thấp, khớp CSV). Điểm đáng mượn duy nhất là mẫu "chỗ có hạn, giá cao, theo đợt" (100 chỗ x 999 USD); khách của owner (doanh nghiệp, người nổi tiếng) khó chấp nhận gắn thương hiệu với mô hình không kiểm duyệt.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://audn.ai/necromicon - bộ đếm công khai "53 / 120 active $999 accessors", cho phép suy ra phần doanh thu từ chỗ 999 USD.</li>
+<li>https://penclaw.ai - giá, KYC, điều khoản không hoàn tiền của nhánh có vẻ ra tiền.</li>
+<li>https://trustmrr.com/startup/audn-ai.md - bản máy đọc của TrustMRR có doanh thu từng ngày và dòng "Revenue last synced".</li>
+<li>https://www.cekura.ai/pricing - giá công khai kiểm thử voice agent (0,25 USD/phút), mốc so sánh cho mảng giọng nói.</li>
+<li>https://www.promptfoo.dev/blog/promptfoo-joining-openai/ - thông báo OpenAI mua Promptfoo, kèm số người dùng do hãng nói.</li>
+<li>https://cxotoday.com/research/gartner-forecasts-securing-ai-market-to-hit-4-8-billion-by-2027/ - bản đọc được của dự báo Gartner "securing AI" khi gartner.com chặn.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/09-audn-ai.md</code> (bản .md cho agent đọc)</div></main></body></html>

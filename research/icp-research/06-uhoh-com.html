@@ -1,0 +1,319 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>uhoh.com - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>uhoh.com - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được.</p>
+<h2>A. Tóm tắt</h2>
+<p>uhoh.com (https://www.uhoh.com) là dịch vụ IT thuê ngoài (MSP) chạy bằng người thật trong Slack, không phải phần mềm: FAQ của trang tự hỏi "So is this an MSP?" và đáp "Yeah. Pretty much." Người mua là founder hoặc chủ công ty từ 10 người, chưa có bộ phận IT. Trang giá hiện tại ghi một gói duy nhất: 99 USD mỗi người mỗi tháng, tối thiểu 10 người (sàn 990 USD/tháng), yêu cầu không giới hạn, theo tháng, có dùng thử. TrustMRR (bên thứ ba, nói là xác minh qua Stripe) ghi MRR 43.573 USD, 36 gói, tăng 19,9% trong 30 ngày, đồng bộ lần cuối 31/10/2026 08:21 UTC. Sản phẩm có từ 18/06/2025; người đứng sau là Jonathan Sturgeon (Edmonton, Canada), cũng điều hành agency marketing Dingus &amp; Zazzy. Kết luận: nhu cầu có tiền thật, nhưng ngoài hồ sơ owner và nặng nhân công; điều đáng học là định giá một con số, có sàn, tính theo đơn vị tăng cùng khách.</p>
+<p><strong>Lưu ý trung thực:</strong> CSV và file ICP tổng hợp trước ghi "không đọc được trang uhoh.com" và "khách tự đặt giá" (từ mô tả của TrustMRR). Hôm nay tôi đọc được trang chủ (read-blocked, tầng <code>jina</code>) và trang giá (tầng <code>direct</code>, host <code>www.uhoh.com</code>). Trang hiện tại không nói "khách tự đặt giá", chỉ ghi giá cố định 99 USD/người; "tự đặt giá" có thể là cách bán cũ. Bản Wayback của trang giá (11/05/2026) không đọc được (archive.org trả 429 hai lần). WebFetch chỉ trả bản tóm tắt; số TrustMRR khớp với CSV lấy cùng ngày.</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:469px"><colgroup><col style="width:135px"><col style="width:334px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>uhoh.com - https://www.uhoh.com (curl tới tên trần <code>uhoh.com</code> trả 000 từ máy này). [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Help desk IT do người thật làm trong Slack, "không ticket": quản trị Google/Microsoft Workspace, tài khoản nhân viên, VPN, mật khẩu và 2FA, phần cứng, MDM, sao lưu. Ngoài IT: website và tên miền, cold email, CRM (HubSpot), kiểm toán chi tiêu SaaS và bảo mật. [CONFIRMED - trang chủ qua jina]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>Thuê bao tháng tính theo người dùng, theo tháng, "no setup fees, no overages". [CONFIRMED - www.uhoh.com/pricing]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>"Our Only Plan": 99 USD/người/tháng, tối thiểu 10 người, yêu cầu không giới hạn, huỷ bất cứ lúc nào, không phân biệt quốc gia. Nút "Get a free trial"; FAQ ghi "30 day trial". 10 người = 990 USD/tháng; 50 người = 50 x 99 = 4.950 USD/tháng; trên 50 người "we can work something out". [CONFIRMED - trang giá và FAQ]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 43.573 USD (+19,9%/30 ngày); 36 gói; doanh thu 30 ngày 49.004 USD (+70,0%); 3 tháng 104.322; 6 tháng 209.622; 12 tháng 387.529; tích luỹ 461.979 USD; ngày cao nhất 8.750 USD (20/10/2026). "Revenue last synced" 2026-10-31T08:21:50Z, không có cờ "expired". [SECONDARY - https://trustmrr.com/startup/uhoh-com.md qua WebFetch; doanh thu từ Stripe API key theo TrustMRR, tôi không tự kiểm được Stripe]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Jonathan Sturgeon, Edmonton. X @imintomoms: bio "started this thing: uhoh.com", "Founder / CEO @ Dingus and Zazzy", 261 người theo dõi (khớp TrustMRR). Trang uhoh ghi "Jon Sturgeon, CEO of Dingus &amp; Zazzy &amp; Co-Founder of uhoh", nên có ít nhất một đồng sáng lập chưa nêu tên. Thành lập 18/06/2025, đội không liệt kê. [CONFIRMED cho X (api.fxtwitter.com) và trang uhoh; SECONDARY cho ngày thành lập]</td>
+</tr>
+<tr>
+<td>Công ty chị em</td>
+<td>Dingus &amp; Zazzy: marketing giá phẳng theo tháng, Limitless 3.999 USD (trên 10 người), Limitless Jr. 2.999 USD (startup, đội nhỏ); khai 1.000+ khách; founder nói trong phỏng vấn Hampton "on track for $10 million this year", bán bằng gọi lạnh và email lạnh. [VENDOR-CLAIMED - dingusandzazzy.com, joinhampton.com/blog/he-scaled-an-unlimited-marketing-service-to-8-figures-through-cold-calling]</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Sáu lời chứng thực: Clifton Sellers (Founder/CEO, Legacy Builders), Na'eem Adam (Founder/CEO, Parkour), Moses Lam (Owner, Artisanal Mortgages), Alex Stewart (Founder/CEO, Teamtown), Stephanie O'Brien (President, Carmella), Enoch Taralson (Director of RevOps, Dingus &amp; Zazzy, công ty của founder). Không logo, không số khách. [VENDOR-CLAIMED]</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Những điều nguồn nói chưa khớp hoặc chưa chắc</h3>
+<ol>
+<li><strong>Giá có ba phiên bản.</strong> Trang giá: 99 USD/người, tối thiểu 10. TrustMRR: "từ 3k USD/tháng cho tối đa 50 nhân viên" = 3.000 / 50 = 60 USD/người. CSV: "tự đặt giá". Nếu cả 36 gói ở 3.000 USD thì MRR phải là 36 x 3.000 = 108.000 USD, gấp 2,5 lần số thật, nên 3k không còn là mức điển hình. 3k gần với gói Limitless Jr. 2.999 USD của công ty chị em, có thể là giá cũ hoặc chép sang. [UNVERIFIED - suy luận của tôi]</li>
+<li><strong>MRR khớp trang giá.</strong> 43.573 / 36 = 1.210 USD mỗi gói. Nếu mọi gói chạm sàn 990 USD thì tối thiểu 36 x 990 = 35.640 USD; phần dư 43.573 - 35.640 = 7.933 USD, trung bình 43.573 / 36 / 99 = 12,2 người mỗi khách, hợp lý với "tối thiểu 10". [UNVERIFIED - giả định mọi khách trả giá niêm yết]</li>
+<li><strong>Doanh thu 30 ngày 49.004 USD so với MRR 43.573 USD.</strong> Chênh 5.431 USD (+12,5%). MRR là giá trị thuê bao định kỳ quy tháng tại lúc đồng bộ; "doanh thu 30 ngày" là tiền thực thu, nên gồm khoản không định kỳ, thanh toán bù, thêm người giữa kỳ hoặc thu dồn. Chưa biết khoản nào. Tiền về theo cục: ngày 20/10 thu 8.750 USD (8.750 / 49.004 = 17,9% cả tháng), nhiều ngày 0 USD. Chiều ngược lại: doanh thu tháng 8 (26.489) và tháng 9 (28.829) đều thấp hơn MRR đầu tháng 10 là 43.573 / 1,199 = 36.341 USD (thiếu hơn 7.500). MRR của TrustMRR không phải lúc nào cũng thành tiền cùng tháng. Tôi dùng MRR để ước quy mô, không dùng làm sự thật. [UNVERIFIED]</li>
+<li><strong>Số TrustMRR tự khớp.</strong> +70,0% suy ra 30 ngày trước là 49.004 / 1,7 = 28.826, khớp tháng 9 (28.829); bảng 12 tháng cộng 387.530 so với 387.529; cửa sổ 6 tháng ghi 209.622 nhưng bảng cộng ra 211.622 (lệch 2.000, có thể do cửa sổ trượt).</li>
+<li><strong>Bản cũ.</strong> Kết quả tìm kiếm trích TrustMRR ngày 20/01/2026: "12 gói". Doanh thu 12/2025 là 30.050 USD: 30.050 / 12 = 2.504 USD mỗi gói, gấp đôi 1.210 USD hiện nay: khách đầu trả nhiều hơn (có thể gói 3k), hoặc có khoản ngoài thuê bao. [UNVERIFIED - không có bản gốc]</li>
+<li><strong>Danh mục.</strong> TrustMRR xếp "SaaS, Productivity, Security". Thực chất là MSP: đừng áp biên lợi nhuận phần mềm; biên thật chưa biết.</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<p><strong>1. Sản phẩm dành cho ai?</strong></p>
+<p>Founder hoặc chủ công ty nhỏ đang lớn, từ 10 người, chưa có IT, dùng Google Workspace hoặc Microsoft, Slack, HubSpot.</p>
+<ul>
+<li>Vai trò: người ký là founder/CEO/owner/president (năm trên sáu lời chứng thực).</li>
+<li>Quy mô: 10 đến 50 người (sàn do trang giá đặt, trên 50 phải thương lượng). [CONFIRMED]</li>
+<li>Ngành: không chỉ startup công nghệ. TrustMRR gọi "growing startups", trang chủ nói "growing business"; trang không nêu ngành của các công ty chứng thực. [VENDOR-CLAIMED]</li>
+<li>Ngân sách: 990 đến 4.950 USD/tháng; trung bình ước 1.210 USD mỗi khách (43.573 / 36). [SECONDARY, tự tính]</li>
+</ul>
+<p><strong>2. Họ gặp vấn đề gì?</strong></p>
+<p>Không ai sở hữu IT. Trang chủ liệt kê: lỗi khó hiểu trên một ứng dụng, tài khoản Google Ads bị khoá không rõ lý do, nhân viên mất quyền vào tài khoản dùng chung. Hệ quả: người rành công nghệ nhất bị kéo đi sửa Wi-Fi, nhân viên mới chờ lâu mới có máy, sao lưu và 2FA không ai kiểm. [VENDOR-CLAIMED]</p>
+<p><strong>3. Họ đang làm bằng tay thế nào?</strong></p>
+<ul>
+<li>Nhờ "nhân viên rành công nghệ nhất" làm kiêm nhiệm (chính trang chủ nêu).</li>
+<li>Thuê MSP truyền thống: 110 đến 185 USD/người/tháng cho gói quản lý toàn phần, trung bình 145 USD (arphost, không rõ ai khảo sát) [VENDOR-CLAIMED], thường có phiếu, giờ làm, hợp đồng.</li>
+<li>Mua phần mềm help desk (Freshservice, Jira Service Management) rồi tự cử người trực.</li>
+<li>Chi phí hiện tại: thời gian của người giỏi nhất đội, hoặc một kỹ sư IT (blog nhà cung cấp nêu từ 60.000 USD/năm, [VENDOR-CLAIMED]).</li>
+</ul>
+<p><strong>4. Bạn giải bằng cách nào? (lối đi riêng, giả thuyết, không khuyến nghị làm)</strong></p>
+<p>Ngoài ngành owner nên đây chỉ là giả thuyết theo khuôn mẫu. Điểm yếu của kiểu này là chất lượng không đều khi lớn (Electric, mục D2). Một bản khác sẽ: (1) công bố cam kết thời gian phản hồi bằng số và hoàn tín dụng khi trễ; (2) công bố cách nhân viên hỗ trợ truy cập máy khách (VPN, nhật ký); (3) dùng quy trình và AI để phiếu cùng loại xử lý như nhau. [UNVERIFIED]</p>
+<p><strong>Câu chốt</strong></p>
+<p>Cho chủ công ty 10 đến 50 người chưa có IT, [tên bản khác] là help desk IT trong Slack với một giá, yêu cầu không giới hạn, theo tháng, khác uhoh ở chỗ cam kết thời gian phản hồi và quy tắc truy cập bảo mật được công bố bằng số thay vì chỉ hứa "nhanh và rẻ".</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<p><strong>Mục tiêu một câu</strong></p>
+<p>Tôi cần biết help desk IT thuê ngoài cho công ty nhỏ tính giá thế nào và người dùng phàn nàn điều gì, để quyết định mô hình "một giá cố định có sàn" của uhoh có đáng học cho dịch vụ bán phán đoán của owner hay không.</p>
+<h3>1. Đối thủ và giá</h3>
+<p>Giá đọc 31/10/2026; trong ngoặc là tầng đọc.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:965px"><colgroup><col style="width:90px"><col style="width:172px"><col style="width:220px"><col style="width:172px"><col style="width:165px"><col style="width:146px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Mô hình</th>
+<th>Khoảng trống</th>
+<th>Nhãn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uhoh</td>
+<td>https://www.uhoh.com/pricing</td>
+<td>99 $/người/tháng, tối thiểu 10, huỷ bất cứ lúc nào (direct)</td>
+<td>Dịch vụ người thật trong Slack</td>
+<td>Không công bố SLA, chưa có đánh giá độc lập</td>
+<td>[CONFIRMED] giá</td>
+</tr>
+<tr>
+<td>BRITECITY</td>
+<td>https://britecity.com/pricing</td>
+<td>157 $/người + 17,85 $/máy + 16,90 $/hộp thư mỗi tháng; sàn 2.500 $/tháng (jina)</td>
+<td>MSP công bố giá</td>
+<td>Đắt hơn; sàn loại công ty rất nhỏ</td>
+<td>[CONFIRMED] (giá do hãng đăng)</td>
+</tr>
+<tr>
+<td>Electric</td>
+<td>https://electric.ai/pricing</td>
+<td>0 / 10 / 25 $/người/tháng (jina)</td>
+<td>Nền tảng IT (thiết bị, ứng dụng, MDM); từng là help desk người thật trong Slack</td>
+<td>Trang giá không mô tả người hỗ trợ; từng bị chê chất lượng (D2)</td>
+<td>[CONFIRMED] giá; chuyển hướng [UNVERIFIED]</td>
+</tr>
+<tr>
+<td>Risotto</td>
+<td>https://tryrisotto.com/pricing</td>
+<td>Startup 1.250 $/tháng, trả năm, dưới 200 nhân viên (WebFetch)</td>
+<td>Phần mềm phiếu IT trong Slack, AI tầng 1</td>
+<td>Cần người xử lý phần còn lại</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Siit</td>
+<td>https://www.siit.io/pricing</td>
+<td>23 / 45 / 89 $ mỗi admin/tháng, trả năm, nhân viên không giới hạn (WebFetch)</td>
+<td>Service desk Slack/Teams tính theo admin</td>
+<td>Phải có admin của chính công ty</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Atera</td>
+<td>https://www.atera.com/pricing/</td>
+<td>Professional 149 $, Expert 189 $, Master 219 $ mỗi kỹ thuật viên/tháng, trả năm (169/229/269 $ nếu trả tháng) (jina)</td>
+<td>Phần mềm RMM và phiếu cho IT/MSP</td>
+<td>Dành cho người làm IT</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Freshservice</td>
+<td>https://www.freshworks.com/freshservice/pricing/</td>
+<td>Starter 19 $, Growth 49 $, Pro 99 $ mỗi agent/tháng, trả năm (WebFetch)</td>
+<td>Phần mềm ITSM theo agent</td>
+<td>Cần người trực</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Jira Service Mgmt</td>
+<td>https://www.atlassian.com/software/jira/service-management/pricing</td>
+<td>Free (3 agent), Standard 21,50 $, Premium 55,28 $ mỗi agent/tháng; kỳ thanh toán trên trang không rõ (direct)</td>
+<td>Phần mềm ITSM</td>
+<td>Cần người trực</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Zendesk</td>
+<td>https://www.zendesk.com/pricing/</td>
+<td>19 / 55 / 115 $ mỗi agent/tháng, trả năm (direct)</td>
+<td>Chăm sóc khách hàng, có tab Employee Service</td>
+<td>Không chuyên IT</td>
+<td>[CONFIRMED]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Cùng một công ty 25 người, một tháng (tôi tự tính):</strong> uhoh 25 x 99 = 2.475 $; BRITECITY 3.925 + 446,25 + 422,50 = 4.793,75 $ (25 người, 25 máy, 25 hộp thư); Risotto 1.250 $ cộng người trực; Siit Standard 45 $ cho một admin cộng lương admin. Phần mềm rẻ trên giấy nhưng cần người trực; uhoh và BRITECITY bán luôn người trực. Mốc thị trường 145 $/người (arphost, khảo sát 412 MSP và người mua ở Mỹ và Canada, không rõ ai làm, bài ngày 28/08/2026) [VENDOR-CLAIMED]: uhoh thấp hơn 1 - 99/145 = 32%, phạm vi chưa chắc tương đương.</p>
+<h3>2. Tiếng nói người dùng</h3>
+<p><strong>Về uhoh:</strong> không tìm thấy đánh giá độc lập. Tìm web "uhoh.com reviews" không ra; Trustpilot không đọc được (mọi tầng read-blocked bị chặn hoặc không có trang, chưa kết luận); kho Reddit chỉ tìm theo tiêu đề, không ra gì; G2 và Product Hunt không thử vì G2 đã chặn IP này hôm nay. [UNVERIFIED] Chỉ có sáu lời chứng thực trên trang, đều tích cực, ví dụ Moses Lam: "transparent flat-fee pricing, which made the whole process stress-free and affordable" [VENDOR-CLAIMED].</p>
+<p><strong>Về Electric</strong> (đối thủ gần nhất khi còn là help desk người thật trong Slack): Capterra "Electric AI" 3,6/5 từ 24 đánh giá, cập nhật 29/10/2026; tôi cộng lại 24 điểm: 87 / 24 = 3,625. Đọc bằng tầng <code>brightdata</code> của read-blocked. [CONFIRMED - https://www.capterra.com/p/187542/Electric-AI/reviews/] Lưu ý: một đánh giá 2023 viết về sản phẩm năng lượng trùng tên; bảy đánh giá tháng 2-3/2020 đều 4 đến 5 sao; năm đánh giá 1 đến 2 sao.</p>
+<ul>
+<li>02/06/2021, 1/5: "Quality of service was the #1 issue": phiếu cùng loại xử lý khác nhau tuỳ nhân viên, cấp quyền admin dù đã dặn không, lời hứa lúc bán không đúng, vẫn bị tính tiền sau khi huỷ. Cũng người này: "I love the accessibility of the Slack-based helpdesk".</li>
+<li>25/08/2023, 3/5: giá "among the highest in the industry", sa thải làm hỏng onboarding, lỗi giấy phép làm ngừng hoạt động hai giờ.</li>
+<li>05/08/2026, 1/5 (đánh giá có ưu đãi): nhân viên hỗ trợ truy cập máy khách không qua VPN dù hợp đồng yêu cầu. Một nguồn, giọng giận dữ; chưa có bằng chứng thứ hai.</li>
+</ul>
+<p>Rút ra: bị chê chất lượng không đều giữa nhân viên, lời hứa lúc bán khác thực tế, cách hỗ trợ viên vào máy khách, hoá đơn sau khi huỷ; được khen kênh Slack và giá (2020, 2024). Đây là chỗ khách của uhoh sẽ kiểm tra.</p>
+<h3>3. Kích thước thị trường</h3>
+<p>Mốc lớn để kiểm chéo (không phải của tôi): dịch vụ quản lý toàn cầu 2026 là 370,5 tỉ $ theo Fortune Business Insights, Bắc Mỹ 43,2% = 157,1 tỉ $; ước tính khác 332,78 (The Business Research Company), 430,56 (Mordor), 460,59 tỉ (MarketsandMarkets), lệch tới 1,4 lần vì định nghĩa khác. Chỉ đọc qua trang kết quả tìm kiếm, chưa mở báo cáo gốc. [SECONDARY / UNVERIFIED]</p>
+<p><strong>TAM / SAM / SOM</strong></p>
+<p>Đơn vị: doanh thu một năm nếu mua với giá niêm yết 99 $/người/tháng. Số tự tính.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:492px"><colgroup><col style="width:90px"><col style="width:233px"><col style="width:169px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM</td>
+<td>6.000.000 doanh nghiệp Mỹ có nhân viên x 8% (20-99 người) = 480.000 công ty; x 40 người x 99 x 12</td>
+<td>22.809.600.000 $ (khoảng 22,8 tỉ)</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>480.000 x 10% (kiểu startup/dịch vụ, dùng Google/Slack, không có IT, chịu thuê ngoài) = 48.000 công ty; x 40 x 99 x 12</td>
+<td>2.280.960.000 $ (khoảng 2,28 tỉ)</td>
+</tr>
+<tr>
+<td>SOM (12 tháng)</td>
+<td>tốc độ uhoh 36 / 16,4 tháng = 2,2 khách/tháng; nửa tốc độ = 1,1/tháng, tròn 13 khách; 13 x 12 người x 99 x 12</td>
+<td>185.328 $ doanh thu định kỳ cuối năm</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>"Khoảng 6 triệu" và "8% có 20-99 người": bài tóm tắt của Pew Research (22/04/2024) về Census ABS 2021, đọc qua WebFetch; chỉ Mỹ. [SECONDARY] Census bị Cloudflare chặn, API đòi khoá, nên không có số gốc.</li>
+<li>40 người dùng mỗi công ty: ước lượng của tôi, thấp hơn điểm giữa khoảng 20-99. [UNVERIFIED]</li>
+<li>10% đúng phân khúc: ước lượng của tôi, không nguồn. [UNVERIFIED]</li>
+<li>12 người mỗi khách (43.573 / 36 / 99 = 12,2) giả định mọi khách trả giá niêm yết. [UNVERIFIED]</li>
+<li>Tốc độ: 36 gói trong 16,4 tháng (18/06/2025 đến 31/10/2026); "nửa tốc độ" là giả định thận trọng của tôi. SOM là doanh thu định kỳ cuối năm; doanh thu ghi nhận trong năm đầu chỉ khoảng một nửa nếu tăng đều.</li>
+</ol>
+<p>Kiểm chéo:</p>
+<ul>
+<li>TAM 22,8 tỉ $ = 22,8 / 370,5 = 6,2% thị trường toàn cầu và 22,8 / 157,1 = 14,5% Bắc Mỹ. Nếu phần SME là 1 - 68,88% (tỉ lệ doanh nghiệp lớn trích từ kết quả tìm kiếm, chưa kiểm) = 31,12%, chi tiêu SME Bắc Mỹ khoảng 157,1 x 0,3112 = 48,9 tỉ $ và TAM của tôi bằng 22,8 / 48,9 = 47%. Nhóm công ty 20-99 người không thể chiếm gần nửa; TAM nhiều khả năng cao ít nhất 2 lần (giả định mọi công ty đều mua, và dịch vụ quản lý còn có phần ngoài help desk). Đọc SAM như mức trần.</li>
+<li>MRR chạy năm của uhoh: 43.573 x 12 = 522.876 $. SOM 185.328 $ bằng 35% số đó, khớp giả định nửa tốc độ (13 / 36 = 36%). uhoh chiếm 522.876 / 2.280.960.000 = 0,023% SAM: thị trường còn rất phân tán giữa các MSP địa phương, hoặc SAM 10% của tôi quá rộng.</li>
+</ul>
+<p><strong>Số bị từ chối in</strong></p>
+<ul>
+<li>"Estimated user count: 0" (TrustMRR): giá trị giữ chỗ.</li>
+<li>"Từ 3k $/tháng cho 50 nhân viên" và "tự đặt giá": mâu thuẫn trang giá hiện tại (B, mục 1).</li>
+<li>"12 gói, 20/01/2026": chỉ là trích từ tìm kiếm, chưa mở bản gốc.</li>
+<li>"10 triệu $/năm" của Dingus &amp; Zazzy: lời founder, không phải doanh thu uhoh.</li>
+<li>Sáu lời chứng thực: hãng tự đăng, một lời của công ty chị em.</li>
+<li>Bốn ước tính thị trường 333 đến 461 tỉ $ và "trung bình 145 $" của arphost: định nghĩa hoặc phương pháp không rõ; chỉ kiểm chéo.</li>
+</ul>
+<p><strong>Khoảng trống và lối đi riêng</strong></p>
+<ol>
+<li>Phần mềm help desk tính theo nhân viên IT, còn công ty không có IT cần dịch vụ tính theo người dùng cuối. uhoh nằm ở đó, giá thấp hơn mốc 145 $ và BRITECITY.</li>
+<li>Không ai trong bảng công bố cam kết phản hồi hay tư thế bảo mật bằng số, trong khi phàn nàn về Electric xoay quanh chất lượng không đều và truy cập máy khách. [UNVERIFIED: chưa đọc điều khoản dịch vụ của uhoh]</li>
+<li>Rủi ro: uhoh có thể thêm SLA trong vài tuần; dịch vụ người thật có biên mỏng, biên của uhoh chưa biết.</li>
+</ol>
+<p><strong>Ba cách xác thực rẻ nhất trước khi build</strong></p>
+<ol>
+<li><strong>Phỏng vấn 5 người đã bỏ MSP:</strong> tìm người viết đánh giá 1 đến 3 sao về Electric trên Capterra, hỏi họ trả bao nhiêu, vì sao bỏ, cần cam kết gì để quay lại. Đi tiếp nếu ít nhất 3 trong 5 nhắc "chất lượng không đều" hoặc "bảo mật" (ngưỡng do tôi đặt, UNVERIFIED).</li>
+<li><strong>Trang đích có sàn 990 $/tháng và SLA bằng số:</strong> nêu câu chốt, giá, nút đặt lịch 15 phút; khoảng 300 $ quảng cáo nhắm chủ công ty 10-50 người. Đi tiếp nếu có 10 cuộc gọi trong 2 tuần (ngưỡng do tôi đặt, UNVERIFIED).</li>
+<li><strong>Bán trước thủ công:</strong> nhận 3 khách thử 990 $/tháng, một kỹ thuật viên bán thời gian trực trong Slack, ghi phiếu vào bảng tính để đo thời gian phản hồi thật. Ít nhất 2 khách ký trong 4 tuần và phản hồi trung vị đạt mức đã hứa thì nhu cầu là thật; không thì dừng trước khi viết mã.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p><strong>Nguồn (đọc 31/10/2026; tầng đọc trong ngoặc)</strong></p>
+<ul>
+<li>https://www.uhoh.com/ (tầng jina; WebFetch trả ECONNRESET), https://www.uhoh.com/pricing và /book-a-meeting (tầng direct)</li>
+<li>https://trustmrr.com/startup/uhoh-com.md (WebFetch, bản tóm tắt)</li>
+<li>https://x.com/imintomoms (jina), https://api.fxtwitter.com/imintomoms</li>
+<li>https://www.dingusandzazzy.com và bài Hampton (link ở phần B) (WebFetch)</li>
+<li>Giá đối thủ: các link trong bảng D1 (tầng ghi trong ngoặc ở bảng)</li>
+<li>https://www.capterra.com/p/187542/Electric-AI/reviews/ (tầng brightdata)</li>
+<li>https://arphost.com/managed-it-support-pricing/ và https://www.pewresearch.org/short-reads/2024/04/22/a-look-at-small-businesses-in-the-us/ (WebFetch)</li>
+<li>Thị trường dịch vụ quản lý (Fortune Business Insights, Mordor, MarketsandMarkets, The Business Research Company): chỉ đọc qua trang kết quả tìm kiếm.</li>
+</ul>
+<p><strong>Chưa kiểm được</strong></p>
+<ul>
+<li>Giá lịch sử của uhoh: bản Wayback 11/05/2026 tồn tại nhưng trả 429; chưa biết "khách tự đặt giá" từng nghĩa là gì.</li>
+<li>Stripe và hợp đồng thật: MRR là lời của TrustMRR.</li>
+<li>Đồng sáng lập, nhân viên hỗ trợ và nơi làm việc, SLA, chính sách bảo mật: trang uhoh không nêu.</li>
+<li>Đánh giá độc lập về uhoh: không tìm thấy; Trustpilot không kết luận được; G2, Product Hunt không thử.</li>
+<li>Số doanh nghiệp tuyệt đối từ Census (bị chặn). Pilot, Vanta, "Oysta": chưa mở trang.</li>
+</ul>
+<p><strong>Giả định chính</strong>
+480.000 công ty Mỹ 20-99 người; 40 người dùng mỗi công ty; 10% đúng phân khúc; 13 khách trong 12 tháng (nửa tốc độ uhoh); mọi khách trả 99 $/người; 12 người mỗi khách. Các ngưỡng 3/5, 10 cuộc gọi, 2/3 khách do tôi đặt. Tất cả là ước lượng.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li><strong>Nên theo đuổi: không, nếu ý là làm một bản help desk IT.</strong> Nhu cầu có tiền thật (MRR 43.573 $, +19,9%/30 ngày) nhưng ngành ngoài hồ sơ owner, dịch vụ nặng người, chưa có đánh giá độc lập nào. Nếu vẫn thử, chỉ đi tiếp khi 5 cuộc phỏng vấn xác nhận "chất lượng không đều" là nỗi đau chính và bán trước được ít nhất 2 gói.</li>
+<li><strong>Rủi ro lớn nhất:</strong> dịch vụ người thật mất chất lượng khi lớn (bằng chứng ở Electric), và MRR của TrustMRR không thành tiền thu đều mỗi tháng (tháng 8 và 9 thấp hơn MRR hơn 7.500 $).</li>
+<li><strong>Bước tiếp theo rẻ nhất:</strong> nếu chỉ muốn học, không cần làm thêm gì với uhoh; nếu muốn kiểm, phỏng vấn 5 người đã bỏ MSP, chưa viết mã.</li>
+</ol>
+<p><strong>Hợp với hồ sơ owner.</strong> Owner (winning-product.config.md) bán phán đoán media nào đáng chi tiền, không làm creative thủ công, mũi nhọn đầu tiên là ba agency; uhoh ngoài ngành nên độ hợp thấp. Bài học định giá: trang hiện tại không còn "khách tự đặt giá", chỉ một con số, nhấn "same price whether you're small or scaling"; có thể (chưa chứng minh) "tự đặt giá" cộng dùng thử chỉ để kéo khách đầu. Điều chuyển được: (1) giá phẳng có sàn 990 $ lọc khách nhỏ, nhân theo đơn vị tăng cùng khách; với owner đơn vị có thể là "mỗi kế hoạch media được chấm" hoặc "mỗi tháng cố vấn", không tính theo phần trăm ngân sách media để tránh xung đột lợi ích (đề xuất của tôi, UNVERIFIED); (2) dùng thử 30 ngày, không phí cài đặt; (3) công ty chị em giá phẳng (Dingus &amp; Zazzy) chạy song song giống ba agency của owner, khách đầu có thể đến từ đó (suy luận, chưa kiểm); (4) cảnh báo từ Electric: làm tay không quy trình thì chất lượng trôi, nên phán đoán phải đóng gói thành bảng chấm trước khi tăng số khách.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://trustmrr.com/startup/uhoh-com.md - bản máy đọc của TrustMRR, có bảng doanh thu ngày và tháng và dòng "Revenue last synced"; WebFetch đọc được.</li>
+<li>https://www.uhoh.com/pricing - trang giá; tên trần <code>uhoh.com</code> bị curl trả 000, host <code>www.uhoh.com</code> thì tầng direct của read.sh đọc được trang con.</li>
+<li>https://www.capterra.com/p/187542/Electric-AI/reviews/ - đánh giá có ngày và điểm từng mục; G2 bị chặn hôm nay nhưng Capterra ra chữ qua tầng brightdata.</li>
+<li>https://britecity.com/pricing và https://electric.ai/pricing - giá MSP và giá phần mềm IT; tầng jina đọc được, WebFetch trả 403.</li>
+<li>https://api.fxtwitter.com/imintomoms - số người theo dõi và bio của tài khoản X, không cần đăng nhập.</li>
+<li>Không dùng được hôm nay: census.gov (Cloudflare chặn), api.census.gov (đòi khoá), web.archive.org (429).</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/06-uhoh-com.md</code> (bản .md cho agent đọc)</div></main></body></html>

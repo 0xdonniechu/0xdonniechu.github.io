@@ -1,0 +1,186 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>11 mô hình thu phí và mô hình nào hợp DF (2026-11-01)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>11 mô hình thu phí và mô hình nào hợp DF (2026-11-01)</h1>
+<p>Nguồn bảng: ảnh owner gửi ngày 2026-11-01 (11 mô hình, ví dụ và giá công khai). Giá trong ảnh <strong>chưa kiểm lại</strong> trên trang từng hãng; độ tin B. Bối cảnh DF lấy từ <a href="../research/decision-vn-first-2026-11-01.html"><code>research/decision-vn-first-2026-11-01.md</code></a> và <a href="../research/df-partner-pricing-2026-11-01.html"><code>research/df-partner-pricing-2026-11-01.md</code></a>. Phần chấm điểm và đề xuất là suy luận của tôi.</p>
+<h2>1. Năm họ mô hình</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:772px"><colgroup><col style="width:161px"><col style="width:166px"><col style="width:175px"><col style="width:135px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Họ</th>
+<th>Mô hình trong bảng</th>
+<th>Tiền đến từ</th>
+<th>Doanh thu đoán trước được</th>
+<th>Tải vận hành khi lớn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thu theo thời gian dùng</td>
+<td>Seat subscription, Freemium, Open core</td>
+<td>Thuê bao tháng</td>
+<td>Cao</td>
+<td>Thấp (phần mềm)</td>
+</tr>
+<tr>
+<td>Thu theo mức dùng</td>
+<td>Usage-based, Outcome-based</td>
+<td>Mỗi lượt, mỗi kết quả</td>
+<td>Thấp đến vừa</td>
+<td>Thấp</td>
+</tr>
+<tr>
+<td>Bán một lần, bán quyền</td>
+<td>One-time license, White label</td>
+<td>Trả một lần hoặc phí bán lại</td>
+<td>Thấp (one-time), cao (white label)</td>
+<td>Thấp</td>
+</tr>
+<tr>
+<td>Bán việc được hoàn thành</td>
+<td>Productized service, Service-as-Software</td>
+<td>Phí tháng cố định cho kết quả</td>
+<td>Cao</td>
+<td>Cao, trừ khi phần mềm làm chính</td>
+</tr>
+<tr>
+<td>Thu trên kết nối</td>
+<td>Marketplace, Community/cohort</td>
+<td>% giao dịch, phí thành viên</td>
+<td>Vừa</td>
+<td>Vừa</td>
+</tr>
+</tbody>
+</table></div>
+<p>Quy luật: càng gần "bán việc được hoàn thành", giá mỗi khách càng cao (Designjoy 4.995 USD/tháng, ListKit từ 18.000 USD/quý) nhưng tải vận hành càng lớn. Service-as-Software là cách giữ giá cao mà không để tải tăng theo số khách: phần mềm làm chính, người chỉ duyệt.</p>
+<h2>2. Chấm từng mô hình cho DF</h2>
+<p>Tiêu chí: hợp ICP giai đoạn đầu (Enterprise và agency ở Việt Nam); khớp lý do khách trả tiền (tiết kiệm tiền, thời gian, công sức); tải vận hành; đóng góp vào 1M trong 12 tháng.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:638px"><colgroup><col style="width:135px"><col style="width:135px"><col style="width:135px"><col style="width:233px"></colgroup>
+<thead>
+<tr>
+<th>Mô hình</th>
+<th>Hợp DF</th>
+<th>Vai trò</th>
+<th>Lý do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service-as-Software</strong></td>
+<td><strong>Cao</strong></td>
+<td><strong>Lõi: DF Partner</strong></td>
+<td>Đúng thứ Enterprise mua: kết quả, không tự làm. Giá neo vào agency/in-house (bảng Before/After). DF làm chính, người duyệt, nên tải không tăng theo khách như agency</td>
+</tr>
+<tr>
+<td><strong>White label</strong></td>
+<td><strong>Cao</strong></td>
+<td><strong>Kênh agency</strong></td>
+<td>ICP thứ hai là agency. GoHighLevel cho thấy agency trả tiền để có "phần mềm riêng" gắn thương hiệu của họ rồi bán lại. DF chạy engine dưới tên agency, thu theo mỗi brand được vận hành. Một agency mang 5-20 brand, nên mỗi lần chốt là nhiều khách</td>
+</tr>
+<tr>
+<td><strong>Productized service</strong></td>
+<td>Vừa (cách đóng gói)</td>
+<td>Hình thức của Partner</td>
+<td>Mượn cách Designjoy làm: giá cố định, phạm vi rõ, có thể tạm dừng. Không dùng mô hình "một người làm" vì giới hạn bởi sức người</td>
+</tr>
+<tr>
+<td><strong>Usage-based</strong></td>
+<td>Vừa</td>
+<td>DF Self</td>
+<td>Self 99/199 USD theo quy mô đã là bậc theo mức dùng. Có thể thêm credit khi vượt khối lượng asset</td>
+</tr>
+<tr>
+<td><strong>Community, cohort</strong></td>
+<td>Vừa</td>
+<td>Phễu đào tạo</td>
+<td>Academy 400 USD và cộng đồng học viên. Hợp người đã có audience: cần mặt tiền founder (bài học Run By Linh, MagentX)</td>
+</tr>
+<tr>
+<td><strong>Freemium</strong></td>
+<td>Vừa</td>
+<td>Cửa vào</td>
+<td>Workshop free, công cụ chấm free. Dùng để kéo người, không phải nguồn tiền</td>
+</tr>
+<tr>
+<td><strong>Outcome-based</strong></td>
+<td>Thấp đến vừa</td>
+<td>Thưởng thêm, không làm lõi</td>
+<td>Kết quả trên social phụ thuộc nền tảng (Reddit, YouTube đã đổi luật năm 2026). Chỉ dùng phí nền + thưởng theo kết quả</td>
+</tr>
+<tr>
+<td>One-time license</td>
+<td>Thấp</td>
+<td>Khoá vệ tinh 20 USD</td>
+<td>Chỉ là sản phẩm thông tin giá thấp trong phễu</td>
+</tr>
+<tr>
+<td>Seat subscription</td>
+<td>Thấp</td>
+<td>Không dùng</td>
+<td>Giá trị của DF tính theo brand và khối lượng, không theo số người đăng nhập</td>
+</tr>
+<tr>
+<td>Marketplace</td>
+<td>Thấp lúc này</td>
+<td>Để sau</td>
+<td>Có thể thành chợ nối brand với nhân vật AI, creator; cần quy mô trước</td>
+</tr>
+<tr>
+<td>Open core</td>
+<td>Không hợp</td>
+<td>Không dùng</td>
+<td>DF không phải dev tool; mở mã không kéo được ICP này</td>
+</tr>
+</tbody>
+</table></div>
+<h2>3. Tổ hợp đề xuất cho DF</h2>
+<pre><code>Freemium (workshop, công cụ chấm)
+  → Cohort (khoá 20 USD → Academy 400 USD, cộng đồng)
+      → Service-as-Software: DF Partner S / M / L (lõi doanh thu)
+      → White label cho agency: thu theo mỗi brand vận hành
+      → Usage-based: DF Self 99/199 USD (phụ ở Việt Nam, hợp global sau)
+  (+ thưởng theo kết quả như phần thêm của Partner)
+</code></pre>
+<h2>4. Điều mới so với mô hình đã chốt</h2>
+<p><strong>White label là đòn bẩy chưa có trong phương trình 1M.</strong> Partner bán cho từng brand; white label bán cho agency, mỗi agency mang nhiều brand. Phép tính minh hoạ (giả định của tôi, chưa kiểm thị trường): nếu thu 300 USD mỗi brand mỗi tháng, một agency vận hành 10 brand trên DF là 3.000 USD/tháng, ngang một khách Partner gói L, nhưng phần làm việc với brand do agency gánh. Cần kiểm: agency Việt Nam trả bao nhiêu cho phần mềm white label (GoHighLevel 297-497 USD/tháng là mốc global).</p>
+<p><strong>Rủi ro:</strong> white label và Partner có thể giẫm chân nhau (agency bán lại cùng dịch vụ cho cùng brand mà DF đang chào trực tiếp). Cần luật kênh: brand đã thuộc agency thì DF không chào trực tiếp.</p>
+<h2>5. Cần kiểm tiếp</h2>
+<ul>
+<li>Giá trong ảnh (Designjoy, ListKit, GoHighLevel, Skool, Intercom Fin, Affitor) trên trang chính thức.</li>
+<li>Agency Việt Nam đang dùng phần mềm white label nào, giá bao nhiêu, cho bao nhiêu brand.</li>
+<li>Giá thưởng theo kết quả trong ngành content: có agency nào ở Việt Nam bán theo kết quả không.</li>
+</ul><div class="src">Nguồn: <code>research/revenue-models-pricing-2026-11-01.md</code> (bản .md cho agent đọc)</div></main></body></html>

@@ -1,0 +1,106 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Deep dive, candidate 1: sell the verdict (go / test / kill) before the spend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Deep dive, candidate 1: sell the verdict (go / test / kill) before the spend</h1>
+<p>Date: 2026-10-30. Method: public-page teardown (homepages and press only; no sign-up, trial or payment; X skipped). Blank = not readable. Labels: HIGH = read on the company's own page or a primary listing; MED = one secondary source or company claim; LOW = inference.</p>
+<h2>Teardown</h2>
+<h3>Adside.ai (YC F26)</h3>
+<ul>
+<li>Sells: AI agents that research, strategise, make static/video ads, monitor and rotate creatives on the client's ad accounts. Two tiers: self-serve "AI Agency" and "Managed service" (software plus an expert from their network). To startups, brands and agencies. HIGH (<a href="https://adside.ai">adside.ai</a>)</li>
+<li>Price: $290/brand/month ($190 annual prepay), $100 creative credits included, unlimited users. Managed: 10% of ad spend, $3,500/month minimum. HIGH</li>
+<li>Delivery: agents do the work; Slack, Claude Code/ChatGPT, MCP. Human only in Managed (weekly reports, phone access). Live "same day".</li>
+<li>Proof: claim "4.5 hours becomes 3.5 minutes"; dashboard snippets with unattributed figures. No case studies, no logos, no ROAS. Founders say they sold a prior bootstrapped software company.</li>
+<li>Traction: YC F26 listing only (<a href="sweep-yc.html">sweep-yc.md</a>). Revenue/customers blank.</li>
+<li>Weakness: no outcome proof; pays for execution, not judgment; crowded with ad-automation tools.</li>
+</ul>
+<h3>Light Anchor (YC, listed Spring 2026 / P26, not S26)</h3>
+<ul>
+<li>Correction: batch label in your brief is wrong; the YC page says Spring 2026. MED (<a href="https://www.ycombinator.com/companies/light-anchor">YC</a>)</li>
+<li>Sells: agents that run a consumer brand's ads (Meta, Google, TikTok, Amazon, ChatGPT ads), storefront copy, review campaigns, AI-answer visibility, on the client's own accounts. To consumer brands on Amazon/Shopify (mostly Korean/K-beauty logos). HIGH (<a href="https://lightanchor.ai">lightanchor.ai</a>)</li>
+<li>Price: 5-15% of the revenue the agents create; no retainer, no setup fee; set on a call. HIGH</li>
+<li>Delivery: client connects ad accounts, Amazon, Shopify, brand kit. Human role not stated on the site. YC page says they also operate their own stores, and the team is 2.</li>
+<li>Proof: one case (Anuko, week of Sep 7-13 2026): sales $140,384, Meta spend $44,422, MER 3.16x, own-reported. Logos: Memebox, Nooni, Anuko, Lion Pose, Baegayul, Dermaglaze, Aruen. HIGH that they are claimed, LOW that they are verified.</li>
+<li>Traction: 50+ Upwork Shopify jobs at 4.9/5; brand count inconsistent (7 brands vs "one flagship plus experiments"). MED</li>
+<li>Weakness: outcome-share pricing means they carry the risk; sells execution plus rev-share, not an upfront verdict.</li>
+</ul>
+<h3>Gudea (gudea.ai)</h3>
+<ul>
+<li>Sells: "actionable intelligence platform" on narrative formation, amplifiers and spread; forecasts speed, reach, life of a narrative; roots in tracking online extremist networks; use cases crisis comms, retail, finance. Buyer: "organizations", unnamed. HIGH on page, MED on use cases (<a href="https://runtimewire.com/article/gudea-raises-7m-viral-narrative-forecasting">RuntimeWire</a>, <a href="https://pulse2.com/gudea-raises-7-million-seed-round-co-led-by-mudita-ventures-and-collide-capital/">Pulse2</a>)</li>
+<li>Price: blank. Delivery: platform plus "expert interpretation" and custom reports; split not shown.</li>
+<li>Proof: no metrics, no case studies, no customers; only a Rolling Stone headline.</li>
+<li>Traction: $7M seed, Oct 2026 (investors reported inconsistently; ~$15M total claimed, uncorroborated). MED</li>
+<li>Weakness: reporters say it is untested whether forecasts help customers act earlier; sells monitoring/defence, not creative go/kill.</li>
+</ul>
+<h3>Clouted (clouted.com; a16z Speedrun, $7M seed May 2026)</h3>
+<ul>
+<li>Sells: "distribution marketing": clipping, UGC, managed pages, creator seeding, performance ads, content production, with an assigned strategist. To music, entertainment, gaming, consumer tech. HIGH (<a href="https://clouted.com">clouted.com</a>)</li>
+<li>Price: not shown; "Book a strategy call". Press hints at subscription. Delivery: intake, content analysis, strategist plan, launch in 24-48h, learnings to next round.</li>
+<li>Proof: named campaigns (ILLENIUM 30M+ views; House of Feelings 39M+ impressions; a film 13.8M+), logos inferred from image names (BMG, Insomniac, Liquid State...). Own claims.</li>
+<li>Traction: $7M seed 20-21 May 2026 led by Slow Ventures. MED (<a href="https://www.accessnewswire.com/newsroom/en/publishing-and-media/clouted-raises-7m-to-define-the-next-era-of-distribution-marketing-1169015">ITBrief/press</a> not readable, via search summary; <a href="https://techbuzz.ai/articles/clouted-wants-to-take-the-guesswork-out-of-making-short-videos-go-viral">TechBuzz</a> says customers and revenue undisclosed).</li>
+<li>Weakness: "virality engine" is wrapped in a campaign-execution service; the prediction itself is not sold alone and not proven.</li>
+</ul>
+<h3>Viral Validator (cheap-end data point)</h3>
+<ul>
+<li>Sells: self-serve scorer for a short video (hook, retention, aesthetics, shareability, commentability) plus fixes. $9/month or $19/month. HIGH (<a href="https://trustmrr.com/startup/viral-validator">TrustMRR</a>)</li>
+<li>Traction: all-time revenue $1.50 (one payment, 2025-12), MRR $0, 0 subscriptions, listed for sale at $10,000, 4 offers. HIGH (page synced 2026-10-30; the founded date on it is a data error). Earlier note said $2; the page says $1.50.</li>
+<li>Weakness: confirms a self-serve anonymous score does not sell.</li>
+</ul>
+<h2>Answers for candidate 1</h2>
+<ol>
+<li>
+<p>What buyers pay for today. They pay for execution and outcome: ad-account management (Adside $190-290/brand/mo; managed 10% of spend, $3,500 min), revenue share (Light Anchor 5-15%), and clip/creator distribution campaigns (Clouted, quote-only). Intelligence platforms (Gudea) are funded but have no public price or customer. Confidence: MED for prices (company pages), LOW for who actually pays, since none show verified revenue.</p>
+</li>
+<li>
+<p>Evidence anyone pays for an independent verdict before spend. Yes, but only in the old research form: panel ad pre-testing (Zappi-type studies quoted at about $3,000-$25,000+ per study, and $2,500-$5,000 for a lower-cost option, from a competitor's blog and Zappi help pages, not price lists). LOW-MED. For a small, fast, human-judged go/test/kill verdict, I found no verified sale. At the cheap end, a $9-19 AI scorer earned $1.50. No evidence for a price in between. Absence from a US-only search is not proof of absence.</p>
+</li>
+<li>
+<p>Three product shapes and first paid offers (prices are hypotheses, not evidence).</p>
+<ul>
+<li>A. Pick-the-winner review: brand or agency sends 10-20 drafts and a goal; you return rank, top 3 with reasons, kill list in 48h. First offer: $300-500 per batch, first 3 buyers at $99, sold to the 3 agencies' existing clients.</li>
+<li>B. Go / test / kill gate for a campaign, sold to a celebrity or brand team before a launch budget is released: a one-page verdict plus a small test plan. First offer: $1,500 flat for one campaign decision, with a refund if the team did not act on it.</li>
+<li>C. Verdict-then-run bundle for agencies: the verdict is a fee, and the test spend is run through their existing tools (e.g. Adside or Clouted style execution). First offer: $2,000/month retainer for 4 verdicts, billed to the agency.</li>
+</ul>
+</li>
+<li>
+<p>Single biggest assumption to test: that a buyer with real spend will pay a stand-alone fee for a human-judged verdict from the owner, and then act on it, rather than getting it free inside an agency or tool. Test: put offer A in front of 10 existing clients of the three agencies and count paid yes versus free interest, then compare the picks with real results. Confidence it is the right assumption: MED.</p>
+</li>
+<li>
+<p>Confidence labels are inline above. Overall: the funding signal is real (HIGH: Clouted, Gudea round sizes, MED); paid demand for a verdict is unproven (LOW). Every one of the four sells execution or monitoring, so a verdict-only firm is an open slot or a sign of no demand; the 48-hour test cannot tell which, only the owner's buyers can.</p>
+</li>
+</ol>
+<h2>Not done</h2>
+<p>No pricing page or customer interview was read behind a login. Gudea pricing and Clouted pricing are blank. Light Anchor's human role is blank.</p><div class="src">Nguồn: <code>research/deep-c1.md</code> (bản .md cho agent đọc)</div></main></body></html>

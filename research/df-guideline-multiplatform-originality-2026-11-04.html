@@ -1,0 +1,186 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Guideline vận hành &amp; thiết kế sản phẩm DF: Đăng chéo đa nền tảng (Cross-posting) và Cơ chế kiểm duyệt &quot;Nội dung không nguyên gốc&quot; (2026-11-04)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Guideline vận hành &amp; thiết kế sản phẩm DF: Đăng chéo đa nền tảng (Cross-posting) và Cơ chế kiểm duyệt "Nội dung không nguyên gốc" (2026-11-04)</h1>
+<p>Tài liệu hướng dẫn tiêu chuẩn vận hành (SOP) và quy tắc thiết kế pipeline cho <strong>Distraction Foundry (DF)</strong> khi phân phối nội dung (đặc biệt là Short-form Video: TikTok, Instagram Reels, YouTube Shorts, Facebook Reels) trên nhiều nền tảng và nhiều tài khoản.</p>
+<p>Mọi quy tắc dưới đây được đối chiếu trực tiếp từ văn bản chính sách chính thức của <strong>TikTok</strong>, <strong>Instagram</strong>, <strong>YouTube</strong> và tài liệu kỹ thuật vận hành API của các nền tảng đăng bài tính đến ngày <strong>2026-11-04</strong>. Nhãn độ tin cậy: <strong>[A]</strong> (tài liệu chính thức của nền tảng).</p>
+<hr />
+<h2>1. Tóm tắt phán quyết: Khi nào CẦN và KHÔNG CẦN biến đổi video gốc?</h2>
+<blockquote>
+<p><strong>Kết luận cốt lõi:</strong> Nếu video là <strong>nội dung tự sản xuất (Self-made Master)</strong> và chỉ đăng lên <strong>1 tài khoản chính ở mỗi nền tảng</strong> (1 TikTok + 1 IG Reels + 1 YT Shorts + 1 FB Reels), <strong>KHÔNG CẦN</strong> tốn công đổi hiệu ứng chuyển cảnh, icon hay kiểu chữ trong video. Các nền tảng <strong>không phạt</strong> nhà sáng tạo đăng video gốc của chính mình lên nhiều mạng xã hội khác nhau.</p>
+</blockquote>
+<div class="tw"><table style="table-layout:fixed;min-width:1083px"><colgroup><col style="width:240px"><col style="width:180px"><col style="width:218px"><col style="width:165px"><col style="width:280px"></colgroup>
+<thead>
+<tr>
+<th>Kịch bản phân phối</th>
+<th>Loại nguồn nội dung</th>
+<th>Cần sửa video (hiệu ứng, bố cục, icon, âm thanh)?</th>
+<th>Cần viết lại Caption / Tiêu đề / Hashtag ngoài bài đăng?</th>
+<th>Lý do từ cơ chế nền tảng [A]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kịch bản 1 (Mode A):</strong> Đăng lên <strong>1 tài khoản / nền tảng</strong> (1 TikTok + 1 IG + 1 YT + 1 FB)</td>
+<td><strong>Video tự quay / tự dựng</strong> (File Master sạch)</td>
+<td><strong>KHÔNG CẦN</strong> <em>(Giữ nguyên 100% file video Master)</em></td>
+<td><strong>BẮT BUỘC</strong> <em>(Tối ưu SEO theo từng nền tảng)</em></td>
+<td>TikTok, Instagram, YouTube không phạt chủ sở hữu đăng tác phẩm gốc của mình sang nền tảng đối thủ, miễn là file sạch (không dính watermark nền tảng khác).</td>
+</tr>
+<tr>
+<td><strong>Kịch bản 2 (Mode B1):</strong> Đăng cùng 1 video lên <strong>≥2 tài khoản trong CÙNG 1 nền tảng</strong> (VD: kênh Brand + kênh Founder + 3 kênh TikTok/IG vệ tinh)</td>
+<td><strong>Video tự quay / tự dựng</strong> (File Master sạch)</td>
+<td><strong>BẮT BUỘC</strong> <em>(Phải xuất thành các file video khác nhau)</em></td>
+<td><strong>BẮT BUỘC</strong></td>
+<td>Hệ thống chống spam nội bộ quét mã băm (<code>file hash</code>) + dấu vân tay hình ảnh (<code>perceptual hash</code>). Đăng trùng file lên nhiều tài khoản cùng nền tảng sẽ bị <strong>0 view (shadowban)</strong> hoặc khóa token API.</td>
+</tr>
+<tr>
+<td><strong>Kịch bản 3 (Mode B2):</strong> Cắt clip từ nguồn chung có sẵn trên mạng (podcast công khai, livestream, UGC, template AI hàng loạt)</td>
+<td><strong>Nguồn thứ cấp / Nguồn dùng chung</strong></td>
+<td><strong>BẮT BUỘC BIẾN ĐỔI SÂU</strong> <em>(Thêm bình luận, góc nhìn, giọng đọc, cấu trúc lại)</em></td>
+<td><strong>BẮT BUỘC</strong></td>
+<td>Cả 3 nền tảng đều có bộ lọc <em>Unoriginal / Reused / Inauthentic Content</em> và nêu rõ: <strong>chỉ đổi tốc độ, thêm viền, chèn chữ tĩnh hoặc icon/sticker sẽ KHÔNG vượt qua được bộ lọc</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>2. Bằng chứng từ chính sách chính thức của 3 nền tảng lớn (kiểm chứng 2026-11-04)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:1079px"><colgroup><col style="width:153px"><col style="width:269px"><col style="width:318px"><col style="width:339px"></colgroup>
+<thead>
+<tr>
+<th>Nền tảng</th>
+<th>Nguồn chính sách chính thức</th>
+<th>Quy định với video tự làm đăng chéo sang nền tảng khác</th>
+<th>Cờ phạt &amp; các chỉnh sửa hời hợt bị bác bỏ [A]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TikTok</strong></td>
+<td>• <a href="https://www.tiktok.com/community-guidelines/en/integrity-authenticity">Community Guidelines — Integrity &amp; Authenticity</a> <em>(hiệu lực 2026-09-24, đọc 2026-11-04)</em><br>• <a href="https://support.tiktok.com/en/business-and-creator/creator-rewards-program/creator-rewards-program">Creator Rewards Program</a> <em>(đọc 2026-11-04)</em></td>
+<td>• <strong>Cho phép:</strong> Video tự quay/tự dựng đăng chéo hoàn toàn hợp lệ.<br>• <strong>Lưu ý chương trình bật kiếm tiền (<em>Creator Rewards</em>):</strong> Yêu cầu liên kết tài khoản Instagram &amp; YouTube chính chủ vào hồ sơ TikTok để chứng minh quyền sở hữu nếu video đã xuất hiện ở nền tảng khác.</td>
+<td>• <strong>Không đủ điều kiện FYP:</strong> <em>"Unoriginal content that is simply reposted from another source without adding any new creative edits, such as content with visible watermarks or logos from elsewhere."</em><br>• <strong>Bác bỏ chỉnh sửa nông (<em>Creator Rewards</em>):</strong> <em>"Simple edits, like changing the video speed or adding a filter, aren't considered original"</em> và loại trừ <em>"content that has already been posted on TikTok or another platform"</em>.</td>
+</tr>
+<tr>
+<td><strong>Instagram (Reels)</strong></td>
+<td>• <a href="https://creators.instagram.com/original-content-guidelines/">Instagram Original Content Guidelines</a> <em>(cập nhật 2026-04-30, đọc 2026-11-03)</em><br>• <a href="https://creators.instagram.com/recommendations-and-originality">Recommendations and Originality</a> <em>(đọc 2026-11-03)</em></td>
+<td>• <strong>Cho phép:</strong> Khuyến nghị (<em>Recommendations</em>) ưu tiên nội dung do chính nhà sáng tạo sở hữu. Không phạt nhà sáng tạo đăng video gốc của mình ở nhiều nền tảng.<br>• Nếu phát hiện trùng lặp <em>trong nội bộ Instagram</em>, thuật toán dùng <strong>Aggregator Replacement</strong> (chỉ phân phối bản gốc của tác giả, ẩn bản re-up).</td>
+<td>• <strong>Giảm tiếp cận ngay lập tức</strong> nếu file dính watermark/logo của TikTok, CapCut template hoặc app thứ 3.<br>• <strong>Bác bỏ chỉnh sửa nông:</strong> Nêu rõ việc <em>"chỉ thêm chữ (text), sticker, đường viền (borders) hoặc chèn ảnh phản ứng tĩnh"</em> vào clip có sẵn <strong>không</strong> được tính là <em>materially enhance</em> (cải thiện thực chất).</td>
+</tr>
+<tr>
+<td><strong>YouTube (Shorts)</strong></td>
+<td>• <a href="https://support.google.com/youtube/answer/1311392">YouTube Channel Monetization Policies — Reused &amp; Inauthentic Content</a> <em>(cập nhật 2025-07-15, đọc 2026-11-04)</em></td>
+<td>• <strong>Cho phép:</strong> Quy định ghi rõ: <em>"If you've put a funny or thoughtful spin on content you didn't originally create, you've transformed the content in some way. <strong>It's fine to have this type of content on your channel</strong>"</em> — và hoàn toàn cho phép nội dung gốc do chính chủ kênh tự sản xuất dù đã đăng ở nền tảng khác.</td>
+<td>• <strong>Vi phạm <em>Reused / Inauthentic Content</em>:</strong> <em>"Short videos that you compiled from other social media websites"</em> (tổng hợp từ MXH khác không phải của mình) hoặc <em>"Clips of moments from your favorite show edited together with little or no narrative"</em> và <em>"Repetitious / mass-produced template content"</em>.</td>
+</tr>
+<tr>
+<td><strong>API các nền tảng (Thực tế vận hành)</strong></td>
+<td>• <a href="https://support.post-bridge.com/faq/why-you-cannot-post-the-same-content-to-multiple-accounts-on-the-same-platform">Post Bridge — Why you cannot post the same content to multiple accounts on the same platform</a> <em>(đọc 2026-11-04)</em><br>• <a href="https://support.post-bridge.com/troubleshooting/how-to-fix-low-tiktok-views-and-warm-up-your-account">Post Bridge — How to fix low TikTok views and warm up your account</a> <em>(đọc 2026-11-04)</em></td>
+<td>• <strong>Cho phép đăng chéo khác nền tảng</strong> (1 TikTok + 1 IG + 1 YT + 1 X + 1 LinkedIn).<br>• <strong>Cấm đăng trùng cùng 1 video lên nhiều tài khoản trong CÙNG 1 nền tảng</strong> (tránh vi phạm chính sách chống spam dẫn tới thu hồi khóa API).</td>
+<td>• <strong>Bẫy tài khoản mới trên TikTok:</strong> Tài khoản TikTok mới tạo chưa "làm ấm" (warm-up) mà đăng ngay qua API bên thứ 3 sẽ bị thuật toán chống bot đánh <strong>0 views</strong> hoặc báo lỗi <em>"Not eligible for the For You page"</em>.</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>3. Năm nguyên tắc bắt buộc khi đăng 1 video gốc tự làm lên nhiều nền tảng (Mode A)</h2>
+<p>Khi áp dụng quy tắc <strong>"1 video Master tự làm đăng lên 1 tài khoản/nền tảng không cần chỉnh sửa lại video"</strong>, đội vận hành và hệ thống DF <strong>bắt buộc</strong> phải tuân thủ 5 nguyên tắc kỹ thuật dưới đây để không bị bóp tương tác vì lỗi vận hành:</p>
+<h3>Nguyên tắc 1: Chỉ dùng "File Master Sạch" (Clean Master MP4)</h3>
+<ul>
+<li>Luôn xuất (render) file <code>.mp4</code> gốc trực tiếp từ phần mềm dựng (Premiere, CapCut, DaVinci, hoặc studio nội bộ) và đẩy thẳng file đó lên từng nền tảng.</li>
+<li><strong>Tuyệt đối cấm:</strong> Đăng lên TikTok hoặc Instagram trước, sau đó tải (download) file đã xuất bản về (hoặc qua các tool xóa watermark) để đăng sang nền tảng khác. Các nền tảng nhúng cả chữ ký siêu dữ liệu (EXIF/container metadata) lẫn dấu hiệu nén âm thanh/hình ảnh.</li>
+</ul>
+<h3>Nguyên tắc 2: Thiết kế chữ và hình trong "Vùng an toàn chung" (Universal 9:16 Safe Zone)</h3>
+<p>Để không phải xuất 3 phiên bản video khác vị trí chữ cho TikTok, IG Reels và YT Shorts, ngay từ khâu dựng video gốc phải đặt phụ đề (burned-in captions) và yếu tố đồ họa vào <strong>vùng giao nhau an toàn</strong>:</p>
+<ul>
+<li><strong>Cách đáy màn hình (Bottom margin):</strong> Tối thiểu <strong>28% – 30% chiều cao khung hình</strong> (khoảng <code>540px – 576px</code> trên khung <code>1080×1920</code>) để tránh phần mô tả dài, tên bài hát chạy và thanh tìm kiếm của TikTok/Reels.</li>
+<li><strong>Cách đỉnh màn hình (Top margin):</strong> Tối thiểu <strong>12% – 15% chiều cao khung hình</strong> (<code>230px – 288px</code>) để không đè lên thanh điều hướng "Following / For You" hoặc tiêu đề Reels.</li>
+<li><strong>Cách lề phải (Right margin):</strong> Tối thiểu <strong>15% chiều rộng khung hình</strong> (<code>160px</code>) ở nửa dưới màn hình để tránh cột nút Tim / Bình luận / Chia sẻ / Lưu.</li>
+</ul>
+<h3>Nguyên tắc 3: Viết lại hoàn toàn lớp văn bản (Metadata &amp; Copywriting) theo từng nền tảng</h3>
+<p>Video giữ nguyên 100%, nhưng phần chữ đi kèm bài đăng phải tách riêng theo thuật toán khám phá của từng nơi:</p>
+<ul>
+<li><strong>YouTube Shorts:</strong> Tiêu đề ≤ 60 ký tự chứa từ khóa tìm kiếm chính + <code>#Shorts</code>; mô tả có từ khóa SEO.</li>
+<li><strong>Instagram Reels:</strong> Dòng đầu tiên (trước nút <em>"...more"</em>) phải là câu Hook kích thích đọc tiếp hoặc mở bình luận; 3–5 hashtag ngách.</li>
+<li><strong>TikTok:</strong> Caption chứa cụm từ khóa dài (long-tail keywords) khớp với chữ nói trong video để TikTok xếp hạng vào ô tìm kiếm (<em>Search bar suggestion</em>).</li>
+<li><strong>Facebook Reels:</strong> Caption ngắn gọn, trực diện, ưu tiên đặt câu hỏi tạo thảo luận ở bình luận.</li>
+</ul>
+<h3>Nguyên tắc 4: Đồng bộ thời điểm đăng &amp; Liên kết xác thực tài khoản chính chủ</h3>
+<ul>
+<li><strong>Lịch đăng:</strong> Ưu tiên <strong>đăng đồng thời (Simultaneous Scheduling)</strong> trên tất cả các nền tảng, hoặc đăng trên <strong>TikTok trước tiên</strong>.<ul>
+<li><em>Lý do:</em> Nếu đăng YouTube Shorts / IG Reels trước vài ngày, các kênh vệ tinh/re-up bên ngoài có thể tải video của bạn đăng lên TikTok trước. Khi kênh TikTok chính chủ đăng sau, bộ quét tự động của <em>TikTok Creator Rewards</em> sẽ nhận diện sai video của chính chủ là bản đăng lại (<em>"content that has already been posted on TikTok or another platform"</em>).</li>
+</ul>
+</li>
+<li><strong>Xác thực liên kết chéo:</strong> Gắn liên kết tài khoản Instagram và YouTube chính thức vào hồ sơ TikTok (và ngược lại) để hệ thống xác minh quyền sở hữu chéo (Cross-platform ownership verification).</li>
+</ul>
+<h3>Nguyên tắc 5: Tránh 2 "bẫy kỹ thuật" thường bị nhầm là phạt trùng lặp nội dung</h3>
+<ol>
+<li><strong>Bẫy nhạc bản quyền &gt;1 phút &amp; logo nền tảng đối thủ:</strong><ul>
+<li>Với video dài ≥ 1 phút, không chèn nhạc nền thương mại/bản quyền kéo dài quá 1 phút trong file Master (dẫn tới tắt tiếng trên TikTok hoặc mất quyền kiếm tiền <em>Creator Rewards</em>).Ưu tiên dùng giọng nói gốc + hiệu ứng âm thanh (SFX) hoặc nhạc miễn bản quyền (Royalty-free).</li>
+<li>Không đóng cứng (burn-in) lời kêu gọi hay biểu tượng của nền tảng đối thủ vào file Master (ví dụ: icon <em>"Follow on Instagram"</em> hay nút <em>"Subscribe YouTube"</em> đỏ), vì thuật toán thị giác sẽ đánh dấu là nội dung quảng cáo kéo người dùng rời nền tảng.</li>
+</ul>
+</li>
+<li><strong>Bẫy đăng qua API trên tài khoản mới chưa "làm ấm" (Account Warm-up):</strong><ul>
+<li>Với <strong>tài khoản TikTok mới tạo</strong>, bắt buộc phải <strong>đăng tay trực tiếp trên điện thoại trong 7–14 ngày đầu</strong> (tương tác tự nhiên, lướt FYP, đăng tay đến khi các video ổn định mức <strong>&gt;1.000 lượt xem/video</strong>) rồi mới kết nối vào hệ thống đăng tự động qua API (DF / Postiz / Post Bridge...).</li>
+<li>Kết nối API và bắn bài tự động ngay trên tài khoản trắng sẽ bị hệ thống chống bot của TikTok chặn phân phối FYP (0–10 views).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>4. Quy tắc khi BẮT BUỘC phải biến đổi video (Mode B — Nhân bản đa tài khoản trong cùng nền tảng)</h2>
+<p>Nếu khách hàng của DF muốn lấy <strong>cùng 1 video gốc</strong> để phủ lên <strong>nhiều tài khoản trong cùng 1 nền tảng</strong> (ví dụ: 1 kênh TikTok Thương hiệu + 1 kênh TikTok Founder + 3 kênh TikTok đại lý/vệ tinh), hệ thống <strong>không được phép</strong> đẩy cùng 1 file <code>.mp4</code> mà phải chạy qua pipeline <strong>Multi-Account Variant Engine (Mode B)</strong>:</p>
+<ol>
+<li><strong>Thay đổi lớp hình ảnh (Visual Fingerprint):</strong><ul>
+<li>Đổi <strong>Hook 3 giây đầu</strong> (cắt điểm mở đầu khác đi 0.5–1.5 giây hoặc thay cảnh B-roll mở đầu).</li>
+<li>Thay đổi bộ mẫu phụ đề (font chữ, màu sắc, vị trí trong vùng an toàn) và cấp độ crop/zoom nhẹ (<code>102% – 105%</code>) hoặc lật khung hình ở các cảnh B-roll không chứa chữ.</li>
+</ul>
+</li>
+<li><strong>Thay đổi lớp âm thanh (Audio Fingerprint):</strong><ul>
+<li>Phối lại lớp nhạc nền (ambient track) hoặc điều chỉnh nhịp cắt khoảng lặng (silence trimming) để mã vân tay âm thanh khác biệt giữa các bản xuất.</li>
+</ul>
+</li>
+<li><strong>Xuất file độc lập (Fresh Encode):</strong><ul>
+<li>Mỗi tài khoản nhận một file <code>.mp4</code> được render mới hoàn toàn (khác thời lượng, khác bitrate/metadata và khác <code>SHA-256</code> file hash) và đặt lịch đăng lệch giờ nhau (staggered scheduling, cách nhau tối thiểu 2–4 giờ).</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>5. Áp dụng trực tiếp vào Thử nghiệm 1 của DF (<code>decision-df-experiments-2026-11-02.md</code>)</h2>
+<p>Khi chạy <strong>Thử nghiệm 1 (So sánh Reach khi đăng qua API với đăng tay)</strong> trong <a href="file:///home/dc-group/work/0xdonniechu/what-to-build/research/decision-df-experiments-2026-11-02.html">decision-df-experiments-2026-11-02.md</a>:</p>
+<ul>
+<li>Chỉ chạy thử nghiệm trên các trang/tài khoản <strong>đã qua giai đoạn làm ấm</strong> (đã có lịch sử đăng bài tay tự nhiên &gt;2 tuần).</li>
+<li>Các bài đăng qua API và đăng tay phải dùng <strong>file Master sạch</strong> tuân thủ 5 nguyên tắc ở Mục 3 để kết quả đo lường phản ánh đúng hiệu quả của đường truyền API, không bị nhiễu bởi lỗi dính watermark, che khuất UI hay nhạc bản quyền.</li>
+</ul><div class="src">Nguồn: <code>research/df-guideline-multiplatform-originality-2026-11-04.md</code> (bản .md cho agent đọc)</div></main></body></html>

@@ -1,0 +1,911 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sweep: Y Combinator, 2026 batches vs 2025 (branch claude-research)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Sweep: Y Combinator, 2026 batches vs 2025 (branch claude-research)</h1>
+<p>Date pulled: 2026-10-30. Confidence label on every finding below: HIGH = counted directly from the data, MEDIUM = keyword proxy, LOW = my reading.</p>
+<h2>Method and limits</h2>
+<ul>
+<li>Batches the YC directory shows as of today: Fall 2026, Summer 2026, Spring 2026, Winter 2026, then Fall/Summer/Spring/Winter 2025. There is no "X26" or "P26" batch (a lookup for it returned 404). </li>
+<li>Browser tool: none available. The directory page loads by JavaScript and returns no listing to a plain fetch. I used the public JSON mirror of the YC directory (<code>yc-oss.github.io/api/batches/&lt;batch&gt;.json</code>), which carries name, one-liner, long description, team size, industry, sub-industry, website, status. Then I fetched each chosen company's own page on ycombinator.com for the founder list. Mirror snapshot date is unknown; batch sizes (W26 197, S26 193, Su26 229, F26 192, F25 145, Su25 166, Sp25 144, W25 165) may be partial, so counts are indicative.</li>
+<li>Sample: 57 rows hand-picked from about 1,430 companies across 8 batches: AI-agent / vertical-agent / AI-native-firm companies, team size 5 or fewer except Contrario (20) and Risely AI (8), status Active, skipping developer-infrastructure and agent-tooling companies (they sell to other builders, not to a vertical buyer). The pick is mine, so theme counts describe the sample, not the market.</li>
+<li>Funding: blank on every row. YC profile text does not state amounts. Not guessed.</li>
+<li>Revenue: only what a company wrote on its own YC profile, quoted, unverified. 13 of the 57 rows have such a line (a 14th, TrueMile, quotes the founder's earlier trucking business, not the company). Nothing here is TrustMRR-grade; per the method, unverified never ranks above verified.</li>
+<li>Row order is by batch (newest first), not by rank, because there is no verified revenue to rank by.</li>
+</ul>
+<h2>2026 vs 2025 (all companies in the batches, not only the sample)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:546px"><colgroup><col style="width:178px"><col style="width:135px"><col style="width:135px"><col style="width:98px"></colgroup>
+<thead>
+<tr>
+<th>Measure</th>
+<th>2026 (F+Su+S+W, n=811)</th>
+<th>2025 (F+Su+Sp+W, n=620)</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Median team size listed</td>
+<td>3 (Fall and Summer 2026: 2)</td>
+<td>4</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Teams of 1-2 people</td>
+<td>50%</td>
+<td>32%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Industry tag B2B</td>
+<td>56%</td>
+<td>65%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Industrials (manufacturing, defense, energy, aviation)</td>
+<td>19%</td>
+<td>10%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Sub-industry Manufacturing/Robotics or Defense</td>
+<td>11%</td>
+<td>6%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Sub-industry Engineering/Product/Design (dev tools)</td>
+<td>8%</td>
+<td>15%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Sub-industry Infrastructure or Security</td>
+<td>13%</td>
+<td>9%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Healthcare / Fintech / Consumer tag</td>
+<td>8% / 9% / 5%</td>
+<td>7% / 6% / 7%</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>Mentions "agent" in one-liner or description</td>
+<td>40%</td>
+<td>40%</td>
+<td>MEDIUM (keyword)</td>
+</tr>
+<tr>
+<td>One-liner reads "AI-native <firm/agency/practice/brokerage>" or "runs your business"</td>
+<td>3.7% (30 companies)</td>
+<td>1.3% (8)</td>
+<td>MEDIUM (regex)</td>
+</tr>
+<tr>
+<td>Description carries a $ revenue/ARR line</td>
+<td>14 companies</td>
+<td>14 companies</td>
+<td>MEDIUM (regex)</td>
+</tr>
+</tbody>
+</table></div>
+<p>What shifted, in order of how sure I am:</p>
+<ol>
+<li>Teams got smaller. Half of the 2026 companies list 1-2 people, up from about a third. (HIGH)</li>
+<li>Dev-tool share fell by about half (15% to 8%) while Industrials rose (10% to 19%), led by manufacturing/robotics, defense, energy: the batch moved from software for engineers toward physical industries. Summer 2026 is the extreme: 25% Industrials. (HIGH)</li>
+<li>"Agent" as a word did not grow (40% both years), so agents are the baseline, not the differentiator. What grew is the AI-native firm that sells the service itself (law firm, accounting firm, brokerage, ad agency, radiology practice, trucking company, engineering firm): 8 companies in 2025, 30 in 2026, 15 of them in Summer 2026 alone. (MEDIUM: regex on one-liners, undercounts firms that describe themselves otherwise)</li>
+<li>A new sub-layer of "infrastructure for agents" (VMs, wallets, identity, evals, sandboxes, MCP) is visible in 2026 lists; 2026 Infrastructure + Security rose 9% to 13%. I excluded these from the rows on purpose. (HIGH for the counts, LOW for the reading)</li>
+<li>Revenue lines on profiles did not rise as a share. Founders are not showing more revenue; they are showing fewer people. (MEDIUM)</li>
+</ol>
+<p>For the thesis: the 2026 shift matches "a company that is 3 people doing the work of 300" and also means that the claim is no longer unusual inside YC. T1 below has 15 sample rows and several are already near the agency model.</p>
+<h2>Themes (counts are of the 57 rows below, not of the batches)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:867px"><colgroup><col style="width:90px"><col style="width:201px"><col style="width:220px"><col style="width:90px"><col style="width:266px"></colgroup>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Problem</th>
+<th>Buyer</th>
+<th>Rows</th>
+<th>Edge for deep research + strategy + AI-workflow + marketing/media judgment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1</td>
+<td>AI-native service firm: an agent-run firm sells the outcome, not software</td>
+<td>End clients of law, accounting, recruiting, ads, brokerage, radiology, property, trucking, engineering, trials</td>
+<td>15</td>
+<td>HIGH for ad/brand, recruiting, finance-advisory firms (Light Anchor, Adside.ai, Prism, Bear, Contrario): output is judged on strategy and taste, owner can direct it. MEDIUM for law, radiology, trials (licence and liability). This is the closest match to the federation / agency thesis.</td>
+</tr>
+<tr>
+<td>T2</td>
+<td>Back-office / ops OS for local and trade SMBs</td>
+<td>Owner-operators: auto shops, home services, restaurants, hotels, wholesalers, STR hosts, factories</td>
+<td>12</td>
+<td>MEDIUM. Needs field research and a sales route into a trade; research and workflow skill help, marketing/media reach to owner-operators is the moat.</td>
+</tr>
+<tr>
+<td>T3</td>
+<td>Compliance, finance, legal and insurance workflow agents for regulated professionals</td>
+<td>Banks, insurers, finance and legal teams, regulators, utilities</td>
+<td>13</td>
+<td>MEDIUM-HIGH where the work is research and strategy (Fed10 government affairs, Collar investor relations, Hickory compliance, HillStar utility buying); LOW where it needs licences or lender capital (Copperlane, Klaimee).</td>
+</tr>
+<tr>
+<td>T4</td>
+<td>Healthcare billing and revenue-cycle agents</td>
+<td>Provider practices and billing teams</td>
+<td>3</td>
+<td>LOW. Domain access and compliance dominate; little edge from marketing or research.</td>
+</tr>
+<tr>
+<td>T5</td>
+<td>Growth, sales and creative-production agents</td>
+<td>Brands (CPG, D2C), B2B go-to-market teams, video teams</td>
+<td>6</td>
+<td>HIGH. Direct overlap with strategy, AI workflow and marketing/media judgment (Corvera, Kuli, Gojiberry AI, Imagine AI, Lapis, Wideframe).</td>
+</tr>
+<tr>
+<td>T6</td>
+<td>Consumer agents and marketplaces</td>
+<td>Job seekers, travellers with weak passports, card collectors</td>
+<td>3</td>
+<td>MEDIUM. Consumer distribution is a media-judgment game; revenue claims are large but self-stated.</td>
+</tr>
+<tr>
+<td>T7</td>
+<td>Education and campus administration</td>
+<td>Students, colleges</td>
+<td>2</td>
+<td>MEDIUM-LOW. Small evidence base here (2 rows).</td>
+</tr>
+<tr>
+<td>T8</td>
+<td>Customer-support and voice agents</td>
+<td>Airlines, financial services, hotels</td>
+<td>3</td>
+<td>LOW-MEDIUM. Crowded; defensibility comes from vertical data, not from strategy or media.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Batch counts per theme (2026 / 2025 rows): T1 11/4; T2 9/3; T3 11/2; T4 1/2; T5 4/2; T6 2/1; T7 0/2; T8 0/3. These are counts inside my hand-picked sample, not market shares.</p>
+<h2>Rows</h2>
+<p>Columns: funding is blank on every row because no YC profile text read states it (YC's standard deal is not company-specific and is not counted). The last column is traction the company wrote on its own YC profile; none of it is verified (E2/TrustMRR-grade it is not). Source for every row is the YC company page linked in the name and the public YC directory mirror (see Method).</p>
+<div class="tw"><table style="table-layout:fixed;min-width:1312px"><colgroup><col style="width:52px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:189px"><col style="width:165px"><col style="width:90px"><col style="width:167px"><col style="width:214px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Company</th>
+<th>Batch</th>
+<th>Theme</th>
+<th>What it does, for whom (YC one-liner)</th>
+<th>YC industry</th>
+<th>Funding</th>
+<th>Website</th>
+<th>Founders</th>
+<th>Self-stated traction (YC profile)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://www.ycombinator.com/companies/wingman-law">Wingman Law</a></td>
+<td>Fall 2026</td>
+<td>T1</td>
+<td>AI-native personal injury law firm</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>https://www.wingmanlaw.com</td>
+<td>Sun Woo Lee (Founder/CEO); Nicholas Le (Founder/CPO)</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://www.ycombinator.com/companies/collar">Collar</a></td>
+<td>Fall 2026</td>
+<td>T3</td>
+<td>AI-Native Investor Relations</td>
+<td>B2B</td>
+<td></td>
+<td>https://usecollarai.com</td>
+<td>Kazel Koh En Yang (Founder/CEO); Jamie Yau (Founder/COO)</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://www.ycombinator.com/companies/hickory-and-company">Hickory &amp; Company</a></td>
+<td>Fall 2026</td>
+<td>T3</td>
+<td>Hickory is agentic compliance and BSA for banks and fintechs</td>
+<td>B2B -&gt; Operations</td>
+<td></td>
+<td>https://hickory.co</td>
+<td>Joshua Howland (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://www.ycombinator.com/companies/hillstar">HillStar</a></td>
+<td>Fall 2026</td>
+<td>T3</td>
+<td>Agents to help utilities make better buying decisions.</td>
+<td>B2B</td>
+<td></td>
+<td>https://hillstar.ai</td>
+<td>Nooshin Behroyan (Founder/CEO); Kenny Stone (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://www.ycombinator.com/companies/veeza-ai">Veeza AI</a></td>
+<td>Fall 2026</td>
+<td>T6</td>
+<td>AI tourist visa agent for people with weak passports.</td>
+<td>Consumer -&gt; Travel, Leisure and Tourism</td>
+<td></td>
+<td>https://veeza.ai</td>
+<td>Aly Moursy (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://www.ycombinator.com/companies/truemile">TrueMile</a></td>
+<td>Fall 2026</td>
+<td>T1</td>
+<td>AI-native trucking company</td>
+<td>B2B -&gt; Supply Chain and Logistics</td>
+<td></td>
+<td>https://TrueMile.AI</td>
+<td>Harpreet Dhaliwal (Founder/CEO)</td>
+<td>(founder prior: "more than $7M in trucking revenue"; not the company)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://www.ycombinator.com/companies/praxis">Praxis</a></td>
+<td>Fall 2026</td>
+<td>T3</td>
+<td>AI agents that run law firm operations.</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>https://runpraxis.ai</td>
+<td>Diana Khramina (Founder/CEO); Maxence Guegnolle--Santi (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://www.ycombinator.com/companies/covera">Covera</a></td>
+<td>Fall 2026</td>
+<td>T3</td>
+<td>AI-native OS for insurance brokers</td>
+<td>Fintech -&gt; Insurance</td>
+<td></td>
+<td>https://www.covera-agents.com</td>
+<td>Tiphaine Venet (Founder/CEO); Thibaut Regerat (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="https://www.ycombinator.com/companies/adsideai">Adside.ai</a></td>
+<td>Fall 2026</td>
+<td>T1</td>
+<td>AI agency that manages paid ads on Meta, Google, LinkedIn, etc.</td>
+<td>B2B -&gt; Marketing</td>
+<td></td>
+<td>https://adside.ai</td>
+<td>Robin Choy (Founder/CEO); Guillaume Miara (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://www.ycombinator.com/companies/lark-2">Lark</a></td>
+<td>Fall 2026</td>
+<td>T2</td>
+<td>AI agents that automate workflows for distributors</td>
+<td>Industrials</td>
+<td></td>
+<td>https://larkagents.com</td>
+<td>Jason Wang (Founder/CEO); Michael Wang (Co-Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://www.ycombinator.com/companies/altair-health">Altair Health</a></td>
+<td>Fall 2026</td>
+<td>T4</td>
+<td>Stripe for medical billing</td>
+<td>Healthcare -&gt; Healthcare Services</td>
+<td></td>
+<td>https://www.altair-health.com</td>
+<td>Aouss Sbai (Founder/CEO); Jad Sbai (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://www.ycombinator.com/companies/atlia">Atlia</a></td>
+<td>Summer 2026</td>
+<td>T1</td>
+<td>The AI-native property management company for short-term rentals</td>
+<td>Real Estate and Construction -&gt; Housing and Real Estate</td>
+<td></td>
+<td>https://www.atlia.com</td>
+<td>Edmond Niu (Founder); Shaan Yadav (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://www.ycombinator.com/companies/bear-inc">Bear</a></td>
+<td>Summer 2026</td>
+<td>T1</td>
+<td>AI-native accounting firm.</td>
+<td>B2B -&gt; Finance and Accounting</td>
+<td></td>
+<td>https://bear.inc</td>
+<td>Sami Laakkonen (Founder); Riki Karjalainen (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://www.ycombinator.com/companies/radley">Radley</a></td>
+<td>Summer 2026</td>
+<td>T1</td>
+<td>The AI-native radiology practice</td>
+<td>Healthcare</td>
+<td></td>
+<td>https://radley.health</td>
+<td>Maryam Jahed (Founder/CEO); Seak Meng Lay (Founder/CTO)</td>
+<td>"acquiring a radiology practice bringing Radley to $4.6M in annualized revenue" (acquisition, not organic)</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://www.ycombinator.com/companies/joinmarble">Marble</a></td>
+<td>Summer 2026</td>
+<td>T2</td>
+<td>The autonomous back-of-house for restaurants.</td>
+<td>B2B</td>
+<td></td>
+<td>https://joinmarble.ai</td>
+<td>Aakar Khanna (Founder/CEO); Arjun Chaliha (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://www.ycombinator.com/companies/carsignal">CarSignal</a></td>
+<td>Summer 2026</td>
+<td>T2</td>
+<td>The AI Operating System for Auto Shops.</td>
+<td>B2B</td>
+<td></td>
+<td>https://www.trycarsignal.com</td>
+<td>Michael Muzzin (Founder/CEO); Junaid Popalzai (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://www.ycombinator.com/companies/whitespace">Whitespace</a></td>
+<td>Summer 2026</td>
+<td>T2</td>
+<td>AI Operating System for Wholesale Distribution</td>
+<td>B2B -&gt; Supply Chain and Logistics</td>
+<td></td>
+<td>https://whitespacehq.ai</td>
+<td>Alex Tung (Founder/CEO); Leon Yao (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="https://www.ycombinator.com/companies/verdant">Verdant</a></td>
+<td>Summer 2026</td>
+<td>T3</td>
+<td>AI Agents to Make Local Gov Efficient</td>
+<td>Government</td>
+<td></td>
+<td>https://www.verdantapp.com</td>
+<td>Aidan Ng (Founder); Jason Yi (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td><a href="https://www.ycombinator.com/companies/tsenta">Tsenta</a></td>
+<td>Summer 2026</td>
+<td>T6</td>
+<td>AI career agent that finds matching jobs &amp; applies on your behalf</td>
+<td>Consumer -&gt; Job and Career Services</td>
+<td></td>
+<td>https://tsenta.com</td>
+<td>Agnay Srivastava (Founder/CEO); Pulkit Gupta (Founder/CTO)</td>
+<td>"~$3M annualized in three months"</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://www.ycombinator.com/companies/marengo">Marengo</a></td>
+<td>Summer 2026</td>
+<td>T1</td>
+<td>AI-Native Engineering Firm designing Data Centers</td>
+<td>Industrials -&gt; Energy</td>
+<td></td>
+<td>https://marengox.com</td>
+<td>Emil Ares (Founder/CEO); Gad Marconi (Founder/CTO)</td>
+<td>"$70K in revenue in our first month, with $4M in contracts to deliver"</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://www.ycombinator.com/companies/bizmark">Bizmark</a></td>
+<td>Summer 2026</td>
+<td>T2</td>
+<td>OpenClaw for manufacturers</td>
+<td>B2B</td>
+<td></td>
+<td>https://bizmark.ai</td>
+<td>Rodrigo Mosqueira (Founder/CEO); Oscar Aguilar (Founder/CTO)</td>
+<td>"$108k in annual recurring revenue"</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://www.ycombinator.com/companies/tryprism">Prism</a></td>
+<td>Spring 2026</td>
+<td>T1</td>
+<td>AI-native recruiting agency</td>
+<td>B2B -&gt; Recruiting and Talent</td>
+<td></td>
+<td>https://tryprism.com</td>
+<td>Theo Kitsberg (Founder/CEO); Axel La Pira (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td><a href="https://www.ycombinator.com/companies/light-anchor">Light Anchor</a></td>
+<td>Spring 2026</td>
+<td>T1</td>
+<td>AI-native growth agency for consumer brands</td>
+<td>Consumer</td>
+<td></td>
+<td>https://lightanchor.ai</td>
+<td>Sangha Park (Founder/CEO); Chase Kim (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="https://www.ycombinator.com/companies/andco">Andco</a></td>
+<td>Spring 2026</td>
+<td>T3</td>
+<td>Agents that build personal injury cases</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>http://www.useandco.com</td>
+<td>Ryan Xue (Founder/CEO); David Lee (Founder); Michael Lemm (Founder/COO)</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="https://www.ycombinator.com/companies/useparrot">Parrot</a></td>
+<td>Spring 2026</td>
+<td>T2</td>
+<td>Agentic operating system for auto repair shops</td>
+<td>B2B</td>
+<td></td>
+<td>https://www.useparrot.com</td>
+<td>Phillip Baek (Founder/CEO); Liam McBride (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="https://www.ycombinator.com/companies/kuli">Kuli</a></td>
+<td>Spring 2026</td>
+<td>T5</td>
+<td>AI coworker for marketing teams at the largest consumer brands</td>
+<td>B2B -&gt; Marketing</td>
+<td></td>
+<td>https://kuli.one</td>
+<td>Michael Hodara (Founder/CEO); Jonathan Hassan (Founder/CRO)</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td><a href="https://www.ycombinator.com/companies/centralcoms">CentralComs</a></td>
+<td>Spring 2026</td>
+<td>T2</td>
+<td>AI agent platform for home services companies.</td>
+<td>Real Estate and Construction -&gt; Construction</td>
+<td></td>
+<td>https://centralcoms.com</td>
+<td>Kyle Chang (Founder/CEO); Kevin Wong (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="https://www.ycombinator.com/companies/trellistech">Trellis</a></td>
+<td>Spring 2026</td>
+<td>T2</td>
+<td>Agents that run short-term rental operations end-to-end</td>
+<td>B2B -&gt; Operations</td>
+<td></td>
+<td>https://trellistech.com</td>
+<td>Lodovico Benvenuti (Founder/CEO); Jan Sahagun (Founder/COO)</td>
+<td>"$500k ARR across 35 customers" in two months</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="https://www.ycombinator.com/companies/gojiberry-ai">Gojiberry AI</a></td>
+<td>Spring 2026</td>
+<td>T5</td>
+<td>AI Go-To-Market agents for B2B teams</td>
+<td>B2B -&gt; Sales</td>
+<td></td>
+<td>https://www.gojiberry.ai</td>
+<td>Pierre-Eliott Lallemant (Founder/CEO); Romàn Czerny (Founder/CMO); Dylan TEIXEIRA (Founder/CTO)</td>
+<td>"$0 to $2.5M ARR in 10 months", "profitable", 2,000+ customers</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="https://www.ycombinator.com/companies/runharbor">Harbor</a></td>
+<td>Spring 2026</td>
+<td>T1</td>
+<td>AI-native CRO for clinical trial operations</td>
+<td>Healthcare</td>
+<td></td>
+<td>https://runharbor.com</td>
+<td>Albert Cai (Founder/CEO); Nathan H. Leung (Founder/CTO)</td>
+<td>"~$187k in contracted software revenue"</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="https://www.ycombinator.com/companies/klaimee">Klaimee</a></td>
+<td>Spring 2026</td>
+<td>T3</td>
+<td>Liability insurance for AI Agents. You deploy agents, we cover you.</td>
+<td>Fintech -&gt; Insurance</td>
+<td></td>
+<td>https://www.klaimee.ai</td>
+<td>Ines Boutemadja (Founder/CEO); Julien Catonnet (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://www.ycombinator.com/companies/corvera">Corvera</a></td>
+<td>Winter 2026</td>
+<td>T5</td>
+<td>The AI sales agent for CPG brands</td>
+<td>B2B -&gt; Sales</td>
+<td></td>
+<td>https://corvera.ai</td>
+<td>Christopher Kong (Founder/CEO); Dirk Breeuwer (Founder/CTO); Matthew Collins (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://www.ycombinator.com/companies/legalos">LegalOS</a></td>
+<td>Winter 2026</td>
+<td>T1</td>
+<td>The AI-Native Immigration Law Firm</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>https://www.legalos.ai</td>
+<td>Matthew Asir (Founder/CEO); Rachel Asir (Founder/COO); Claire Jutabha (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://www.ycombinator.com/companies/fullseam">FullSeam</a></td>
+<td>Winter 2026</td>
+<td>T3</td>
+<td>AI agents for corporate accounting teams</td>
+<td>B2B -&gt; Finance and Accounting</td>
+<td></td>
+<td>https://fullseam.com</td>
+<td>Thomas Dowling (Founder/CEO); Aaron Coppa (Founder/CTO); Geoff Segal (Founder/President)</td>
+<td></td>
+</tr>
+<tr>
+<td>35</td>
+<td><a href="https://www.ycombinator.com/companies/robby">Robby</a></td>
+<td>Winter 2026</td>
+<td>T2</td>
+<td>AI agents that grow revenue for home services businesses</td>
+<td>B2B -&gt; Productivity</td>
+<td></td>
+<td>https://tryrobby.com</td>
+<td>Vineet Jammalamadaka (Founder/CEO); Feroze Mohideen (Founder/CTO); Joseph Schwarzmann (Founder/COO)</td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td><a href="https://www.ycombinator.com/companies/wideframe">Wideframe</a></td>
+<td>Winter 2026</td>
+<td>T5</td>
+<td>AI coworker for video editors to ship more video faster</td>
+<td>B2B</td>
+<td></td>
+<td>https://wideframe.com</td>
+<td>Daniel Pearson (Founder/CEO); Zachary Kim (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>37</td>
+<td><a href="https://www.ycombinator.com/companies/copperlane">Copperlane</a></td>
+<td>Winter 2026</td>
+<td>T3</td>
+<td>Agentic Mortgage Origination</td>
+<td>Fintech -&gt; Credit and Lending</td>
+<td></td>
+<td>https://www.copperlane.ai</td>
+<td>Athan Zhang (Founder/CEO); Brianna Lin (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>38</td>
+<td><a href="https://www.ycombinator.com/companies/fed10">Fed10</a></td>
+<td>Winter 2026</td>
+<td>T3</td>
+<td>AI Agents for Government Affairs</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>https://www.fed10.ai</td>
+<td>Armand Iorgulescu (Founder/CEO); Zayan Islam (Founder/CTO); Winston Wei (Founder/COO)</td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="https://www.ycombinator.com/companies/casey">Casey</a></td>
+<td>Fall 2025</td>
+<td>T1</td>
+<td>Casey is an AI-native commercial insurance brokerage</td>
+<td>Fintech -&gt; Insurance</td>
+<td></td>
+<td>https://caseyinsure.com</td>
+<td>Maximilian Thoelen (Founder); Nico Hänggi (Founder); Pascal Küng (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="https://www.ycombinator.com/companies/automax-ai">Automax.ai</a></td>
+<td>Fall 2025</td>
+<td>T1</td>
+<td>AI native real-estate appraisal firm</td>
+<td>Real Estate and Construction -&gt; Housing and Real Estate</td>
+<td></td>
+<td>https://automax.ai</td>
+<td>Humza Ahmed (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://www.ycombinator.com/companies/lunabill">LunaBill</a></td>
+<td>Fall 2025</td>
+<td>T4</td>
+<td>AI Voice callers for healthcare billing teams</td>
+<td>Healthcare -&gt; Healthcare IT</td>
+<td></td>
+<td>https://lunabill.com</td>
+<td>Suhail Parry (Founder/CEO); David Day (Founder/CTO)</td>
+<td>"$764K in contracted ARR, of which $428K is live"</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://www.ycombinator.com/companies/imagine-ai">Imagine AI</a></td>
+<td>Fall 2025</td>
+<td>T5</td>
+<td>We reverse engineer B2B growth, starting with LinkedIn.</td>
+<td>B2B -&gt; Sales</td>
+<td></td>
+<td>https://useimagine.ai</td>
+<td>Sky Yang (Founder/CEO); Neo Lee (Co-founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td><a href="https://www.ycombinator.com/companies/lapis">Lapis</a></td>
+<td>Fall 2025</td>
+<td>T5</td>
+<td>AI that creates and runs ads, end-end</td>
+<td>B2B -&gt; Marketing</td>
+<td></td>
+<td>https://www.trylapis.com</td>
+<td>Varunram Ganesh (Founder/CEO); Sai Surbehera (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="https://www.ycombinator.com/companies/stormy">Stormy</a></td>
+<td>Summer 2025</td>
+<td>T2</td>
+<td>Stormy runs the office so your crew can run the work.</td>
+<td>B2B -&gt; Operations</td>
+<td></td>
+<td>https://stormy.ai</td>
+<td>Robert Lukoszko (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td><a href="https://www.ycombinator.com/companies/stockline">Stockline</a></td>
+<td>Summer 2025</td>
+<td>T2</td>
+<td>AI-native ERP for food wholesalers</td>
+<td>B2B</td>
+<td></td>
+<td>https://stockline.ai</td>
+<td>Mariem Ould Ismail (Founder/CEO); Moncef DJAFRI (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="https://www.ycombinator.com/companies/mimos">Mimos</a></td>
+<td>Summer 2025</td>
+<td>T3</td>
+<td>The growth OS for plaintiff-side law firms</td>
+<td>B2B</td>
+<td></td>
+<td>https://www.trymimos.com</td>
+<td>Rohit Sirosh (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td><a href="https://www.ycombinator.com/companies/humoniq">Humoniq</a></td>
+<td>Summer 2025</td>
+<td>T8</td>
+<td>Airline customer service, fully automated.</td>
+<td>B2B</td>
+<td></td>
+<td>https://humoniq.ai</td>
+<td>Todd Sullivan (Founder/CEO); Will Weber (Founder/CRO)</td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="https://www.ycombinator.com/companies/risely-ai">Risely AI</a></td>
+<td>Summer 2025</td>
+<td>T7</td>
+<td>AI agents that automate administrative work across college campuses.</td>
+<td>Education</td>
+<td></td>
+<td>https://www.risely.ai</td>
+<td>Shahryar Abbasi (Founder/CEO); Sadia Saifuddin (Founder/CPO)</td>
+<td>"$8k MRR" six weeks after launch</td>
+</tr>
+<tr>
+<td>49</td>
+<td><a href="https://www.ycombinator.com/companies/cohesive">Cohesive</a></td>
+<td>Spring 2025</td>
+<td>T2</td>
+<td>The agentic CRM for blue-collar services</td>
+<td>B2B</td>
+<td></td>
+<td>https://getcohesiveai.com</td>
+<td>Kevin Zhang (Founder/CEO); Nam Nguyen (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="https://www.ycombinator.com/companies/eloquent-ai">Eloquent AI</a></td>
+<td>Spring 2025</td>
+<td>T8</td>
+<td>The AI Operator for Financial Services</td>
+<td>B2B</td>
+<td></td>
+<td>https://www.eloquentai.co</td>
+<td>Tugce Bulut (Founder/CEO); Aldo Lipani (Founder)</td>
+<td>"$500K ARR in just four weeks"</td>
+</tr>
+<tr>
+<td>51</td>
+<td><a href="https://www.ycombinator.com/companies/aegis">Aegis</a></td>
+<td>Spring 2025</td>
+<td>T4</td>
+<td>AI Agents to win denied health insurance claims.</td>
+<td>Healthcare -&gt; Healthcare IT</td>
+<td></td>
+<td>https://aegishealth.us</td>
+<td>Krishang Todi (Founder/CEO); Aarav Bajaj (Founder/CTO); Dhanya Shah (Founder)</td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td><a href="https://www.ycombinator.com/companies/blueshoe">Blueshoe</a></td>
+<td>Spring 2025</td>
+<td>T1</td>
+<td>The AI-Native Consumer + Plaintiff Law Firm</td>
+<td>B2B -&gt; Legal</td>
+<td></td>
+<td>https://blueshoe.com</td>
+<td>Casey O'Grady (Founder/CEO); Kai Yee Wan (Founder/CTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td><a href="https://www.ycombinator.com/companies/riviera">Riviera</a></td>
+<td>Winter 2025</td>
+<td>T8</td>
+<td>AI Employees for Hotels</td>
+<td>B2B</td>
+<td></td>
+<td>https://www.withriviera.com</td>
+<td>Shaun Lane (Founder/CEO); Daniel Tyshler (Founder/COO)</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td><a href="https://www.ycombinator.com/companies/trava">Trava</a></td>
+<td>Winter 2025</td>
+<td>T3</td>
+<td>AI agents for global trade compliance</td>
+<td>B2B -&gt; Supply Chain and Logistics</td>
+<td></td>
+<td>https://www.usetrava.com</td>
+<td>Pushkar Lanka (Founder/CEO)</td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td><a href="https://www.ycombinator.com/companies/alice-tech">Alice.tech</a></td>
+<td>Winter 2025</td>
+<td>T7</td>
+<td>AI-driven exam prep</td>
+<td>Education</td>
+<td></td>
+<td>https://www.alice.tech</td>
+<td>Kim Rants (Founder/CEO)</td>
+<td>"MRR is $20k"</td>
+</tr>
+<tr>
+<td>56</td>
+<td><a href="https://www.ycombinator.com/companies/misprint">Misprint</a></td>
+<td>Winter 2025</td>
+<td>T6</td>
+<td>Misprint is building Robinhood for Pokemon cards</td>
+<td>Consumer</td>
+<td></td>
+<td>https://www.misprint.com</td>
+<td>Eva Herget (Founder/CEO)</td>
+<td>"$500k ARR within three months"</td>
+</tr>
+<tr>
+<td>57</td>
+<td><a href="https://www.ycombinator.com/companies/contrario">Contrario</a></td>
+<td>Winter 2025</td>
+<td>T1</td>
+<td>AI hiring platform powered by expert recruiters</td>
+<td>B2B -&gt; Recruiting and Talent</td>
+<td></td>
+<td>https://contrario.ai</td>
+<td>Arya Marwaha (Founder/CEO); Aditya Sood (Founder/CTO)</td>
+<td>"$6M in annualized revenue"</td>
+</tr>
+</tbody>
+</table></div><div class="src">Nguồn: <code>research/sweep-yc.md</code> (bản .md cho agent đọc)</div></main></body></html>

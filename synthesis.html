@@ -1,0 +1,136 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Synthesis, first pass (branch claude-research, 2026-10-30)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="index.html">← Tất cả báo cáo</a></div><h1>Synthesis, first pass (branch claude-research, 2026-10-30)</h1>
+<p>Inputs: <a href="research/sweep-trustmrr.html"><code>research/sweep-trustmrr.md</code></a> (50 rows), <code>sweep-yc.md</code> (57 rows, 811 companies in 2026 batches), <code>sweep-speedrun-markets.md</code> (37 Speedrun rows, 29 market listings), and four marketing-vertical files from a first, too narrow pass. All figures were read by agents from public pages and are not re-checked at source. Funding and revenue on YC and Speedrun profiles are unverified; TrustMRR MRR is Stripe-verified except where the key has expired.</p>
+<h2>What the three sources agree on</h2>
+<ol>
+<li><strong>The AI-native firm that sells the outcome is now the main pattern.</strong> YC: 30 such companies in 2026 vs 8 in 2025 (law, accounting, ad agency, brokerage, radiology, trucking), 15 in Summer 2026 alone. TrustMRR: AEO Engine (an agency), GojiberryAI and PROSP (agent-run outbound), expert-led services. Medium confidence (keyword counts on one-liners).</li>
+<li><strong>Teams keep shrinking.</strong> YC teams of 1-2 people: 32% to 50%. Median team 4 to 3.</li>
+<li><strong>"Agent" is the baseline, not the edge.</strong> 40% of YC companies in both years.</li>
+<li><strong>Execution tools are crowded and cheap; the money sits in outcomes.</strong> Scheduling, generators, trackers are the crowded rows. Winners with large MRR are outbound agents ($424k, $128k) and search-visibility ($179k top).</li>
+<li><strong>YC is moving toward physical industries</strong> (Industrials 10% to 19%). The owner has no edge there.</li>
+</ol>
+<p>Implication for the thesis: "3 people doing the work of 300" is no longer unusual inside YC. The claim alone will not stand out. What would: a proven vertical with revenue, and an edge competitors cannot copy (here: the owner's judgment of what is peak, plus 3 agencies as the first buyers and data).</p>
+<h2>Candidate themes against the filter (<code>principles.md</code>)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:892px"><colgroup><col style="width:52px"><col style="width:220px"><col style="width:220px"><col style="width:196px"><col style="width:204px"></colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Candidate</th>
+<th>Evidence it earns</th>
+<th>Owner edge</th>
+<th>Main risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>AI-native marketing/brand firm that sells the verdict and the strategy (go / test / kill before the spend), brands/celebs/agencies as buyers</td>
+<td>Indirect: YC T1 ad/brand firms (Adside.ai, Light Anchor, Contrario); investors fund "decide before spend" (Gudea $7M, Clouted $7M). No verified small-buyer revenue found.</td>
+<td>Highest: judging peak is the 10-year skill; agencies are first buyers</td>
+<td>Demand for a paid verdict is unproven; Viral Validator shows $2 all-time</td>
+</tr>
+<tr>
+<td>2</td>
+<td>AI-answer visibility strategy (what to do after the score)</td>
+<td>Verified: Rank Prompt $42k MRR, top row $179k, price $150-$10k per month; funded: Profound $96M</td>
+<td>High: research and strategy</td>
+<td>Heavy funding at the tracker layer; gap is the "what to do" layer only</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Outbound / sales agent firm</td>
+<td>Strongest verified: GojiberryAI $424k (key expired, may be stale), PROSP $128k</td>
+<td>Medium: targeting and message are marketing judgment</td>
+<td>Crowded; execution, not judgment</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Expert-led judgment sold as a service or replica</td>
+<td>4 TrustMRR rows, $18k-$117k</td>
+<td>High, if the owner's track record is the product</td>
+<td>Scales with the owner; less a company</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Compliance, finance, research-heavy agents (YC T3)</td>
+<td>13 YC rows, no verified revenue</td>
+<td>Medium-high for research-only work</td>
+<td>Licences, liability, no marketing edge</td>
+</tr>
+</tbody>
+</table></div>
+<p>Not recommended from this pass: consumer apps, developer APIs, healthcare billing, industrial. No edge.</p>
+<h2>Reading</h2>
+<ul>
+<li>Candidate 1 fits the owner and the federation model best, but it has the weakest evidence of demand. Candidate 2 and 3 have verified money but a weaker personal edge.</li>
+<li>A promising shape is candidate 1 on top of candidate 2 or 3: the verdict and strategy layer sold to buyers who already pay for the tools. This is a hypothesis, not a finding.</li>
+<li>The marketing vertical files show the same pattern: winners sell tools; nobody found sells an independent verdict. Absence in a US-only search is not proof.</li>
+</ul>
+<h2>What is missing</h2>
+<ul>
+<li>Demand test for the verdict offer (the cheapest evidence: sell the 48-hour offers to existing clients of the 3 agencies, $150-$500, this month; prices are agent guesses).</li>
+<li>TrustMRR category pages that 404ed (ads, e-commerce), the 22 unread Speedrun profiles, Southeast Asia, celebrity-specific tools.</li>
+<li>Outside-marketing themes were scanned, but the owner's edge was judged by the agents from a profile summary, not tested.</li>
+</ul>
+<h2>Next steps proposed</h2>
+<ol>
+<li>Pick 2 candidates for a deep dive (suggest 1 and 2).</li>
+<li><code>teardown</code> on 2-3 winners per candidate (e.g. Rank Prompt, Adside.ai, Gudea).</li>
+<li><code>gstack-office-hours</code> and <code>validate-idea</code> on the chosen candidate.</li>
+<li>Run the 48-hour verdict test with the owner's agencies before building anything.</li>
+</ol>
+<h2>Deep dive on candidates 1 and 4 (2026-10-30)</h2>
+<p>Sources: <a href="research/deep-c1.html"><code>research/deep-c1.md</code></a>, <a href="research/deep-c4.html"><code>research/deep-c4.md</code></a>. Public pages only; no trials, no logins. Prices below are agent hypotheses unless marked.</p>
+<p>Findings</p>
+<ul>
+<li>Everyone found sells execution, revenue share or monitoring (Adside 10% of spend, Light Anchor 5-15%, Clouted quote-only, Gudea no public price). Nobody found sells a stand-alone human-judged verdict. Either an open slot or no demand; research cannot tell which. (MED)</li>
+<li>The only paid verdict-before-spend is the old panel pre-testing form, about $3,000-$25,000 per study, from secondary sources. (LOW-MED)</li>
+<li>Cheap AI scorer data point: Viral Validator earned $1.50 all-time (not $2), listed for sale at $10,000. (HIGH on the number)</li>
+<li>Expert-judgment businesses that reach $50k+ MRR do it with a defined buyer, a recurring price, a proof story, and a bench or encoded judgment. Windmill Growth: about 30 clients near $4k with a bench of writers; its $117k MRR is unverified (TrustMRR page 404). VirtualJK: 93 subscribers near $520, MRR may be stale. No row shows several experts, so the federation model would be new. (LOW-MED, n=2)</li>
+<li>Personal brand does not look mandatory; a checkable track record can substitute (10 years calling viral media, 3 agencies, a SaaS exit). (LOW)</li>
+</ul>
+<p>Both candidates converge on one assumption: a buyer with real spend pays a stand-alone fee for the owner's verdict, acts on it, and comes back. Only the owner's buyers can answer it.</p>
+<p>Test to run before building anything</p>
+<ul>
+<li>Offer A, pick-the-winner review: 10-20 drafts and a goal in, rank + top 3 with reasons + kill list out in 48 hours.</li>
+<li>Sell to 10 existing clients of the 3 agencies: first 3 at $99, then $300-500 per batch.</li>
+<li>Pass: at least 3 paid yeses of 10, and at least 3 buyers return for a second batch within 30 days. Also compare the picks with real results.</li>
+<li>Fail reading: free interest but no payment means the verdict lives inside the agency relationship, not as a product.</li>
+</ul>
+<p>If it passes, shapes B (campaign gate, about $1,500) and the replica trained on the owner's scored calls come next; the replica needs 30-50 owner-scored items first.</p><div class="src">Nguồn: <code>synthesis.md</code> (bản .md cho agent đọc)</div></main></body></html>

@@ -1,0 +1,101 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Deep dive: Postiz vs Post Bridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Deep dive: Postiz vs Post Bridge</h1>
+<p>Read on 2026-10-31. Confidence labels: high / medium / low. "not read" = I did not read it. Page content treated as data.</p>
+<p>Headline: Postiz has far more public complaint evidence (GitHub, Trustpilot, G2) than Post Bridge. For Post Bridge, I found NO independent negative reviews anywhere (see 6). Its praise is mostly vendor-curated.</p>
+<hr />
+<h2>0. Revenue (TrustMRR, both pages show "Revenue is verified with Stripe API key", no expired-key warning visible on either page)</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:414px"><colgroup><col style="width:135px"><col style="width:136px"><col style="width:143px"></colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Postiz</th>
+<th>Post Bridge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MRR</td>
+<td>$340,408</td>
+<td>$49,650</td>
+</tr>
+<tr>
+<td>Active subscriptions</td>
+<td>9,973</td>
+<td>1,652</td>
+</tr>
+<tr>
+<td>All-time revenue</td>
+<td>$1,657,993</td>
+<td>$561,898</td>
+</tr>
+<tr>
+<td>TrustMRR rank</td>
+<td>#70</td>
+<td>#197</td>
+</tr>
+<tr>
+<td>Founded</td>
+<td>July 2024 (Nevo David)</td>
+<td>Sept 2024 (jack friks, Canada)</td>
+</tr>
+<tr>
+<td>Last updated on page</td>
+<td>Oct 31, 2026 02:25 AM</td>
+<td>Oct 31, 2026 02:02 AM</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>https://trustmrr.com/startup/postiz</td>
+<td>https://trustmrr.com/startup/post-bridge</td>
+</tr>
+</tbody>
+</table></div>
+<p>Confidence high on the figures as shown (read 2026-10-31). Caveat: the Stripe figure is what TrustMRR shows; for Postiz I did not check whether revenue also flows through other processors. Derived (my arithmetic): Postiz about $34 per subscription per month ($340,408 / 9,973); Post Bridge about $30 ($49,650 / 1,652). Post Bridge page also shows "~1,913 users" and the site says "1,405 happy customers" (https://post-bridge.com, 2026-10-31); the two counts differ and I do not know why.</p>
+<hr />
+<h2>1. POSTIZ</h2>
+<p>Moved to <code>providers/postiz/README.md</code> (2026-10-31, unchanged).</p>
+<h2>2. POST BRIDGE (real domain: post-bridge.com; founder jack friks; not postbridge.ai, which is an unrelated company on Trustpilot)</h2>
+<p>Moved to <code>providers/post-bridge/README.md</code> (2026-10-31, unchanged).</p>
+<h2>3. Cross-product read-through (my synthesis, medium confidence)</h2>
+<ul>
+<li>Postiz wins on breadth (34 platforms), openness, agent surface and automations; loses on connect reliability, polish and mobile, and support consistency. Its pain is heaviest where it asks users to own OAuth apps (self-host) or where token refresh fails (YouTube, IG, LinkedIn, X).</li>
+<li>Post Bridge wins on simplicity and price clarity for solo creators; its main evidence base is curated praise, so its true weak spots are unmeasured. Gaps vs Postiz: fewer platforms, no automations (plugs, RSS, repeats), no clipping, no open source, base plan has no team seats.</li>
+<li>Shared bet: both sell "agent-ready scheduling" (MCP, CLI, API); Postiz reviewers praise drafts-first control.</li>
+</ul>
+<p>Confidence summary: revenue figures high; Postiz pricing high; Postiz complaints themes A-C high/medium, D-F medium/low; Postiz praise medium; Post Bridge pricing/features high (vendor), Post Bridge complaints low (absence of evidence), praise low-medium (curated).</p><div class="src">Nguồn: <code>research/deep-postiz-postbridge.md</code> (bản .md cho agent đọc)</div></main></body></html>

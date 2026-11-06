@@ -1,0 +1,841 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Run By Linh: GTM teardown (2026-11-01)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Run By Linh: GTM teardown (2026-11-01)</h1>
+<p>Skill: <code>/gtm-teardown</code> v0.1.0, lần chạy đầu. Mọi trang đọc ngày 2026-11-01. Độ tin: <strong>A</strong> đọc/xem trực tiếp, <strong>B</strong> nguồn thứ hai, <strong>suy luận</strong> của mình. Quy đổi USD tôi tính theo 26.000 VND/USD.</p>
+<p><strong>Tóm tắt.</strong> Run By Linh (RBL) là học viện marketing cho SME do một người dẫn dắt (Trần Thùy Linh). Funnel: TikTok cá nhân @chayboilinh → workshop Zoom free (không record) → nhóm Zalo và tư vấn qua điện thoại → khoá Zoom 6 buổi 5,999tr (combo 14,999tr) → dịch vụ <strong>tư vấn</strong> 3tr/giờ, Masterplan theo báo giá, coaching 1:1 tối thiểu 3 tháng. Giả thuyết của owner chỉ được bằng chứng công khai xác nhận <strong>một phần</strong>. Có học viên nói thẳng "học để nắm tổng quan, phần chi tiết thuê người làm". Nhưng RBL <strong>công khai từ chối làm hộ</strong>: trang dịch vụ ghi "Không phải agency", "không làm thay rồi bàn giao", và loại trừ sản xuất content cùng việc của đội marketing. Vì vậy, nếu học viên RBL thuê làm hộ, họ thuê bên khác. Trên site không có đối tác hay chương trình giới thiệu nào. Phần thực thi bị bỏ trống đó chính là chỗ DF Partner nhắm vào.</p>
+<h2>1. Định danh</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:670px"><colgroup><col style="width:90px"><col style="width:250px"><col style="width:165px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+<th>Nguồn</th>
+<th>Tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand</td>
+<td>Run By Linh (RBL), "Marketing Academy &amp; Transformation Partner"; footer vẫn ghi "Marketing Academy &amp; Agency"</td>
+<td>https://www.runbylinh.com/</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Pháp nhân</td>
+<td>"Run By Linh Co., Ltd" (tự khai trên Udemy). Chưa tìm được MST (WebSearch không ra). Hoá đơn VAT 8% cho "quý công ty"</td>
+<td>https://www.udemy.com/user/tran-thuy-linh-48/ , https://www.runbylinh.com/quydinhvat</td>
+<td>B (MST: trống)</td>
+</tr>
+<tr>
+<td>Văn phòng</td>
+<td>Tầng 8, toà AC, 3 ngõ 78 Duy Tân, Cầu Giấy, Hà Nội; 0979 439 887; cskh@runbylinh.com</td>
+<td>footer site</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Founder</td>
+<td>Trần Thùy Linh: tốt nghiệp FTU (chương trình tiên tiến), "cựu Associate Marketing &amp; BD Manager tại VNG", từng làm manager/C-level ở startup. Có co-trainer kiêm PM Nguyễn Ngọc Hạnh và 2 người hỗ trợ</td>
+<td>home, Udemy</td>
+<td>A (tự khai; VNG chưa kiểm được vì LinkedIn đòi đăng nhập)</td>
+</tr>
+<tr>
+<td>Site</td>
+<td>Ladipage; có Meta Pixel và TikTok Pixel (trang free training), tức là có chạy quảng cáo retarget</td>
+<td>HTML các trang</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Trùng tên đã loại</td>
+<td>Các FB "Trần Thùy Linh" khác (Linh Gems, Huế); Tran Thuy Linh của DigiPencil; "Chạy bởi Linh" chính là founder (bio TikTok ghi Founder RBL)</td>
+<td>WebSearch</td>
+<td>A</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. Social</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:643px"><colgroup><col style="width:168px"><col style="width:220px"><col style="width:165px"><col style="width:90px"></colgroup>
+<thead>
+<tr>
+<th>Tài khoản</th>
+<th>Số liệu</th>
+<th>Nguồn</th>
+<th>Tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TikTok @chayboilinh ("Chạy bởi Linh", tài khoản founder)</td>
+<td>4.643 followers, 32,9K likes. Bio: "Founder Run By Linh - Marketing Academy &amp; Transformation Firm. Contact for work… Tài liệu - Khoá học - Dịch vụ ở link dưới". Đọc được 43 ID clip, clip cũ nhất 2025-03; dày từ 09/2026, gần như mỗi ngày trong 10/2026</td>
+<td>scroll-read.mjs (bậc cuối) + read.sh (jina)</td>
+<td>A</td>
+</tr>
+<tr>
+<td>TikTok @runbylinh (brand)</td>
+<td>88 followers, 521 likes, không bio</td>
+<td>read.sh</td>
+<td>A</td>
+</tr>
+<tr>
+<td>YouTube "Run By Linh - Marketing Academy" (UCBhSif9zTlie-Auzi1XmKcQ)</td>
+<td>557 người đăng ký, tổng 6.342 view, 9 video dài và vài Shorts. Video dài cao nhất 2.704 view</td>
+<td>trang about + yt-dlp</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Threads @chayboilinh</td>
+<td>277 followers, 27 thread</td>
+<td>og:description</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Instagram @chayboilinh / @runbylinh</td>
+<td>75 followers, 31 bài / ~83 followers (snippet tìm kiếm)</td>
+<td>og:description / WebSearch</td>
+<td>A / B</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td>Udemy dẫn tới facebook.com/runbylinhacademy, nhưng trang báo "This content isn't available" (scroll-read). facebook.com/runbylinh ra trang trống. Số liệu: trống</td>
+<td></td>
+<td>trống</td>
+</tr>
+<tr>
+<td>LinkedIn /in/tranthuylinhrbl</td>
+<td>bị authwall</td>
+<td>read.sh</td>
+<td>trống</td>
+</tr>
+<tr>
+<td>Gitiho (kênh phân phối)</td>
+<td>khoá free "Lean Marketing Plan cho SME", 1.097 học viên, 5/5 (8 đánh giá). Bio cũ hơn: "600+ học viên, 30+ event, 5.000+ người dự"</td>
+<td>https://gitiho.com/teacher/568980-run-by-linh-marketing-academy</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Udemy</td>
+<td>997 learners, 86 reviews</td>
+<td>Udemy</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Tìm kiếm thấy trang TikTok discover "Run by Linh Marketing Phốt"</td>
+<td>chưa mở, không biết nội dung</td>
+<td>WebSearch</td>
+<td>chưa kiểm</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nhận xét (suy luận): TikTok cá nhân là kênh kéo người duy nhất có quy mô. Tài khoản brand gần như bỏ trống. Mẫu này giống MagentX: niềm tin nằm ở người, không ở brand.</p>
+<h3>Phân tích từng clip</h3>
+<p>Cột "Xem": K = đã xem khung hình (contact sheet), L = đã có lời (whisper). Số liệu TikTok lấy từ embed/v2, ngày đăng suy từ ID.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:1006px"><colgroup><col style="width:206px"><col style="width:90px"><col style="width:148px"><col style="width:135px"><col style="width:165px"><col style="width:262px"></colgroup>
+<thead>
+<tr>
+<th>Clip</th>
+<th>Ngày</th>
+<th>View / like / share / cmt</th>
+<th>share/view; view/followers</th>
+<th>Xem</th>
+<th>Hook (2 giây đầu) → giá trị → CTA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7683499732894829845">TT 7683499732894829845</a> "Không bỏ sót Insight…"</td>
+<td>2026-09-09</td>
+<td>99.200 / 2.866 / 308 / 16</td>
+<td>0,31%; 21x</td>
+<td>K+L</td>
+<td>"Đây là cách mình dùng Claude để quét hàng chục nguồn thông tin cùng lúc". Demo Claude extension đọc review và comment sàn TMĐT với ví dụ trầm hương. Nhấn mạnh "người quyết định cuối cùng là chúng ta". Không gắn sản phẩm của brand khác</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7484224352750161159">TT 7484224352750161159</a> "Marketing Plan cho nữ độc thân muốn tìm chồng"</td>
+<td>2025-03-21</td>
+<td>93.800 / 5.034 / 2.059 / 147</td>
+<td><strong>2,2%</strong>; 20x</td>
+<td>K+L</td>
+<td>Tự trào "Linh hành nghề bán khoá học… bị đồn là lùa gà". Áp khung marketing plan (phân khúc thu nhập, đối thủ, kênh tiếp cận) vào chuyện tìm chồng, quay ngoài công viên. Clip giải trí, share cao nhất. Không có CTA bán</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7686736184227351828">TT 7686736184227351828</a> "Hệ thống tự động Market Research &amp; báo cáo hằng ngày"</td>
+<td>2026-09-18</td>
+<td>80.400 / 2.354 / 339 / 23</td>
+<td>0,42%; 17x</td>
+<td>K (whisper ra lời rác, lời đọc từ chữ trên khung)</td>
+<td>"Xây hệ thống tự động market research &amp; gửi báo cáo cùng Claude". Claude Scheduled Tasks quét Google, Maps, FB, TikTok, IG rồi lưu Notion, tạo "bộ nhớ" cho lần sau, chạy thành vòng lặp. Đây chính là agent 02 trong khoá Fullstack</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7541090079838588168">TT 7541090079838588168</a> "Đừng bao giờ yêu cầu nhân viên lập kế hoạch"</td>
+<td>2025-08-21</td>
+<td>66.300 / 3.166 / 497 / 53</td>
+<td>0,75%; 14x</td>
+<td>K+L</td>
+<td>Stitch clip một anh chủ doanh nghiệp. Hook phản biện: "Đừng bao giờ yêu cầu nhân viên lập kế hoạch". Nói về nỗi đau SME (sếp không có định hướng, nhân viên tự bơi). Kết: vừa làm vừa test. Nói thẳng với cả chủ doanh nghiệp lẫn marketer</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7685593983875173653">TT 7685593983875173653</a> Research TikTok bằng Claude extension</td>
+<td>2026-09-15</td>
+<td>11.400 / 234 / 72 / 12</td>
+<td>0,63%</td>
+<td>K (lời rác)</td>
+<td>Quét keyword, trend, comment, đối thủ, KOC. Bước 4: tổng hợp thành gợi ý marketing plan</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7694238400664145173">TT 7694238400664145173</a> Content plan cho team 1-3 người</td>
+<td>2026-10-08</td>
+<td>6.599 / 377 / 55 / 5</td>
+<td>0,83%</td>
+<td>L</td>
+<td>"Team 1-3 người lên content cả tháng có khả thi không?" Chỉ lên trước 2-3 ngày</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7693451193309302017">TT 7693451193309302017</a></td>
+<td>2026-10-06</td>
+<td>8.265 / 399 / 23 / 3</td>
+<td>0,28%</td>
+<td>L</td>
+<td>"Pillar và angle không phải điểm bắt đầu". Neo theo chiến thuật</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7695363254142471445">TT 7695363254142471445</a></td>
+<td>2026-10-11</td>
+<td>2.748 / 119 / 12 / 3</td>
+<td>0,44%</td>
+<td>L</td>
+<td>Đặt mục tiêu từ năng lực con người, không từ tiền ("5 video/tháng là sức của tôi")</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7699906052145433877">TT 7699906052145433877</a></td>
+<td>2026-10-23</td>
+<td>1.062 / 46 / 3 / 9</td>
+<td>0,28%</td>
+<td>L</td>
+<td>Lịch đăng bám thực tế. CTA "bio hoặc comment để mình gửi"</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7701169753074814228">TT 7701169753074814228</a></td>
+<td>2026-10-27</td>
+<td>570 / 40 / 10 / 0</td>
+<td>1,8%</td>
+<td>L</td>
+<td>Insight từ comment và review. <strong>CTA khoá học</strong>: "tham khảo khoá học của mình, team gửi link"</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7701627453218852116">TT 7701627453218852116</a> Edit video tự động bằng Claude</td>
+<td>2026-10-28</td>
+<td>1.863 / 91 / 13 / 17</td>
+<td>0,70%</td>
+<td>L</td>
+<td>Từ 30-60 phút còn 3-5 phút mỗi clip, "giảm chi phí outsource video editor". <strong>CTA "muốn sở hữu agent tương tự hãy comment"</strong>: bán agent, không bán dịch vụ</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7702314107248200980">TT 7702314107248200980</a> "Xây kênh TikTok cho ngành giáo dục"</td>
+<td>2026-10-30</td>
+<td>549 / 23 / 1 / 0</td>
+<td>0,18%</td>
+<td>K+L</td>
+<td>Trả lời một "anh" chủ trường: 3 cách (nhân viên đứng kênh, có rủi ro nghỉ việc; founder đứng kênh; kênh giả lập người dùng). "Đừng chỉ giới thiệu dịch vụ". Giọng tư vấn cho chủ doanh nghiệp</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/KUdukDDkpOw">YT KUdukDDkpOw</a> Market Research &amp; insight vô hạn với Claude (15 phút)</td>
+<td>2026-09-18</td>
+<td>2.704 / 54 like / 8 cmt</td>
+<td>4,9x subs</td>
+<td>K+L</td>
+<td>Bản dài của clip TikTok 80K. Mô tả có link "chuỗi Workshop free" (bom.so) và link khoá. Kết bằng lead magnet: "comment để team gửi tài liệu"</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/aLrELsP_R9o">YT aLrELsP_R9o</a> Insight khi thiếu dữ liệu (21 phút)</td>
+<td>2026-09-11</td>
+<td>1.418 / 39 / 5</td>
+<td></td>
+<td>L</td>
+<td>Ví dụ quán trà đá. Cùng CTA workshop free</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/UlFy2J_0yBk">YT UlFy2J_0yBk</a> Hệ thống vận hành Fullstack Marketing (16 phút)</td>
+<td>2026-09-29</td>
+<td>755 / 15 / 3</td>
+<td></td>
+<td>L</td>
+<td>Định nghĩa fullstack, không phải đa nhiệm. Dashboard nối triển khai, đo lường và cải tiến</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/1wm89eYxaGU">YT 1wm89eYxaGU</a> feedback học viên (24 giây)</td>
+<td>2024-08-18</td>
+<td>36</td>
+<td></td>
+<td>K+L</td>
+<td><strong>Trung Hiếu, học viên, nghề gia sư tiếng Anh</strong>: "cái quan trọng là em cần cái tổng quan… chi tiết thì em có thể <strong>thuê người khác</strong>" (whisper có lỗi, ý rõ)</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/qiOSgmImJt0">YT qiOSgmImJt0</a>, <a href="https://youtu.be/FrFUsJZztu0">FrFUsJZztu0</a>, <a href="https://youtu.be/hhe1-VngrYQ">hhe1-VngrYQ</a> feedback</td>
+<td>2024-08 / 2025-03</td>
+<td>27 / 88 / 73</td>
+<td></td>
+<td>L</td>
+<td>SEO specialist khen template Masterplan. Chị Ngọc Trâm học lại K07 vì "nội dung cập nhật qua từng khoá" (hợp với con số tự khai "60% học viên quay lại"). Học viên khen "không bị thúc ép mua"</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/FVfRCPFVUOk">YT FVfRCPFVUOk</a>, <a href="https://youtu.be/gdKBKRdRuqQ">gdKBKRdRuqQ</a>, <a href="https://youtu.be/Gp_lcZq4dmo">Gp_lcZq4dmo</a> demo agent (30 giây, nhúng trên trang khoá)</td>
+<td>2026-10-27</td>
+<td>0 view</td>
+<td></td>
+<td>K (chỉ có nhạc)</td>
+<td>Màn hình demo: "chỉ cần 1 câu lệnh", agent lập lịch theo pillar × phễu × kênh rồi ghi vào Google Sheets. Workspace mẫu là thương hiệu "Ngõ Dịu" (spa massage)</td>
+</tr>
+<tr>
+<td><a href="https://youtu.be/0grCw_z2gTw">YT 0grCw_z2gTw</a>, <a href="https://youtu.be/9M-cHkgm9Hs">9M-cHkgm9Hs</a> Shorts</td>
+<td>2026-10</td>
+<td>80 / 123</td>
+<td></td>
+<td>L</td>
+<td>Phân tích video viral bằng Claude. "Xin prompt là vô dụng, hãy mô tả ngữ cảnh"</td>
+</tr>
+</tbody>
+</table></div>
+<p>Clip ghim 141,7K view: trang profile có, nhưng không lấy được ID (embed trả về trống), <strong>chưa xem</strong>. Clip 93,8K/99,2K ở trên có thể chính là clip ghim. Chưa phân biệt được.</p>
+<p><strong>Trụ nội dung (suy luận từ các clip đã xem):</strong> (1) demo Claude/agent làm việc thật trên màn hình (market research, lịch content, edit video), tức dạy đúng các agent tặng trong khoá; (2) quan điểm phản biện cho SME ("đừng bắt nhân viên lập kế hoạch", "đừng lên lịch quá xa"); (3) thỉnh thoảng có clip giải trí tự trào, và đó là clip share cao nhất. Không thấy quảng cáo cho brand khác. Mọi clip đều không gắn brand trong caption ngoài hashtag. Cái hút view là <strong>bằng chứng tay nghề AI</strong>, không phải lời chứng thực.</p>
+<h2>3. Website</h2>
+<ul>
+<li><strong>Lời hứa:</strong> "Giúp Marketers và chủ doanh nghiệp nâng cao năng lực Marketing… với nguồn lực hạn chế và ngân sách thấp". Người mua: marketer đa nhiệm và chủ SME doanh thu 1-50 tỷ/năm, đội marketing 1-10 người (trang /dichvu). A.</li>
+<li><strong>Thang offer (A, các trang /freetraining /khoahoc /masterplan /fullstack /contentai /dashboardmkt /dichvu):</strong></li>
+</ul>
+<div class="tw"><table style="table-layout:fixed;min-width:695px"><colgroup><col style="width:90px"><col style="width:220px"><col style="width:165px"><col style="width:220px"></colgroup>
+<thead>
+<tr>
+<th>Bậc</th>
+<th>Offer</th>
+<th>Giá</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td>Free Training Zoom 90 phút 04/11/2026 "Lập kế hoạch Fullstack Marketing tinh gọn cùng AI, tăng doanh số tháng 11"; workshop "giải case" và học thử</td>
+<td>0</td>
+<td><strong>Không record</strong>, record chỉ gửi học viên. Form hỏi kinh nghiệm, vị trí, "muốn được tư vấn qua điện thoại hay Zalo", "có phải học viên cũ"; xong thì chuyển vào nhóm Zalo</td>
+</tr>
+<tr>
+<td>Free</td>
+<td>Khoá "Lean Marketing Plan" trên Gitiho</td>
+<td>0</td>
+<td>1.097 học viên</td>
+</tr>
+<tr>
+<td>Thấp</td>
+<td>"Lập kế hoạch Brandformance 799.000đ, chỉ còn 3 slot cuối" (khối cũ còn sót trên home); phiên bản Elearning</td>
+<td>799k</td>
+<td>bậc cũ, không thấy trên trang khoá hiện tại</td>
+</tr>
+<tr>
+<td>Lõi</td>
+<td>Masterplan 2027 (17/11), Fullstack (07/12), Content A-Z (12/2026), mỗi khoá 6 buổi Zoom tối</td>
+<td>5,999tr (gạch 7,999tr hoặc 8,999tr) ≈ 231 USD</td>
+<td>quà: bộ AI Agent + "100+ Skills Marketing cho AI" + 12 khoá e-learning + template; truy cập record 1 năm; <strong>"5 slot mỗi tháng giải case 1:1"</strong></td>
+</tr>
+<tr>
+<td>Lõi</td>
+<td>Phân tích số liệu &amp; báo cáo (dashboardmkt)</td>
+<td>4,999tr (gạch 6,999tr)</td>
+<td>3 buổi</td>
+</tr>
+<tr>
+<td>Combo</td>
+<td>Mua 3 tặng 1: 3 khoá cộng khoá Data</td>
+<td>14,999tr ≈ 577 USD (gạch 17,997tr)</td>
+<td>"Trọn bộ 7 Agent Fullstack Marketing"</td>
+</tr>
+<tr>
+<td>Dịch vụ 1</td>
+<td>Tư vấn theo giờ cho Founder/BOD và Marketing Manager</td>
+<td><strong>3.000.000đ/giờ</strong> chưa VAT ≈ 115 USD; mỗi buổi 1,5-2 giờ</td>
+<td>có bản tổng hợp sau buổi</td>
+</tr>
+<tr>
+<td>Dịch vụ 2</td>
+<td>Tư vấn &amp; đồng hành xây Marketing Masterplan: 3-4 tuần, 3 buổi, đánh giá lại sau 30 ngày</td>
+<td>báo giá</td>
+<td>"Học viên Masterplan muốn áp dụng vào bài toán thực tế" là một đối tượng; "không bắt buộc học khoá trước"</td>
+</tr>
+<tr>
+<td>Dịch vụ 3</td>
+<td>Tư vấn tổ chức &amp; tối ưu nhân sự phòng marketing (cơ cấu, JD, KPI, quỹ lương)</td>
+<td>báo giá</td>
+<td>ví dụ minh hoạ: 103tr/tháng xuống 83tr, tiết kiệm 240tr/năm (ghi rõ là minh hoạ)</td>
+</tr>
+<tr>
+<td>Dịch vụ 4</td>
+<td>Coaching 1:1 cho Founder/BOD</td>
+<td>không ghi giá</td>
+<td>tối thiểu 3 tháng</td>
+</tr>
+<tr>
+<td>Giữ chân</td>
+<td>Membership (có link trong menu, trang trống); cộng đồng Zalo</td>
+<td>?</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Định vị dịch vụ, nguyên văn (A, /dichvu):</strong> "Không phải agency. Không phải công ty công nghệ. Đối tác chuyển đổi từ bên trong. Run By Linh không làm thay rồi bàn giao…". Phần "Dịch vụ không mặc định bao gồm" có: sản xuất content/creative, thực hiện công việc của đội marketing hay sales, cam kết doanh thu. Nền tảng: "100% nội bộ, Claude · Notion · Google Drive".</li>
+<li><strong>Bằng chứng:</strong> "2.000+ học viên", "150+ sự kiện, 20.000+ người dự", "60% học viên quay lại", rating 4,8 và 4,9 (tự khai, không rõ nền tảng nào). Bio Gitiho cũ hơn ghi 600+ và 30+ event, nên có thể đó là tăng trưởng theo thời gian, chưa kiểm. Logo "đối tác" chỉ có "Trung tâm tiếng Anh Philippines", "Trung tâm tư vấn du học Mỹ" với dòng "<em>thông tin khách hàng được bảo mật</em>". Case có tên: <strong>Đảo Matcha</strong> ("hàng chục kênh UGC được lập ra, 1 kênh đạt 1,8 triệu view, 258 followers, 68,9K like, 5 bài trong 7 ngày"; "mở rộng tiếp cận… từ học viên &amp; trainer"), <strong>Cent Beauty</strong> (ảnh tài liệu chiến lược "SAVE model"), "case học viên content viral ra số". Tất cả là ảnh chụp tự đăng, chưa có nguồn ngoài xác nhận.</li>
+<li><strong>CTA, thu lead:</strong> form đăng ký → Zalo group; "Tư vấn cho tôi" (gọi điện); cọc 500k <strong>không hoàn</strong> để giữ giá trước "ngày tăng giá"; trả đủ mới được vào Zalo và nhận link Zoom; "liên hệ xác nhận trong 8 tiếng"; hoá đơn VAT cho công ty; brochure dịch vụ; tư vấn miễn phí 30 phút cho doanh nghiệp.</li>
+<li><strong>Đáng học:</strong> (1) trang dịch vụ nói rõ <strong>phạm vi và phần không làm</strong>, cùng ai chịu trách nhiệm gì: hợp gu khách doanh nghiệp; (2) ví dụ tiết kiệm bằng tiền và ngày công, có ghi "chỉ minh hoạ"; (3) mỗi khoá tặng agent cụ thể, có demo 30 giây, nên học viên mua một hệ thống chứ không chỉ mua kiến thức; (4) workshop free bám mùa bán (11/11, Black Friday) và không có record, buộc người học phải dự trực tiếp.</li>
+<li><strong>Cần tránh:</strong> khối template Ladipage còn sót (giỏ hàng "Sản phẩm 1 10.000.000đ", "Tổng đài 099999999x", khối cọc "K2 29/7, K3 23/8" đã cũ); llms.txt, /about-us, /membership trả về trống; logo khách ẩn danh; footer "Agency" mâu thuẫn với "Không phải agency".</li>
+</ul>
+<h2>4. Funnel quan sát được</h2>
+<pre><code>TikTok @chayboilinh (demo Claude/agent, quan điểm SME; 4,6K followers, clip đỉnh 80-99K view)
+  + YouTube bản dài, có link workshop free trong mô tả; Meta/TikTok Pixel để retarget
+  → CTA &quot;comment để team gửi tài liệu&quot; / link bio (bom.so, đi đâu: không theo được)
+  → Free Training Zoom 90 phút, không record (form: vị trí, kinh nghiệm, muốn gọi hay nhắn Zalo)
+  → nhóm Zalo + sale gọi điện; Q&amp;A giới thiệu lộ trình
+  → cọc 500k không hoàn, tăng giá theo mốc → khoá 6 buổi 5,999tr hoặc combo 14,999tr (kèm agent)
+  → trong khoá: giải case 1:1 (5 slot/tháng); học lại khoá mới (&quot;60% quay lại&quot;)
+  → doanh nghiệp: tư vấn 30 phút free → tư vấn 3tr/giờ → Masterplan (báo giá) → tổ chức nhân sự → coaching ≥3 tháng
+</code></pre>
+<p>Không thấy được: nội dung trong buổi free training và Q&amp;A (phải đăng ký mới thấy, không làm); nội dung nhóm Zalo; brochure dịch vụ (phải để lại thông tin); giá Masterplan và coaching; trang Facebook (không truy cập được).</p>
+<p><strong>Chỗ giáo dục biến thành deal (A với phần site, suy luận với phần cơ chế):</strong></p>
+<ol>
+<li><strong>Học viên → dịch vụ tư vấn của chính RBL</strong>: trang dịch vụ nhắm thẳng "học viên Masterplan muốn áp dụng vào bài toán thực tế". Thang đi lên là tư vấn và coaching, <strong>không phải làm hộ</strong>.</li>
+<li><strong>Brand → hợp tác qua lớp học</strong>: Đảo Matcha có "kênh UGC lập ra… từ học viên &amp; trainer". Học viên làm bài tập thật cho brand: brand có nội dung, khoá có case. Đây là thứ gần làm hộ nhất mà RBL công khai, và nhân lực làm là học viên.</li>
+<li><strong>Doanh nghiệp mua khoá cho nhân viên</strong>: có quy trình hoá đơn VAT "quý công ty" (A). Đơn đặt khoá cho cả đội (in-house) thì không thấy trên site.</li>
+<li><strong>Không thấy</strong> agency riêng, đối tác thực thi hay chương trình referral. Clip edit video có câu "giảm chi phí outsource editor bên ngoài": RBL bán cho người học <strong>công cụ để khỏi phải thuê ngoài</strong>.</li>
+</ol>
+<p><strong>Kiểm giả thuyết của owner</strong> ("phần lớn học viên học xong thì thuê làm hộ"): bằng chứng công khai <strong>ủng hộ hành vi</strong> nhưng <strong>không ủng hộ "thuê RBL"</strong>. Ủng hộ: học viên Trung Hiếu nói rõ ý học tổng quan rồi thuê người (A, clip 24 giây); người mua là chủ SME 1-10 người, tự nhận thiếu nguồn lực (A). Phản bác: RBL tự loại phần thực thi và không giới thiệu bên làm hộ (A). Tỷ lệ "phần lớn" thì không có số công khai nào: <strong>B (lời owner)</strong>. Cách kiểm rẻ nhất (gợi ý): hỏi 5-10 học viên RBL trong mạng lưới của owner xem họ đã thuê ai sau khoá và giá bao nhiêu.</p>
+<p><strong>Cách RBL xây niềm tin với doanh nghiệp (A + suy luận):</strong> founder có xuất thân (VNG, FTU); nội dung quan điểm nói chuyện như chủ doanh nghiệp ("anh"); demo màn hình thật; trang dịch vụ minh bạch phạm vi và có ví dụ tiết kiệm bằng tiền; có hoá đơn VAT; case có tên brand (Đảo Matcha). Không thấy logo enterprise, báo chí hay giải thưởng: khách là SME, không phải enterprise.</p>
+<h2>5. Bằng chứng: đã kiểm và chưa kiểm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:375px"><colgroup><col style="width:177px"><col style="width:198px"></colgroup>
+<thead>
+<tr>
+<th>Nhận định</th>
+<th>Trạng thái</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Giá khoá, cọc, dịch vụ 3tr/giờ, phạm vi dịch vụ</td>
+<td>A, site</td>
+</tr>
+<tr>
+<td>Followers và view TikTok/YT/Threads</td>
+<td>A, đọc trực tiếp ngày 2026-11-01</td>
+</tr>
+<tr>
+<td>2.000+ học viên, 20.000+ người dự, 60% quay lại, rating 4,8/4,9</td>
+<td>tự khai, chưa kiểm. Gitiho và Udemy cộng lại khoảng 2.100 learner (khoá free), nên con số "2.000+" có thể gồm cả người học free (suy luận)</td>
+</tr>
+<tr>
+<td>Cựu VNG, Run By Linh Co., Ltd, MST</td>
+<td>tự khai; MST trống</td>
+</tr>
+<tr>
+<td>Case Đảo Matcha 1,8M view, Cent Beauty</td>
+<td>ảnh tự đăng; chưa tìm kênh UGC để kiểm</td>
+</tr>
+<tr>
+<td>"Phốt" trên TikTok</td>
+<td>chỉ thấy tên trang discover; chưa mở, không kết luận</td>
+</tr>
+<tr>
+<td>Học viên thuê làm hộ sau khoá</td>
+<td>1 lời chứng thực (A); tỷ lệ là lời owner (B)</td>
+</tr>
+</tbody>
+</table></div>
+<h2>6. Bài học áp dụng cho DF (suy luận, tách khỏi phần sự thật)</h2>
+<p><strong>Nên học</strong></p>
+<ol>
+<li><strong>Founder-led TikTok bằng demo agent thật</strong>: clip 80-99K view của Linh đều là "xem tôi cho Claude làm market research". Với khoảng 4,6K followers mà ra 20x view/followers là nhờ demo công cụ. DF nên quay đúng hệ thống mình bán (dây chuyền content, vòng đo lường) làm nội dung đầu phễu, mỗi clip một kết quả cụ thể.</li>
+<li><strong>Khoá tặng agent cụ thể</strong> khiến giá 5,999tr (≈231 USD) dễ nuốt. Academy 400 USD của DF nên giao "hệ thống chạy được" chứ không chỉ kiến thức. Nhưng DF cần giữ phần vận hành nhiều khách và dữ liệu cho bậc Partner (xem điểm 5).</li>
+<li><strong>Trang dịch vụ kiểu RBL</strong>: đối tượng (doanh thu, quy mô đội), thời điểm nên dùng, đầu ra, quy trình theo tuần, ai chịu trách nhiệm gì, không bao gồm gì, ví dụ tiết kiệm có ghi "minh hoạ". Dùng y khung này cho DF Partner, thêm cam kết sản lượng mà RBL không có.</li>
+<li><strong>Workshop free không record, bám mùa bán</strong> và form phân loại (vị trí, kinh nghiệm, muốn gọi hay nhắn). DF thêm câu hỏi "doanh thu / đội marketing / đang thuê agency không" để lọc lead Partner ngay từ form workshop.</li>
+<li><strong>Lỗ hổng làm hộ</strong>: RBL dạy và tư vấn nhưng từ chối làm. Học viên muốn thuê làm thì không có ai trong hệ RBL. DF Partner lấp đúng chỗ này. Hai hướng: (a) cạnh tranh, nói thẳng "học xong không có người làm? DF làm cùng bạn"; (b) <strong>đối tác giới thiệu</strong> với các học viện không làm hộ như RBL, chia hoa hồng cho học viên được chuyển sang. Hướng (b) rẻ hơn cho DF về chi phí hút khách. Cần hỏi thử RBL; chưa có bằng chứng họ nhận.</li>
+<li><strong>Biến bài tập thành deal brand</strong> (mẫu Đảo Matcha): mời brand thật làm "case lớp học" ở khoá 20 hoặc 400 USD. Brand thấy kết quả, sau đó ký Partner. Giáo dục trở thành demo năng lực.</li>
+</ol>
+<p><strong>Cần tránh</strong></p>
+<ol>
+<li>Template site sót lại, footer "Agency" mâu thuẫn với "không phải agency": khách doanh nghiệp đọc kỹ những chỗ này.</li>
+<li>Logo khách ẩn danh ("thông tin bảo mật") và rating không rõ nguồn. DF chỉ đưa case có tên, có số và kiểm được.</li>
+<li>Cọc "không hoàn trong mọi trường hợp" cộng tăng giá theo mốc: hợp B2C, nhưng gây rủi ro uy tín với doanh nghiệp và enterprise.</li>
+<li>Kênh brand bỏ trống (TikTok brand 88 followers, YouTube 557 subs): toàn bộ phụ thuộc một người. DF nên có ít nhất 2 gương mặt, hoặc một kênh "bằng chứng sống" riêng như gợi ý ở case MagentX.</li>
+<li>Đừng định giá Partner theo mốc của RBL. 3tr/giờ (≈115 USD) là giá tư vấn, không có thực thi. DF Partner 1.999-2.999 USD/tháng phải neo theo chi phí đội in-house hoặc agency (<a href="../research/vn-content-spend-2026-11-01.html"><code>research/vn-content-spend-2026-11-01.md</code></a>), không neo theo giờ tư vấn.</li>
+</ol>
+<h2>7. Nguồn và chỗ chưa đọc được</h2>
+<ul>
+<li>Đọc trực tiếp bằng curl: runbylinh.com <code>/</code>, <code>/freetraining</code>, <code>/khoahoc</code>, <code>/masterplan</code>, <code>/fullstack</code>, <code>/contentai</code>, <code>/dashboardmkt</code>, <code>/dichvu</code>, <code>/quydinhvat</code>. Trả về trống: <code>/llms.txt</code>, <code>/about-us</code>, <code>/membership</code>, <code>/tuyensinh</code>, <code>/chinhsach</code>, <code>/chinhsachcoc</code>.</li>
+<li>TikTok: read.sh (jina) và scroll-read.mjs; số liệu clip lấy từ embed/v2; tải clip bằng yt-dlp. YouTube: yt-dlp (format 134+139), whisper small, contact sheet ffmpeg.</li>
+<li>Không đọc được: Facebook (runbylinhacademy "not available", runbylinh trống), LinkedIn (authwall), Instagram profile (đòi đăng nhập, chỉ có og:description), link bom.so (không redirect được bằng curl), clip ghim 141,7K, nội dung workshop, nhóm Zalo và brochure (phải để lại thông tin, không làm).</li>
+<li>Không đăng nhập, không đăng ký, không điền form.</li>
+</ul>
+<h2>Ghi chú cho skill</h2>
+<ol>
+<li><strong>Whisper ra lời rác trên clip có nhạc nền</strong> ("Hãy subscribe cho kênh Ghiền Mì Gõ…" lặp lại). Gặp ở 2/12 clip TikTok và 3 demo YouTube; <code>--condition_on_previous_text False</code> không chữa được. Skill nên dặn: nhận diện câu ảo này, khi đó đọc lời từ chữ trên khung hình; cân nhắc tách giọng hoặc dùng model lớn hơn.</li>
+<li><strong>Lệnh contact sheet <code>fps=1/2,tile=4x3</code> chỉ ra 24 giây đầu</strong> của mỗi sheet. Nên tính <code>fps=12/duration</code> để một sheet phủ cả clip. Một clip TikTok có luồng audio dài hơn video (334 giây so với 173 giây), làm sheet hụt khung.</li>
+<li><strong>yt-dlp YouTube lỗi "Requested format is not available"</strong> khi không có JS runtime; phải chọn format cụ thể (<code>-f 134+139</code>). Nên ghi vào phần Công cụ.</li>
+<li><strong>yt-dlp không lấy được danh sách clip của user TikTok</strong> ("Unable to extract secondary user ID"). Cách chạy được: <code>read.sh</code> profile rồi grep <code>video/&lt;id&gt;</code>, sau đó dùng embed/v2. Nên ghi thành công thức. Embed/v2 không trả <code>desc</code> sạch (escape unicode) và trả trống với một số clip, kể cả clip ghim.</li>
+<li><strong>Link social trên site Ladipage</strong> là icon không có href. Skill nên gợi ý tìm qua bio Udemy, Gitiho hay hồ sơ trên nền tảng khoá học (ở đây đó là nơi duy nhất có link FB).</li>
+<li>Thiếu hướng dẫn khi <strong>founder có tài khoản tên khác brand</strong> (ở đây là "Chạy bởi Linh" @chayboilinh): nên dặn tìm theo hashtag brand và email liên hệ.</li>
+<li>Bước 4 nên có mục bắt buộc <strong>"kiểm giả thuyết người dùng đưa vào"</strong> (ủng hộ, phản bác, cách kiểm rẻ). Skill hiện chỉ nói "tìm nơi giáo dục biến thành deal".</li>
+<li>Bước 2 nói "top clip theo view": profile TikTok không đăng nhập chỉ cho thứ tự mới nhất, nút Popular cần đăng nhập. Nên ghi cách lấy top: lấy embed của mọi ID rồi tự sắp.</li>
+<li>Skill nên nói rõ chuẩn "đã xem" khi clip dài 15-20 phút (đủ lời toàn bộ cộng 1 sheet có được không?) và giới hạn số clip để không tốn quá nhiều thời gian whisper.</li>
+<li>Lệnh <code>pgrep -f</code>/<code>pkill -f</code> theo tên whisper khớp với chính shell đang chạy và giết nó. Nên dặn chờ bằng PID hoặc chạy nền có thông báo.</li>
+</ol>
+<hr />
+<h2>Vòng 2: đọc bằng trình duyệt đã đăng nhập (2026-11-01)</h2>
+<p>Đọc bằng trình duyệt nhúng Orca (profile mặc định, tài khoản của owner đã đăng nhập FB, LinkedIn, TikTok), chỉ đọc: không like, follow, join, comment, nhắn tin hay điền form. Mọi số đọc ngày 2026-11-01. Độ tin như vòng 1. Giao diện FB của tài khoản đang ở tiếng Hindi; ngày tương đối ("2 ngày trước") quy về 2026-11-01.</p>
+<p><strong>Tóm tắt vòng 2.</strong> Vòng 1 kết luận "RBL không làm hộ". Vòng 2 sửa lại: trang /dichvu nói "không làm thay rồi bàn giao", nhưng chính founder viết trên FB (23/02/2026) rằng RBL có dịch vụ "Lập kế hoạch MKT &amp; <strong>đồng hành triển khai thực chiến</strong>" và <strong>Headhunt</strong> ("giới thiệu nhân sự… 60% là học viên/cộng đồng của mình"), và ngày 29/05/2026 tuyển "Chuyên viên AI Marketing <strong>mảng dịch vụ</strong>" vì "các dự án… đang quá tải". LinkedIn công ty ghi thẳng "Đào tạo Marketing thực chiến &amp; <strong>cung ứng nhân lực Marketing</strong> cho doanh nghiệp". Tức là: khi chủ doanh nghiệp học xong và cần người làm, đường RBL mở sẵn là <strong>tuyển người in-house (do RBL giới thiệu, thường là học viên)</strong> hoặc <strong>RBL đồng hành triển khai</strong>, không phải thuê một agency ngoài. Mới nhất (29/10/2026) RBL mở "Audit tư vấn Marketing 1:1" cho chủ SME ngoài cộng đồng học viên.</p>
+<h3>V2.1 Facebook</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:766px"><colgroup><col style="width:217px"><col style="width:246px"><col style="width:168px"><col style="width:135px"></colgroup>
+<thead>
+<tr>
+<th>Tài khoản</th>
+<th>Số liệu</th>
+<th>Nguồn</th>
+<th>Tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hồ sơ cá nhân "Thùy Linh (Run By Linh)"</td>
+<td><strong>10K followers</strong>, 239 đang follow. Bio: "Đào tạo nâng cao năng lực team MKT Inhouse - Founder Run By Linh"; Founder &amp; CEO từ 10/2023; FTU; liên kết TikTok chayboilinh</td>
+<td>https://www.facebook.com/thuylinh.runbylinh</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Page "Run By Linh - Marketing Academy &amp; Martech Agency"</td>
+<td><strong>6,2K followers</strong>; địa chỉ mới Số 8 ngõ 198B Nguyễn Tuân, Thanh Xuân (khác footer site: Duy Tân); cskh@runbylinh.com</td>
+<td>https://www.facebook.com/runbylinh</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Page "Run By Linh - Martech Agency" (loại "trường học")</td>
+<td>1,4K followers; "Học Viện Phát Triển Doanh Nghiệp… trực thuộc Run By Linh Academy &amp; Transformation Firm"</td>
+<td>https://www.facebook.com/runbylinhsmeacademy</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Group công khai "Cộng đồng Run By Linh - Thực chiến Marketing cho SMEs &amp; Startups"</td>
+<td><strong>8.363 thành viên</strong>, <strong>+835 trong tuần qua</strong>, 50 bài trong tháng qua; lập 21/08/2024, đổi tên 14/09/2026; 7 admin (Thùy Linh, Ngọc Hạnh, Nguyen Tra My, Thùy Dương…)</td>
+<td>https://www.facebook.com/groups/runbylinh/about</td>
+<td>A (đọc phần công khai, không join)</td>
+</tr>
+<tr>
+<td>facebook.com/runbylinhacademy (link trên Udemy)</td>
+<td>"Nội dung này hiện không có" kể cả khi đã đăng nhập: link chết</td>
+<td></td>
+<td>A</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Nhịp đăng (A):</strong></p>
+<ul>
+<li><em>Page</em>: 3-12 bài/ngày trong tuần 27/10-01/11, gần như toàn bộ là clip TikTok đăng lại kèm link bom.so tới khoá/workshop hoặc "Audit tư vấn 1:1"; tương tác rất thấp (2-28 reaction, 1-14 share mỗi bài). Page là kho phân phối + quảng cáo (nút "Apply now" "Chuỗi Workshop đặc biệt: Thực chiến AI Marketing cho Marketers chạy số cuối năm"), không phải kênh kéo người.</li>
+<li><em>Hồ sơ cá nhân</em>: dày đặc 03-07/2026 (gần như mỗi ngày, có ngày 2 bài), thưa từ 08/2026 (thấy 16/08, 22/10, 29/10); cuối 2026 trọng tâm dời sang group và TikTok. (Feed FB ảo hoá DOM nên có thể sót bài; xem ghi chú skill.)</li>
+<li><em>Group</em>: Linh và co-trainer Ngọc Hạnh đăng gần như mỗi ngày; thành viên hỏi đáp (chủ tiệm gội đầu 5tr/tháng ads, trung tâm du học nghề Hàn, marketer ngành âm thanh).</li>
+</ul>
+<p><strong>Top bài (số đọc được; thứ tự số trên FB là reaction / comment / share).</strong> Ở hồ sơ cá nhân DOM chỉ hiện comment và share, không đọc được reaction.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:551px"><colgroup><col style="width:220px"><col style="width:90px"><col style="width:90px"><col style="width:151px"></colgroup>
+<thead>
+<tr>
+<th>Bài</th>
+<th>Ngày</th>
+<th>Số</th>
+<th>Loại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hồ sơ: "Full lộ trình tự học MKT bài bản… dịp 30/4"</td>
+<td>28/04/2026</td>
+<td>20 cmt / <strong>523 share</strong></td>
+<td>tài liệu free</td>
+</tr>
+<tr>
+<td>Hồ sơ: "Quà tặng 30/4 - Share full 100% tài liệu các khoá học 2025-đầu 2026"</td>
+<td>30/04/2026</td>
+<td>14 / <strong>506</strong></td>
+<td>tài liệu free (cả tài liệu khoá trả phí)</td>
+</tr>
+<tr>
+<td>Hồ sơ: "Toàn bộ hệ thống MKT cho team tinh gọn 3 người cho Startup"</td>
+<td>01/04/2026</td>
+<td>14 / 484</td>
+<td>template</td>
+</tr>
+<tr>
+<td>Hồ sơ: "Tài liệu - Phần 0. Nhập môn Claude cho Marketers"</td>
+<td>13/04/2026</td>
+<td>12 / 442</td>
+<td>tài liệu Claude</td>
+</tr>
+<tr>
+<td>Hồ sơ: "Chia sẻ hệ thống Workspace + Workflow AI với nhân sự"</td>
+<td>19/05/2026</td>
+<td><strong>86 cmt</strong> / 13</td>
+<td>comment-để-nhận</td>
+</tr>
+<tr>
+<td>Hồ sơ: "Cả nhà có lấy bộ 50+ skills Brandformance 2026… comment xuống dưới"</td>
+<td>08/07/2026</td>
+<td>46 / 44</td>
+<td>comment-để-nhận</td>
+</tr>
+<tr>
+<td>Group: "Insight… ngành Spa &amp; Làm đẹp… video viral… tháng 11"</td>
+<td>~29/10/2026</td>
+<td><strong>364 / 13 / 543</strong></td>
+<td>tài liệu theo ngành</td>
+</tr>
+<tr>
+<td>Group: "Social listening → Content Strategy &amp; Calendar tự động"</td>
+<td>17/09/2026</td>
+<td>164 / 226 / 156</td>
+<td>demo hệ thống AI</td>
+</tr>
+<tr>
+<td>Group: "Insight &amp; ý tưởng Content ngành F&amp;B"</td>
+<td>~30/10/2026</td>
+<td>191 / 72 / 275</td>
+<td>tài liệu theo ngành</td>
+</tr>
+<tr>
+<td>Group: "Đội Agent nhỏ cho content fullstack… Solo founder"</td>
+<td>22/10/2026</td>
+<td>87 / <strong>171</strong> / 55</td>
+<td>comment-để-nhận agent</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nguồn: https://www.facebook.com/thuylinh.runbylinh (cuộn feed), https://www.facebook.com/groups/runbylinh. Tin A.</p>
+<p><strong>Trụ nội dung FB (suy luận từ ~45 bài hồ sơ + ~40 bài group):</strong> (1) <strong>tặng tài liệu/template/skill Claude</strong> với hook "link dưới comment" hay "comment để nhận": share cao nhất, kéo thành viên group; (2) tài liệu insight theo ngành (spa, F&amp;B, giáo dục, du học) bám mùa bán; (3) demo agent Claude (edit video, design ảnh, content team); (4) chuyện founder (2 năm mở/đóng văn phòng 4 lần, tạm ngưng hoạt động 1 lần; văn phòng mới); (5) quan điểm ("không dùng 100% AI để lập chiến lược").</p>
+<p><strong>Cách bán (A):</strong></p>
+<ul>
+<li>Comment-để-nhận ở bài tài liệu → admin gửi link (FB không cho thấy có chuyển sang inbox/Zalo hay không). Luật group cấm thành viên "chấm để gửi link" và bán khoá, nhưng admin dùng chính chiêu đó và đăng thông báo workshop/Audit dưới nhãn "Thông báo từ RBL".</li>
+<li>Workshop free Zoom đăng trong group (04/11 19:30 "Lập kế hoạch Fullstack Marketing tinh gọn cùng AI"); livestream trong group, record lên YouTube (bài 23/02).</li>
+<li><strong>Offer mới "Audit tư vấn Marketing 1:1"</strong> cho chủ SME (bài 29/10/2026: "Đợt này kinh tế khó khăn nên mình có mở chương trình tư vấn 1:1… 1 tháng có ngồi với riêng vài chủ DN là học viên… mở thêm vài slots ngoài cộng đồng học viên… lọc các case phù hợp và giới hạn slots"); đăng ký qua form Lark (không mở). Giá: không công bố.</li>
+<li>Zalo: "Group Zalo bản tin việc làm Marketing" (zalo.me/g/slsuxx190, bài 23/02).</li>
+<li>Lời chứng thực: album "Review học viên", "Showcase học viên bứt phá doanh số nhờ Brandformance" (page, 09/10/2026).</li>
+<li>Không thấy ads chạy trên chính page ở phần đọc được ngoài nút Apply now trên bài clip (đó là bài có CTA lead form, không xác định có trả tiền hay không).</li>
+</ul>
+<p><strong>Bài tự giới thiệu ghim ngầm (23/02/2026), nguyên văn chính (A):</strong> https://www.facebook.com/thuylinh.runbylinh/posts/pfbid02ZGjvhetdVVneKMySvtvCM8T3CBxE5mU3LzxeuvtNpJ4xvQSewzfEerm3CXCdVuBNl</p>
+<ul>
+<li>"Associate MKT &amp; BD Manager cho 1 dự án nho nhỏ trực thuộc VNG năm 2022-2023"; làm marketing từ cuối 2017.</li>
+<li>RBL bán: workshop/livestream free; khoá học (từ 2026 do Linh + đội trainer "đi từ học viên… thực chiến dự án cho khách hàng cùng mình"; phụ trách: co-founder Ngô Cúc); <strong>dịch vụ 3 mảng</strong>: "Rà soát/Tư vấn tái cấu trúc team MKT", "<strong>Lập kế hoạch MKT &amp; đồng hành triển khai thực chiến</strong>", "<strong>Headhunt - giới thiệu các nhân sự chất lượng cao do bên mình phỏng vấn &amp; đánh giá chuyên môn. 60% là học viên/cộng đồng của mình</strong>" (phụ trách: Nguyen Tra My). "Dịch vụ thiên về cấu trúc team Inhouse MKT… đào tạo + đồng hành thực chiến".</li>
+<li>Với học viên: "trở thành nhân sự của RBL tham gia thực chiến các dự án" hoặc "nhân sự chính thức của các đơn vị đối tác/khách hàng trong mạng lưới đối tác của RBL".</li>
+<li>Với doanh nghiệp: case Đảo Matcha, Cent Beauty, Biluxury, Trạm Phượt; "năm 2026 bên mình sẽ <strong>tạm dừng phần này</strong> để tập trung thúc đẩy dịch vụ".</li>
+<li>Với <strong>agency và SaaS</strong>: "rất open để hợp tác chéo… Đơn vị của mình tập trung vào 1 ngách… vẫn có rất nhiều agency mạnh"; SaaS liên hệ để "kết nối với cộng đồng học viên". Comment của Linh: "Mấy bác hỏi 'tóm lại em bán cái gì' với lại 'có mỗi bán khoá' thì em update ở đây".</li>
+</ul>
+<p><strong>Tuyển dụng mảng dịch vụ (29/05/2026, A):</strong> https://www.facebook.com/thuylinh.runbylinh/posts/pfbid02UreG2Q38TsyM83bH68hCCGsq3XKGvfJMwJnhmyNgBJaYz7nXweSSaoKJpewyDQDKl — "Tìm đồng đội triển khai mảng dịch vụ về AI Marketing cho Doanh nghiệp… Chuyên viên AI Marketing; Marketing Executive CTV/fulltime… các dự án về với chúng mình đang trong tình trạng quá tải… ứng dụng AI vào quá trình triển khai Marketing cho team Inhouse của các doanh nghiệp". 19 cmt / 32 share. Bài 12/05/2026: "Mở rộng mảng dịch vụ mới, được đón nhận"; "phấn đấu mở chi nhánh SG".</p>
+<p><strong>Khác (A):</strong> bài 22/10/2026 (32 cmt) tố một đơn vị "chuyên làm dịch vụ AI vận hành doanh nghiệp" vào lớp lấy tài liệu RBL để mở Zoom bán khoá: cho thấy đối thủ dịch vụ AI dùng lớp RBL làm nguồn, và RBL "bị leak khoá nhiều rồi". Bài 21/06: Linh đứng lớp cùng ở Học viện Quản trị XLeaders cho chủ doanh nghiệp (kênh tiếp cận chủ DN qua học viện khác).</p>
+<p><strong>Ai thực thi cho học viên (bằng chứng FB):</strong> không thấy tag đối tác agency nào hay comment "em thuê bên X làm". Thấy: (a) RBL tự đồng hành triển khai và tuyển người cho mảng này; (b) headhunt học viên vào doanh nghiệp; (c) group có mục "Tuyển dụng" là dạng bài được phép; (d) tài liệu/agent tặng để học viên tự làm. Kênh làm hộ bên ngoài: không thấy.</p>
+<h3>V2.2 LinkedIn</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:700px"><colgroup><col style="width:90px"><col style="width:280px"><col style="width:165px"><col style="width:165px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Giá trị</th>
+<th>Nguồn</th>
+<th>Tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headline</td>
+<td>"Founder Run By Linh Academy | Marketing Consultant &amp; Trainer for SMEs &amp; Startups"; Hanoi; <strong>1.524 followers</strong></td>
+<td>https://www.linkedin.com/in/tranthuylinhrbl/</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Kinh nghiệm</td>
+<td>Founder, Run By Linh Co., Ltd (10/2023-nay); <strong>Associate Marketing Business Development Manager, VNG Corporation, 2022-2023</strong>; Marketing Planner, VCCorp (part-time 2019-2021); Marketing Manager/Leader, bePOS.HQ (2018-2019); Freelance 07/2017-08/2018</td>
+<td>/details/experience/</td>
+<td>A (tự khai trên LinkedIn; khớp với FB; vẫn là lời tự khai, chưa có nguồn thứ ba)</td>
+</tr>
+<tr>
+<td>About</td>
+<td>"CMO/Marketing Manager… Technology companies for 7 years"</td>
+<td>profile</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Hoạt động</td>
+<td>Gần như chỉ repost bài tiếng Anh (copywriting, content B2B); bài tự đăng gần nhất ~1 năm trước. LinkedIn không phải kênh của cô</td>
+<td>/recent-activity/all/</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Company page</td>
+<td>"Run By Linh Co., Ltd - Marketing Education &amp; Agency": "Đào tạo Marketing thực chiến cho Marketers &amp; <strong>cung ứng nhân lực Marketing</strong> cho các doanh nghiệp tại Việt Nam"; <strong>43 followers</strong>; 11-50 nhân viên (tự khai), 5 thành viên liên kết; thành lập 2023; loại Educational. Bài cũ (8 tháng trước): "Đơn vị đào tạo &amp; <strong>Cung cấp/Tái cấu trúc/Xây team MKT Inhouse</strong> cho SMEs &amp; Startups"; 3 reaction mỗi bài</td>
+<td>https://www.linkedin.com/company/run-by-linh/about/</td>
+<td>A</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tín hiệu B2B/enterprise: yếu. Không có logo khách lớn, không bài case enterprise; LinkedIn gần như bỏ trống. Khách là SME Việt tìm qua FB/TikTok. (suy luận)</p>
+<h3>V2.3 TikTok @chayboilinh (đã đăng nhập)</h3>
+<p>Profile ngày 2026-11-01: <strong>4.645 followers, 33K likes</strong> (A). Bio có thêm "Contact for work: linhtran.workcontact@gmail.com", link bom.so/FFpVxT.</p>
+<p><strong>Clip ghim 141,7K đã định danh:</strong> không phải video mà là <strong>bài ảnh (carousel)</strong> https://www.tiktok.com/@chayboilinh/photo/7528666228072860936 , đăng 2025-07-19, "26 tuổi - mở 2 công ty và những bài học đau thương của mình". 5.587 like, 122 cmt, 1.671 lưu, 274 share (thứ tự icon TikTok: like, comment, lưu, share). Đây là lý do embed/v2 trả trống ở vòng 1. Hai clip ghim còn lại là 93,8K và 99,2K (đã xem ở vòng 1).</p>
+<p><strong>Popular sort (đăng nhập, A):</strong> 141,7K (ảnh) · 99,2K · 93,8K · 80,4K · 68,6K (ảnh) · 66,3K · 48,9K · 41,2K · 39,3K · 31,7K (ảnh) · 17K · 12,4K · 11,4K · 8.636 · 8.266 … (thứ tự TikTok trả không hoàn toàn giảm dần).</p>
+<p><strong>Phân tích 5+1 bài mới xem (chưa xem ở vòng 1).</strong> Số từ yt-dlp info.json / trang bài; ngày từ timestamp.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:1026px"><colgroup><col style="width:175px"><col style="width:90px"><col style="width:175px"><col style="width:135px"><col style="width:170px"><col style="width:281px"></colgroup>
+<thead>
+<tr>
+<th>Bài</th>
+<th>Ngày</th>
+<th>View / like / share / cmt</th>
+<th>share/view; view/followers</th>
+<th>Xem</th>
+<th>Hook → giá trị → CTA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/photo/7528666228072860936">ảnh 7528666228072860936</a> ghim</td>
+<td>2025-07-19</td>
+<td>141,7K / 5.587 / 274 / 122 (+1.671 lưu)</td>
+<td>0,19%; 30x</td>
+<td>6 ảnh đọc hết</td>
+<td>"26 tuổi - mở 2 công ty, những điều 'tưởng vậy mà không phải vậy'": lập công ty dễ, duy trì mới khó; mở văn phòng quá sớm làm gãy dòng tiền; không cần nhân sự fulltime, CTV/part-time ổn; tách tiền công ty và cá nhân; lập quỹ rủi ro. Không CTA, không bán</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/photo/7538846545555311879">ảnh 7538846545555311879</a></td>
+<td>2025-08-15</td>
+<td>68,6K / 906 / 43 / 20 (+310 lưu)</td>
+<td>0,06%; 15x</td>
+<td>5 ảnh đọc hết (nhạc nền)</td>
+<td>"26 tuổi - mở 2 công ty, điều mình sẽ không bao giờ làm lại": công ty đầu lập khi đã có khách nhưng mô hình đào tạo không cần văn phòng; công ty 2 mở vội vì khách cần VAT; "chỉ nên lập công ty khi có PMF, khách ổn định, khách cần VAT nhiều, dự trù 6-12 tháng không doanh thu"</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/photo/7530281686823734546">ảnh 7530281686823734546</a></td>
+<td>2025-07-23</td>
+<td>31,7K / 1.120 / 67 / 31 (+313 lưu)</td>
+<td>0,21%; 7x</td>
+<td>chỉ caption + alt ("…Phần 2"), ảnh chưa đọc</td>
+<td>Phần 2 của chuỗi khởi nghiệp</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7541081677129403666">TT 7541081677129403666</a></td>
+<td>2025-08-21</td>
+<td>48,9K / 1.309 / 93 / 36</td>
+<td>0,19%; 11x</td>
+<td>K (whisper small và medium đều ra lời rác; lời đọc từ phụ đề cháy, chỉ từng mảnh)</td>
+<td>"Sai lầm lớn nhất khi mở công ty là… mở công ty". Nói tại văn phòng, phụ đề cháy: "mình có 2 cái sai lầm", "chi phí biến…", "mới là quản trị tốt". Chuỗi khởi nghiệp, không CTA</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7685392608050515220">TT 7685392608050515220</a></td>
+<td>2026-09-14</td>
+<td>41,2K / 795 / 127 / 14</td>
+<td>0,31%; 9x</td>
+<td>K (whisper rác; lời đọc từ chữ trên khung)</td>
+<td>"Xây hệ thống Market Research và đào Insight vô hạn cùng Claude + TikTok": sơ đồ nguồn dữ liệu, câu lệnh Claude Extension mẫu (case tiệm hoa 20/10), báo cáo "Bản đồ Insight Hoa 20/10". Cùng trụ demo với clip 99K/80K</td>
+</tr>
+<tr>
+<td><a href="https://www.tiktok.com/@chayboilinh/video/7483887235834694919">TT 7483887235834694919</a></td>
+<td>2025-03-20</td>
+<td>39,3K / 2.162 / <strong>421</strong> / 42</td>
+<td><strong>1,07%</strong>; 8x</td>
+<td>K+L</td>
+<td>"Phễu marketing cho các công ty 'đào lửa' Campuchia, ngân sách 0 đồng": insight (lòng tham, "người thông minh biết cách kiếm tiền"), KPI 3.000 lead, điểm chạm (kênh TikTok HR, comment group FB, Zalo/Telegram 1:1), FOMO "may mắn được chọn". Cùng định dạng giải trí-áp-khung với clip "tìm chồng" 93,8K; quay ở công viên</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Trụ nội dung TikTok, cập nhật (suy luận):</strong> ngoài (1) demo Claude và (2) quan điểm SME đã thấy ở vòng 1, có thêm trụ <strong>(3) chuyện khởi nghiệp của founder</strong> ("26 tuổi mở 2 công ty"): chiếm 4/10 bài top, gồm bài top 1 (141,7K, 30x followers). Trụ (4) "áp khung marketing vào chủ đề giật gân" (tìm chồng, đào lửa) có share/view cao nhất (1-2%). Những bài top này <strong>không CTA</strong>; CTA bán chỉ nằm ở clip demo gần đây. Đỉnh view 2025 đến từ chuyện cá nhân và giải trí; đỉnh 2026 từ demo Claude.</p>
+<h3>V2.4 Kiểm lại giả thuyết owner ("học viên học xong thuê làm hộ")</h3>
+<div class="tw"><table style="table-layout:fixed;min-width:545px"><colgroup><col style="width:175px"><col style="width:280px"><col style="width:90px"></colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Bằng chứng</th>
+<th>Tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ủng hộ có nhu cầu thực thi</td>
+<td>Bài tuyển 29/05: dự án dịch vụ "quá tải", tuyển "Chuyên viên AI Marketing mảng dịch vụ"; bài 23/02 có "đồng hành triển khai thực chiến"; bài 12/05 "mở rộng mảng dịch vụ mới, được đón nhận từ chính các khách hàng"; Audit 1:1 nói "1 tháng có ngồi riêng với vài chủ DN là học viên mình"</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Nhưng hướng đi của nhu cầu</td>
+<td>RBL hướng chủ DN tới <strong>xây/tái cấu trúc team in-house</strong> và <strong>headhunt học viên</strong> (60% ứng viên giới thiệu là học viên), LinkedIn "cung ứng nhân lực Marketing". Tức là học viên "thuê người" theo nghĩa <strong>tuyển nhân sự</strong>, và RBL tự bắt phần đồng hành</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Phản bác "thuê agency ngoài"</td>
+<td>Không thấy tag/giới thiệu agency thực thi nào; lời mời "hợp tác chéo với agency" (23/02) là ngỏ ý, chưa thấy đối tác cụ thể. RBL tự tặng agent để học viên "khỏi đi xin hay mua" (group 27/10)</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Tỷ lệ "phần lớn"</td>
+<td>Vẫn không có số</td>
+<td>trống</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Kết luận vòng 2:</strong> giả thuyết đúng ở chỗ có nhu cầu làm hộ sau khoá (đủ để RBL quá tải và mở mảng dịch vụ), nhưng <strong>RBL đã tự chiếm chỗ đó</strong> bằng 3 cửa: đồng hành triển khai, headhunt học viên vào team in-house, và Audit 1:1. Điều này làm yếu điểm 5 phần Bài học vòng 1 ("RBL bỏ trống phần thực thi"). Khe còn lại cho DF: sản lượng content chạy liên tục theo tháng có cam kết số (RBL không cam kết doanh thu, không làm creative mặc định), và ngành/khu vực RBL chưa phủ (RBL ở Hà Nội, đang định mở SG). Hướng "đối tác giới thiệu" (5b) có cơ sở hơn vòng 1 vì RBL công khai mời agency hợp tác chéo (A), nhưng RBL cũng đang làm dịch vụ nên có thể coi DF là đối thủ (suy luận). Cách kiểm rẻ nhất: dự workshop free 04/11 với danh tính thật của owner (owner tự quyết) và hỏi Q&amp;A "học xong không có người làm thì sao", hoặc nhắn page RBL hỏi dịch vụ đồng hành triển khai gồm gì, giá bao nhiêu.</p>
+<h3>V2.5 Bài học bổ sung cho DF (suy luận)</h3>
+<ol>
+<li><strong>Chuỗi chuyện founder</strong> (mở/đóng công ty, văn phòng, sai lầm) là bài ra view nhất của Linh, không phải demo. DF nên có trụ "nhật ký dựng DF" song song demo.</li>
+<li><strong>Tài liệu cho không, kể cả tài liệu khoá trả phí</strong> (506 share) không làm khoá ế: RBL vẫn bán khoá 6tr. Thứ bán được là lớp trực tiếp + agent + giải case, không phải tài liệu.</li>
+<li><strong>Group FB là tài sản giữ lead chính</strong> (8,4K, +835/tuần) chứ không phải page (6,2K, tương tác 2-28). DF nên xây một group/cộng đồng làm chỗ giữ liên lạc, luật cấm bán cho thành viên, admin được đăng thông báo.</li>
+<li><strong>Headhunt học viên</strong> là cách một học viện kiếm thêm từ doanh nghiệp mà không phải làm hộ. DF có thể đi ngược: đào tạo người làm cho chính dây chuyền DF Partner.</li>
+<li>Cảnh giác: đối thủ "dịch vụ AI vận hành doanh nghiệp" lấy tài liệu từ lớp RBL; tài liệu DF cũng sẽ bị lấy. Lợi thế phải ở vận hành và dữ liệu, không ở tài liệu.</li>
+</ol>
+<h3>V2.6 Nguồn vòng 2</h3>
+<ul>
+<li>FB: /runbylinhacademy (chết), /search/top?q=Run By Linh, /runbylinh, /thuylinh.runbylinh (+3 bài permalink trích ở trên và bài 29/10 pfbid02tS4dZEiLRFj3ngcDGtrogRnX1ai9ztQyRzqcgMBaccy3WCCNkAhPToDsKg6shacjl), /groups/runbylinh, /groups/runbylinh/about.</li>
+<li>LinkedIn: /in/tranthuylinhrbl/, /details/experience/, /recent-activity/all/, /company/run-by-linh/about/, /posts/.</li>
+<li>TikTok: profile, nút Popular, 3 trang /photo/; yt-dlp + ffmpeg sheet + whisper cho 3 video; ảnh carousel tải từ src trên trang.</li>
+<li>Chưa đọc: reaction ở hồ sơ cá nhân FB; bài FB 08-10/2026 của hồ sơ (feed ảo hoá, có thể sót); ảnh carousel "Phần 2"; form Lark Audit 1:1 và giá (không điền form); nội dung group cần join; bom.so vẫn không theo được bằng curl (link trong trình duyệt không mở để tránh click).</li>
+</ul>
+<h2>Ghi chú cho skill (vòng 2)</h2>
+<ol>
+<li><strong>Trình duyệt đã đăng nhập mở được hầu hết khoảng trống vòng 1</strong>: FB page/hồ sơ/group công khai, LinkedIn experience, TikTok Popular. Phát hiện quan trọng nhất (founder tự nói có đồng hành triển khai và headhunt) nằm ở <strong>bài FB cá nhân</strong>, không ở website: skill nên bắt buộc đọc bài "giới thiệu/tóm lại bán gì" và bài tuyển dụng của founder.</li>
+<li><strong>Link FB trên Udemy có thể chết</strong>; tìm bằng FB search (top) ra cả page, page phụ, group và hồ sơ cá nhân trong một lần.</li>
+<li><strong>Feed FB ảo hoá DOM</strong>: <code>innerText</code> sau khi cuộn chỉ còn vài bài. Cách chạy được: mỗi lần cuộn 2.000px thì gom <code>div[aria-posinset], div[role=article]</code> vào <code>window.__p</code> (khoá theo 200 ký tự đầu), lặp 20-25 lần. Vẫn có thể sót bài.</li>
+<li><strong>Số tương tác FB</strong>: ở group, dãy số sau bài là reaction/comment/share; ở hồ sơ cá nhân chỉ ra comment/share. Đối chiếu bằng <code>aria-label</code> "Comment on …, N comments" trước khi gán nghĩa cho số.</li>
+<li><strong>Giao diện tài khoản owner ở tiếng Hindi</strong>: ngày dạng "22 अक्टूबर", "2 दिन पहले"; regex phải theo ngôn ngữ giao diện. Đừng đổi cài đặt ngôn ngữ (cấm thay đổi tài khoản).</li>
+<li><strong><code>orca screenshot</code> không có <code>--json</code> trả ảnh rất nhỏ (761 byte, trống)</strong>; dùng <code>--json</code> rồi giải base64 <code>result.data</code>. Cuối cùng không cần ảnh: DOM đủ.</li>
+<li><strong>TikTok "clip ghim không lấy được ID" là bài ảnh</strong> (<code>/photo/&lt;id&gt;</code>): embed/v2 trả trống, yt-dlp chỉ tải mp3 nhạc nền (ffmpeg báo "does not contain any stream"). Cách xem: mở trang /photo/ trong trình duyệt, lấy <code>img.src</code> có <code>naturalWidth&gt;500</code>, curl về, ghép dải ảnh bằng ffmpeg <code>hstack</code> rồi đọc. Số liệu đọc từ trang (like, comment, lưu, share).</li>
+<li><strong>Popular cần đăng nhập và thứ tự không giảm dần chặt</strong>: tự sắp lại theo số view.</li>
+<li>Whisper small vẫn ra câu ảo "subscribe kênh Ghiền Mì Gõ" ở 2/3 video có nhạc; xem phụ đề cháy trên sheet. Model <strong>medium</strong> với <code>--condition_on_previous_text False</code> cũng ra đúng câu ảo đó: đổi model không chữa được. Clip nói có phụ đề cháy thì cần sheet dày hơn (ví dụ 24-36 khung) để đọc phụ đề, hoặc tách giọng (demucs) trước whisper.</li>
+<li>Đi chậm (3-5 giây giữa trang, ~35 lượt tải trang tổng) không gặp checkpoint hay cảnh báo nào trên 3 nền tảng.</li>
+</ol><div class="src">Nguồn: <code>research/runbylinh-gtm-2026-11-01.md</code> (bản .md cho agent đọc)</div></main></body></html>

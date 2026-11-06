@@ -1,0 +1,326 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>OmegleWeb - Bài tập tuần 1 (ICP + Research Market)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../../index.html">← Tất cả báo cáo</a></div><h1>OmegleWeb - Bài tập tuần 1 (ICP + Research Market)</h1>
+<p>Ngày đọc nguồn: 31/10/2026. Khoá Build to Own, tuần 1. Nhãn độ tin: [CONFIRMED] đã mở đúng trang gốc; [SECONDARY] từ nguồn thứ hai; [VENDOR-CLAIMED] hãng tự nói; [UNVERIFIED] chưa kiểm được.</p>
+<h2>A. Tóm tắt</h2>
+<p>OmegleWeb (https://omegleweb.com) là trang chat video và chat chữ ngẫu nhiên với người lạ, chạy trên trình duyệt, không cần đăng ký, chỉ cho người từ 18 tuổi, tự giới thiệu là bản thay Omegle (đóng tháng 11/2023). Chat cơ bản miễn phí. Tiền đến từ gói Premium (chọn quốc gia, lọc nam/nữ, tìm nhanh hơn), quảng cáo Google AdSense và, theo mã trang cùng Reddit, phí mở khoá khi bị cấm. Người mua là cá nhân người lớn tự trả bằng thẻ, không phải đội hay doanh nghiệp. TrustMRR (bên thứ ba, nói là xác minh qua khoá Stripe API, đồng bộ 31/10/2026 05:50 UTC) ghi MRR 67.285 USD, 2.166 gói đang chạy, MRR giảm 21,0% trong 30 ngày, doanh thu tích luỹ 391.944 USD kể từ tháng 2/2026.</p>
+<p>Kết luận: nhu cầu có thật và đã trả bằng tiền thật, nhưng không đáng theo đuổi với hồ sơ owner. Doanh thu đã qua đỉnh (tháng 9: 106.865 USD; tháng 10: 93.485 USD). Sản phẩm sống nhờ lượng người lạ online cùng lúc và kiểm duyệt nội dung người lớn, không nhờ phán đoán media. Ba phàn nàn lặp lại (ban oan rồi trả tiền mở khoá vẫn không được; khó huỷ gói; trả tiền lọc giới tính mà vẫn toàn nam) đều là bài toán vận hành, rủi ro pháp lý và thanh toán cao.</p>
+<p>Lưu ý trung thực: không có tài liệu gốc riêng; dữ kiện lấy từ dòng CSV và <code>icp-winning-10-2026-10-31.md</code>, rồi tôi mở lại trang thật ngày 31/10/2026. Lệch nhỏ: CSV ghi 67.272 USD / 2.158 gói (30/10), trang trực tiếp ghi 67.285 USD / 2.166 gói. Bẫy tên: nhiều người trên Reddit nhắc "omegleweb" nhưng nói về omegleweb.io, một trang khác; tôi chỉ dùng phát biểu nêu .com hoặc mô tả khớp giao diện .com.</p>
+<p>Chỗ khuôn mẫu không khớp: khuôn mẫu viết cho "đội/founder" mua dịch vụ; ở đây người mua là cá nhân đại chúng, không có người ký, không có logo khách hàng. Tôi đổi "đội/founder" thành "người dùng cá nhân 18+" và "ngân sách" thành "giá một gói thuê bao".</p>
+<h2>B. Thông tin sản phẩm</h2>
+<div class="tw"><table style="table-layout:fixed;min-width:475px"><colgroup><col style="width:135px"><col style="width:340px"></colgroup>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên / link</td>
+<td>OmegleWeb - https://omegleweb.com ; TrustMRR https://trustmrr.com/startup/omegleweb [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Làm gì</td>
+<td>Chat video/chữ với người lạ trong trình duyệt, ghép theo sở thích, nút Next và báo cáo; tick "18+" thay cho đăng ký; video có chụp khung hình để kiểm duyệt. Premium theo mã trang: "Unlock country controls, Male/Female matching, faster search flow... Cancel anytime", cùng gửi file, tự gửi tin, tự Next; có "Start free trial" và chuỗi "Pay ${price} to unban". [CONFIRMED - omegleweb.com, /js/i18n.js, /tos.html, /privacy.html, 31/10/2026]</td>
+</tr>
+<tr>
+<td>Mô hình thu tiền</td>
+<td>(1) Thuê bao Premium qua Stripe, có dùng thử; (2) quảng cáo Google AdSense (thẻ script trong trang chủ; About ghi "funded through minimal, non-intrusive advertising") [CONFIRMED]; (3) phí mở khoá ban: chỉ có chuỗi trong mã và lời kể người dùng, chưa biết có đi qua Stripe không [UNVERIFIED]. Premium gắn với "trình duyệt/IP", không có tài khoản [CONFIRMED]</td>
+</tr>
+<tr>
+<td>Giá</td>
+<td>Không công bố: FAQ nói "check the purchase screen for current pricing". Mã trang có giá dự phòng 9,99 USD, chu kỳ mặc định "week"; đó chỉ là giá trị dự phòng. Tôi không bấm vào màn mua. [CONFIRMED về mã, UNVERIFIED về giá thật]</td>
+</tr>
+<tr>
+<td>Doanh thu</td>
+<td>MRR 67.285 USD (30 ngày: -21,0%); 2.166 gói; 30 ngày 91.812 USD; 7 ngày 18.715 USD; tích luỹ 391.944 USD (dữ liệu chỉ từ 02/2026). Theo tháng (USD): 02/2026 206; 03: 4.567; 04: 6.495; 05: 7.590; 06: 21.787; 07: 57.950; 08: 92.998; 09: 106.865; 10: 93.485. "Revenue last synced" 31/10/2026 05:50:03 UTC, cùng ngày đọc, không có dòng "expired". Không nối Google Analytics nên TrustMRR không có traffic. Doanh thu quảng cáo không nằm trong số này. [SECONDARY - trustmrr.com/startup/omegleweb.md; Stripe do TrustMRR xác minh, tôi không tự thấy]</td>
+</tr>
+<tr>
+<td>Ai đứng sau</td>
+<td>Trang không nêu công ty hay tên người: Terms và Privacy chỉ có email contact@omegleweb.com; About ghi "a team" [CONFIRMED]. TrustMRR: founder "OmegleWeb", Mỹ. Trang X @OmegleWeb: tham gia 11/2023, 437 người theo dõi, 13 bài, bài đầu 21/11/2023 "Omegle is back!" [CONFIRMED, đọc qua r.jina.ai]. Ngày 06/01/2026, tài khoản Reddit u/EventuallyOffTopic ký "Luke" tự nhận là founder/operator OmegleWeb.com [UNVERIFIED]. Tên thật: chưa kiểm được</td>
+</tr>
+<tr>
+<td>Khách hàng nêu trên trang</td>
+<td>Không logo, không lời chứng thực, không số người dùng. Traffic ước tính 4,69 triệu lượt/tháng, hạng toàn cầu 12.818 (Semrush, số liệu tháng 9/2026, trang cập nhật 11/10/2026) [SECONDARY]. TrustMRR ghi "Estimated user count: 0": ô trống, không phải số thật</td>
+</tr>
+</tbody>
+</table></div>
+<p>Những điều nguồn nói chưa khớp hoặc chưa chắc</p>
+<ol>
+<li>Ngày thành lập lệch. TrustMRR ghi thành lập 23/02/2026, doanh thu đầu tiên 206 USD tháng 2/2026. Nhưng X @OmegleWeb tham gia 11/2023 và đăng "Omegle is back!" ngày 21/11/2023, và một bình luận Reddit ngày 15/11/2023 đã dẫn omegleweb.com (https://reddit.com/r/AMA/comments/17ro2so/). Trang có khoảng 2,3 năm trước dòng tiền đầu tiên ghi nhận; có thể 02/2026 là lúc nối Stripe hoặc bật Premium. Doanh thu 2023-2025 chưa kiểm được. [UNVERIFIED]</li>
+<li>Trang tự mâu thuẫn. About ghi "Completely Free: No subscriptions, no hidden fees" (sửa lần cuối 21/10/2026 theo header HTTP), trong khi FAQ trang chủ nói Premium trả phí. Cộng AdSense, tổng doanh thu thật lớn hơn số TrustMRR (chỉ thấy Stripe). [CONFIRMED về mâu thuẫn; UNVERIFIED về phần quảng cáo]</li>
+<li>MRR mỗi gói cao hơn giá dự phòng. 67.285 / 2.166 = 31,06 USD mỗi gói mỗi tháng. Gói tuần 9,99 USD quy ra tháng là 9,99 x 52 / 12 = 43,29 USD. Nếu mọi gói là gói tuần thì giá tuần trung bình là 31,06 x 12 / 52 = 7,17 USD, gần 6,99 USD/tuần của Shagle và Chatrandom (6,99 x 52 / 12 = 30,29 USD). Gợi ý: phần lớn là gói tuần. [UNVERIFIED - phép tính của tôi]</li>
+<li>MRR thấp hơn doanh thu 30 ngày. 91.812 - 67.285 = 24.527 USD, bằng 26,7% doanh thu 30 ngày (91.812 / 67.285 = 1,36 lần). Phần chênh có thể là gói đã rời đi trong kỳ, tiền mở khoá ban, hoặc cả hai; tôi không tách được. [UNVERIFIED]</li>
+<li>Đà đã đổi chiều. Tháng 9 sang tháng 10: 93.485 - 106.865 = -13.380 USD (-12,5%). Trung bình 7 ngày gần nhất 18.715 / 7 = 2.674 USD/ngày, thấp hơn trung bình 30 ngày 91.812 / 30 = 3.060 USD/ngày khoảng 12,6%. [SECONDARY]</li>
+<li>Hai trang gần tên nhau. omegleweb.io trả 302 chuyển sang https://www.omegle.com/ (header HTTP, 31/10/2026); Semrush ước tính omegleweb.io 7,58 triệu lượt/tháng, nhiều hơn .com. Nội dung omegle.com: chưa mở được. [CONFIRMED về chuyển hướng; SECONDARY về traffic]</li>
+</ol>
+<h2>C. Bài tập phần 2: Chân dung khách hàng (ICP) và câu chốt</h2>
+<ol>
+<li>Sản phẩm dành cho ai?</li>
+</ol>
+<p>Người dùng cá nhân từ 18 tuổi, vào bằng trình duyệt, muốn nói chuyện bất chợt với người lạ. Người trả tiền là một phần nhỏ:</p>
+<ul>
+<li>Vai trò: cá nhân tự trả bằng thẻ hoặc Apple Pay; không có đội, không có người ký.</li>
+<li>Quy mô: 4,69 triệu lượt/tháng, 2.166 gói. Nếu 4 lượt/người/tháng thì 4,69 triệu / 4 = 1.172.500 người; 2.166 / 1.172.500 = 0,18% trả tiền. [UNVERIFIED - giả định 4 lượt/người]</li>
+<li>Tuổi, giới, quốc gia: chưa kiểm được. Chỉ có tín hiệu gián tiếp: người nhắc tên trang nằm nhiều ở các subreddit nội dung người lớn, và phàn nàn "toàn nam" (D2).</li>
+<li>Hai nhóm có dấu hiệu trả tiền: (a) người muốn lọc giới tính/quốc gia (đúng thứ Premium bán); (b) người bị ban muốn vào lại. Tỉ lệ từng nhóm: chưa kiểm được.</li>
+<li>Ngân sách: giá một gói thuê bao; giá thật chưa biết, cùng loại là 6,99 USD/tuần hoặc 19,99 USD/tháng [SECONDARY, D1].</li>
+</ul>
+<ol start="2">
+<li>Họ gặp vấn đề gì?</li>
+</ol>
+<p>Omegle đóng cửa tháng 11/2023 (ITV 09/11/2023 [SECONDARY, chỉ thấy qua kết quả tìm kiếm]) để lại nhu cầu nói chuyện ngẫu nhiên không cần tài khoản. Các bản thay thế đầy bot, đầy nam, và hay cấm người dùng bằng kiểm duyệt tự động. Người trả tiền trả để bớt may rủi (chọn giới tính, quốc gia) hoặc vì bị cấm. Bằng chứng ở D2.</p>
+<ol start="3">
+<li>Họ đang làm bằng tay thế nào?</li>
+</ol>
+<ul>
+<li>Đổi qua lại giữa Ome.tv (32,23 triệu lượt/tháng theo Semrush), Emerald Chat, Chatroulette (miễn phí), Shagle, Chatrandom, Azar.</li>
+<li>Hỏi trên Reddit "chỗ nào còn người", đổi trang khi bị ban, dùng VPN hoặc xoá cache để qua ban (D2).</li>
+<li>Chi phí hiện tại: thời gian lướt qua các cuộc ghép vô ích, 6,99 USD/tuần hoặc 19,99 USD/tháng nếu trả Premium của một trang cùng loại, và rủi ro bị cấm oan. [UNVERIFIED - tổng hợp của tôi]</li>
+</ul>
+<ol start="4">
+<li>Bạn giải bằng cách nào? (lối đi riêng, đề xuất)</li>
+</ol>
+<p>Đây không phải lối đi tôi khuyên owner theo. Nếu ai đó vẫn muốn vào, điểm khác biệt dựa trên phàn nàn quan sát được là "giá và cách huỷ rõ ràng, kháng cáo ban có kết quả":</p>
+<ol>
+<li>Giá và nút huỷ hiện ngay trước thanh toán, huỷ một bước.</li>
+<li>Kháng cáo ban có người xem lại; hoàn tiền mở khoá nếu không có hiệu lực.</li>
+<li>Nói thật tỉ lệ nam/nữ đang online trước khi bán bộ lọc giới tính.</li>
+<li>Nêu rõ cái gì bị chụp, lưu bao lâu, trước khi bật camera.
+Cả bốn là giả thuyết [UNVERIFIED].</li>
+</ol>
+<p>Câu chốt</p>
+<p>Cho người lớn muốn nói chuyện ngẫu nhiên với người lạ nhưng chán bot, bị ban oan và không huỷ được gói, [bản của chủ] là chat ngẫu nhiên có giá và nút huỷ hiện trước khi trả tiền, kháng cáo ban có người xem và hoàn tiền nếu mở khoá vô hiệu, khác OmegleWeb và Ome.tv ở chỗ tiền người dùng không bị giữ lại khi kiểm duyệt tự động sai.</p>
+<h2>D. Bài tập phần 3: Deep Research Market</h2>
+<p>Mục tiêu một câu</p>
+<p>Tôi cần biết thị trường chat video ngẫu nhiên kiểu Omegle còn đủ lớn và còn chỗ trống không, để quyết định có đổ nguồn lực vào đây không, và rút ra điều gì cho việc chọn sản phẩm khác.</p>
+<ol>
+<li>Đối thủ và giá</li>
+</ol>
+<div class="tw"><table style="table-layout:fixed;min-width:1193px"><colgroup><col style="width:90px"><col style="width:135px"><col style="width:220px"><col style="width:173px"><col style="width:196px"><col style="width:205px"><col style="width:174px"></colgroup>
+<thead>
+<tr>
+<th>Tên</th>
+<th>Link</th>
+<th>Giá (nguồn)</th>
+<th>Mô hình</th>
+<th>Điểm mạnh</th>
+<th>Khoảng trống</th>
+<th>Nhãn độ tin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ome.tv</td>
+<td>ome.tv</td>
+<td>Premium chưa kiểm được. Phí mở khoá ban khoảng 10 USD (Trustpilot 29/05/2026)</td>
+<td>Miễn phí + Premium + phí mở khoá</td>
+<td>32,23 triệu lượt/tháng (Semrush)</td>
+<td>Trustpilot 2,3/5 (212); nhiều khiếu nại trả mở khoá vẫn bị cấm lại</td>
+<td>[SECONDARY] giá; [CONFIRMED] điểm</td>
+</tr>
+<tr>
+<td>Emerald Chat</td>
+<td>emeraldchat.com</td>
+<td>Gold khoảng 5,89 USD/tháng, Platinum 12,89 USD (GetApp qua kết quả tìm kiếm; trang GetApp trả 404 khi tôi mở; AlternativeTo cũ ghi 3,89)</td>
+<td>Thuê bao, bắt buộc tài khoản email</td>
+<td>Lọc giới tính, quốc gia; kênh nhóm; Trustpilot 3,9/5 (68)</td>
+<td>Gold chưa bảo đảm ghép đúng giới</td>
+<td>[SECONDARY] giá, nguồn mâu thuẫn; [CONFIRMED] điểm</td>
+</tr>
+<tr>
+<td>Chatroulette</td>
+<td>chatroulette.com</td>
+<td>Miễn phí hoàn toàn (trang chủ); "Quids" là tiền ảo miễn phí</td>
+<td>Miễn phí, lọc quốc gia</td>
+<td>Từ 2009, 190+ quốc gia, kiểm duyệt AI</td>
+<td>Không thấy nguồn doanh thu</td>
+<td>[CONFIRMED]</td>
+</tr>
+<tr>
+<td>Shagle</td>
+<td>shagle.com</td>
+<td>6,99 USD/tuần; 19,99 USD/tháng (DatingScout, 23/10/2026)</td>
+<td>Thuê bao tuần/tháng</td>
+<td>Lọc giới tính, 200 quốc gia, bỏ quảng cáo</td>
+<td>Trustpilot 2,8/5 (5 đánh giá): "8 trên 10 kết nối là nam" dù trả VIP</td>
+<td>[SECONDARY] giá; [CONFIRMED] điểm</td>
+</tr>
+<tr>
+<td>Chatrandom</td>
+<td>chatrandom.com</td>
+<td>6,99 USD/tuần; 19,99 USD/tháng (DatingScout, 27/10/2026); một dòng 89,99 USD không giải thích, tôi bỏ</td>
+<td>Thuê bao tuần/tháng</td>
+<td>Lọc giới tính; phòng "Chat with Girls" cần tài khoản trả phí với nam</td>
+<td>Trustpilot 3,2/5 (8); phí "không rõ ràng"</td>
+<td>[SECONDARY] giá; [CONFIRMED] điểm</td>
+</tr>
+<tr>
+<td>Azar</td>
+<td>azarlive.com</td>
+<td>Mười gói Gem 0,99-37,99 USD (App Store Mỹ, 31/10/2026)</td>
+<td>Ứng dụng, tiền ảo trong app</td>
+<td>4,33/5 từ 101.976 đánh giá Mỹ (iTunes API); thuộc Match Group</td>
+<td>Không phải web; 10-K Match Group nói Apple gỡ app 22/02/2026, nhưng trang App Store mở được hôm nay</td>
+<td>[CONFIRMED] giá, điểm; [SECONDARY] việc gỡ</td>
+</tr>
+<tr>
+<td>Tinychat</td>
+<td>tinychat.com</td>
+<td>Trang chủ có Premium lọc giới tính/vị trí, không nêu giá; nguồn khác mâu thuẫn. Để trống</td>
+<td>Thuê bao</td>
+<td>Tự khai 20 triệu người dùng</td>
+<td>Giá không minh bạch</td>
+<td>[VENDOR-CLAIMED] số người dùng; giá chưa kiểm được</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nhận xét (OmegleWeb: giá không công bố, MRR/gói 31,06 USD, xem B): nhóm clone bán "bộ lọc giới tính/quốc gia" với giá 6,99 USD/tuần đến 19,99 USD/tháng; Chatroulette là ngoại lệ miễn phí. Trên các trang chủ tôi đọc, không trang nào đăng chính sách mở khoá hay hoàn tiền (chưa đọc điều khoản từng trang). Bảng không đầy đủ: Uhmegle, Omegle.fm, Monkey, Camsurf chưa đưa vào.</p>
+<ol start="2">
+<li>Tiếng nói người dùng</li>
+</ol>
+<p>Không có Trustpilot cho omegleweb.com: trang trả "Whoops! The page you're looking for could not be found" khi đọc bằng trình duyệt thật (scroll-read.mjs, bậc cuối, vì các bậc của read.sh không ra chữ), 31/10/2026 [CONFIRMED]. G2, Capterra, Product Hunt không áp dụng cho loại sản phẩm này, tôi không thử. Nguồn thật còn lại là Reddit, đọc qua kho lưu Arctic Shift và PullPush (reddit.com bị chặn) [SECONDARY; nhiều thân bài đã xoá]:</p>
+<ul>
+<li>Ban oan, mở khoá không có hiệu lực. Thread "Ban" (04/2026): một người bị cấm vĩnh viễn dù tắt VPN và camera; người khác: "we PAID TO GET UNBANNED and it didnt work. She tried to run her card three times and it charged her each time" (reddit.com/r/omegleweb/comments/1sdmjv7/). Cuối 2023: "tons of complaints of strangers getting the PAY to UNBAN screen for no reason" (reddit.com/r/omegleweb/comments/18gcbc5/). Chưa chắc mọi thread đều nói về .com [UNVERIFIED].</li>
+<li>Khó huỷ gói. Thread "How do i can el my subscription?!" (06/2026): "why is there no place to cancel ur free trial?? I paid via apple pay and its not even in my transactions"; người khác: "they took my money and it never worked during the trial period". Cách huỷ tìm được nằm trong cài đặt của màn video (khớp giao diện .com). reddit.com/r/omegleweb/comments/1u73ve1/</li>
+<li>Giám sát gây bất ngờ. Bài 23/06/2026 "OmegleWeb is photographing you every 30 seconds" (điểm 19): người đăng nói trang chụp khung hình khi bật camera. Tài khoản u/omegleweb đáp: "We are obligated to provide adequate moderation. This data is automatically pruned/deleted, and never sold" [VENDOR-CLAIMED]. "30 giây" là con số của người đăng; Privacy Policy chỉ nói "periodic".</li>
+<li>Toàn nam. Ba bình luận 02-08/10/2026: "I've tried Omegleweb but there are mostly men", "just majority guys". Cũng có lời tốt: "pretty fun if you take some time" (10/08/2026), "Omegleweb.com is pretty decent" (09/10/2026). Ví dụ: reddit.com/r/masturbation/comments/1wyvtwy/.</li>
+<li>Dấu vết quảng bá. Trong 25 kết quả gần nhất của PullPush cho "omegleweb" (09/09-11/10/2026), 19 bài cùng tiêu đề "OmegleWeb random video chat" ở r/Ome_TV, r/OnlineFriend và nhiều subreddit khác, hầu hết điểm 0-1. Trông như đăng lặp để quảng bá; chưa biết ai đăng. [UNVERIFIED]</li>
+</ul>
+<p>Đối thủ gần nhất (Trustpilot qua r.jina.ai, 31/10/2026): Ome.tv 2,3/5 (212): "i have paid over $30 this month because they keep banning me... this time i paid to get unbanned and then they immediately banned me" (10/05/2026). Shagle VIP: "I pay $20 a month to have the ability to select woman... 8 out of 10 connections are dudes" (28/02/2026). Emerald Chat 3,9/5 (68): một người dùng Gold nói Gold không đủ để ghép với nữ (05/2026). Tất cả là lời một người, mẫu nhỏ.</p>
+<p>Điều rút ra: người trả tiền chê ở bốn chỗ: (a) bị cấm bởi bộ lọc tự động và trả tiền không giải quyết được, (b) khó huỷ, (c) trả cho bộ lọc giới tính nhưng "cung" nữ không đủ, (d) giám sát gây bất ngờ. Cả bốn là vấn đề niềm tin và vận hành.</p>
+<ol start="3">
+<li>Kích thước thị trường</li>
+</ol>
+<p>Mốc có số: Semrush (tháng 9/2026) cho bảy tên miền cùng loại tổng 53,11 triệu lượt/tháng: ome.tv 32,23 + omegleweb.io 7,58 + omegleweb.com 4,69 + omegle.com 4,49 + uhmegle.com 1,89 + omegleapp.me 1,88 + omegle.fm 0,35 [SECONDARY, semrush.com/website/omegleweb.com/competitors, cập nhật 11/10/2026]. Omegle lúc đóng cửa có khoảng 50 triệu khách mỗi tháng (Similarweb qua TechCrunch) [SECONDARY, chưa mở báo cáo gốc]. Doanh thu trên mỗi lượt của OmegleWeb: 91.812 / 4.690.000 = 0,01958 USD, tức 19,58 USD mỗi 1.000 lượt (doanh thu Stripe tháng 10 chia lượt tháng 9, lệch kỳ, không gồm quảng cáo).</p>
+<p>TAM / SAM / SOM</p>
+<p>Đơn vị: USD người dùng trả mỗi năm. Số tự tính.</p>
+<div class="tw"><table style="table-layout:fixed;min-width:573px"><colgroup><col style="width:181px"><col style="width:225px"><col style="width:167px"></colgroup>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Chuỗi tính</th>
+<th>Kết quả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM (chat ngẫu nhiên toàn cầu, web + app)</td>
+<td>53,11 triệu lượt / 4 lượt mỗi người = 13,28 triệu người; x 3 (thêm app và trang ngoài Semrush) = 39,84 triệu; x 3% trả tiền = 1,195 triệu người trả; x 155,28 USD/năm</td>
+<td>185,6 triệu USD</td>
+</tr>
+<tr>
+<td>SAM (clone web kiểu Omegle, không đăng ký)</td>
+<td>53,11 triệu lượt x 12 tháng x 0,01958 USD/lượt</td>
+<td>12,48 triệu USD</td>
+</tr>
+<tr>
+<td>SOM (12 tháng, một đội nhỏ vào mới)</td>
+<td>0,5% của 637,4 triệu lượt/năm = 3,19 triệu lượt (khoảng 265.600 lượt/tháng) x 0,01958 USD</td>
+<td>khoảng 62.400 USD (5.200 USD/tháng)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Giả định (in ra để kiểm):</p>
+<ol>
+<li>4 lượt/người/tháng và hệ số x3 cho app và trang ngoài Semrush: ước lượng của tôi, [UNVERIFIED].</li>
+<li>Tỉ lệ trả tiền 3% là giả định; số đo thật của OmegleWeb thấp hơn nhiều (0,18%, phần C). Tôi chọn 3% vì app có tiền ảo và thuê bao quen hơn; [UNVERIFIED].</li>
+<li>155,28 USD/năm = trung bình của Emerald Gold theo năm (5,89 x 12 = 70,68) và Shagle theo tháng (19,99 x 12 = 239,88): (70,68 + 239,88) / 2 = 155,28 [SECONDARY].</li>
+<li>SAM áp doanh thu trên mỗi lượt của OmegleWeb cho cả bảy tên miền; đây là cận trên vì OmegleWeb bán mạnh và tôi không biết Ome.tv thu bao nhiêu. Không gồm quảng cáo.</li>
+<li>SOM 0,5%: một trang mới phải đạt khoảng 265.600 lượt/tháng sau 12 tháng, bằng 5,7% traffic của OmegleWeb (vốn có thêm 2,3 năm tuổi tên miền).</li>
+</ol>
+<p>Kiểm chéo: Azar một mình có doanh thu trực tiếp 155,8 triệu USD năm 2025 theo Match Group 10-K [SECONDARY: câu này tôi thấy trong đoạn trích tìm kiếm, không tìm lại được dòng đó trong phần trang tôi đọc]. 155,8 / 185,6 = 84%: một app chiếm gần hết TAM của tôi là khó tin, nên 185,6 triệu USD chỉ nên đọc là cận dưới của thị trường web + app. SAM bằng 12,48 / 185,6 = 6,7% TAM; OmegleWeb (91.812 x 12 = 1.101.744 USD) là 8,8% SAM, bằng thị phần traffic 4,69 / 53,11 (đương nhiên, vì SAM dùng chính tỉ lệ của nó). SOM 5.200 USD/tháng ngang OmegleWeb ở tháng thứ 3 (04/2026: 6.495 USD).</p>
+<p>Số bị từ chối in</p>
+<ul>
+<li>"Over 20 million users" (Tinychat, Chatrandom): hãng tự công bố, không truy được gốc.</li>
+<li>"Over 94 million monthly visitors" cho Omegle trên trang thống kê không rõ nguồn; các trang "so sánh Omegle" trên tên miền lạ là nội dung rác.</li>
+<li>"Estimated user count: 0" và "Founded 2026-02-23" của TrustMRR (phần B).</li>
+<li>Giá 3,89 USD của Emerald (cũ), 14,95 USD của Tinychat (không ngày): chưa kiểm được.</li>
+<li>Lời tố cáo lộ thẻ tín dụng và "lừa đảo" của một người trên Reddit về OmegleWeb: không bằng chứng, bài bị gỡ.</li>
+<li>Mọi số liệu trộn omegleweb.io với .com.</li>
+</ul>
+<p>Khoảng trống và lối đi riêng</p>
+<ol>
+<li>Niềm tin sau thanh toán: kháng cáo ban và huỷ gói không ai làm tốt trong các thread đã đọc (D2). Khoảng trống thật nhưng là bài toán dịch vụ khách hàng, không phải phán đoán.</li>
+<li>Bộ lọc giới tính bán một lời hứa mà nguồn cung không đáp ứng (Shagle, Emerald, OmegleWeb đều bị chê). Cách để có "cung" nữ ổn định là đi vào nội dung người lớn trả tiền, mà owner không nên bước vào.</li>
+<li>Rủi ro cả thị trường: cổng 18+ của OmegleWeb là một ô tick; trang lưu khung hình video và báo NCMEC theo Terms; một bình luận trên r/Sextortion nhắc một nạn nhân từng dùng omegleweb.io. Quảng cáo, thanh toán và luật an toàn trẻ em có thể cắt nguồn thu. Chưa đánh giá pháp lý. [UNVERIFIED]</li>
+<li>Doanh thu đang giảm 12% đến 21%: vào lúc này là vào muộn.</li>
+</ol>
+<p>Ba cách xác thực rẻ nhất trước khi build (nếu ai đó vẫn muốn)</p>
+<ol>
+<li>Theo dõi, chưa tiêu tiền: mỗi tuần ghi MRR, số gói, doanh thu 7 ngày của TrustMRR và lượt truy cập Semrush trong 4 tuần. Nếu MRR còn giảm trên 10% mỗi tháng thì dừng (ngưỡng do tôi đặt).</li>
+<li>Hỏi người đã trả: trong r/omegleweb và r/Ome_TV, xin 5 người từng trả Premium hoặc phí mở khoá một cuộc trò chuyện ngắn (trả bao nhiêu, vì sao, huỷ được không). Cần ít nhất 3 người cùng một lý do mới coi là tín hiệu.</li>
+<li>Trang đích + danh sách chờ: nêu câu chốt, giá và "huỷ một bước", khoảng 200 USD quảng cáo; ngưỡng đi tiếp 100 email trong 2 tuần (do tôi đặt, UNVERIFIED). Nền tảng quảng cáo có thể từ chối loại sản phẩm này.</li>
+</ol>
+<h2>E. Nguồn, chỗ chưa kiểm, giả định chính</h2>
+<p>Nguồn (đã đọc ngày 31/10/2026)</p>
+<ul>
+<li>https://omegleweb.com/ và /about.html, /tos.html, /privacy.html, /js/i18n.js (curl); https://trustmrr.com/startup/omegleweb.md; https://x.com/omegleweb (qua r.jina.ai); https://www.semrush.com/website/omegleweb.com/competitors (công cụ lấy và tóm tắt trang)</li>
+<li>Reddit qua Arctic Shift và PullPush: r/omegleweb thread 1sdmjv7, 1u73ve1, 1udbqtq, 18gcbc5; r/redditrequest thread 1q5boqc</li>
+<li>Trustpilot ome.tv, emeraldchat.com, chatrandom.com, shagle.com (qua r.jina.ai); omegleweb.com bằng scroll-read.mjs (không có trang)</li>
+<li>https://www.datingscout.com/shagle/cost và /chatrandom/cost (nguồn thứ hai, có thể có liên kết tiếp thị); trang chủ chatroulette.com, emeraldchat.com, shagle.com, tinychat.com; https://apps.apple.com/us/app/id972558973 và iTunes Search API</li>
+<li>Chỉ đọc đoạn trích tìm kiếm, chưa mở trang gốc: ITV 09/11/2023, TechCrunch (traffic Omegle), GetApp (giá Emerald), PCRisk (phí mở khoá Ome.tv), Match Group 10-K FY2025 (Azar)</li>
+</ul>
+<p>Chưa kiểm được</p>
+<ul>
+<li>Giá Premium thật và phí mở khoá của OmegleWeb: không nằm trong trang; tôi không bấm vào màn mua (luật: không đăng ký, không nhập thanh toán).</li>
+<li>Tỉ lệ gói tuần/tháng; cơ cấu doanh thu giữa Premium, mở khoá và quảng cáo.</li>
+<li>Danh tính, công ty của người vận hành; nội dung omegle.com hiện nay.</li>
+<li>Dòng Azar 155,8 triệu USD trong 10-K: chỉ thấy qua đoạn trích tìm kiếm.</li>
+<li>Trang GetApp của Emerald trả 404; Trustpilot của Chatroulette không đọc được; Reddit chỉ qua kho lưu; Semrush và DatingScout đọc qua bản tóm tắt chứ không nguyên văn.</li>
+</ul>
+<p>Giả định chính
+4 lượt/người/tháng; hệ số x3; 3% trả tiền; 155,28 USD/năm mỗi người trả; doanh thu trên mỗi lượt của OmegleWeb áp cho cả bảy tên miền; SOM 0,5%; ngưỡng 10% sụt MRR và 100 email do tôi đặt. Tất cả là ước lượng, không phải số công khai.</p>
+<h2>F. Kết luận</h2>
+<ol>
+<li>Nên theo đuổi: không. Nhu cầu có thật và đã trả tiền (391.944 USD Stripe trong 9 tháng), nhưng doanh thu đang giảm, giá trị nằm ở số người lạ đang online cùng lúc, và các phàn nàn lặp lại là bài toán vận hành và pháp lý chứ không phải bài toán giải bằng phán đoán. Chỉ giữ như tín hiệu theo dõi (cách xác thực số 1).</li>
+<li>Rủi ro lớn nhất: bị cắt nguồn thu bởi bên thứ ba (thanh toán, quảng cáo, cửa hàng ứng dụng) vì nội dung người lớn và an toàn trẻ em; kế đến là nhu cầu thay thế Omegle nguội dần.</li>
+<li>Bước tiếp theo rẻ nhất: ghi số TrustMRR và Semrush mỗi tuần trong 4 tuần, chưa làm gì khác; dành thời gian cho traxy.ai và Reddit Agency, hai dòng trong <code>icp-winning-10-2026-10-31.md</code> gần khách của owner hơn.</li>
+</ol>
+<p>Hợp với hồ sơ owner</p>
+<p>Thấp. Owner bán phán đoán nên chi tiền vào media nào cho Enterprise, SMB và người nổi tiếng, không làm creative. OmegleWeb không có người mua doanh nghiệp; giá trị nằm ở lượng người dùng đại chúng và kiểm duyệt nội dung, hai thứ owner không có lợi thế. Một bài học dùng được: một kênh kéo traffic của nhóm này có vẻ là đăng lặp trên Reddit (19 bài cùng tiêu đề trong 25 kết quả) và tên miền chứa từ khoá "omegle"; đó là dữ liệu cho một lần chấm "kênh nào đáng chi tiền" nếu có khách trong nhóm này, không phải sản phẩm để owner bán.</p>
+<p>Site đáng lưu cho sites.md:</p>
+<ul>
+<li>https://trustmrr.com/startup/omegleweb.md - bản máy đọc có "Revenue last synced", doanh thu theo tháng và ngày; thêm .md vào mọi trang startup.</li>
+<li>https://www.semrush.com/website/omegleweb.com/competitors - lượt truy cập ước tính của các đối thủ cùng loại, có ngày cập nhật.</li>
+<li>https://api.pullpush.io/reddit/search/comment/?q=TỪ_KHOÁ&amp;size=25 - tìm bình luận Reddit khi reddit.com bị chặn; thêm <code>link_id=&lt;id&gt;</code> để đọc cả thread.</li>
+<li>https://www.trustpilot.com/review/TÊN_MIỀN đọc qua r.jina.ai - điểm và đánh giá thật của đối thủ, ra chữ không cần trình duyệt.</li>
+<li>https://www.datingscout.com/TÊN_SẢN_PHẨM/cost - bảng giá thuê bao có ngày cập nhật (nguồn thứ hai, có thể có liên kết tiếp thị).</li>
+<li>https://itunes.apple.com/search?term=TỪ&amp;entity=software&amp;country=us - điểm đánh giá app, mở được bằng curl; trang apps.apple.com/us/app/idID liệt kê giá gói trong app.</li>
+</ul><div class="src">Nguồn: <code>research/icp-research/01-omegleweb.md</code> (bản .md cho agent đọc)</div></main></body></html>
