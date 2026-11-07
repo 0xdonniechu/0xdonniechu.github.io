@@ -1,33 +1,33 @@
 # KỊCH BẢN VIDEO INTRO (DƯỚI 3 PHÚT): CỖ MÁY NỘI DUNG TỰ HÀNH 24/7
+*(Định hướng Visual 3D & Dây chuyền mô phỏng theo chuẩn **SamsAI.co** & **TryHolo.ai**)*
 
 > **Thời lượng**: Khoảng 2 phút 30 giây (Dưới 3 phút)  
-> **Phong cách**: Nhịp nhanh, lôi cuốn, dễ hiểu cho người dùng đại chúng, hình ảnh trực quan hiện đại.  
-> **Ngôn ngữ**: Tiếng Việt (Giọng đọc Voice-over truyền cảm hứng, sắc nét, dứt khoát).
+> **Phong cách Visual**: Không gian 3D tương tác phòng làm việc ảo (*Spatial Glass Room / 3D Living Desk* của **SamsAI**) kết hợp băng chuyền sản xuất tự động & nút phê duyệt 1-chạm (*Conveyor Belt & 1-Tap Approve* của **Holo**).  
+> **Ngôn ngữ**: Tiếng Việt (Giọng đọc Voice-over truyền cảm hứng, sắc sảo, dứt khoát).
 
 ---
 
-## TỔNG QUAN Ý TƯỞNG
+## Ý TƯỞNG VISUAL CHỦ ĐẠO (INSPIRED BY SAMSAI & HOLO)
 
-Làm nội dung đa nền tảng ngày nay thường là "cơn ác mộng": Cần cả phòng ban đông đảo, cắm mặt vào laptop ngày đêm, deadline chồng chéo và luôn lo sợ trễ trend.
-
-Video này giới thiệu một giải pháp hoàn toàn mới: **Một cỗ máy gồm hơn 20 AI Agent tự điều phối và làm việc thay toàn bộ một công ty truyền thông**.
-- Tự tìm ý tưởng & bắt trend.
-- Tự thiết kế hình ảnh, slide carousel, cắt ghép video ngắn.
-- Tự viết bài và tự lên lịch đăng phủ khắp mọi mạng xã hội.
-- **Không cần mở máy tính**: Chỉ với một chiếc điện thoại di động bình thường qua Telegram, bạn hoàn toàn làm chủ cả cỗ máy.
+1. **Không gian 3D Living Room (theo SamsAI.co)**:
+   - Thay vì sơ đồ khối 2D khô cứng, mở ra một căn phòng 3D hiện đại với các "nhân sự AI" ngồi làm việc tại bàn ảo.
+   - Phía trên mỗi nhân sự nổi lên một màn hình gương kính bóng mờ (*Glass HUD*). Khi agent quét tin tức, vẽ ảnh hay cắt video, các thẻ dữ liệu bay lên trên mặt kính thời gian thực.
+2. **Băng chuyền sản xuất nội dung (theo TryHolo.ai)**:
+   - Các ấn phẩm (bài viết, carousel, video 9:16) trôi liên tục trên băng chuyền (*Infinite Conveyor Belt*) từ khâu ý tưởng đến khi xếp lịch đăng bài.
+   - Người chỉ huy chỉ cần cầm điện thoại bấm nút: **"Chỉ cần 1 chạm để duyệt" (You just tap approve)**.
 
 ---
 
 ## CẤU TRÚC PHÂN CẢNH CHI TIẾT
 
 ```
-[0:00 - 0:25] Cơn Ác Mộng Của Người Làm Nội Dung (The Nightmare)
+[0:00 - 0:25] Cơn Ác Mộng Của Người Làm Nội Dung (The Bottleneck)
       ↓
-[0:25 - 0:55] Giới Thiệu "Phòng Ban AI Hơn 20 Nhân Sự" (The Agent Team)
+[0:25 - 0:55] Căn Phòng 3D & Hơn 20 AI Agent (Spatial 3D Room - SamsAI Style)
       ↓
-[0:55 - 1:40] Dây Chuyền Sản Xuất Khép Kín (From Idea to Multi-Platform)
+[0:55 - 1:40] Băng Chuyền Sản Xuất Đa Kênh Tự Động (Conveyor Pipeline - Holo Style)
       ↓
-[1:40 - 2:10] Chỉ Huy Bằng Chiếc Điện Thoại Cỏ (Pocket Command)
+[1:40 - 2:10] Chỉ Huy Bằng Chiếc Điện Thoại Cỏ (1-Tap Approve via Telegram)
       ↓
 [2:10 - 2:35] Cỗ Máy Không Ngủ 24/7 & Lời Kết (The 24/7 Engine)
 ```
@@ -37,59 +37,63 @@ Video này giới thiệu một giải pháp hoàn toàn mới: **Một cỗ má
 ### PHÂN CẢNH 1: CƠN ÁC MỘNG CỦA NGƯỜI LÀM NỘI DUNG (0:00 - 0:25)
 
 - **Hình ảnh (Visual)**:
-  - Mở đầu bằng khung cảnh quen thuộc: Một người ôm laptop làm việc lúc nửa đêm, vẻ mặt kiệt sức.
-  - Trên màn hình nhảy liên tục các thông báo tin nhắn hối thúc, hàng chục tab trình duyệt mở dở: công cụ thiết kế, file kịch bản, bảng tính lịch đăng bài.
-  - Chữ lớn hiện lên nổi bật giữa màn hình: *"Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"*
+  - Cận cảnh bàn làm việc đêm muộn bừa bộn, người làm sáng tạo gục đầu bên laptop.
+  - Hàng loạt thông báo deadline réo liên tục, màn hình mở chằng chịt tab công cụ.
+  - Chữ lớn hiện lên: *"Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"*
 - **Lời bình (Voice-over)**:
   > *"Để xây dựng một kênh nội dung phủ sóng khắp Facebook, TikTok, Instagram hay YouTube mỗi ngày, bạn cần gì?  
   > Một người săn trend, hai người thiết kế ảnh, một người dựng video, một người viết caption, và hàng đống deadline luôn trực chờ đổ bể.  
   > Bạn phải kè kè chiếc laptop suốt 24 giờ mỗi ngày chỉ sợ lỡ nhịp.  
-  > Nhưng nếu... toàn bộ khối lượng công việc khổng lồ đó có thể tự vận hành mà bạn không cần phải đụng tay?"*
+  > Nhưng nếu... toàn bộ phòng ban đó có thể tự vận hành mà bạn không cần phải đụng tay?"*
 
 ---
 
-### PHÂN CẢNH 2: BỘ MÁY HƠN 20 "NHÂN VIÊN" TỰ HÀNH (0:25 - 0:55)
+### PHÂN CẢNH 2: CĂN PHÒNG 3D & HƠN 20 NHÂN SỰ ẢO (0:25 - 0:55)
+*(Áp dụng phong cách 3D Glass Room của SamsAI)*
 
 - **Hình ảnh (Visual)**:
-  - Hiệu ứng chuyển cảnh mượt mà sang mô hình đồ họa văn phòng làm việc số hóa sống động (`assets/01_architecture_isometric.png`).
-  - Xuất hiện từng vị trí nhân sự AI với nhiệm vụ chuyên biệt:
-    - Nhóm **Trinh sát & Ý tưởng**: Chuyên lùng sục tin tức nóng hổi trên internet.
-    - Nhóm **Thiết kế Đồ họa**: Chuyên vẽ ảnh bìa, dàn trang các bộ slide chia sẻ kiến thức.
-    - Nhóm **Biên tập Video**: Tự động cắt gọt, căn chỉnh khung hình dọc 9:16 cho video ngắn.
-    - Nhóm **Cây Bút Biên tập**: Chấp bút bài viết sắc sảo, tự nhiên cho từng mạng xã hội.
+  - Hiệu ứng camera trượt 3D mượt mà vào một căn phòng kính công nghệ cao (*SamsAI 3D Living Room*).
+  - Từng nhân vật AI ngồi tại các bàn làm việc riêng biệt. Phía trên đầu mỗi nhân sự là tấm gương kính (*Floating Glass Screen*):
+    - **Nhóm Trinh sát**: Màn hình kính hiện tin tức, dữ liệu đang cào từ mạng xã hội.
+    - **Nhóm Thiết kế**: Màn hình kính tự động dựng các slide kiến thức carousel và cover sắc nét.
+    - **Nhóm Biên tập Video**: Khung hình dọc 9:16 tự động cắt ghép, căn lề an toàn.
+    - **Nhóm Biên tập Viết**: Con trỏ tự động gõ hoàn thiện các bài viết sắc sảo.
 - **Lời bình (Voice-over)**:
-  > *"Đây không phải là một con bot trả lời câu hỏi thông thường.  
-  > Đây là một đội ngũ hơn 20 nhân viên AI làm việc độc lập và tự phối hợp với nhau như một tòa soạn chuyên nghiệp:  
-  > Người chuyên rà soát các xu hướng mới nhất trên toàn cầu.  
+  > *"Chào mừng bạn đến với căn phòng làm việc của tương lai.  
+  > Đây không phải là một con bot trả lời câu hỏi thông thường.  
+  > Đây là một đội ngũ hơn 20 nhân viên AI độc lập, tự phối hợp với nhau như một tòa soạn chuyên nghiệp:  
+  > Người chuyên rà soát các xu hướng nóng nhất trên toàn cầu.  
   > Người chuyên thiết kế hình ảnh bắt mắt, dựng slide kiến thức và hoàn thiện video ngắn.  
   > Cùng những cây bút am hiểu thuật toán, biết cách viết caption chạm đúng tâm lý người xem trên từng nền tảng."*
 
 ---
 
-### PHÂN CẢNH 3: DÂY CHUYỀN KHÉP KÍN — TỪ Ý TƯỞNG ĐẾN ĐĂNG BÀI (0:55 - 1:40)
+### PHÂN CẢNH 3: BĂNG CHUYỀN SẢN XUẤT ĐA KÊNH TỰ ĐỘNG (0:55 - 1:40)
+*(Áp dụng phong cách Conveyor Belt của TryHolo)*
 
 - **Hình ảnh (Visual)**:
-  - Sơ đồ chuyển động dòng chảy công việc (`assets/02_architecture_pipeline.png`):
-    - *Bước 1*: Radar tự động rà quét tin tức mới, bắt các chủ đề thảo luận sôi nổi.
-    - *Bước 2*: Dữ liệu chuyển ngay sang xưởng thiết kế -> Xuất hiện các bộ ảnh slide carousel sắc nét và các video ngắn chuyển động cuốn hút.
-    - *Bước 3*: Bài viết được hoàn thiện tự động, kiểm tra câu từ chỉn chu.
-    - *Bước 4*: Các logo nền tảng đồng loạt sáng lên: **Facebook, TikTok, Instagram Reels, YouTube Shorts, Threads, Telegram**. Bài viết được xếp lịch đăng đúng khung giờ có lượng tương tác cao nhất.
+  - Chuyển sang góc máy nhìn một băng chuyền vô cực (*Infinite Conveyor Belt* như TryHolo):
+    - Ý tưởng tin tức rơi vào đầu băng chuyền -> biến thành các bộ ảnh Carousel bóng bẩy -> nối tiếp bằng video ngắn chuyển động cuốn hút -> kèm theo bài viết đã định dạng chuẩn.
+    - Băng chuyền chạy đến cuối, các logo nền tảng đồng loạt bừng sáng: **Facebook, TikTok, Instagram Reels, YouTube Shorts, Threads, Telegram**.
+    - Các bài viết tự động xếp hàng vào đúng các khung giờ vàng có lượng người xem cao nhất.
 - **Lời bình (Voice-over)**:
   > *"Toàn bộ quy trình diễn ra trơn tru như một dây chuyền sản xuất tự động:  
-  > Ngay khi phát hiện một chủ đề tiềm năng, đội ngũ thiết kế lập tức biến nó thành các bộ ảnh slide trực quan hoặc video ngắn sống động.  
+  > Ngay khi phát hiện một chủ đề tiềm năng, đội ngũ thiết kế lập tức biến nó thành các bộ ảnh trực quan hoặc video ngắn sống động.  
   > Đội ngũ biên tập hoàn thiện bài viết, kiểm tra kỹ lưỡng và tối ưu định dạng.  
   > Và cuối cùng, hệ thống tự động lên lịch, phát hành đồng loạt lên tất cả các nền tảng vào đúng khung giờ vàng mà bạn không cần phải bấm đăng thủ công từng bài."*
 
 ---
 
 ### PHÂN CẢNH 4: CHỈ HUY GỌN GÀNG TRÊN CHIẾC ĐIỆN THOẠI CỎ (1:40 - 2:10)
+*(Phong cách "You just tap approve" của Holo + Telegram Pocket Command)*
 
 - **Hình ảnh (Visual)**:
-  - Cảnh quay thực tế: Người dùng đang ngồi thảnh thơi ở quán cà phê ven đường, trên tay chỉ cầm một chiếc điện thoại di động bình thường. Không laptop, không bàn phím.
-  - Màn hình điện thoại hiển thị ứng dụng chat Telegram quen thuộc:
-    - Các thông báo bài viết mẫu được gửi về phòng chat.
-    - Người dùng chỉ cần lướt ngón tay bấm nút: `[ ✅ Duyệt Đăng Ngay ]` hoặc `[ ⏰ Hẹn Giờ ]`.
-    - Hoặc đơn giản là bật chế độ tự động để cả team tự làm, tự duyệt và tự đăng 100%.
+  - Cảnh thực tế: Người dùng đang ngồi thảnh thơi ở quán cà phê ven đường hoặc đi dạo, trên tay chỉ cầm một chiếc điện thoại di động thông thường. Không cần laptop.
+  - Zoom vào màn hình Telegram trên điện thoại:
+    - Báo cáo bài viết mẫu hiện lên với ảnh/video và caption hoàn chỉnh.
+    - Nút bấm trực quan nổi bật: `[ ✅ Duyệt Đăng Ngay ]` hoặc `[ ⏰ Hẹn Giờ ]`.
+    - Ngón tay chạm nhẹ vào nút duyệt -> Hệ thống bắn thông báo xuất bản tức thì.
+    - Hoặc gõ lệnh `/auto` để bật chế độ tự động cho team tự chạy từ A-Z.
 - **Lời bình (Voice-over)**:
   > *"Quan trọng nhất: Bạn hoàn toàn thoát khỏi bàn làm việc.  
   > Không cần bật máy tính cồng kềnh. Không cần mang theo laptop khi đi cà phê hay du lịch.  
@@ -99,12 +103,12 @@ Video này giới thiệu một giải pháp hoàn toàn mới: **Một cỗ má
 
 ---
 
-### PHÂN CẢNH 5: CỖ MÁY 24/7 & LỜI KẾT (2:10 - 2:35)
+### PHÂN CẢNH 5: CỖ MÁY KHÔNG NGỦ 24/7 & LỜI KẾT (2:10 - 2:35)
 
 - **Hình ảnh (Visual)**:
-  - Đồng hồ hiển thị thời gian chạy liên tục: `00:00` -> `06:00` -> `12:00` -> `18:00` -> `24:00`.
-  - Không gian tĩnh lặng, các kênh nội dung vẫn đều đặn xuất bản các bài viết chất lượng cao.
-  - Thông điệp kết thúc xuất hiện to, rõ ràng:
+  - Quay trở lại căn phòng 3D ánh sáng dịu nhẹ ban đêm (*SamsAI Night Room*). Đồng hồ quay liên tục: 00:00 -> 06:00 -> 12:00 -> 18:00.
+  - Các nhân sự AI vẫn thoăn thoắt làm việc, các kênh mạng xã hội vẫn đều đặn tăng trưởng người theo dõi.
+  - Dòng thông điệp kết thúc xuất hiện to, thanh lịch:
     - *Hơn 20 AI Agent làm việc liên tục 24/7.*
     - *Không nghỉ phép. Không trễ hẹn.*
     - *Tự do sáng tạo — Làm chủ thời gian của bạn.*
@@ -115,11 +119,18 @@ Video này giới thiệu một giải pháp hoàn toàn mới: **Một cỗ má
 
 ---
 
-## TÀI NGUYÊN NGUYÊN LIỆU HÌNH ẢNH MINH HỌA
+## NGUYÊN LIỆU VISUAL THỰC TẾ & MẪU THAM CHIẾU 3D
 
-Tải các ảnh minh họa đi kèm kịch bản:
-- [01 - Sơ đồ 3D Không gian phòng ban Agent](assets/01_architecture_isometric.png)
-- [02 - Sơ đồ quy trình dây chuyền sản xuất nội dung](assets/02_architecture_pipeline.png)
-- [03 - Giới thiệu tổng quan cơ cấu nhân sự](assets/03_slide_org_overview.png)
-- [04 - Phân xưởng sáng tạo ảnh và video](assets/05_creative_editorial.png)
-- [05 - Mạng lưới phân phối đa nền tảng](assets/06_gates_distribution.png)
+Để Agent làm video có thể dựng chuẩn phong cách SamsAI & Holo:
+- **Ảnh tham chiếu 3D Room & Notch (SamsAI)**:
+  - [SamsAI 3D Living Room](assets/samsai_3d_room.png) (Mô hình căn phòng 3D với màn hình kính gương)
+  - [SamsAI Notch Hero](assets/samsai_notch_hero.png) (Giao diện hiển thị team agent túc trực)
+- **Ảnh tham chiếu Băng chuyền & Pipeline (TryHolo)**:
+  - [TryHolo Conveyor Pipeline](assets/tryholo_conveyor_pipeline.png) (Băng chuyền sản phẩm mạng xã hội trôi tự động)
+  - [TryHolo Hero Department](assets/tryholo_hero_department.png) (Mô hình một nhân sự thay thế cả phòng marketing)
+- **Ảnh đồ họa nội bộ hệ thống**:
+  - [Sơ đồ phối cảnh 3D không gian phòng ban](assets/01_architecture_isometric.png)
+  - [Sơ đồ dây chuyền sản xuất khép kín](assets/02_architecture_pipeline.png)
+  - [Cơ cấu tổ chức nhân sự ảo](assets/03_slide_org_overview.png)
+  - [Phân xưởng sáng tạo ảnh & video](assets/05_creative_editorial.png)
+  - [Mạng lưới phân phối 6 nền tảng](assets/06_gates_distribution.png)
