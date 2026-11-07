@@ -1,0 +1,680 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Open-source repos to grow aipub.social (inbound + outbound)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--bg:#fff;--accent:#1d4ed8;--soft:#f6f7f9;--col-odd:#faf8f5;--col-even:#ffffff;--th-odd:#f1ede6;--th-even:#e8edf5}
+@media (prefers-color-scheme:dark){:root{--fg:#e8e8e8;--muted:#9a9a9a;--line:#333;--bg:#121212;--accent:#7aa2ff;--soft:#1c1c1c;--col-odd:#1a1917;--col-even:#121212;--th-odd:#24221f;--th-even:#1c2026}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 "Be Vietnam Pro",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+main{max-width:980px;margin:0 auto;padding:24px 18px 80px}
+a{color:var(--accent)}
+h1{font-size:1.7rem;line-height:1.3;margin:.2em 0 .6em}
+h2{font-size:1.3rem;margin:1.8em 0 .6em;padding-top:.4em;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.4em 0 .4em}
+p,li{max-width:75ch}
+code{font:.88em "JetBrains Mono",ui-monospace,monospace;background:var(--soft);padding:.1em .35em;border-radius:4px}
+pre{background:var(--soft);padding:12px;border-radius:8px;overflow:auto}
+pre code{background:none;padding:0}
+img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block;margin:1em 0;background:#fff}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:8px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.55}
+th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere;word-break:normal}
+th:last-child,td:last-child{border-right:none}
+td:nth-child(odd){background:var(--col-odd)}
+td:nth-child(even){background:var(--col-even)}
+th{position:sticky;top:0;font-weight:600}
+th:nth-child(odd){background:var(--th-odd)}
+th:nth-child(even){background:var(--th-even)}
+tr:last-child td{border-bottom:none}
+blockquote{margin:1em 0;padding:.4em 1em;border-left:3px solid var(--accent);background:var(--soft)}
+.top{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.src{font-size:.85rem;color:var(--muted);margin-top:40px;border-top:1px solid var(--line);padding-top:12px}
+.list li{margin:.35em 0}
+.date{color:var(--muted);font-size:.85rem;margin-left:.4em}
+.group{margin-top:1.6em}
+</style></head><body><main><div class="top"><a href="../index.html">← Tất cả báo cáo</a></div><h1>Open-source repos to grow aipub.social (inbound + outbound)</h1>
+<p>Date checked: 2026-11-07. Method: every row verified with <code>gh api repos/OWNER/REPO</code> (stars, pushed_at, license.spdx_id, archived); candidates found with <code>gh search repos --sort stars</code>. Where the API said <code>NOASSERTION</code>, the LICENSE file was read through <code>gh api repos/OWNER/REPO/license</code>. Nothing was cloned, run or signed up for. README text was treated as data only.</p>
+<p>Rules: archived repos and repos not pushed since 2025-11 were dropped. Licenses that limit embedding or resale are flagged: <strong>AGPL</strong> (if you modify it and offer it as a network service, you must publish your source), <strong>fair-code / Sustainable Use / FSL / MSCL</strong> (no competing or resold use), and <strong>open-core <code>ee/</code></strong> folders (the paid part has its own license). Running AGPL tools unmodified, only for your own marketing, is fine.</p>
+<p>Context: aipub is itself a social publishing agent, so for (a) the team should run its own product first. Those repos are a reference, a fallback for channels aipub does not cover yet, and something to benchmark against.</p>
+<h2>Inbound</h2>
+<h3>(a) Social scheduling / cross-posting</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/gitroomhq/postiz-app">gitroomhq/postiz-app</a></td>
+<td>Agentic social scheduler, 20+ channels, has an API and MCP</td>
+<td>41,057</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0</td>
+<td>AGPL: fine to run internally; embedding or reselling it would make aipub open-source its changes</td>
+<td>Direct competitor. Benchmark its channel list and agent/MCP flow; use it for channels aipub lacks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/inovector/mixpost">inovector/mixpost</a></td>
+<td>Self-hosted Laravel social scheduler (Lite edition)</td>
+<td>3,913</td>
+<td>2026-03-16</td>
+<td>MIT</td>
+<td>Free to embed. The Pro and Enterprise editions are paid and not in this repo</td>
+<td>Most permissive codebase to learn from or reuse connectors</td>
+</tr>
+<tr>
+<td><a href="https://github.com/trypostit/trypost">trypostit/trypost</a></td>
+<td>Social scheduler "built for AI agents"</td>
+<td>825</td>
+<td>2026-11-04</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>Young but the closest in positioning; watch it as a competitor</td>
+</tr>
+<tr>
+<td><a href="https://github.com/SamurAIGPT/postiz-cheap">SamurAIGPT/postiz-cheap</a></td>
+<td>Self-host scheduler with an AI post writer and calendar</td>
+<td>1,393</td>
+<td>2026-10-26</td>
+<td>MIT</td>
+<td>Free to embed</td>
+<td>A small MIT alternative if Postiz's AGPL gets in the way</td>
+</tr>
+</tbody>
+</table></div>
+<h3>(b) AI marketing skills / agents (Claude Code and similar)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/coreyhaines31/marketingskills">coreyhaines31/marketingskills</a></td>
+<td>Claude Code skills for CRO, copywriting, SEO, analytics and growth</td>
+<td>58,994</td>
+<td>2026-11-06</td>
+<td>MIT</td>
+<td>Free</td>
+<td>The default skill pack for a 1-3 person team: landing copy, CRO, launch plans</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ericosiu/ai-marketing-skills">ericosiu/ai-marketing-skills</a></td>
+<td>Skills for growth experiments, pipeline, content ops, outbound and SEO</td>
+<td>3,789</td>
+<td>2026-11-01</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Adds outbound and experiment loops that Corey's pack lacks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/aaron-he-zhu/aaron-marketing-skills">aaron-he-zhu/aaron-marketing-skills</a></td>
+<td>120 skills, or an "8-bot team" across 7 disciplines</td>
+<td>3,093</td>
+<td>2026-11-07</td>
+<td>Apache-2.0</td>
+<td>Free (patent grant)</td>
+<td>Broad coverage; take individual skills from it</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kostja94/marketing-skills">kostja94/marketing-skills</a></td>
+<td>160+ skills for SEO, social, influencer and 40+ page types</td>
+<td>1,087</td>
+<td>2026-11-06</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Its influencer and social skills fit the creator/agency audience</td>
+</tr>
+</tbody>
+</table></div>
+<p>Not taken: irinabuht12-oss/marketing-skills (6,920 stars, <strong>no license</strong>, so no rights granted by default); zubair-trabzada/ai-marketing-claude (MIT, 2,867 stars, last push 2026-03-02, slowing down).</p>
+<h3>(c) SEO / programmatic SEO / blog and landing pages</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/AgriciDaniel/claude-seo">AgriciDaniel/claude-seo</a></td>
+<td>Claude Code SEO skill: 26 sub-skills and 19 sub-agents (technical, E-E-A-T, schema, GEO)</td>
+<td>27,147</td>
+<td>2026-11-01</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Audit and GEO for aipub.social and superagent.social from inside Claude Code</td>
+</tr>
+<tr>
+<td><a href="https://github.com/withastro/astro">withastro/astro</a></td>
+<td>Framework for content-driven sites, static output</td>
+<td>63,799</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Fast pSEO pages (e.g. "AI social posts for {industry} in {city}" across APAC markets and languages)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/payloadcms/payload">payloadcms/payload</a></td>
+<td>Next.js-native headless CMS</td>
+<td>45,719</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free</td>
+<td>CMS behind the blog and pSEO data, with localisation for VN/TH/ID etc.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/TryGhost/Ghost">TryGhost/Ghost</a></td>
+<td>Publishing, memberships and newsletter in one app</td>
+<td>55,704</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Blog plus newsletter in one box, if the team wants no custom build</td>
+</tr>
+<tr>
+<td><a href="https://github.com/StJudeWasHere/seonaut">StJudeWasHere/seonaut</a></td>
+<td>Self-hosted SEO crawler and audit tool</td>
+<td>861</td>
+<td>2026-10-08</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Recurring technical crawl of the site</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: strapi/strapi (73,440 stars; MIT outside <code>ee/</code>, the Enterprise Edition is paid), directus/directus (38,678 stars; <strong>MSCL-1.0</strong>, which bans "Competing Use" until it converts to GPL-3.0, so avoid it for embedding), seo-skills/seo-audit-skill (665 stars, MIT, 2026-10-15). Dropped: agamm/pseo-next (64 stars, no license).</p>
+<h3>(d) Email / newsletter</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/knadh/listmonk">knadh/listmonk</a></td>
+<td>Single-binary newsletter and mailing-list manager</td>
+<td>24,184</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0</td>
+<td>AGPL: fine for your own list</td>
+<td>Cheapest way to run a newsletter at volume through SES or another SMTP</td>
+</tr>
+<tr>
+<td><a href="https://github.com/TryGhost/Ghost">TryGhost/Ghost</a></td>
+<td>Newsletter built into the blog</td>
+<td>55,704</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Pick it if the blog is on Ghost too</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mettle/sendportal">mettle/sendportal</a></td>
+<td>Self-hosted email marketing (Laravel)</td>
+<td>2,189</td>
+<td>2026-10-22</td>
+<td>MIT</td>
+<td>Free to embed</td>
+<td>The MIT option if aipub ever ships email to its customers</td>
+</tr>
+<tr>
+<td><a href="https://github.com/pentacent/keila">pentacent/keila</a></td>
+<td>Newsletter tool (Elixir)</td>
+<td>2,260</td>
+<td>2026-11-04</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>A simpler alternative to Listmonk</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: useplunk/plunk (5,594 stars, AGPL, transactional plus marketing), Billionmail/BillionMail (16,208 stars, AGPL, a full mail server; more ops than a tiny team needs).</p>
+<h3>(e) Analytics / attribution</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/umami-software/umami">umami-software/umami</a></td>
+<td>Privacy-first web analytics with campaigns and UTM</td>
+<td>39,963</td>
+<td>2026-11-04</td>
+<td>MIT</td>
+<td>Free, no traps</td>
+<td>Default web and UTM analytics; cookie-free, so it is light under APAC privacy laws (PDPA, PDP)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/PostHog/posthog">PostHog/posthog</a></td>
+<td>Product analytics, session replay, flags, experiments</td>
+<td>40,687</td>
+<td>2026-11-07</td>
+<td>MIT outside <code>ee/</code> (ee is proprietary)</td>
+<td>Self-hosting the core is fine; the paid features live in <code>ee/</code></td>
+<td>In-app funnel for signup to first post to paid; use the cloud free tier rather than self-hosting</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Openpanel-dev/openpanel">Openpanel-dev/openpanel</a></td>
+<td>Open-source Mixpanel alternative (web plus product)</td>
+<td>7,265</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>One tool for both, if PostHog is too heavy</td>
+</tr>
+<tr>
+<td><a href="https://github.com/plausible/analytics">plausible/analytics</a></td>
+<td>Lightweight cookie-free web analytics</td>
+<td>29,788</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>Same job as Umami, with a stricter license</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: rybbit-io/rybbit (13,216 stars, AGPL).</p>
+<h3>(f) Links / UTM / referral / affiliate</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/dubinc/dub">dubinc/dub</a> (the API now resolves to <code>dubinc/dub.link</code>)</td>
+<td>Short links, attribution, conversion tracking, partner/affiliate programs</td>
+<td>25,130</td>
+<td>2026-10-27</td>
+<td>AGPL-3.0 core plus a proprietary <code>(ee)</code> folder</td>
+<td>The affiliate and partner parts sit in <code>(ee)</code> (commercial); the core is AGPL</td>
+<td>Branded short links in every aipub post, and an affiliate program for agencies. Use the hosted version for partners</td>
+</tr>
+<tr>
+<td><a href="https://github.com/thedevs-network/kutt">thedevs-network/kutt</a></td>
+<td>Self-hosted URL shortener with stats</td>
+<td>11,194</td>
+<td>2026-10-19</td>
+<td>MIT</td>
+<td>Free to embed</td>
+<td>MIT short links that could be built into aipub's own posts</td>
+</tr>
+<tr>
+<td><a href="https://github.com/shlinkio/shlink">shlinkio/shlink</a></td>
+<td>Self-hosted URL shortener with an API and visit tracking</td>
+<td>5,408</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free to embed</td>
+<td>API-first; easy for the agent to call</td>
+</tr>
+</tbody>
+</table></div>
+<p>Gap: no healthy open-source affiliate or referral repo turned up in search (results for "affiliate" and "referral" were unrelated). Use Dub Partners, or a paid tool.</p>
+<h3>(g) Community / forms / surveys / reviews</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/formbricks/formbricks">formbricks/formbricks</a></td>
+<td>Surveys: in-app, link and website (an open Qualtrics)</td>
+<td>13,222</td>
+<td>2026-11-06</td>
+<td>AGPL core; SDK packages MIT; <code>ee</code> proprietary</td>
+<td>Embedding the MIT SDKs is fine; the server is AGPL</td>
+<td>NPS, churn surveys, and asking for testimonials after a customer's first good week</td>
+</tr>
+<tr>
+<td><a href="https://github.com/heyform/heyform">heyform/heyform</a></td>
+<td>Conversational form builder</td>
+<td>9,066</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>Lead magnets and waitlist forms</td>
+</tr>
+<tr>
+<td><a href="https://github.com/apache/answer">apache/answer</a></td>
+<td>Q&amp;A, community and help-center platform</td>
+<td>15,710</td>
+<td>2026-11-05</td>
+<td>Apache-2.0</td>
+<td>Free</td>
+<td>A community or help forum that also brings SEO traffic</td>
+</tr>
+<tr>
+<td><a href="https://github.com/discourse/discourse">discourse/discourse</a></td>
+<td>Community forum</td>
+<td>48,056</td>
+<td>2026-11-06</td>
+<td>GPL-2.0</td>
+<td>GPL: fine to self-host</td>
+<td>Heavier option, if the community grows</td>
+</tr>
+</tbody>
+</table></div>
+<p>Gap: no maintained open-source testimonial wall turned up in search (every hit had 0-6 stars). Collect quotes with Formbricks and render them on the Astro site.</p>
+<h3>(h) Social listening / trend scraping</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Panniantong/Agent-Reach">Panniantong/Agent-Reach</a></td>
+<td>Lets an agent read and search X, Reddit, YouTube, GitHub, Bilibili, Xiaohongshu and more</td>
+<td>109,836</td>
+<td>2026-11-06</td>
+<td>MIT</td>
+<td>Free. The platforms' ToS still apply</td>
+<td>Listening across Western and Chinese platforms from one agent. Created 2026-02-24, so very young: try it before relying on it</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mvanhorn/last30days-skill">mvanhorn/last30days-skill</a></td>
+<td>Agent skill: researches a topic across Reddit, X, YouTube, HN and the web for the last 30 days</td>
+<td>66,892</td>
+<td>2026-11-05</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Weekly "what is trending for SMB marketers" brief that feeds aipub content</td>
+</tr>
+<tr>
+<td><a href="https://github.com/DIYgod/RSSHub">DIYgod/RSSHub</a></td>
+<td>Turns thousands of sites and social accounts into RSS</td>
+<td>46,849</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0</td>
+<td>AGPL: fine to run internally</td>
+<td>Cheap, steady feeds of competitor and influencer accounts</td>
+</tr>
+<tr>
+<td><a href="https://github.com/d60/twikit">d60/twikit</a> / <a href="https://github.com/Altimis/Scweet">Altimis/Scweet</a></td>
+<td>X/Twitter scraping with no API key</td>
+<td>4,762 / 1,660</td>
+<td>2026-03-10 / 2026-10-26</td>
+<td>MIT / MIT</td>
+<td>Against X's ToS; accounts get banned</td>
+<td>Only for small-volume research</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: JosephLai241/URS (Reddit, 1,045 stars, MIT, 2026-07-11), davidteather/TikTok-Api (6,734 stars, MIT, 2026-08-24), instaloader/instaloader (Instagram, 13,800 stars, MIT, 2026-11-01). <strong>Flagged: NanmiCoder/MediaCrawler</strong> (70,498 stars; Xiaohongshu, Douyin, Weibo) is under a <strong>NON-COMMERCIAL LEARNING LICENSE</strong>, so it must not be used commercially. Threads: no solid repo (the best has 142 stars and an unclear license). Dropped: ericciarla/trendFinder (last push 2025-02-17).</p>
+<h2>Outbound</h2>
+<h3>(i) Cold email / sequencing / deliverability</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ethanplusai/sellbird">ethanplusai/sellbird</a></td>
+<td>Outreach platform that runs on your Claude/ChatGPT plan: finds leads, writes and sends</td>
+<td>4,696</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0</td>
+<td>AGPL; created 2026-03, young</td>
+<td>Agent-native outbound to APAC agencies, at almost no cost</td>
+</tr>
+<tr>
+<td><a href="https://github.com/growthenginenowoslawski/coldoutboundskills">growthenginenowoslawski/coldoutboundskills</a></td>
+<td>Claude Code skills to grade campaigns, export Prospeo searches, and more</td>
+<td>804</td>
+<td>2026-10-05</td>
+<td>MIT</td>
+<td>Free</td>
+<td>Copy and deliverability QA for cold email, inside Claude Code</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mautic/mautic">mautic/mautic</a></td>
+<td>Full marketing automation: segments, campaigns, scoring</td>
+<td>10,947</td>
+<td>2026-11-06</td>
+<td>GPL-3.0</td>
+<td>GPL: fine to self-host; embedding it would make your code GPL</td>
+<td>Nurture sequences after the first touch. Heavy for a tiny team</td>
+</tr>
+<tr>
+<td><a href="https://github.com/reacherhq/check-if-email-exists">reacherhq/check-if-email-exists</a></td>
+<td>Email verification without sending (Rust, HTTP backend)</td>
+<td>10,433</td>
+<td>2026-10-30</td>
+<td>MIT</td>
+<td>API now says MIT (older versions were AGPL plus commercial; check the version you use)</td>
+<td>Verify scraped emails before sending, to protect sender reputation</td>
+</tr>
+</tbody>
+</table></div>
+<h3>(j) Lead sourcing and enrichment (Google Maps / LinkedIn / websites)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/gosom/google-maps-scraper">gosom/google-maps-scraper</a></td>
+<td>Google Maps business scraper (name, phone, site, rating, emails), CLI or web</td>
+<td>7,436</td>
+<td>2026-10-21</td>
+<td>MIT</td>
+<td>Free. Google ToS applies</td>
+<td>Best fit for SMB leads: "cafes / salons / clinics in HCMC, Bangkok, Jakarta"</td>
+</tr>
+<tr>
+<td><a href="https://github.com/omkarcloud/google-maps-scraper">omkarcloud/google-maps-scraper</a></td>
+<td>Google Maps lead tool with 50+ fields</td>
+<td>3,891</td>
+<td>2026-11-07</td>
+<td>MIT</td>
+<td>Free; may upsell its hosted API</td>
+<td>Second option if gosom misses fields</td>
+</tr>
+<tr>
+<td><a href="https://github.com/unclecode/crawl4ai">unclecode/crawl4ai</a></td>
+<td>LLM-friendly web crawler and extractor</td>
+<td>87,035</td>
+<td>2026-11-04</td>
+<td>Apache-2.0</td>
+<td>Free to embed</td>
+<td>Visit each lead's website and pull the brand, socials and posting gaps for personalisation</td>
+</tr>
+<tr>
+<td><a href="https://github.com/firecrawl/firecrawl">firecrawl/firecrawl</a></td>
+<td>Website to clean data for agents</td>
+<td>199,381</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0</td>
+<td>AGPL if self-hosted and embedded; or pay for the API</td>
+<td>Same job; more polished, stricter license</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: ScrapeGraphAI/Scrapegraph-ai (32,594 stars, MIT), getcargohq/cargo-skills (22 stars, MIT, waterfall-enrichment skills; too small). LinkedIn: joeyism/linkedin_scraper (4,657 stars, <strong>GPL-3.0</strong>, 2026-04-10). LinkedIn bans scraping and enforces it, so use it only manually and at low volume, or skip it.</p>
+<h3>(k) CRM</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/twentyhq/twenty">twentyhq/twenty</a></td>
+<td>Modern open CRM "designed for AI", with an API</td>
+<td>60,590</td>
+<td>2026-11-07</td>
+<td>AGPL-3.0, some files Enterprise/commercial, some packages MIT</td>
+<td>AGPL: fine to self-host internally</td>
+<td>Pipeline for agency and SMB deals; the agent can write to it through the API</td>
+</tr>
+<tr>
+<td><a href="https://github.com/krayin/laravel-crm">krayin/laravel-crm</a></td>
+<td>Laravel CRM for leads and sales</td>
+<td>24,120</td>
+<td>2026-11-06</td>
+<td>MIT</td>
+<td>Free to embed</td>
+<td>The MIT option if a CRM ever goes inside aipub (e.g. for agencies)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/espocrm/espocrm">espocrm/espocrm</a></td>
+<td>Mature general-purpose CRM</td>
+<td>3,555</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>Stable fallback</td>
+</tr>
+<tr>
+<td><a href="https://github.com/frappe/crm">frappe/crm</a></td>
+<td>Frappe-based CRM</td>
+<td>3,926</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0</td>
+<td>AGPL</td>
+<td>Fits if the team is already on Frappe/ERPNext</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: trycompai/crm (11,881 stars, MIT, 2026-11-01; not evaluated further), SuiteCRM (AGPL).</p>
+<h3>(l) Workflow glue</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>What it does</th>
+<th>Stars</th>
+<th>Last push</th>
+<th>License</th>
+<th>Commercial-use note</th>
+<th>Fit for aipub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/activepieces/activepieces">activepieces/activepieces</a></td>
+<td>Workflow automation plus about 400 MCP servers</td>
+<td>25,411</td>
+<td>2026-11-07</td>
+<td>MIT outside <code>ee/</code></td>
+<td>The core is free to embed; <code>ee/</code> is commercial</td>
+<td>Safest glue to embed in aipub, or to wire scraper to CRM to email</td>
+</tr>
+<tr>
+<td><a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a></td>
+<td>Workflow automation with AI nodes</td>
+<td>209,747</td>
+<td>2026-11-07</td>
+<td><strong>Sustainable Use License (fair-code)</strong>, <code>.ee.</code> files commercial</td>
+<td>"Internal business purposes" only; no reselling or embedding as a paid service</td>
+<td>Biggest ecosystem; use it internally only</td>
+</tr>
+<tr>
+<td><a href="https://github.com/windmill-labs/windmill">windmill-labs/windmill</a></td>
+<td>Code-first workflows, apps and agents</td>
+<td>18,447</td>
+<td>2026-11-06</td>
+<td>AGPL-3.0 / Apache-2.0 mix plus proprietary EE</td>
+<td>AGPL by default</td>
+<td>Pick it if the team prefers scripts to a visual canvas</td>
+</tr>
+</tbody>
+</table></div>
+<p>Also checked: baptisteArno/typebot.io (10,609 stars, <strong>FSL-1.1</strong>, a non-compete license; avoid embedding), chatwoot/chatwoot (39,035 stars, MIT outside <code>enterprise/</code>, an omni-channel inbox for replies).</p>
+<h2>Top 8 to start</h2>
+<ol>
+<li><strong>coreyhaines31/marketingskills</strong> (59.0k, MIT): the marketing brain in Claude Code from day one.</li>
+<li><strong>AgriciDaniel/claude-seo</strong> (27.1k, MIT): SEO and GEO audits plus a content plan for aipub.social.</li>
+<li><strong>Panniantong/Agent-Reach</strong> (109.8k, MIT): listening on X, Reddit, YouTube and Xiaohongshu that feeds the content engine. Young; try it first.</li>
+<li><strong>umami-software/umami</strong> (40.0k, MIT): web and UTM analytics, cookie-free.</li>
+<li><strong>dubinc/dub</strong> (25.1k, AGPL plus <code>ee</code>): branded links and attribution in every post, and later an agency affiliate program (hosted).</li>
+<li><strong>gosom/google-maps-scraper</strong> (7.4k, MIT): APAC SMB lead lists by city and vertical.</li>
+<li><strong>twentyhq/twenty</strong> (60.6k, AGPL): the CRM for outbound and agency deals.</li>
+<li><strong>activepieces/activepieces</strong> (25.4k, MIT core): glue that can also be embedded in aipub later.</li>
+</ol>
+<p>Runners-up: knadh/listmonk (24.2k, AGPL) for the newsletter; ethanplusai/sellbird (4.7k, AGPL) for agent-run cold email; mvanhorn/last30days-skill (66.9k, MIT) for weekly trend briefs; n8n (209.7k, fair-code) only for internal workflows.</p><div class="src">Nguồn: <code>marketing/aipub-marketing-repos-2026-11-07.md</code> (bản .md cho agent đọc)</div></main></body></html>
