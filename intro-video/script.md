@@ -1,20 +1,24 @@
 # KỊCH BẢN VIDEO INTRO (DƯỚI 3 PHÚT): CỖ MÁY NỘI DUNG TỰ HÀNH 24/7
-*(Định hướng Visual 3D & Dây chuyền mô phỏng theo chuẩn **SamsAI.co** & **TryHolo.ai**)*
+*(Định hướng Visual 3D & Dây chuyền mô phỏng theo chuẩn **SamsAI.co**, **TryHolo.ai** và các viral case-study)*
 
 > **Thời lượng**: Khoảng 2 phút 30 giây (Dưới 3 phút)  
-> **Phong cách Visual**: Không gian 3D tương tác phòng làm việc ảo (*Spatial Glass Room / 3D Living Desk* của **SamsAI**) kết hợp băng chuyền sản xuất tự động & nút phê duyệt 1-chạm (*Conveyor Belt & 1-Tap Approve* của **Holo**).  
+> **Phong cách Visual**: Không gian 3D tương tác phòng làm việc ảo (*Spatial Glass Room / 3D Living Desk* của **SamsAI**) kết hợp băng chuyền sản xuất tự động & nút phê duyệt 1-chạm (*Conveyor Belt & 1-Tap Approve* của **Holo**), cùng nhịp chuyển động stop-motion / kinetic typography ấn tượng (*Motion Theory & Ripping*).  
 > **Ngôn ngữ**: Tiếng Việt (Giọng đọc Voice-over truyền cảm hứng, sắc sảo, dứt khoát).
 
 ---
 
-## Ý TƯỞNG VISUAL CHỦ ĐẠO (INSPIRED BY SAMSAI & HOLO)
+## Ý TƯỞNG VISUAL CHỦ ĐẠO & NGUỒN THAM CHIẾU (BENCHMARK REELS)
 
 1. **Không gian 3D Living Room (theo SamsAI.co)**:
-   - Thay vì sơ đồ khối 2D khô cứng, mở ra một căn phòng 3D hiện đại với các "nhân sự AI" ngồi làm việc tại bàn ảo.
+   - Mở ra một căn phòng 3D hiện đại với các "nhân sự AI" ngồi làm việc tại bàn ảo.
    - Phía trên mỗi nhân sự nổi lên một màn hình gương kính bóng mờ (*Glass HUD*). Khi agent quét tin tức, vẽ ảnh hay cắt video, các thẻ dữ liệu bay lên trên mặt kính thời gian thực.
-2. **Băng chuyền sản xuất nội dung (theo TryHolo.ai)**:
+2. **Băng chuyền sản xuất nội dung (theo TryHolo.ai & Reel `Deq1nUPMqtr`)**:
    - Các ấn phẩm (bài viết, carousel, video 9:16) trôi liên tục trên băng chuyền (*Infinite Conveyor Belt*) từ khâu ý tưởng đến khi xếp lịch đăng bài.
-   - Người chỉ huy chỉ cần cầm điện thoại bấm nút: **"Chỉ cần 1 chạm để duyệt" (You just tap approve)**.
+   - Trải nghiệm chỉ huy: **"Chỉ cần 1 chạm để duyệt" (You just tap approve)**.
+3. **Tư duy "Stop Selling Tools, Sell The Job Done" (theo Reel Ben Zogby `DfFoUcNjUPY`)**:
+   - Đánh trúng tâm lý: Người dùng không mua thêm công cụ AI để học cách dùng, họ cần **kết quả đầu ra tự động hoàn tất**.
+4. **Hiệu ứng Stop-Scroll Visual & Kinetic Storytelling (theo Reel Motion Theory `Delp79QBXxC`)**:
+   - Sử dụng các cú zoom giật, kinetic text tương phản cao, âm thanh chuyển động dứt khoát khiến người xem không thể lướt qua.
 
 ---
 
@@ -39,7 +43,7 @@
 - **Hình ảnh (Visual)**:
   - Cận cảnh bàn làm việc đêm muộn bừa bộn, người làm sáng tạo gục đầu bên laptop.
   - Hàng loạt thông báo deadline réo liên tục, màn hình mở chằng chịt tab công cụ.
-  - Chữ lớn hiện lên: *"Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"*
+  - Chữ lớn hiện lên theo phong cách kinetic text giật nhịp (*Motion Theory*): *"Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"*
 - **Lời bình (Voice-over)**:
   > *"Để xây dựng một kênh nội dung phủ sóng khắp Facebook, TikTok, Instagram hay YouTube mỗi ngày, bạn cần gì?  
   > Một người săn trend, hai người thiết kế ảnh, một người dựng video, một người viết caption, và hàng đống deadline luôn trực chờ đổ bể.  
@@ -69,7 +73,7 @@
 ---
 
 ### PHÂN CẢNH 3: BĂNG CHUYỀN SẢN XUẤT ĐA KÊNH TỰ ĐỘNG (0:55 - 1:40)
-*(Áp dụng phong cách Conveyor Belt của TryHolo)*
+*(Áp dụng phong cách Conveyor Belt của TryHolo & Holo Reel `Deq1nUPMqtr`)*
 
 - **Hình ảnh (Visual)**:
   - Chuyển sang góc máy nhìn một băng chuyền vô cực (*Infinite Conveyor Belt* như TryHolo):
@@ -108,7 +112,7 @@
 - **Hình ảnh (Visual)**:
   - Quay trở lại căn phòng 3D ánh sáng dịu nhẹ ban đêm (*SamsAI Night Room*). Đồng hồ quay liên tục: 00:00 -> 06:00 -> 12:00 -> 18:00.
   - Các nhân sự AI vẫn thoăn thoắt làm việc, các kênh mạng xã hội vẫn đều đặn tăng trưởng người theo dõi.
-  - Dòng thông điệp kết thúc xuất hiện to, thanh lịch:
+  - Dòng thông điệp kết thúc xuất hiện to, thanh lịch (*Stop selling tools. Sell the job done*):
     - *Hơn 20 AI Agent làm việc liên tục 24/7.*
     - *Không nghỉ phép. Không trễ hẹn.*
     - *Tự do sáng tạo — Làm chủ thời gian của bạn.*
@@ -119,18 +123,28 @@
 
 ---
 
-## NGUYÊN LIỆU VISUAL THỰC TẾ & MẪU THAM CHIẾU 3D
+## NGUYÊN LIỆU VISUAL THỰC TẾ & CÁC CLIP THAM CHIẾU (INSPIRATION HUB)
 
-Để Agent làm video có thể dựng chuẩn phong cách SamsAI & Holo:
-- **Ảnh tham chiếu 3D Room & Notch (SamsAI)**:
-  - [SamsAI 3D Living Room](assets/samsai_3d_room.png) (Mô hình căn phòng 3D với màn hình kính gương)
-  - [SamsAI Notch Hero](assets/samsai_notch_hero.png) (Giao diện hiển thị team agent túc trực)
-- **Ảnh tham chiếu Băng chuyền & Pipeline (TryHolo)**:
-  - [TryHolo Conveyor Pipeline](assets/tryholo_conveyor_pipeline.png) (Băng chuyền sản phẩm mạng xã hội trôi tự động)
-  - [TryHolo Hero Department](assets/tryholo_hero_department.png) (Mô hình một nhân sự thay thế cả phòng marketing)
-- **Ảnh đồ họa nội bộ hệ thống**:
-  - [Sơ đồ phối cảnh 3D không gian phòng ban](assets/01_architecture_isometric.png)
-  - [Sơ đồ dây chuyền sản xuất khép kín](assets/02_architecture_pipeline.png)
-  - [Cơ cấu tổ chức nhân sự ảo](assets/03_slide_org_overview.png)
-  - [Phân xưởng sáng tạo ảnh & video](assets/05_creative_editorial.png)
-  - [Mạng lưới phân phối 6 nền tảng](assets/06_gates_distribution.png)
+### 1. Các clip Instagram Reel tham chiếu
+- **[Holo Brand Ad Creation Reel](https://www.instagram.com/reel/Deq1nUPMqtr/)** (`Deq1nUPMqtr`):
+  - *Đặc trưng*: Băng chuyền chuyển động mô phỏng sản phẩm mạng xã hội tạo ra liên tục từ logo thương hiệu.
+  - *Thumbnail lưu tại*: [assets/Deq1nUPMqtr.jpg](assets/Deq1nUPMqtr.jpg)
+- **[Ben Zogby — Stop Selling AI Tools, Sell The Job](https://www.instagram.com/reel/DfFoUcNjUPY/)** (`DfFoUcNjUPY`):
+  - *Đặc trưng*: Tư duy phân phối giải pháp trọn gói tự động, hook dứt khoát, thuyết phục người xem ngay 3 giây đầu.
+  - *Thumbnail lưu tại*: [assets/DfFoUcNjUPY.jpg](assets/DfFoUcNjUPY.jpg)
+- **[Motion Theory — Visuals That Make People Stop](https://www.instagram.com/reel/Delp79QBXxC/)** (`Delp79QBXxC`):
+  - *Đặc trưng*: Kinetic text, cắt dựng dồn dập, hiệu ứng stop-scroll hút mắt và âm thanh ấn tượng.
+  - *Thumbnail lưu tại*: [assets/Delp79QBXxC.jpg](assets/Delp79QBXxC.jpg)
+
+### 2. Mẫu tham chiếu 3D Room & Băng chuyền
+- [SamsAI 3D Living Room](assets/samsai_3d_room.png) (Mô hình căn phòng 3D với màn hình kính gương)
+- [SamsAI Notch Hero](assets/samsai_notch_hero.png) (Giao diện hiển thị team agent túc trực)
+- [TryHolo Conveyor Pipeline](assets/tryholo_conveyor_pipeline.png) (Băng chuyền sản phẩm mạng xã hội trôi tự động)
+- [TryHolo Hero Department](assets/tryholo_hero_department.png) (Mô hình một nhân sự thay thế cả phòng marketing)
+
+### 3. Ảnh đồ họa nội bộ hệ thống
+- [Sơ đồ phối cảnh 3D không gian phòng ban](assets/01_architecture_isometric.png)
+- [Sơ đồ dây chuyền sản xuất khép kín](assets/02_architecture_pipeline.png)
+- [Cơ cấu tổ chức nhân sự ảo](assets/03_slide_org_overview.png)
+- [Phân xưởng sáng tạo ảnh & video](assets/05_creative_editorial.png)
+- [Mạng lưới phân phối 6 nền tảng](assets/06_gates_distribution.png)

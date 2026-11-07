@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kịch bản Video Intro: Cỗ Máy Nội Dung Tự Hành 24/7 (SamsAI & Holo Style)</title>
+  <title>Kịch bản Video Intro: Cỗ Máy Nội Dung Tự Hành 24/7 (SamsAI, Holo & Reels)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -183,6 +183,59 @@
       font-weight: 500;
       color: #cbd5e1;
     }
+    .reels-banner {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .reel-card {
+      background: #0b0f19;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .reel-card:hover {
+      transform: translateY(-3px);
+      border-color: #ec4899;
+    }
+    .reel-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .reel-info {
+      padding: 12px;
+    }
+    .reel-tag {
+      font-size: 11px;
+      color: #ec4899;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .reel-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+    .reel-desc {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
     footer {
       text-align: center;
       margin-top: 48px;
@@ -196,9 +249,9 @@
 <body>
   <div class="container">
     <header>
-      <div class="badge">Visual Benchmark: SamsAI.co & TryHolo.ai</div>
+      <div class="badge">Visual Benchmark: SamsAI • TryHolo • Viral Reels</div>
       <h1>Kịch Bản Video Intro: Cỗ Máy Nội Dung Tự Hành 24/7</h1>
-      <p class="desc">Dành cho người dùng đại chúng: Mô phỏng không gian 3D Living Room & Glass HUD theo chuẩn <strong>SamsAI</strong> kết hợp Băng chuyền sản xuất vô cực & Nút duyệt 1-chạm theo chuẩn <strong>TryHolo</strong>.</p>
+      <p class="desc">Dành cho người dùng đại chúng: Mô phỏng không gian 3D Living Room & Glass HUD của <strong>SamsAI</strong>, Băng chuyền sản xuất vô cực của <strong>TryHolo</strong>, kết hợp phong cách Stop-Scroll Kinetic của các <strong>Reel triệu view</strong>.</p>
       
       <div class="download-bar">
         <a href="script.md" download class="btn btn-primary">
@@ -212,6 +265,42 @@
       </div>
     </header>
 
+    <!-- Clip tham chiếu Reels -->
+    <div class="reels-banner">
+      <div style="font-size: 16px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px;">
+        <span style="color: #ec4899;">🎬</span> Các Clip Instagram Reel Tham Chiếu Cho Agent Dựng Video
+      </div>
+      <div class="reels-grid">
+        <a href="https://www.instagram.com/reel/Deq1nUPMqtr/" target="_blank" class="reel-card">
+          <img src="assets/Deq1nUPMqtr.jpg" alt="TryHolo Reel">
+          <div class="reel-info">
+            <div class="reel-tag">Holo Official</div>
+            <div class="reel-title">Băng Chuyền Quảng Cáo Đa Kênh</div>
+            <div class="reel-desc">Mô phỏng sản phẩm mạng xã hội bắn ra liên tục từ logo thương hiệu.</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/reel/DfFoUcNjUPY/" target="_blank" class="reel-card">
+          <img src="assets/DfFoUcNjUPY.jpg" alt="Ben Zogby Reel">
+          <div class="reel-info">
+            <div class="reel-tag">Ben Zogby</div>
+            <div class="reel-title">Stop Selling Tools, Sell The Job</div>
+            <div class="reel-desc">Đánh trúng tâm lý người xem: Cần việc hoàn thành, không cần thêm tool.</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/reel/Delp79QBXxC/" target="_blank" class="reel-card">
+          <img src="assets/Delp79QBXxC.jpg" alt="Motion Theory Reel">
+          <div class="reel-info">
+            <div class="reel-tag">Motion Theory</div>
+            <div class="reel-title">Stop-Scroll Visuals & Kinetic Flow</div>
+            <div class="reel-desc">Cắt dựng dồn dập, chuyển động kinetic typography giữ chân người xem.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Phân cảnh -->
+    <div style="margin-top: 32px;"></div>
+
     <div class="scene-card">
       <div class="scene-header">
         <div class="scene-title">Phân Cảnh 1: Cơn Ác Mộng Của Người Làm Nội Dung</div>
@@ -219,7 +308,7 @@
       </div>
       <div class="section-label">Hình ảnh (Visual)</div>
       <div class="visual-content">
-        Montage bàn làm việc bừa bộn lúc nửa đêm, vẻ mặt kiệt sức của người làm sáng tạo. Màn hình laptop mở hàng chục tab công cụ thiết kế, bảng tính lịch bài. Chữ lớn hiện lên: "Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"
+        Montage bàn làm việc bừa bộn lúc nửa đêm, vẻ mặt kiệt sức của người làm sáng tạo. Màn hình laptop mở hàng chục tab công cụ thiết kế, bảng tính lịch bài. Kinetic text giật nhịp dồn dập: "Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"
       </div>
       <div class="section-label">Lời bình (Voice-over)</div>
       <div class="voice-content">
@@ -316,7 +405,7 @@
     </div>
 
     <footer>
-      Autonomous Content Bureau • Chuẩn hóa Visual theo phong cách SamsAI & TryHolo
+      Autonomous Content Bureau • Chuẩn hóa Visual theo phong cách SamsAI, TryHolo & Viral Reels
     </footer>
   </div>
 </body>
