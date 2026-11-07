@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kịch bản Video Intro: Cỗ Máy Nội Dung Tự Hành 24/7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090b10;
+      --card: #131722;
+      --border: #232936;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --btn-bg: #1e293b;
+      --btn-hover: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 9999px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      margin-bottom: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .desc {
+      color: var(--text-dim);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .download-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: var(--btn-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: var(--btn-hover);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #090b10;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background: #7dd3fc;
+      color: #090b10;
+    }
+    .scene-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .scene-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 12px;
+    }
+    .scene-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .scene-time {
+      font-size: 13px;
+      font-family: monospace;
+      color: var(--accent);
+      background: var(--accent-glow);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    .visual-content {
+      color: #cbd5e1;
+      font-size: 14px;
+      margin-bottom: 14px;
+      padding-left: 14px;
+      border-left: 2px solid var(--border);
+    }
+    .voice-content {
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+      font-style: italic;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .gallery-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      background: #000;
+    }
+    .gallery-item span {
+      display: block;
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Creative Bureau • Under 3 Minutes</div>
+      <h1>Kịch Bản Video Intro: Cỗ Máy Nội Dung Tự Hành 24/7</h1>
+      <p class="desc">Dành cho người dùng đại chúng: Minh họa toàn diện cách một hệ thống gồm hơn 20 AI Agent tự tìm ý tưởng, dựng ảnh, cắt video, viết bài và đăng phủ đa nền tảng chỉ qua chiếc điện thoại di động.</p>
+      
+      <div class="download-bar">
+        <a href="script.md" download class="btn btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Tải file Script (.md)
+        </a>
+        <a href="script.md" target="_blank" class="btn">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          Xem file Markdown thô
+        </a>
+      </div>
+    </header>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <div class="scene-title">Phân Cảnh 1: Cơn Ác Mộng Của Người Làm Nội Dung</div>
+        <div class="scene-time">0:00 - 0:25</div>
+      </div>
+      <div class="section-label">Hình ảnh (Visual)</div>
+      <div class="visual-content">
+        Montage bàn làm việc bừa bộn lúc nửa đêm, vẻ mặt kiệt sức của người làm sáng tạo. Màn hình laptop mở hàng chục tab công cụ thiết kế, bảng tính lịch bài. Chữ lớn hiện lên: "Đăng bài mỗi ngày? 6 nền tảng? Bao nhiêu người cho đủ?"
+      </div>
+      <div class="section-label">Lời bình (Voice-over)</div>
+      <div class="voice-content">
+        "Để xây dựng một kênh nội dung phủ sóng khắp Facebook, TikTok, Instagram hay YouTube mỗi ngày, bạn cần gì? Một người săn trend, hai người thiết kế ảnh, một người dựng video, một người viết caption, và hàng đống deadline luôn trực chờ đổ bể. Bạn phải kè kè chiếc laptop suốt 24 giờ mỗi ngày chỉ sợ lỡ nhịp. Nhưng nếu... toàn bộ khối lượng công việc khổng lồ đó có thể tự vận hành mà bạn không cần phải đụng tay?"
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <div class="scene-title">Phân Cảnh 2: Đội Ngũ Hơn 20 "Nhân Viên" Tự Hành</div>
+        <div class="scene-time">0:25 - 0:55</div>
+      </div>
+      <div class="section-label">Hình ảnh (Visual)</div>
+      <div class="visual-content">
+        Chuyển cảnh mượt mà sang mô hình văn phòng số 3D. Từng vị trí chuyên biệt xuất hiện: Trinh sát tin tức (quét web/mạng xã hội), Nghệ sĩ đồ họa (dựng bìa & carousel), Biên tập viên video (chuẩn khung hình dọc 9:16), và Cây bút biên tập (viết bài đúng thuật toán).
+      </div>
+      <div class="section-label">Lời bình (Voice-over)</div>
+      <div class="voice-content">
+        "Đây không phải là một con bot trả lời câu hỏi thông thường. Đây là một đội ngũ hơn 20 nhân viên AI làm việc độc lập và tự phối hợp với nhau như một tòa soạn chuyên nghiệp: Người chuyên rà soát các xu hướng mới nhất trên toàn cầu. Người chuyên thiết kế hình ảnh bắt mắt, dựng slide kiến thức và hoàn thiện video ngắn. Cùng những cây bút am hiểu thuật toán, biết cách viết caption chạm đúng tâm lý người xem trên từng nền tảng."
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <div class="scene-title">Phân Cảnh 3: Dây Chuyền Khép Kín — Từ Ý Tưởng Đến Đăng Bài</div>
+        <div class="scene-time">0:55 - 1:40</div>
+      </div>
+      <div class="section-label">Hình ảnh (Visual)</div>
+      <div class="visual-content">
+        Dòng chảy quy trình tự động: Bắt trend tin tức -> Lập tức dựng thành slide ảnh & video ngắn -> Hoàn thiện bài viết -> Tự động lên lịch và đồng loạt xuất bản lên Facebook, TikTok, Instagram Reels, YouTube Shorts, Threads, Telegram vào đúng khung giờ vàng.
+      </div>
+      <div class="section-label">Lời bình (Voice-over)</div>
+      <div class="voice-content">
+        "Toàn bộ quy trình diễn ra trơn tru như một dây chuyền sản xuất tự động: Ngay khi phát hiện một chủ đề tiềm năng, đội ngũ thiết kế lập tức biến nó thành các bộ ảnh slide trực quan hoặc video ngắn sống động. Đội ngũ biên tập hoàn thiện bài viết, kiểm tra kỹ lưỡng và tối ưu định dạng. Và cuối cùng, hệ thống tự động lên lịch, phát hành đồng loạt lên tất cả các nền tảng vào đúng khung giờ vàng mà bạn không cần phải bấm đăng thủ công từng bài."
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <div class="scene-title">Phân Cảnh 4: Chỉ Huy Gọn Gàng Trên Chiếc Điện Thoại Cỏ</div>
+        <div class="scene-time">1:40 - 2:10</div>
+      </div>
+      <div class="section-label">Hình ảnh (Visual)</div>
+      <div class="visual-content">
+        Cảnh người dùng đi dạo hoặc ngồi cà phê ven đường, trên tay chỉ cầm một chiếc smartphone phổ thông. Không cần laptop. Màn hình hiển thị phòng chat Telegram: Thẻ duyệt bài mẫu xuất hiện, bấm 1 chạm vào nút "Duyệt Đăng" hoặc bật chế độ tự động cho team tự làm từ A-Z.
+      </div>
+      <div class="section-label">Lời bình (Voice-over)</div>
+      <div class="voice-content">
+        "Quan trọng nhất: Bạn hoàn toàn thoát khỏi bàn làm việc. Không cần bật máy tính cồng kềnh. Không cần mang theo laptop khi đi cà phê hay du lịch. Chỉ với một chiếc điện thoại di động thông thường, toàn bộ phòng ban nằm gọn trong tầm tay bạn qua một ứng dụng nhắn tin quen thuộc. Bạn muốn duyệt bài? Chỉ cần một chạm trên màn hình cảm ứng. Bạn bận việc cả ngày? Bật chế độ tự động — cả team sẽ tự chạy, tự kiểm soát chất lượng và xuất bản đều đặn không gián đoạn."
+      </div>
+    </div>
+
+    <div class="scene-card">
+      <div class="scene-header">
+        <div class="scene-title">Phân Cảnh 5: Cỗ Máy Không Ngủ 24/7 & Lời Kết</div>
+        <div class="scene-time">2:10 - 2:35</div>
+      </div>
+      <div class="section-label">Hình ảnh (Visual)</div>
+      <div class="visual-content">
+        Đồng hồ quay liên tục 24h. Các kênh nội dung vẫn đều đặn lên bài chất lượng cao lúc đêm muộn lẫn sáng sớm. Slogan kết thúc: "Hơn 20 AI Agent làm việc 24/7. Không nghỉ phép. Không trễ hẹn. Tự do sáng tạo — Làm chủ thời gian của bạn."
+      </div>
+      <div class="section-label">Lời bình (Voice-over)</div>
+      <div class="voice-content">
+        "Một đội ngũ hơn 20 nhân sự làm việc 24/7, không bao giờ kiệt sức, không nghỉ lễ, không than phiền. Giúp bạn duy trì hiện diện mạnh mẽ trên mọi mặt trận nội dung, trong khi bạn có thể hoàn toàn giải phóng thời gian cho những mục tiêu quan trọng hơn. Tương lai của sáng tạo nội dung không phải là làm việc nhiều hơn — mà là sở hữu một hệ thống thông minh hơn."
+      </div>
+    </div>
+
+    <h2 style="font-size: 20px; font-weight: 700; margin: 32px 0 16px; color: #fff;">Nguyên Liệu Hình Ảnh Đi Kèm (Assets)</h2>
+    <div class="gallery-grid">
+      <a href="assets/01_architecture_isometric.png" target="_blank" class="gallery-item">
+        <img src="assets/01_architecture_isometric.png" alt="Sơ đồ văn phòng 3D">
+        <span>01. Mô hình không gian 3D văn phòng Agent</span>
+      </a>
+      <a href="assets/02_architecture_pipeline.png" target="_blank" class="gallery-item">
+        <img src="assets/02_architecture_pipeline.png" alt="Dây chuyền sản xuất">
+        <span>02. Quy trình sản xuất tự động khép kín</span>
+      </a>
+      <a href="assets/03_slide_org_overview.png" target="_blank" class="gallery-item">
+        <img src="assets/03_slide_org_overview.png" alt="Cơ cấu nhân sự ảo">
+        <span>03. Slide giới thiệu các phòng ban nhân sự</span>
+      </a>
+      <a href="assets/05_creative_editorial.png" target="_blank" class="gallery-item">
+        <img src="assets/05_creative_editorial.png" alt="Phân xưởng sáng tạo">
+        <span>04. Chi tiết khối đồ họa, video & biên tập</span>
+      </a>
+      <a href="assets/06_gates_distribution.png" target="_blank" class="gallery-item">
+        <img src="assets/06_gates_distribution.png" alt="Phân phối đa nền tảng">
+        <span>05. Mạng lưới xuất bản 6 nền tảng xã hội</span>
+      </a>
+    </div>
+
+    <footer>
+      Autonomous Content Bureau • Kịch bản video intro chuẩn hóa cho người dùng đại chúng
+    </footer>
+  </div>
+</body>
+</html>
