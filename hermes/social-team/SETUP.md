@@ -94,3 +94,11 @@ Trong từng topic, gửi: `Bạn là ai, việc của bạn là gì, bạn dùn
 
 ## Cập nhật
 Khi file trên `BASE` đổi: tải lại SOUL.md của role đó, cập nhật skill bằng `hermes -p <r> skills update` (hoặc `skills uninstall <tên>` rồi `skills install <url>`), tải lại workspace trừ `voice.md` và `work/`.
+
+**Tài liệu campaign do Ông Chủ giao** (plan campaign `work/plan-c*.md`, ghi chú tham khảo `work/ref-*.md`) cũng nằm trên `BASE`. Tải về khi Ông Chủ báo có tài liệu mới; lệnh này chỉ ghi đè hai loại file đó, không đụng nháp, trả lời hay báo cáo của team:
+```bash
+cd ~/marketing-team/social
+curl -fsSL $BASE/manifest.txt | grep -E '^workspace/work/(plan-c|ref-)' | while read p; do
+  curl -fsSL "$BASE/$p" -o "${p#workspace/}"; done
+```
+Rồi nhắn Saitama tên file mới để giao việc.

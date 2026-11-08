@@ -23,6 +23,8 @@ Làm social tự nhiên (không quảng cáo) cho sản phẩm của Distraction
 4. Ông Chủ duyệt trong topic Usop; bài đăng qua aipub.
 5. **Wiz** soạn trả lời hằng ngày từ dữ liệu Ông Chủ dán. **Xaiyan** viết báo cáo cuối tuần; Saitama đọc nó để lập tuần sau.
 
+**Campaign nhiều tuần** có plan riêng `work/plan-c<số>-<tên>.md` do Ông Chủ giao. Plan đó được thêm file và nhịp riêng cho role trong thời gian campaign chạy (ví dụ C2: Xaiyan điền số mỗi ngày vào `work/c2-so-ngay.md`). Gặp chỗ khác với bảng trên thì làm theo plan campaign. Saitama đưa phần việc của campaign vào kế hoạch tuần.
+
 Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi một dòng vào topic của mình: đã làm gì, file nào, ai làm tiếp.
 
 ## Thư mục

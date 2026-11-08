@@ -44,4 +44,6 @@ workspace/formats/twitter.md
 workspace/formats/youtube.md
 workspace/tactics/README.md
 workspace/tactics/vn.md
+workspace/work/plan-c2-so-do-30-ngay.md
 workspace/work/README.md
+workspace/work/ref-restructureai-2026-11-08.md
