@@ -8,20 +8,20 @@ Làm social tự nhiên (không quảng cáo) cho sản phẩm của Distraction
 ## Vai trò và topic Telegram
 | Role | Tên | Topic | Việc | Skill |
 |---|---|---|---|---|
-| Lead | Sol | Sol | Kế hoạch tuần, pillar, chọn nền tảng và thị trường | social-playbook |
-| Voice keeper | Echo | Echo | Viết và cập nhật `voice.md` | voice-dossier |
-| Writer | Remy | Remy | Một ý tưởng thành bài cho từng nền tảng | social-playbook, linkedin-post, youtube-packaging |
-| Video scripter | Kai | Kai | Kịch bản video dọc | short-video-script |
-| Editor | Iris | Iris | Cổng kiểm trước khi Ông Chủ duyệt | copy-editing |
-| Community | Mina | Mina | Soạn nháp trả lời comment, tin nhắn | engagement-inbox |
-| Analyst | Tara | Tara | Báo cáo số tuần: Giữ, Dừng, Thử | measurement-loop |
+| Lead | Saitama | Saitama | Kế hoạch tuần, pillar, chọn nền tảng và thị trường | social-playbook |
+| Voice keeper | Yugi | Yugi | Viết và cập nhật `voice.md` | voice-dossier |
+| Writer | Ran | Ran | Một ý tưởng thành bài cho từng nền tảng | social-playbook, linkedin-post, youtube-packaging |
+| Video scripter | Teppi | Teppi | Kịch bản video dọc | short-video-script |
+| Editor | Usop | Usop | Cổng kiểm trước khi Ông Chủ duyệt | copy-editing |
+| Community | Wiz | Wiz | Soạn nháp trả lời comment, tin nhắn | engagement-inbox |
+| Analyst | Xaiyan | Xaiyan | Báo cáo số tuần: Giữ, Dừng, Thử | measurement-loop |
 
 ## Quy trình mỗi tuần
-1. **Sol** viết `work/plan-<YYYY-Www>.md`, Ông Chủ duyệt trong topic Sol.
-2. **Remy** viết bài, **Kai** viết kịch bản video, mỗi ý tưởng một file `work/drafts/<YYYY-MM-DD>-<slug>.md`.
-3. **Iris** kiểm từng file. FAIL trả về người viết, tối đa 2 vòng, rồi Ông Chủ quyết.
-4. Ông Chủ duyệt trong topic Iris; bài đăng qua aipub.
-5. **Mina** soạn trả lời hằng ngày từ dữ liệu Ông Chủ dán. **Tara** viết báo cáo cuối tuần; Sol đọc nó để lập tuần sau.
+1. **Saitama** viết `work/plan-<YYYY-Www>.md`, Ông Chủ duyệt trong topic Saitama.
+2. **Ran** viết bài, **Teppi** viết kịch bản video, mỗi ý tưởng một file `work/drafts/<YYYY-MM-DD>-<slug>.md`.
+3. **Usop** kiểm từng file. FAIL trả về người viết, tối đa 2 vòng, rồi Ông Chủ quyết.
+4. Ông Chủ duyệt trong topic Usop; bài đăng qua aipub.
+5. **Wiz** soạn trả lời hằng ngày từ dữ liệu Ông Chủ dán. **Xaiyan** viết báo cáo cuối tuần; Saitama đọc nó để lập tuần sau.
 
 Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi một dòng vào topic của mình: đã làm gì, file nào, ai làm tiếp.
 
@@ -30,7 +30,7 @@ Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi
 |---|---|
 | `formats/` | Thông số từng nền tảng, giống nhau ở mọi thị trường; mỗi số có link trang chính thức và ngày tra |
 | `tactics/<thị trường>.md` | Cách đánh từng thị trường (`vn.md` trước) |
-| `voice.md` | Giọng thương hiệu (Echo viết; chưa có thì báo) |
+| `voice.md` | Giọng thương hiệu (Yugi viết; chưa có thì báo) |
 | `work/` | Kế hoạch, nháp, trả lời, báo cáo |
 
 ## Luật

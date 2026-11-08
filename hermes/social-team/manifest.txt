@@ -1,10 +1,10 @@
-roles/echo/SOUL.md
-roles/iris/SOUL.md
-roles/kai/SOUL.md
-roles/mina/SOUL.md
-roles/remy/SOUL.md
-roles/sol/SOUL.md
-roles/tara/SOUL.md
+roles/ran/SOUL.md
+roles/saitama/SOUL.md
+roles/teppi/SOUL.md
+roles/usop/SOUL.md
+roles/wiz/SOUL.md
+roles/xaiyan/SOUL.md
+roles/yugi/SOUL.md
 SETUP.md
 skills/copy-editing/references/ai-tells.md
 skills/copy-editing/references/checklist.md
