@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>PM-Agent × aipub.social — Hồ sơ Chiến lược, Giá, Roadmap &amp; Đặc tả Sản phẩm (2026-11-10)</title>
+  <meta name="description" content="Báo cáo điều hành sản phẩm aipub.social do PM-Agent tổng hợp: Chẩn đoán chiến lược Rumelt, Kiểm toán giá 21/25, Lộ trình 90 ngày tại Việt Nam, Nhật ký quyết định và 2 bản đặc tả intent/.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+  <style>
+    :root {
+      --paper: #F1F4F2;
+      --grid: #E2E8E4;
+      --card: #FFFFFF;
+      --soft: #E8EEEA;
+      --ink: #13201B;
+      --muted: #55665F;
+      --line: #CFDAD4;
+      --jade: #0E7A62;
+      --jade-soft: #DDF0E9;
+      --seal: #C8372D;
+      --seal-soft: #FBE4E0;
+      --amber: #B45309;
+      --amber-soft: #FEF3C7;
+      --col-odd: #F8FAF9;
+      --col-even: #FFFFFF;
+      --th-bg: #E5ECE8;
+      --display: "Bricolage Grotesque", "Be Vietnam Pro", system-ui, sans-serif;
+      --body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #0E1513;
+        --grid: #16201D;
+        --card: #15201C;
+        --soft: #1C2924;
+        --ink: #E6EDEA;
+        --muted: #98AAA2;
+        --line: #283631;
+        --jade: #45C2A2;
+        --jade-soft: #15382F;
+        --seal: #EF6654;
+        --seal-soft: #3B1F1C;
+        --amber: #F59E0B;
+        --amber-soft: #382810;
+        --col-odd: #182420;
+        --col-even: #141E1B;
+        --th-bg: #1E2D28;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --paper: #0E1513;
+      --grid: #16201D;
+      --card: #15201C;
+      --soft: #1C2924;
+      --ink: #E6EDEA;
+      --muted: #98AAA2;
+      --line: #283631;
+      --jade: #45C2A2;
+      --jade-soft: #15382F;
+      --seal: #EF6654;
+      --seal-soft: #3B1F1C;
+      --amber: #F59E0B;
+      --amber-soft: #382810;
+      --col-odd: #182420;
+      --col-even: #141E1B;
+      --th-bg: #1E2D28;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 15.5px/1.65 var(--body);
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    a { color: var(--jade); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+    h1, h2, h3, h4 { font-family: var(--display); margin: 0; letter-spacing: -0.015em; text-wrap: balance; }
+    p { margin: 0 0 0.9em; max-width: 78ch; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { margin: 0.4em 0 1em; padding-left: 1.35em; }
+    li { margin: 0.35em 0; max-width: 78ch; }
+    code {
+      font: 500 0.86em var(--mono);
+      background: var(--soft);
+      padding: 0.14em 0.42em;
+      border-radius: 5px;
+      border: 1px solid var(--line);
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Sticky Topbar */
+    header.topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding-block: 11px;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .back-link {
+      font: 600 0.84rem/1 var(--body);
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    .back-link:hover { color: var(--ink); border-color: var(--ink); }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: var(--ink);
+      color: var(--paper);
+      display: grid;
+      place-items: center;
+      font: 800 0.85rem/1 var(--display);
+    }
+    .brand b { font: 800 1.15rem/1 var(--display); }
+    .brand span { color: var(--muted); font-weight: 600; font-size: 0.92rem; }
+    nav.sec-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    nav.sec-nav::-webkit-scrollbar { display: none; }
+    nav.sec-nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.83rem;
+      font-weight: 600;
+      padding: 6px 9px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+    nav.sec-nav a:hover { color: var(--ink); background: var(--soft); }
+    .theme-btn {
+      font: 700 0.76rem/1 var(--mono);
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    @media (max-width: 900px) {
+      nav.sec-nav { display: none; }
+    }
+
+    /* Hero Banner */
+    .hero {
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+      gap: 28px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: 700 0.72rem/1 var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--jade);
+      background: var(--jade-soft);
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(1.95rem, 3.8vw, 3rem);
+      line-height: 1.08;
+      font-weight: 800;
+    }
+    .hero h1 em { font-style: normal; color: var(--seal); }
+    .hero-lead {
+      margin-top: 14px;
+      font-size: 1.03rem;
+      color: var(--muted);
+    }
+    .locked-quote {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--jade);
+      border-radius: 12px;
+      font-size: 0.95rem;
+    }
+    .locked-quote strong { color: var(--ink); }
+
+    .stamp-card {
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+      position: relative;
+      display: grid;
+      gap: 12px;
+    }
+    .seal-badge {
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font: 800 0.76rem/1 var(--display);
+      letter-spacing: 0.08em;
+      color: var(--seal);
+      border: 2.5px double var(--seal);
+      border-radius: 7px;
+      padding: 5px 9px;
+      transform: rotate(-3deg);
+      background: var(--seal-soft);
+    }
+    .meta-list {
+      display: grid;
+      gap: 7px;
+      font-size: 0.87rem;
+    }
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .meta-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .meta-row span:first-child { color: var(--muted); }
+    .meta-row b { font-family: var(--mono); font-size: 0.82rem; text-align: right; }
+
+    /* KPI Strip */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 16px 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .kpi .k-label {
+      font: 700 0.7rem/1.2 var(--mono);
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .kpi .k-val {
+      font: 800 1.75rem/1.1 var(--display);
+      color: var(--ink);
+    }
+    .kpi .k-val.jade { color: var(--jade); }
+    .kpi .k-val.seal { color: var(--seal); }
+    .kpi .k-sub { font-size: 0.84rem; color: var(--muted); }
+
+    /* Sections */
+    section.sec {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+    .sec-tag {
+      font: 700 0.72rem/1 var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .sec-head h2 {
+      font-size: clamp(1.45rem, 2.6vw, 2rem);
+      font-weight: 800;
+    }
+    .skill-pill {
+      font: 700 0.74rem/1 var(--mono);
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+
+    /* Cards & Grids */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    @media (max-width: 860px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font: 700 0.68rem/1 var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+    .badge.jade { background: var(--jade-soft); color: var(--jade); }
+    .badge.seal { background: var(--seal-soft); color: var(--seal); }
+    .badge.amber { background: var(--amber-soft); color: var(--amber); }
+    .badge.neutral { background: var(--soft); color: var(--muted); }
+
+    /* Callouts */
+    .callout {
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 16px 0;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+    .callout.crux {
+      border-left: 4px solid var(--seal);
+      background: color-mix(in srgb, var(--seal-soft) 45%, var(--card));
+    }
+    .callout.good {
+      border-left: 4px solid var(--jade);
+      background: color-mix(in srgb, var(--jade-soft) 45%, var(--card));
+    }
+    .callout-title {
+      font: 700 0.82rem/1.2 var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* Responsive Tables (matches reports-site .tw convention) */
+    .tw {
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--card);
+      -webkit-overflow-scrolling: touch;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      padding: 11px 13px;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+    th:last-child, td:last-child { border-right: none; }
+    tr:last-child td { border-bottom: none; }
+    th {
+      background: var(--th-bg);
+      font-weight: 700;
+      font-size: 0.83rem;
+    }
+    td:nth-child(odd) { background: var(--col-odd); }
+    td:nth-child(even) { background: var(--col-even); }
+
+    /* Score Bars */
+    .score-bar {
+      width: 88px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--soft);
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .score-bar i {
+      display: block;
+      height: 100%;
+      background: var(--jade);
+      border-radius: 99px;
+    }
+    .score-bar.warn i { background: var(--amber); }
+
+    /* Roadmap Columns */
+    .rm-col {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .rm-col.now { border-top: 4px solid var(--seal); }
+    .rm-col.next { border-top: 4px solid var(--jade); }
+    .rm-col.later { border-top: 4px solid var(--muted); }
+    .rm-item {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: grid;
+      gap: 6px;
+      font-size: 0.89rem;
+    }
+    .rm-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .rm-item b { font-size: 0.94rem; }
+
+    /* Spec Tabs */
+    .tabs-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .tab-btn {
+      font: 700 0.88rem/1.2 var(--body);
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: var(--card);
+      color: var(--muted);
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Breadboard Flow */
+    .breadboard {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 14px 0 18px;
+    }
+    @media (max-width: 820px) {
+      .breadboard { grid-template-columns: 1fr; }
+    }
+    .bb-step {
+      background: var(--paper);
+      border: 1.5px dashed var(--line);
+      border-radius: 13px;
+      padding: 14px;
+      font-size: 0.88rem;
+    }
+    .bb-step .step-no {
+      font: 700 0.7rem/1 var(--mono);
+      color: var(--jade);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .bb-step h4 { font-size: 0.98rem; margin-bottom: 6px; }
+
+    /* UI Mockup inside Spec 2 */
+    .ui-preview {
+      margin-top: 14px;
+      background: var(--paper);
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+    .ui-statusbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .online-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font: 700 0.74rem/1 var(--mono);
+      color: var(--jade);
+      background: var(--jade-soft);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .online-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--jade);
+    }
+    .recovery-box {
+      background: var(--card);
+      border: 1.5px solid var(--amber);
+      border-radius: 12px;
+      padding: 13px 15px;
+      display: grid;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+    .mock-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .mock-btn {
+      font: 600 0.8rem/1 var(--body);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .mock-btn.pri {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    footer {
+      padding: 32px 0 60px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .foot-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand-row">
+      <a class="back-link" href="../index.html">← Tất cả báo cáo</a>
+      <a class="brand" href="#top">
+        <span class="brand-mark">PM</span>
+        <b>aipub<span>.social</span></b>
+      </a>
+    </div>
+    <nav class="sec-nav" aria-label="Mục lục báo cáo">
+      <a href="#chien-luoc">1. Chiến lược &amp; Crux</a>
+      <a href="#khach-hang">2. ICP &amp; Đối thủ</a>
+      <a href="#bang-gia">3. Kiểm toán Giá</a>
+      <a href="#roadmap">4. Roadmap &amp; Rủi ro</a>
+      <a href="#quyet-dinh">5. Quyết định &amp; Red-Team</a>
+      <a href="#dac-ta">6. Đặc tả intent/</a>
+      <a href="#eval">7. Chỉ số &amp; AI Eval</a>
+    </nav>
+    <button class="theme-btn" id="theme-toggle" type="button">Giao diện Sáng/Tối</button>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">PM-Agent Operating System · Báo cáo thực chiến</span>
+        <h1>Hồ sơ Điều hành Sản phẩm <em>aipub.social</em> — Giai đoạn Mở màn Việt Nam</h1>
+        <p class="hero-lead">
+          Tổng hợp và kiểm định toàn diện dự án <strong>aipub.social</strong> (nhánh agent đăng bài thuộc <code>superagent.social</code> · Distraction Foundry) bằng bộ 10 kỹ năng của <strong>PM-Agent</strong>: từ chẩn đoán điểm nghẽn chiến lược, kiểm toán bảng giá, lộ trình 90 ngày tới 2 bản đặc tả <code>intent/</code> sẵn sàng trình duyệt.
+        </p>
+        <div class="locked-quote">
+          <strong>Thông điệp cốt lõi đã khóa (Owner, 2026-11-07):</strong><br>
+          <em>“Đăng bài nhớ giọng thương hiệu, viết lại cho từng nền tảng và chỉ đăng khi bạn bấm duyệt.”</em>
+        </div>
+      </div>
+
+      <aside class="stamp-card" aria-label="Thông tin kiểm định">
+        <span class="seal-badge">✓ PM-AGENT VALIDATED · 0 ERRORS</span>
+        <div class="meta-list">
+          <div class="meta-row"><span>Ngày xuất bản</span><b>2026-11-10</b></div>
+          <div class="meta-row"><span>Phạm vi khóa 90 ngày</span><b>Việt Nam (11/2026 – 02/2027)</b></div>
+          <div class="meta-row"><span>Mô hình bài đăng</span><b>Không giới hạn ở mọi gói</b></div>
+          <div class="meta-row"><span>Gói tự phục vụ</span><b>$0 · $8 · $40 (+$10/brand)</b></div>
+          <div class="meta-row"><span>Gói làm hộ 1-1</span><b>Premium (DF Partner)</b></div>
+          <div class="meta-row"><span> Nguồn đối chiếu</span><b>20 hãng SMM · 16 YC · Giá VN</b></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <span class="k-label">Điểm Kiểm toán Giá (/pm-pricing)</span>
+        <span class="k-val jade">21 / 25</span>
+        <span class="k-sub">Xóa hẳn nỗi sợ hết credit &amp; phí phạt theo đầu người</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">North Star Metric</span>
+        <span class="k-val">WAPP</span>
+        <span class="k-sub">Số bài đúng giọng được bấm duyệt &amp; lên sóng mỗi tuần</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Chốt chặn trước giờ G</span>
+        <span class="k-val seal">3 Hạng mục P0</span>
+        <span class="k-sub">Nối phễu #join · Đối chứng Reach ≥80% · Luồng Đăng bù</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Bản nháp Đặc tả (bto-sdlc)</span>
+        <span class="k-val">2 file intent/</span>
+        <span class="k-sub">Appetite 3 ngày &amp; 1 tuần · Trạng thái <code>draft</code> chờ duyệt</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. STRATEGY & THE CRUX -->
+  <section class="sec" id="chien-luoc">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 01 · Chẩn đoán Chiến lược, Hào kinh tế &amp; Ranh giới từ chối</span>
+        <h2>Chẩn đoán Rumelt &amp; Điểm nghẽn Quyết định (The Crux)</h2>
+      </div>
+      <span class="skill-pill">/pm-strategy · Rumelt + Helmer 7 Powers</span>
+    </div>
+
+    <p>
+      Dữ liệu kiểm chứng trên <strong>20 thương hiệu quản lý mạng xã hội đầu ngành</strong> và <strong>16 công ty Y Combinator</strong> chỉ ra một khoảng trống cấu trúc rõ rệt: nhóm phần mềm tính phí theo đầu người (Sprout Social, Hootsuite, Agorapulse) thu tới <code>$237–$897/tháng</code> cho đội 3 người quản lý 10 hồ sơ, trong khi nhóm công cụ AI giá rẻ lại vướng hai phàn nàn lặp đi lặp lại là <strong>viết văn mẫu sai giọng thương hiệu ("AI slop")</strong> và <strong>đồng hồ đếm credit gây lo lắng</strong> (<a href="../research/deepdive-social-media-management-2026-11-02.html">báo cáo 20 brand SMM</a>, <a href="../research/deep-community-voice.html">tiếng nói cộng đồng</a>).
+    </p>
+    <p>
+      Tại Việt Nam, chủ shop SME và agency nhỏ đang chi <code>3–4 triệu VND/tháng</code> cho CTV sinh viên hoặc <code>9–12 triệu VND/tháng</code> cho nhân sự Content in-house chỉ để duy trì bài đều trên Facebook, TikTok, Zalo OA (<a href="../research/vn-content-spend-2026-11-01.html">khảo sát chi tiêu content VN</a>). <code>aipub.social</code> đã chốt được định vị và khung giá đánh thẳng vào khoảng trống này, nhưng đối mặt với <strong>3 điểm nghẽn sống còn (The Crux)</strong> phải giải quyết dứt điểm trong 30 ngày đầu:
+    </p>
+
+    <div class="callout crux">
+      <span class="callout-title">⚡ THE CRUX — 3 Rào cản quyết định thành bại khi mở màn tại Việt Nam</span>
+      <ol style="margin-bottom:0">
+        <li><strong>Đứt phễu thu lead &amp; chưa gắn hàng rào theo dõi chi phí AI gói Free:</strong> Kiểm tra mã nguồn trang đích hiện tại cho thấy biểu mẫu <code>#join</code> mới dừng ở bước kiểm tra cú pháp trên trình duyệt, chưa nối backend lưu trữ/gửi email xác nhận qua Resend, chưa gắn dòng đồng ý Nghị định 13/2023/NĐ-CP và chưa có cảnh báo chi phí LLM theo từng tài khoản Free không giới hạn bài đăng.</li>
+        <li><strong>Rào cản niềm tin về tương tác tự nhiên (Reach):</strong> Sợ giảm tương tác là một trong 5 nỗi lo lớn nhất của người dùng công cụ đăng bài. Trước khi đi chào hàng Agency, bắt buộc hoàn tất phép thử đối chứng cặp (<code>đăng qua aipub</code> so với <code>đăng tay</code> trên cùng kênh, cùng khung giờ đạt trung vị <code>≥ 80%</code> reach sau 48h).</li>
+        <li><strong>Rủi ro lỡ lịch hẹn giờ khi máy tính người dùng đang tắt:</strong> Gói Free, Pro và Business yêu cầu máy tính của người dùng đang bật lúc đến giờ đăng (khác với gói <code>DF Partner</code> chạy server riêng). Nếu người dùng gập laptop giờ nghỉ trưa/tối mà không có đèn báo trực tuyến và hộp thoại <em>Đăng bù 1 chạm</em> lúc mở máy lại, họ sẽ lầm tưởng công cụ bị lỗi hụt bài.</li>
+      </ol>
+    </div>
+
+    <div class="grid-2" style="margin-top:18px">
+      <div class="card">
+        <h3>Kiểm định Hào kinh tế <span class="badge jade">Helmer 7 Powers</span></h3>
+        <ul>
+          <li><strong>Ngắn hạn (0–6 tháng) — Counter-Positioning:</strong> Phá thế kẹp của đối thủ bằng hai cam kết ngược dòng: (1) <strong>Không đếm credit / không giới hạn bài đăng</strong> ở mọi gói, và (2) <strong>Không phạt tiền theo số người dùng</strong> ở gói Business <code>$40/tháng</code>. Các hãng lớn đang sống bằng doanh thu per-seat không thể bắt chước nếu không tự cắt doanh thu cốt lõi.</li>
+          <li><strong>Trung &amp; dài hạn (6–18 tháng) — Switching Costs (Chi phí chuyển đổi):</strong> Tích lũy <em>Hồ sơ Giọng Thương Hiệu Sống</em> cho từng thương hiệu Việt Nam (xưng hô <em>“tụi mình – mọi người”</em>, danh sách từ cấm như <em>“siêu phẩm / giá sốc”</em>, cấu trúc câu riêng từng nền tảng, lịch sử các bài đã được chủ quán sửa và bấm duyệt). Dùng càng lâu AI viết càng giống chủ quán; chuyển sang công cụ khác là mất trắng bộ nhớ này.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>5 Ranh giới Từ chối <span class="badge seal">Explicit Non-Goals</span></h3>
+        <ol>
+          <li><strong>Không mở sang quốc gia APAC khác trước <code>2027-02-07</code>:</strong> Dồn 100% nguồn lực cho tiếng Việt và thói quen người dùng Việt Nam trong 90 ngày đầu.</li>
+          <li><strong>Không bao giờ tự đăng khi chưa bấm duyệt:</strong> Giữ nguyên tắc bất khả xâm phạm <em>“bài chưa duyệt thì không lên”</em> để triệt tiêu rủi ro 5% bài lỗi làm hỏng thương hiệu.</li>
+          <li><strong>Không đánh tráo kênh khác tệp người đọc:</strong> Tuyệt đối không thay thế <code>Twitter</code> (logo X) bằng Google Business hay gộp chung các kênh khác bản chất độc giả.</li>
+          <li><strong>Không đồng hồ credit, không giá lẻ tâm lý (<code>99k / 249k / 990k</code>):</strong> Niêm yết USD minh bạch, quy đổi ra VND theo đúng tỉ giá thực trong ngày tại trang thanh toán.</li>
+          <li><strong>Không ôm đồm Hộp thư chat đa kênh (Social Inbox), Paid Ads hay BI 20 biểu đồ trong v1:</strong> Giữ sản phẩm sắc gọn đúng vai trò Agent đăng bài nhớ giọng thương hiệu.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ICP & COMPETITIVE LANDSCAPE -->
+  <section class="sec" id="khach-hang">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 02 · Chân dung Khách hàng Mục tiêu &amp; Bản đồ Cạnh tranh</span>
+        <h2>Ba Phân khúc Khách hàng Việt Nam &amp; So sánh Before / After</h2>
+      </div>
+      <span class="skill-pill">/pm-discovery · /pm-market-intel</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>ICP-1 · Chủ shop &amp; SME Việt <span class="badge jade">Free → Pro $8</span></h3>
+        <p class="muted" style="color:var(--muted);font-size:0.88rem">F&amp;B, thời trang, mỹ phẩm, nha khoa/spa, khóa học (1–10 nhân sự)</p>
+        <ul>
+          <li><strong>Hiện trạng (Before):</strong> Tự thức khuya copy-paste sửa bài cho từng kênh hoặc thuê CTV sinh viên <code>3–4 triệu VND/tháng</code> (lẻ <code>80k–300k VND/bài</code>) nhưng giọng viết vẫn trồi sụt.</li>
+          <li><strong>Giải pháp (After):</strong> Lên Pro <code>$8/tháng</code> (~<code>211,700 VND</code> — <em>“chỉ bằng 2 ly trà sữa”</em>), phủ 5 kênh (FB cá nhân, Page, Group, TikTok, Zalo OA), đổi lịch bất cứ lúc nào, tiết kiệm <strong>&gt;90% chi phí</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>ICP-2 · Boutique Agency <span class="badge amber">Business $40 + $10</span></h3>
+        <p class="muted" style="color:var(--muted);font-size:0.88rem">Agency social/creative &amp; Freelance Manager quản lý 3–15 thương hiệu</p>
+        <ul>
+          <li><strong>Hiện trạng (Before):</strong> Trả lương nhân viên Content <code>9–12 triệu VND/tháng</code> (TB <code>11.3M</code> trên TopCV), gửi file bảng tính qua lại chờ khách duyệt, đăng xong phải canh thả link mua hàng dưới bình luận thủ công.</li>
+          <li><strong>Giải pháp (After):</strong> Đủ 10 kênh, team quản lý chung, duyệt 1 chạm qua <code>Telegram / Discord</code>, tự bình luận kèm link dưới bài. Agency 10 brand chỉ tốn <code>$40 + 9×$10 = $130/tháng</code> (~<code>344k VND/brand</code>).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>ICP-3 · Doanh nghiệp Ủy thác <span class="badge neutral">DF Partner</span></h3>
+        <p class="muted" style="color:var(--muted);font-size:0.88rem">Chủ doanh nghiệp cần bàn giao trọn gói, không muốn bật máy tính</p>
+        <ul>
+          <li><strong>Hiện trạng (Before):</strong> Thuê gói chăm sóc đa kênh của agency truyền thống <code>15–50 triệu VND/tháng</code> nhưng quy trình duyệt chậm và thiếu đồng nhất.</li>
+          <li><strong>Giải pháp (After):</strong> Chuyển thẳng sang cột thứ 4 trên bảng giá — <strong>DF Partner</strong>: chạy trên server riêng 24/7 không cần bật máy, hỗ trợ 1-1, đội ngũ Distraction Foundry trực tiếp vận hành.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px;font-size:1.15rem">Bản đồ đối chiếu 4 nhóm giải pháp trên thị trường (Số liệu đã xác minh nguồn)</h3>
+    <div class="tw">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:18%">Nhóm giải pháp</th>
+            <th style="width:20%">Đại diện &amp; Quy mô xác minh</th>
+            <th style="width:18%">Chi phí tham chiếu</th>
+            <th style="width:22%">Điểm nghẽn người dùng phàn nàn</th>
+            <th style="width:22%">Lợi thế đối đầu của aipub.social</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Phần mềm ngoại tính theo đầu người (Per-seat)</strong></td>
+            <td>Sprout Social (<code>$457.5M</code> FY25), Hootsuite, Agorapulse [A]</td>
+            <td><code>$237 – $897/tháng</code> cho 3 người, 10 hồ sơ [A]</td>
+            <td>Đắt gấp 6–22 lần khả năng chi trả của SME Việt; phàn nàn gia hạn/hoàn tiền (Hootsuite 1.3/5 Trustpilot); không có Zalo OA &amp; Lemon8.</td>
+            <td>Gói Business <code>$40/tháng</code> mở sẵn làm việc nhóm, đủ 10 kênh (có Zalo OA, Lemon8), không thu tiền theo ghế nhân sự.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Công cụ đặt lịch phẳng tăng trưởng nhanh</strong></td>
+            <td>Postiz (<code>$350,207</code> MRR Stripe), Podawaa (<code>$60,980</code> MRR), Post Bridge (<code>$49,528</code> MRR), Buffer [A]</td>
+            <td>Trung vị <code>$66/tháng</code> cho 10 hồ sơ; gói cơ bản <code>$0–$30/tháng</code> [A]</td>
+            <td>Thiên về đặt lịch thuần túy; AI đi kèm viết chung chung một màu; cài đặt phức tạp hoặc thiếu luồng duyệt nhanh trên Telegram/Discord.</td>
+            <td>Đi từ gốc <em>nhớ giọng thương hiệu tiếng Việt</em> + tự viết lại riêng từng kênh + tự bình luận gắn link dưới bài.</td>
+          </tr>
+          <tr>
+            <td><strong>3. AI Marketing Agents thế hệ mới</strong></td>
+            <td>Sintra, Marky (<code>$22,351</code> MRR Stripe), Blaze, Holo, Native (YC Fall 2026) [A/B]</td>
+            <td><code>$29 – $99+/tháng</code> (nhiều bên áp trần credit/tác vụ) [A]</td>
+            <td>Bị phàn nàn văn mẫu AI phải sửa lại nhiều, phải nhắc lại ngữ cảnh doanh nghiệp mỗi lần, và căng thẳng vì sợ cạn credit.</td>
+            <td><strong>Không giới hạn số bài</strong> ở mọi gói; học giọng trực tiếp từ các kênh cũ của khách ngay bước đăng ký 3 thông tin.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Thuê nhân sự / CTV thủ công tại VN</strong></td>
+            <td>CTV sinh viên, Freelancer lẻ, Nhân viên Content, Agency nhỏ [A]</td>
+            <td>CTV <code>3–4M VND</code>; NV <code>9–12M VND</code>; Agency cơ bản <code>3.5–12M VND/tháng</code> [A]</td>
+            <td>Chi phí cố định cao hàng tháng; nghỉ việc là đứt mạch giọng viết của quán; mất thời gian đốc thúc duyệt bài mỗi ngày.</td>
+            <td>Pro <code>$8</code> (~<code>211.7k VND</code>) rẻ bằng 1–2 bài viết lẻ; chủ quán giữ quyền bấm duyệt cuối cùng trong 30 giây.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 3. PRICING & PACKAGING AUDIT -->
+  <section class="sec" id="bang-gia">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 03 · Kiểm toán Đóng gói, Định giá &amp; Kinh tế Đơn vị AI</span>
+        <h2>Chấm điểm Bảng giá hiện tại: 21 / 25 điểm (Mức Mạnh)</h2>
+      </div>
+      <span class="skill-pill">/pm-pricing · 5-Criterion Rubric</span>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:23%">Tiêu chí kiểm định</th>
+            <th style="width:15%">Điểm số</th>
+            <th style="width:62%">Phân tích thực chứng &amp; Khuyến nghị bảo vệ biên lợi nhuận</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Thước đo giá trị (Value Metric)</strong></td>
+            <td><strong>5 / 5</strong> <span class="score-bar"><i style="width:100%"></i></span></td>
+            <td>Định giá theo <strong>độ rộng kênh (3 → 5 → 10 kênh)</strong> và <strong>cấp độ vận hành (cá nhân → quản lý lịch → team &amp; đa thương hiệu)</strong>, hoàn toàn không đếm bài hay đếm credit. Khớp 100% với tâm lý ghét đồng hồ credit của người mua.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Độ phân tách giữa các gói</strong></td>
+            <td><strong>4 / 5</strong> <span class="score-bar"><i style="width:80%"></i></span></td>
+            <td>Lộ trình nâng cấp rất tự nhiên: Free thử giọng thật → Pro (<code>$8</code>) mở <code>Facebook Group</code> + <code>Zalo OA</code> + lịch đăng → Business (<code>$40</code>) mở đủ 10 kênh + auto-comment link + duyệt Telegram/Discord + <code>$10/brand</code>. <em>Điểm cần theo dõi:</em> đặt <code>YouTube</code> (62.1M người dùng VN) ở gói <code>$40</code> có thể tạo rào cản cho creator nhỏ ở gói <code>$8</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Bằng chứng sẵn sàng chi trả</strong></td>
+            <td><strong>4 / 5</strong> <span class="score-bar"><i style="width:80%"></i></span></td>
+            <td>Neo giá Before/After rất đắt giá tại Việt Nam: <code>$8/tháng</code> (~<code>211,700 VND</code> = 2 ly trà sữa = 1–2 bài thuê viết lẻ) và <code>$40/tháng</code> (~<code>1,058,520 VND</code> = 1/3 chi phí CTV sinh viên). Sẽ đạt 5/5 ngay khi có số chuyển đổi thực tế từ 100 tài khoản đầu tiên.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Hàng rào Chi phí AI (AI COGS)</strong></td>
+            <td><strong>3 / 5</strong> <span class="score-bar warn"><i style="width:60%"></i></span></td>
+            <td>Chính sách <strong>không giới hạn số bài ở cả gói Free (<code>$0</code>)</strong> là nam châm hút người dùng cực mạnh, nhưng để ngỏ rủi ro chi phí LLM nếu có tài khoản gọi tạo lại hàng trăm bản nháp/ngày. <strong>Hành động bắt buộc:</strong> gắn bộ đếm chi phí AI theo từng workspace ngay từ ngày 1, báo động nội bộ cho Owner nếu vượt <code>$0.60/tháng</code> ở Free (tuyệt đối không tự ý cắt tính năng khi chưa có lệnh Owner).</td>
+          </tr>
+          <tr>
+            <td><strong>5. Minh bạch Thanh toán &amp; Niềm tin</strong></td>
+            <td><strong>5 / 5</strong> <span class="score-bar"><i style="width:100%"></i></span></td>
+            <td>Đối lập hoàn toàn với 11/20 đối thủ lớn bị phàn nàn về hóa đơn: công khai giá USD, quy đổi VND sát tỉ giá thực trong ngày, không bẫy giá lẻ <code>99k/249k</code>, và ghi thẳng điều kiện bật máy tính ngay dưới bảng giá.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout good">
+      <span class="callout-title">💡 Điểm nhấn đóng gói cho đội Kinh doanh Agency (Gói Business $40 + $10/brand)</span>
+      <p>
+        Khi tiếp cận các Boutique Agency tại TP.HCM và Hà Nội, hãy đặt trực tiếp phép tính: <strong>Quản lý 5 thương hiệu khách hàng = <code>$80/tháng</code> (~2.12 triệu VND) · Quản lý 10 thương hiệu = <code>$130/tháng</code> (~3.44 triệu VND, tức chỉ ~344,000 VND/brand/tháng)</strong> — có sẵn duyệt bài qua Telegram/Discord cho khách và tự động bình luận gắn link bán hàng, rẻ hơn <strong>3 đến 7 lần</strong> phần mềm ngoại tính tiền theo đầu người.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. PRIORITIZED ROADMAP & HYPOTHESES -->
+  <section class="sec" id="roadmap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 04 · Lộ trình Đầu ra 90 Ngày &amp; Sổ cái Kiểm định Giả thuyết</span>
+        <h2>Lộ trình Now / Next / Later (Gắn thang điểm bằng chứng Itamar Gilad)</h2>
+      </div>
+      <span class="skill-pill">/pm-prioritize · Evidence-Capped Confidence</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="rm-col now">
+        <div>
+          <span class="badge seal">NOW · Tuần 1 – 2</span>
+          <h3 style="margin-top:8px">Khóa Phễu &amp; Bằng chứng Gốc</h3>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>N1. Nối phễu #join + NĐ 13 + Đọc giọng nháp</b><span class="badge jade">5.0 / 10</span></div>
+          <span>Appetite: <code>3 ngày</code> · Nối Resend lưu 100% lead, thêm ô đồng ý Nghị định 13/2023/NĐ-CP, trả bản đọc vị giọng mẫu trong 5 phút trước khi mở DNS <code>aipub.social</code>.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>N2. Đối chứng Reach 20 cặp bài &amp; Bộ Eval 50 bài</b><span class="badge amber">3.5 / 10</span></div>
+          <span>Appetite: <code>2 tuần</code> · Đo trung vị reach 48h <code>đăng qua aipub</code> so với <code>đăng tay</code> (ngưỡng đạt <code>≥80%</code>) + vượt ngưỡng <code>≥45/50 PASS</code> giọng tiếng Việt.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>N3. Telemetry AI COGS &amp; Bộ đếm Umami UTM</b><span class="badge jade">6.0 / 10</span></div>
+          <span>Appetite: <code>2 ngày</code> · Theo dõi chi phí LLM trên từng workspace Free/Pro và đo chuyển đổi thực từ chiến dịch <em>Sổ đỏ 30 ngày</em>.</span>
+        </div>
+      </div>
+
+      <div class="rm-col next">
+        <div>
+          <span class="badge jade">NEXT · Tuần 3 – 6</span>
+          <h3 style="margin-top:8px">Kích hoạt, Giữ chân &amp; Thu tiền</h3>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>X1. Đèn báo “Máy đang trực” &amp; Đăng bù 1 chạm</b><span class="badge jade">4.5 / 10</span></div>
+          <span>Appetite: <code>1 tuần</code> · Chặn đứt gãy trải nghiệm khi khách gập máy tính lúc hẹn giờ đăng; giữ tỷ lệ lỡ lịch không khôi phục <code>≤5%</code>.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>X2. Cổng thanh toán VND tỉ giá ngày ($8 / $40)</b><span class="badge jade">5.0 / 10</span></div>
+          <span>Appetite: <code>1 tuần</code> · Quy đổi USD → VND minh bạch đúng tỉ giá trong ngày, hóa đơn rõ ràng, hủy gói 1 chạm không giam thẻ.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>X3. Phỏng vấn Mom Test 10 khách đầu tiên</b><span class="badge amber">4.0 / 10</span></div>
+          <span>Appetite: <code>1 tuần</code> · Lấp khoảng trống 0 phỏng vấn trực tiếp hiện tại; kiểm chứng nhu cầu <code>YouTube</code> ở gói Pro so với Business.</span>
+        </div>
+      </div>
+
+      <div class="rm-col later">
+        <div>
+          <span class="badge neutral">LATER · Tháng 2 – 3</span>
+          <h3 style="margin-top:8px">Mở rộng Agency &amp; Hào Giọng Viết</h3>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>L1. Duyệt 1 chạm Telegram/Discord &amp; Auto-comment link</b><span class="badge amber">3.0 / 10</span></div>
+          <span>Appetite: <code>2 tuần</code> · Vũ khí chốt đơn gói Business <code>$40 + $10/brand</code> cho các Boutique Agency Việt Nam.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>L2. Hồ sơ Giọng Sống (Tự học từ thao tác sửa bài)</b><span class="badge neutral">2.5 / 10</span></div>
+          <span>Appetite: <code>2 tuần</code> · Tự ghi nhớ các từ chủ shop xóa/sửa trước khi bấm duyệt để kéo tỷ lệ sửa nặng xuống <code>&lt;15%</code>.</span>
+        </div>
+        <div class="rm-item">
+          <div class="rm-item-top"><b>L3. Cổng xét duyệt APAC (Sau 02/2027)</b><span class="badge neutral">1.0 / 10</span></div>
+          <span>Chỉ mở sang nước thứ 2 sau ngày <code>2027-02-07</code> nếu tỷ lệ giữ chân tuần 4 tại Việt Nam đạt <code>≥40%</code>.</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px;font-size:1.15rem">Sổ cái 5 Giả thuyết Rủi ro &amp; Ngưỡng Bác bỏ (Kill Criteria)</h3>
+    <div class="tw">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:14%">Mã &amp; Nhóm rủi ro</th>
+            <th style="width:32%">Giả thuyết cần chứng minh</th>
+            <th style="width:28%">Ngưỡng bác bỏ / Đảo chiều (Kill Criterion)</th>
+            <th style="width:26%">Phép thử rẻ nhất</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>H-V1</code><br><strong>Value</strong></td>
+            <td>Chủ shop SME &amp; Agency VN dùng đều hàng tuần và nâng cấp trả phí nhờ <em>nhớ giọng + bấm duyệt mới đăng</em>.</td>
+            <td>Sau 100 đăng ký hợp lệ đầu tiên: <code>&lt;20%</code> duyệt đủ 3 bài trong 7 ngày hoặc <code>&lt;3%</code> lên gói trả phí sau 30 ngày.</td>
+            <td>Trả ngay hồ sơ giọng nháp từ kênh thật của khách trong email đăng ký đầu tiên.</td>
+          </tr>
+          <tr>
+            <td><code>H-U1</code><br><strong>Usability</strong></td>
+            <td>Đèn báo <em>Máy đang trực</em> + hộp thoại <em>Đăng bù 1 chạm</em> giải quyết êm điều kiện phải bật máy tính lúc đến giờ đăng.</td>
+            <td><code>&gt;10%</code> bài hẹn giờ bị lỡ không khôi phục trong 24h hoặc <code>&gt;20%</code> khách rời bỏ tháng đầu vì quên bật máy.</td>
+            <td>Triển khai Spec 2 (<code>intent/2026-11-10-missed-post-and-online-status.md</code>) với appetite 1 tuần.</td>
+          </tr>
+          <tr>
+            <td><code>H-F1</code><br><strong>Feasibility</strong></td>
+            <td>Bài <code>đăng qua aipub</code> đạt trung vị reach 48h <code>≥80%</code> so với bài <code>đăng tay</code> đối chứng trên cùng kênh.</td>
+            <td>Tỷ số trung vị reach 48h tụt xuống <code>&lt;50%</code> sau 10–20 cặp bài cùng chủ đề và khung giờ.</td>
+            <td>Chạy 20 cặp bài đối chứng trên kênh nhà trước khi tuyên bố bất kỳ thông điệp nào về reach.</td>
+          </tr>
+          <tr>
+            <td><code>H-B1</code><br><strong>Viability</strong></td>
+            <td>Không giới hạn bài đăng ở gói Free vẫn giữ biên lợi nhuận gộp khỏe nhờ gói Pro <code>$8</code> và Business <code>$40 + $10/brand</code>.</td>
+            <td>Chi phí AI trung bình tài khoản Free vượt <code>$1.50/tháng</code> và ngốn <code>&gt;30%</code> doanh thu gộp từ tệp trả phí.</td>
+            <td>Đo chi phí token theo <code>workspace_id</code> từ ngày 1; bắn cảnh báo cho Owner ở ngưỡng <code>$0.60/tháng</code>.</td>
+          </tr>
+          <tr>
+            <td><code>H-O1</code><br><strong>Legal / Policy</strong></td>
+            <td>Biểu mẫu thu thập Email, SĐT và Link kênh tại Việt Nam tuân thủ đầy đủ Nghị định 13/2023/NĐ-CP.</td>
+            <td>Bật tên miền chính thức khi biểu mẫu chưa có hộp kiểm đồng ý xử lý dữ liệu cá nhân hoặc rơi dữ liệu đăng ký.</td>
+            <td>Thêm hộp kiểm đồng ý không tích sẵn + kiểm thử đầu-cuối với Resend trong 3 ngày (Spec 1).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 5. DECISION LOG & RED-TEAM -->
+  <section class="sec" id="quyet-dinh">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 05 · Nhật ký Quyết định (Decision Log) &amp; Phản biện Đỏ (Red-Team)</span>
+        <h2>Quyết định Đã khóa &amp; Đề xuất Đang chờ Owner Phê duyệt</h2>
+      </div>
+      <span class="skill-pill">/pm-decide · /pm-spec Play C</span>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>DEC-01 · Khóa VN 90 ngày &amp; Giá phẳng Unlimited <span class="badge jade">Status: decided</span></h3>
+        <p style="font-size:0.88rem;color:var(--muted)">Người quyết định: <code>0xdonniechu</code> · Ngày chốt: <code>2026-11-08</code> · Ngày rà soát: <code>2027-02-07</code></p>
+        <ul>
+          <li><strong>Eigenquestion:</strong> Đánh dàn trải nhiều nước bằng mô hình đếm credit quen thuộc hay khóa chặt thị trường Việt Nam 90 ngày với bảng giá phẳng không giới hạn bài?</li>
+          <li><strong>Quyết định:</strong> Chỉ làm Việt Nam từ <code>11/2026 – 02/2027</code>; chốt 4 gói <code>Free $0</code> (3 kênh), <code>Pro $8</code> (5 kênh), <code>Business $40 + $10/brand</code> (10 kênh), <code>DF Partner</code>; không giới hạn số bài.</li>
+          <li><strong>Điều kiện đảo ngược (Reversal Trigger):</strong> (1) Chi phí AI gói Free <code>&gt;$1.50/user/tháng</code> ăn mòn <code>&gt;30%</code> lãi gộp → xét giới hạn tần suất chống lạm dụng tự động; (2) <code>&gt;30%</code> khách hỏi mua Pro từ chối nâng cấp chỉ vì thiếu <code>YouTube</code> → xét hoán đổi vị trí kênh với <code>Zalo OA</code>.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="border-color:var(--seal)">
+        <h3>DEC-02 · Khóa 3 chốt chặn trước khi mở rộng <span class="badge seal">Status: pending</span></h3>
+        <p style="font-size:0.88rem;color:var(--muted)">Đề xuất bởi: <code>PM-Agent</code> · Ngày trình: <code>2026-11-10</code> · Chờ duyệt bởi: <code>0xdonniechu</code></p>
+        <ul>
+          <li><strong>Eigenquestion:</strong> Có bật DNS <code>aipub.social</code> và đẩy chiến dịch chào hàng Agency ngay, hay khóa cứng tuần tự 3 chốt chặn kỹ thuật &amp; bằng chứng trước?</li>
+          <li><strong>Đề xuất trình duyệt:</strong>
+            <ol style="margin-top:4px;margin-bottom:4px">
+              <li>Nối xong Resend + Nghị định 13 + Umami (<code>3 ngày</code>) rồi mới bật bản ghi DNS chính thức cho <code>aipub.social</code>.</li>
+              <li>Tuyệt đối chưa đưa ra tuyên bố về reach cho tới khi xong <code>20 cặp bài</code> đối chứng đạt trung vị <code>≥80%</code>.</li>
+              <li>Đưa luồng <em>Đèn báo máy đang trực + Đăng bù 1 chạm</em> lên ưu tiên P0 ngay sau bước nối phễu.</li>
+            </ol>
+          </li>
+          <li><strong>Phương án linh hoạt:</strong> Nếu cần thu danh sách chờ ngay trong ngày, tách riêng phần lưu email cơ bản trong 2 giờ trước, giữ phần đọc giọng tự động ở nhịp kế tiếp.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SHAPED INTENT SPECS -->
+  <section class="sec" id="dac-ta">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 06 · Hai Bản Đặc tả Định hình (Shaped Specs — bto-sdlc Phase 1)</span>
+        <h2>Bản nháp <code>intent/</code> Sẵn sàng Duyệt (Giới hạn ≤ 5 P0, Chưa sinh .plan.md)</h2>
+      </div>
+      <span class="skill-pill">/pm-spec · Ryan Singer Shape Up</span>
+    </div>
+
+    <div class="tabs-bar" role="tablist" aria-label="Chọn bản đặc tả">
+      <button class="tab-btn active" type="button" role="tab" aria-selected="true" data-tab="spec-1">
+        Spec 1 · Phễu Đăng ký, Nghị định 13 &amp; Đọc giọng 5 phút (Appetite: 3 ngày)
+      </button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" data-tab="spec-2">
+        Spec 2 · Đèn báo “Máy đang trực” &amp; Đăng bù 1 chạm (Appetite: 1 tuần)
+      </button>
+    </div>
+
+    <!-- SPEC 1 -->
+    <div class="tab-panel active" id="spec-1">
+      <div class="card">
+        <h3>
+          <code>intent/2026-11-10-waitlist-onboarding-voice-capture.md</code>
+          <span class="badge amber">status: draft</span>
+          <span class="badge jade">Appetite: 3 ngày</span>
+        </h3>
+        <p>
+          <strong>Vấn đề thực tế (<code>[V]</code>):</strong> Trang đích hiện tại đã có biểu mẫu <code>#join</code> rất gọn (chỉ thu Email, Số điện thoại, Link các kênh social), nhưng sự kiện gửi mới kiểm tra cú pháp trên trình duyệt mà chưa lưu về server hay gửi email qua Resend; đồng thời thiếu ô đồng ý Nghị định 13/2023/NĐ-CP và nhãn đo lường UTM. Nếu khách vừa gửi link kênh xong mà chỉ nhận dòng chữ tĩnh thay vì thấy ngay <code>aipub</code> đọc đúng giọng quán của mình, khoảnh khắc “Aha!” đầu tiên bị bỏ phí.
+        </p>
+
+        <div class="breadboard">
+          <div class="bb-step">
+            <span class="step-no">Bước 1 · Biểu mẫu #dang-ky</span>
+            <h4>Nhập 3 thông tin + Đồng ý NĐ 13</h4>
+            <p>Giữ nguyên đúng 3 nhóm trường (Email, SĐT VN, Link kênh social), thêm 1 ô tích đồng ý Nghị định 13/2023/NĐ-CP (không tích sẵn) và tự bắt tham số <code>utm_*</code> ẩn.</p>
+          </div>
+          <div class="bb-step">
+            <span class="step-no">Bước 2 · Xử lý &amp; Lưu trữ</span>
+            <h4>Kiểm tra hợp lệ &amp; Gửi Resend &lt;30s</h4>
+            <p>Chống spam theo IP, lưu bản ghi kèm dấu thời gian đồng ý dữ liệu cá nhân, kích hoạt gửi email xác nhận từ tên miền <code>aipub.social</code> qua Resend.</p>
+          </div>
+          <div class="bb-step">
+            <span class="step-no">Bước 3 · Khoảnh khắc Aha!</span>
+            <h4>Hồ sơ Giọng nháp &amp; 3 bài duyệt thử</h4>
+            <p>Email trả kèm thẻ tóm tắt giọng rút từ kênh của khách (xưng hô, nhịp câu, từ tránh dùng) + nút mở vào duyệt thử ngay 3 bài đầu tiên.</p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h4 style="margin-bottom:6px">5 Yêu cầu P0 (Bắt buộc có để xuất xưởng)</h4>
+            <ol>
+              <li><strong>P0-1:</strong> Biểu mẫu <code>#join</code> gửi dữ liệu thực về backend, lưu đủ <code>email</code>, <code>phone</code>, <code>channels</code>, thời điểm đồng ý Nghị định 13 và nhãn <code>UTM</code>.</li>
+              <li><strong>P0-2:</strong> Bổ sung hộp kiểm đồng ý xử lý dữ liệu cá nhân ngắn gọn bằng tiếng Việt trước nút <em>Đăng ký miễn phí</em>.</li>
+              <li><strong>P0-3:</strong> Gửi tự động email xác nhận qua Resend trong <code>&lt;30 giây</code>, hiển thị rõ thông báo nếu kết nối gián đoạn.</li>
+              <li><strong>P0-4:</strong> Gắn bộ đếm <code>Umami</code> nhẹ, tôn trọng quyền riêng tư để đo chuyển đổi từ từng bài trong <em>Sổ đỏ 30 ngày</em>.</li>
+              <li><strong>P0-5:</strong> Tạo sẵn 1 bản <em>Hồ sơ giọng thương hiệu nháp</em> cho mỗi lượt đăng ký (nếu kênh riêng tư/ít bài thì chuyển sang 3 câu chọn giọng nhanh, không bao giờ báo lỗi chặn luồng).</li>
+            </ol>
+          </div>
+          <div>
+            <h4 style="margin-bottom:6px">Chỉ số Thành công, Ranh giới Cắt bỏ &amp; Câu hỏi mở</h4>
+            <ul>
+              <li><strong>Target Metric:</strong> Tỷ lệ lưu &amp; gửi thư xác nhận đạt <code>≥99%</code> (từ <code>0%</code> hiện tại); <code>≥35%</code> người đăng ký bấm vào duyệt thử 3 bài đầu tiên trong 7 ngày.</li>
+              <li><strong>Counter-Metric:</strong> Tỷ lệ bỏ ngang tại biểu mẫu không tăng quá <code>10%</code> sau khi thêm hộp kiểm Nghị định 13.</li>
+              <li><strong>Chủ động cắt khỏi v1 (No-Gos):</strong> Chưa gắn cổng thanh toán ở bước này; không đòi khách nhập thêm chức danh/quy mô công ty; không ép nối đủ 10 kênh ngay lần đầu.</li>
+              <li><strong>Câu hỏi chờ Owner chốt (<code>[?]</code>):</strong> Địa chỉ gửi thư trên Resend dùng <code>hello@aipub.social</code> hay <code>duyet@aipub.social</code>?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPEC 2 -->
+    <div class="tab-panel" id="spec-2">
+      <div class="card">
+        <h3>
+          <code>intent/2026-11-10-missed-post-and-online-status.md</code>
+          <span class="badge amber">status: draft</span>
+          <span class="badge jade">Appetite: 1 tuần</span>
+        </h3>
+        <p>
+          <strong>Vấn đề thực tế (<code>[V]</code>):</strong> Ở gói Free, Pro và Business, máy tính của người dùng cần đang bật lúc đến giờ đăng. Nếu chủ quán gập laptop giờ nghỉ trưa hoặc buổi tối khiến bài đã duyệt bị quá giờ mà giao diện im lặng (hoặc tự đăng bù lúc 2 giờ sáng khi vừa mở máy), người dùng sẽ mất niềm tin ngay lập tức. Tính năng này biến giới hạn vận hành thành trải nghiệm chủ động, rõ ràng và an toàn tuyệt đối.
+        </p>
+
+        <div class="breadboard">
+          <div class="bb-step">
+            <span class="step-no">Bước 1 · Đầu trang Lịch đăng</span>
+            <h4>Đèn báo “Máy đang trực”</h4>
+            <p>Hiển thị rõ huy hiệu xanh ngọc <em>“Máy đang trực · Hẹn kế tiếp 20:00”</em> hoặc cam <em>“Máy chưa trực · Cần mở máy lúc 20:00”</em> ngay góc trên lịch tháng.</p>
+          </div>
+          <div class="bb-step">
+            <span class="step-no">Bước 2 · Trước giờ hẹn 15 phút</span>
+            <h4>Nhắc nhẹ đúng lúc cần thiết</h4>
+            <p>Chỉ gửi email nhắc (hoặc tin nhắn Telegram/Discord ở gói Business) nếu còn 15 phút tới giờ đăng bài đã duyệt mà máy người dùng vẫn đang tắt.</p>
+          </div>
+          <div class="bb-step">
+            <span class="step-no">Bước 3 · Khi mở máy trở lại</span>
+            <h4>Hộp thoại Đăng bù 1 chạm</h4>
+            <p>Không bao giờ tự đăng bù vào giờ chết. Hiện ngay thẻ khôi phục với 3 nút: <em>Đăng bù ngay</em>, <em>Dời sang ngày mai cùng giờ</em>, hoặc <em>Bỏ qua</em>.</p>
+          </div>
+        </div>
+
+        <!-- Visual Breadboard Mockup -->
+        <div class="ui-preview" aria-label="Minh họa giao diện đèn trạng thái và hộp thoại đăng bù">
+          <div class="ui-statusbar">
+            <strong>Lịch đăng Tháng 12 · 2026 ( Minh họa luồng khôi phục )</strong>
+            <span class="online-pill">Máy đang trực · Đã kết nối lại lúc 21:10</span>
+          </div>
+          <div class="recovery-box">
+            <div>
+              <span class="badge amber">Lỡ 1 khung giờ hẹn lúc máy tắt (20:00 hôm nay)</span>
+              <p style="margin-top:6px"><strong>Bài đã duyệt:</strong> <em>“Bạc xỉu muối về rồi nè mọi người! Ba ngày đầu tụi mình giảm 20%...”</em> (Facebook Page · TikTok · Zalo OA). Bài <strong>chưa tự đăng</strong> để tránh lên sóng sai giờ.</p>
+            </div>
+            <div class="mock-actions">
+              <span class="mock-btn pri">✓ Đăng bù ngay bây giờ (3 kênh)</span>
+              <span class="mock-btn">↻ Dời sang 20:00 ngày mai</span>
+              <span class="mock-btn">✕ Bỏ qua lịch này</span>
+            </div>
+            <span style="font-size:0.8rem;color:var(--muted)">Gợi ý tinh tế (chỉ hiện từ lần lỡ lịch thứ 3): Hay bận ngoài quán không tiện mở máy? Gói <strong>DF Partner</strong> chạy trên server riêng 24/7.</span>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:16px">
+          <div>
+            <h4 style="margin-bottom:6px">5 Yêu cầu P0 (Bắt buộc có để xuất xưởng)</h4>
+            <ol>
+              <li><strong>P0-1:</strong> Hiển thị trạng thái trực tuyến hiện tại của máy người dùng kèm giờ hẹn gần nhất ngay đầu trang Lịch đăng.</li>
+              <li><strong>P0-2:</strong> Chặn tuyệt đối việc tự động đăng bù các bài đã quá giờ hẹn quá khoảng ân hạn khi người dùng chưa xác nhận lại.</li>
+              <li><strong>P0-3:</strong> Bắn thông báo nhắc trước <code>15 phút</code> qua Email (và Telegram/Discord cho gói Business) khi có bài đã duyệt sắp tới giờ mà máy đang tắt.</li>
+              <li><strong>P0-4:</strong> Hiện hộp thoại 3 thao tác 1 chạm (<em>Đăng bù ngay</em> · <em>Dời sang ngày mai cùng giờ</em> · <em>Hủy lịch</em>) ngay khi mở máy lại.</li>
+              <li><strong>P0-5:</strong> Đếm số lần lỡ lịch để chỉ hiển thị dòng gợi ý nâng cấp lên <code>DF Partner</code> từ lần thứ 3 trở đi (không làm phiền người mới).</li>
+            </ol>
+          </div>
+          <div>
+            <h4 style="margin-bottom:6px">Chỉ số Thành công, Ranh giới Cắt bỏ &amp; Câu hỏi mở</h4>
+            <ul>
+              <li><strong>Target Metric:</strong> <code>≥85%</code> số bài bị lỡ do tắt máy được khôi phục chủ động trong 24h; tỷ lệ lỡ lịch bỏ rơi <code>≤5%</code>.</li>
+              <li><strong>Counter-Metric:</strong> <code>0%</code> bài bị tự đăng bù vào đêm khuya ngoài ý muốn; tỷ lệ hỏi hỗ trợ vì không hiểu sao bài chưa lên <code>&lt;2%</code>.</li>
+              <li><strong>Chủ động cắt khỏi v1 (No-Gos):</strong> Không chuyển gói Free/Pro/Business lên server đám mây dùng chung; không làm thuật toán AI đoán giờ vàng phức tạp; chưa làm app di động riêng.</li>
+              <li><strong>Câu hỏi chờ Owner chốt (<code>[?]</code>):</strong> Khoảng ân hạn (<em>grace window</em>) khi mở máy trễ vài phút nên chốt là <code>10 phút</code> hay <code>15 phút</code>?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. METRICS & BINARY AI VOICE EVAL -->
+  <section class="sec" id="eval" style="border-bottom:none">
+    <div class="sec-head">
+      <div>
+        <span class="sec-tag">Phần 07 · Hệ thống Đo lường &amp; Kiểm định Chất lượng Giọng Thương Hiệu</span>
+        <h2>Cây Chỉ số Vận hành &amp; Bộ Chấm Nhị phân 50 Bài Chuẩn Tiếng Việt</h2>
+      </div>
+      <span class="skill-pill">/pm-execution · Binary AI Eval Rubric</span>
+    </div>
+
+    <p>
+      Lời hứa <em>“nhớ giọng thương hiệu, viết lại cho từng nền tảng”</em> không được phép đánh giá bằng cảm tính hay điểm thang 1–5 mơ hồ. Trước khi mở đăng ký rộng rãi, bộ viết bài của <code>aipub.social</code> được kiểm định nhị phân (<strong><code>PASS / FAIL</code></strong>) trên tập mẫu <strong>50 ý tưởng thực tế của 5 nhóm ngành SME Việt Nam</strong> (Quán cà phê/F&amp;B, Thời trang/Mỹ phẩm, Khóa học/Chuyên gia, Nha khoa/Spa, Agency B2B). Ngưỡng xuất xưởng bắt buộc: <strong><code>≥ 90%</code> (tối thiểu 45/50 ca đạt trọn vẹn cả 5 tiêu chí)</strong>.
+    </p>
+
+    <div class="tw">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:22%">Mã tiêu chí Eval</th>
+            <th style="width:42%">Quy tắc đạt chuẩn (<code>PASS</code>)</th>
+            <th style="width:36%">Lỗi đánh trượt ngay lập tức (<code>FAIL</code>)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>1. Voice-Pronoun-Match</code><br><span class="muted" style="font-size:0.82rem;color:var(--muted)">Đúng đại từ xưng hô</span></td>
+            <td>Giữ đúng 100% cặp đại từ rút từ bài cũ của thương hiệu trên từng kênh (ví dụ: <em>“tụi mình – mọi người”</em>, <em>“em – các chị”</em>, <em>“bên mình – anh/chị”</em>).</td>
+            <td>Trôi về văn phong dịch máy cứng nhắc kiểu <em>“chúng tôi – quý khách hàng”</em> khi kênh gốc vốn thân mật.</td>
+          </tr>
+          <tr>
+            <td><code>2. Zero-Banned-Slop</code><br><span class="muted" style="font-size:0.82rem;color:var(--muted)">Sạch văn mẫu AI &amp; từ cấm</span></td>
+            <td>Câu ngắn, tự nhiên như người Việt nói chuyện ngoài đời; tuân thủ tuyệt đối danh sách từ cấm riêng của từng thương hiệu.</td>
+            <td>Xuất hiện dù chỉ 1 cụm sáo rỗng (<em>“Trong kỷ nguyên số”</em>, <em>“Không chỉ… mà còn…”</em>, <em>“Nâng tầm trải nghiệm”</em>) hoặc từ quán đã cấm (<em>“giá sốc”</em>, <em>“siêu phẩm”</em>).</td>
+          </tr>
+          <tr>
+            <td><code>3. True-Channel-Rewrite</code><br><span class="muted" style="font-size:0.82rem;color:var(--muted)">Viết lại thật từng kênh</span></td>
+            <td>Mỗi kênh có cấu trúc riêng: Facebook gợi câu hỏi bình luận; TikTok cài từ khóa tìm kiếm ngắn; Zalo OA đi thẳng ưu đãi/nút hành động; LinkedIn mạch lạc chuyên môn; Twitter cô đọng vài câu.</td>
+            <td>Hai nền tảng bất kỳ trùng lặp quá <code>70%</code> câu chữ hoặc bê nguyên đoạn mở bài từ Facebook sang TikTok/Twitter.</td>
+          </tr>
+          <tr>
+            <td><code>4. Fact-Preservation</code><br><span class="muted" style="font-size:0.82rem;color:var(--muted)">Bảo toàn dữ kiện gốc</span></td>
+            <td>Giữ chính xác 100% con số giảm giá, giá tiền, khung ngày áp dụng, địa chỉ và đường dẫn từ ý tưởng gốc của người dùng.</td>
+            <td>Tự suy diễn hoặc bịa thêm quà tặng, cam kết, khung giờ khuyến mãi không hề có trong ý tưởng đầu vào.</td>
+          </tr>
+          <tr>
+            <td><code>5. Approval-Safety-Gate</code><br><span class="muted" style="font-size:0.82rem;color:var(--muted)">Chốt chặn duyệt &amp; link</span></td>
+            <td>Mọi bài tạo ra luôn nằm ở trạng thái chờ bấm duyệt; với gói Business có gắn link, đường dẫn nằm gọn trong phần bình luận tự động đầu tiên dưới bài.</td>
+            <td>Tự chuyển sang trạng thái đăng khi chưa có thao tác bấm duyệt hoặc nhồi link thô làm rối thân bài chính.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <strong>PM-Agent × aipub.social</strong> · Tổng hợp từ bộ nhớ sản phẩm đã kiểm định (<code>validate-brain: 0 errors</code> · 2026-11-10).
+    </div>
+    <div>
+      Liên kết liên quan: <a href="../marketing/aipub-marketing-plan-2026-11-07.html">Kế hoạch Marketing aipub.social</a> · <a href="../index.html">Trang chủ báo cáo</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // Theme switcher
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', function () {
+      var cur = root.getAttribute('data-theme');
+      var isDark = cur === 'dark' || (!cur && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+
+    // Spec tabs
+    var tabs = document.querySelectorAll('.tab-btn');
+    var panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        var target = t.getAttribute('data-tab');
+        tabs.forEach(function (b) {
+          var on = b === t;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach(function (p) {
+          p.classList.toggle('active', p.id === target);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
