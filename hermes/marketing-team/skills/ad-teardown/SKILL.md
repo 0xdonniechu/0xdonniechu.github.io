@@ -1,6 +1,6 @@
 ---
 name: ad-teardown
-description: 'Dùng khi Ông Chủ hoặc Saitama nhờ "xem đối thủ đang chạy quảng cáo gì", "mổ xẻ TVC / video quảng cáo / OOH này", "báo cáo đối thủ tuần này". Quét nguồn công khai (không đăng nhập), viết teardown từng tài sản vào work/intel/<đối-thủ>/ và bản tổng hợp tuần work/intel/tuan-<YYYY-Www>.md với brief cho Teppi và tham chiếu cho Zoro. Chỉ đọc, ghi file và lấy clip công khai bằng tools/fetch_clip.sh: không đăng nhập, không liên hệ ai, không ước lượng chi tiêu.'
+description: 'Dùng khi Ông Chủ hoặc Saitama nhờ "xem đối thủ đang chạy quảng cáo gì", "mổ xẻ TVC / video quảng cáo / OOH này", "báo cáo đối thủ tuần này". Quét nguồn công khai (không đăng nhập), viết teardown từng tài sản vào work/intel/<đối-thủ>/ và bản tổng hợp tuần work/intel/tuan-<YYYY-Www>.md với brief cho Teppi và tham chiếu cho Zoro. Đọc, ghi file trong work/intel/ và lấy clip công khai bằng tools/fetch_clip.sh: không đăng nhập, không liên hệ ai, không ước lượng chi tiêu.'
 ---
 
 # Ad teardown: mổ xẻ quảng cáo của đối thủ
@@ -14,7 +14,7 @@ Skill do team viết, không lấy từ nguồn ngoài. Dùng cho role Vail (Tri
 
 ## Luật cứng
 - Không đăng nhập, không tạo tài khoản, không liên hệ đối thủ, KOL hay agency, không comment, follow, thả cảm xúc, không trả tiền, không đăng ký, không nhập key.
-- Lấy clip chỉ bằng `tools/fetch_clip.sh` (clip công khai, không đăng nhập, không cookie). Terminal chỉ để chạy script đó và `ls`, `cat` file trong `work/intel/`: không chạy lệnh mạng nào khác, không cài gói, không sửa script. Script từ chối thì ghi "chưa xem clip", không tìm cách khác.
+- Lấy clip bằng `tools/fetch_clip.sh` (clip công khai, không đăng nhập, không cookie). Terminal dùng được cho mọi việc không gây hại; việc gây hại bị cấm liệt kê trong SOUL. Script từ chối thì ghi "chưa xem clip"; không vượt qua bằng đăng nhập, cookie hay key.
 - Không chép nguyên văn creative hay kịch bản của đối thủ. Rút cấu trúc, ý tưởng, nhịp.
 - Mỗi sự kiện có link và ngày xem. Điều suy ra ghi "suy đoán". Thiếu thì ghi "chưa có nguồn", không bịa.
 - Chi tiêu, GRP, reach, lịch phát TV/OOH: chỉ lấy từ nguồn có tên, ghi tên nguồn và ngày. Công cụ giám sát trả phí (Kantar, Nielsen và tương tự) team không có: ghi "chưa có nguồn". Không bao giờ ước lượng.

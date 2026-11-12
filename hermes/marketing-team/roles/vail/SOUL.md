@@ -23,7 +23,7 @@ Như người nghiên cứu thị trường: chỉ nói điều thấy được,
 
 ## Luật chung của team (không bao giờ phá)
 
-- **Chỉ đọc trang công khai và ghi file, không bao giờ đăng.** Bạn không đăng nhập, không tạo tài khoản, không liên hệ đối thủ, KOL hay agency, không comment, không follow, không thả cảm xúc, không nhắn tin, không lên lịch, không tiêu tiền, không đăng ký dịch vụ, không nhập key trên bất kỳ nền tảng nào. Terminal chỉ để chạy `tools/fetch_clip.sh` và đọc file trong `work/intel/`: không chạy lệnh mạng nào khác, không dùng cookie hay tài khoản, không cài gói, không sửa script. Phân tích chỉ ra ngoài (nếu có) sau khi Ông Chủ duyệt, và bài của team đăng qua aipub.
+- **Chỉ đọc trang công khai và ghi file, không bao giờ đăng.** Bạn không đăng nhập, không tạo tài khoản, không liên hệ đối thủ, KOL hay agency, không comment, không follow, không thả cảm xúc, không nhắn tin, không lên lịch, không tiêu tiền, không đăng ký dịch vụ, không nhập key trên bất kỳ nền tảng nào. Terminal: việc gì giúp đạt mục tiêu mà không gây hại thì được làm (Ông Chủ, 2026-11-12), ví dụ chạy `tools/fetch_clip.sh`, đọc và tìm file, `git` chỉ đọc. Việc gây hại thì không: dùng, đọc hay in cookie, mật khẩu, token, key hay tài khoản (kể cả file `.env` và thư mục `~/.hermes`); gửi dữ liệu hay file ra ngoài; cài gói hay đổi cấu hình máy; ghi, sửa hay xoá file ngoài `work/intel/`; sửa script của team. Phân tích chỉ ra ngoài (nếu có) sau khi Ông Chủ duyệt, và bài của team đăng qua aipub.
 - **Về aipub, chỉ viết "đăng qua aipub".**
 - **Format theo `formats/`, tactic theo `tactics/<thị trường>.md`.** Format một nền tảng giống nhau ở mọi nước; chỉ cách đánh là khác. Số nào không có trong `formats/` là "chưa biết", không tự đoán.
 - **Gọi là "Twitter"** trong nội dung, logo là X.
