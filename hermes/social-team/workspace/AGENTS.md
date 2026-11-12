@@ -34,6 +34,7 @@ Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi
 | `tactics/<thị trường>.md` | Cách đánh từng thị trường (`vn.md` trước) |
 | `voice.md` | Giọng thương hiệu (Yugi viết; chưa có thì báo) |
 | `work/` | Kế hoạch, nháp, trả lời, báo cáo |
+| `tools/` | Script của team (`readout_stats.py`: Xaiyan tính trung vị và tỉ lệ) |
 
 ## Luật
 - **Không gì ra ngoài khi Ông Chủ chưa duyệt.** Không role nào đăng, comment, nhắn tin, lên lịch, tiêu tiền, đăng ký dịch vụ hay nhập key.
@@ -42,4 +43,5 @@ Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi
 - **Về aipub, chỉ viết "đăng qua aipub".**
 - **Gọi là "Twitter"** trong nội dung; logo là X.
 - **Không đổi kênh này lấy kênh khác** khi tệp người dùng khác nhau; thêm kênh, hoặc nói rõ vì sao bỏ.
+- **Khi soạn, thiếu chi tiết nhỏ thì nêu giả định, không dừng hỏi.** Góc viết, độ dài, nền tảng nào trước, tên file: chọn cách hợp lý nhất, ghi `Giả định: <...>` ở đầu file hoặc tin trả lời. Thiếu số, nguồn, trích dẫn, bài gốc, ID hay tài khoản thì vẫn hỏi Ông Chủ, không bịa. Ô số liệu (kể cả cột `boosted`) không bao giờ là chi tiết nhỏ.
 - Skill của team đã được chọn lọc và sửa; không tự cài thêm skill, plugin hay hook từ nguồn ngoài.

@@ -19,7 +19,7 @@ curl -fsSL $BASE/manifest.txt | grep '^workspace/' | while read p; do
   mkdir -p "$(dirname "${p#workspace/}")"; curl -fsSL "$BASE/$p" -o "${p#workspace/}"; done
 mkdir -p work/drafts work/replies
 ```
-Kết quả phải có: `AGENTS.md`, `formats/` (6 file), `tactics/` (2 file), `work/`.
+Kết quả phải có: `AGENTS.md`, `formats/` (6 file), `tactics/` (2 file), `tools/` (2 file), `work/`. Kiểm script: `python3 tools/test_readout_stats.py` báo `OK`.
 
 ## 2. Tạo 7 profile, mỗi profile một SOUL.md
 ```bash
@@ -64,7 +64,7 @@ hermes -p <r> config set agent.disabled_toolsets '[...]'                # danh s
 | wiz | file, skills, memory, clarify | `[browser, terminal, code_execution, delegation, cronjob, web, search, image_gen, video_gen, computer_use, x_search, tts, connections]` |
 | xaiyan | file, skills, vision, code_execution, memory, clarify | `[browser, terminal, delegation, cronjob, web, search, image_gen, video_gen, computer_use, x_search, tts, connections]` |
 
-Lý do: không role nào được tự đăng, điều khiển trình duyệt hay nối tài khoản ứng dụng (`connections`); chỉ Saitama có `cronjob` (nhắc lập kế hoạch tuần); chỉ Xaiyan có `code_execution` (tính trung vị từ CSV; Xaiyan không được cài thư viện hay gọi mạng, chỉ đọc file Ông Chủ gửi); Teppi và Xaiyan có `vision` (đọc ảnh chụp). Usop không có `memory` để mỗi lần kiểm là kiểm mới.
+Lý do: không role nào được tự đăng, điều khiển trình duyệt hay nối tài khoản ứng dụng (`connections`); chỉ Saitama có `cronjob` (nhắc lập kế hoạch tuần); chỉ Xaiyan có `code_execution` (chạy `tools/readout_stats.py` để tính trung vị và tỉ lệ từ CSV; Xaiyan không được cài thư viện hay gọi mạng, chỉ đọc file Ông Chủ gửi); Teppi và Xaiyan có `vision` (đọc ảnh chụp). Usop không có `memory` để mỗi lần kiểm là kiểm mới.
 
 ## 5. Nhóm Telegram có topic, mỗi topic một role
 1. **[Ông Chủ]** Tạo một supergroup Telegram (ví dụ "DF Social"), bật **Topics**, thêm bot của Hermes và cho bot làm **admin** (admin nhận mọi tin, không cần tắt privacy mode). Nếu không cho làm admin thì tắt privacy mode trong @BotFather, rồi **gỡ bot ra và thêm lại** vào nhóm.
