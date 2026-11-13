@@ -38,6 +38,7 @@ skills/keyword-research/SKILL.md
 skills/LICENSES/aaron-he-zhu_aaron-marketing-skills.LICENSE
 skills/LICENSES/coreyhaines31_marketingskills.LICENSE
 skills/LICENSES/ericosiu_ai-marketing-skills.LICENSE
+skills/LICENSES/Jakeschincariol_founder-skill.LICENSE
 skills/LICENSES/kostja94_marketing-skills.LICENSE
 skills/LICENSES/pbakaus_impeccable.LICENSE
 skills/linkedin-post/SKILL.md
@@ -99,8 +100,14 @@ workspace/formats/youtube.md
 workspace/tactics/README.md
 workspace/tactics/vn.md
 workspace/tools/fetch_clip.sh
+workspace/tools/price_survey_example.csv
 workspace/tools/readout_stats.py
+workspace/tools/saas_economics.py
+workspace/tools/saas_example.json
 workspace/tools/test_readout_stats.py
+workspace/tools/test_saas_economics.py
+workspace/tools/test_van_westendorp.py
+workspace/tools/van_westendorp.py
 workspace/work/plan-c2-so-do-30-ngay.md
 workspace/work/README.md
 workspace/work/ref-restructureai-2026-11-08.md

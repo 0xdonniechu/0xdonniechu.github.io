@@ -1,0 +1,25 @@
+{
+  "business": "Ví dụ (số giả)",
+  "currency": "đ",
+  "months": 12,
+  "plans": [
+    {"name": "Cơ bản", "price_month": 99000, "mix": 0.7,
+     "variable_month": [{"label": "Chi phí AI", "cost": 12000}]},
+    {"name": "Nâng cao", "price_month": 199000, "mix": 0.3,
+     "variable_month": [{"label": "Chi phí AI", "cost": 35000}]}
+  ],
+  "payment_fee_rate": 0.02,
+  "free": {"users_per_paying": 5, "cost_month": 800},
+  "partner": {"share_of_new": 0.3, "commission_rate": 0.3, "commission_months": 6},
+  "monthly_churn": 0.06,
+  "fixed_monthly": [
+    {"label": "Lương", "cost": 40000000},
+    {"label": "Máy chủ cố định", "cost": 6000000},
+    {"label": "Nội dung và marketing", "cost": 10000000}
+  ],
+  "startup": [
+    {"label": "Dựng sản phẩm", "cost": 80000000},
+    {"label": "Pháp lý, thương hiệu", "cost": 10000000}
+  ],
+  "new_paying_per_month": [40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260]
+}

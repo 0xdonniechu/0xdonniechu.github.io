@@ -20,7 +20,7 @@ curl -fsSL $BASE/manifest.txt | grep '^workspace/' | while read p; do
 mkdir -p work/drafts work/replies work/banners work/emails work/intel/clips work/seo/briefs work/seo/drafts work/seo/pages work/seo/audits work/seo/data
 chmod +x tools/*.sh
 ```
-Kết quả phải có: `AGENTS.md`, `formats/` (6 file), `tactics/` (2 file), `tools/` (3 file), `work/`. Kiểm script: `python3 tools/test_readout_stats.py` báo `OK`.
+Kết quả phải có: `AGENTS.md`, `formats/` (6 file), `tactics/` (2 file), `tools/` (9 file), `work/`. Kiểm script: `python3 tools/test_readout_stats.py`, `python3 tools/test_saas_economics.py` và `python3 tools/test_van_westendorp.py` đều báo `OK`.
 
 ## 2. Tạo 11 profile, mỗi profile một SOUL.md
 ```bash

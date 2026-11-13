@@ -51,8 +51,8 @@ Bàn giao giữa các role đi qua file trong `work/`. Khi xong việc, role ghi
 | `voice.md` | Giọng thương hiệu (Yugi viết; chưa có thì báo) |
 | `work/` | Kế hoạch, nháp, trả lời, báo cáo, `banners/`, `emails/` |
 | `work/intel/` | Vail: `doi-thu.md` (danh sách đối thủ), `nguon.md` (nguồn đã kiểm), `<đối-thủ>/` (teardown), `tuan-<YYYY-Www>.md` (tổng hợp tuần), `clips/` (clip và khung hình từ `tools/fetch_clip.sh`, file Ông Chủ để vào) |
-| `work/seo/` | Team SEO: `ke-hoach-<YYYY-MM>.md`, `briefs/`, `drafts/`, `pages/<slug>/` (gói trang), `audits/`, `cau-hoi-ai.md`, `readout-<YYYY-MM>.md`, dữ liệu Ông Chủ xuất trong `data/` |
-| `tools/` | Script của team (`readout_stats.py`: Xaiyan tính trung vị và tỉ lệ; `fetch_clip.sh`: Vail lấy clip đối thủ và cắt khung hình) |
+| `work/seo/` | Team SEO: `ke-hoach-<YYYY-MM>.md`, `briefs/`, `drafts/`, `pages/<slug>/` (gói trang), `audits/`, `cau-hoi-ai.md`, `readout-<YYYY-MM>.md`, `gia-<YYYY-MM-DD>.md` (giá và lãi), dữ liệu Ông Chủ xuất trong `data/` |
+| `tools/` | Script của team (`readout_stats.py`: Xaiyan tính trung vị và tỉ lệ; `fetch_clip.sh`: Vail lấy clip đối thủ và cắt khung hình; `saas_economics.py`: Lelouch tính lãi góp, giá trị trọn đời, điểm hoà vốn từ số Ông Chủ đưa; `van_westendorp.py`: Lelouch tính khoảng giá từ câu trả lời khảo sát thật) |
 
 ## Luật
 - **Không gì ra ngoài khi Ông Chủ chưa duyệt.** Không role nào đăng, comment, nhắn tin, lên lịch, tiêu tiền, đăng ký dịch vụ hay nhập key.
