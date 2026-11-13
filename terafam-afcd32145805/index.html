@@ -49,30 +49,24 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 .src{font-size:.85rem;color:var(--muted)}
 .num{font-variant-numeric:tabular-nums}
 @media (max-width:640px){h1{font-size:1.45rem}table{font-size:.82rem}}
+
+figure{margin:1.2em 0}
+figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block;background:#fcfcfb}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:.5em;max-width:90ch}
+table{min-width:780px}
+td ul{margin:.2em 0;padding-left:1.1em}
+td li{margin:.15em 0}
+.toc.sub{margin-top:6px}
 </style>
 </head>
 <body>
 <main>
 
-<p class="meta">Nghiên cứu thị trường · cutoff 2026-11-13 · chỉ Việt Nam · tài liệu nội bộ, không phải tư vấn đầu tư</p>
-<h1>TeraFam: định vị và giá chào trong thị trường nguyên liệu dược liệu và nông sản sơ chế</h1>
+<p class="meta">Nghiên cứu thị trường · cutoff 2026-11-13 · chỉ Việt Nam · tài liệu nội bộ, không phải tư vấn đầu tư · phiên bản 2</p>
+<h1>TeraFam: bức tranh thị trường nguyên liệu nông nghiệp, mốc đối sánh và lộ trình phát triển</h1>
 
-<ul class="toc">
-<li><a href="#kl">1. Kết luận</a></li>
-<li><a href="#pham-vi">2. Phạm vi và mẫu</a></li>
-<li><a href="#doi-thu">3. Bảng đối thủ</a></li>
-<li><a href="#ma-tran">4. Ma trận năng lực</a></li>
-<li><a href="#gia">5. Giá và mô hình giá</a></li>
-<li><a href="#khach">6. Bằng chứng từ phía mua</a></li>
-<li><a href="#luat">7. Pháp lý</a></li>
-<li><a href="#tam">8. TAM · SAM · SOM</a></li>
-<li><a href="#tu-duoi-len">9. Thử số từ dưới lên</a></li>
-<li><a href="#tu-choi">10. Số bị từ chối in</a></li>
-<li><a href="#sua">11. Chỗ đã sửa khi đối chiếu</a></li>
-<li><a href="#rui-ro">12. Rủi ro và khoảng trống</a></li>
-<li><a href="#buoc-tiep">13. Bước tiếp theo</a></li>
-<li><a href="#phuong-phap">14. Phương pháp</a></li>
-</ul>
+<ul class="toc"><li><a href="#doc-nhanh">Đọc nhanh</a></li><li><a href="#khung">1. Khung nhìn</a></li><li><a href="#thi-truong">2. Bức tranh thị trường</a></li><li><a href="#chuoi">3. Chuỗi giá trị và biên</a></li><li><a href="#cay">4. Chọn cây</a></li><li><a href="#doi-sanh">5. Đối sánh</a></li><li><a href="#that-bai">6. Bài học thất bại</a></li><li><a href="#lua-chon">7. Lựa chọn khâu</a></li><li><a href="#lo-trinh">8. Lộ trình</a></li><li><a href="#kenh">9. Kênh và hỗ trợ</a></li><li><a href="#khoang-trong">10. Khoảng trống</a></li></ul>
+<ul class="toc sub"><li><a href="#p2">P2. Phạm vi và mẫu</a></li><li><a href="#p3">P3. Bảng tổng quan đối thủ</a></li><li><a href="#p4">P4. Ma trận năng lực</a></li><li><a href="#p5">P5. Giá và mô hình giá</a></li><li><a href="#p6">P6. Bằng chứng từ phía mua</a></li><li><a href="#p7">P7. Pháp lý: điều TeraFam phải đáp ứng và hiện chưa nêu</a></li><li><a href="#p8">P8. TAM · SAM · SOM</a></li><li><a href="#p9">P9. Thử số hãng phân tích từ dưới lên</a></li><li><a href="#p10">P10. Số bị từ chối in</a></li><li><a href="#p11">P11. Chỗ đã sửa khi đối chiếu chéo</a></li><li><a href="#p14">P14. Phương pháp</a></li></ul>
 
 <div class="box">
 <strong>Nhãn dữ liệu (mỗi con số và mỗi ô bảng đều có một nhãn)</strong>
@@ -82,36 +76,431 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <li><span class="b v">VENDOR</span> doanh nghiệp tự nói về mình (trang web, hồ sơ năng lực, bài quảng bá).</li>
 <li><span class="b i">INFERENCE</span> / <span class="b i">ASSUMPTION</span> mình suy ra từ số có nhãn (công thức in kèm) / giả định mình đặt, người đọc được phép đổi.</li>
 <li><span class="b u">UNVERIFIED</span> chỉ thấy qua đoạn tóm tắt của công cụ tìm kiếm, hoặc nguồn bị chặn. <span class="b u">REFUSED</span> không truy được nguồn nên không ghi số.</li>
-<li>Ký hiệu năng lực: <strong>C</strong> rõ, <strong>P</strong> một phần hoặc chỉ hãng tự nói, <strong>?</strong> chưa đủ bằng chứng. Dấu ? không có nghĩa là không có năng lực.</li>
+<li>Mã rút gọn trong bảng dày: C, S, V, I, U là CONFIRMED, SECONDARY, VENDOR, INFERENCE/ASSUMPTION, UNVERIFIED. Ký hiệu năng lực ở phụ lục: <strong>C</strong> rõ, <strong>P</strong> một phần hoặc chỉ hãng tự nói, <strong>?</strong> chưa đủ bằng chứng. Dấu ? không có nghĩa là không có năng lực.</li>
 </ul>
 </div>
 
-<h2 id="kl">1. Kết luận</h2>
-
-<p><strong>Câu hỏi quyết định:</strong> cần biết đối thủ là ai, giá đang ở đâu, người mua chê gì và thị trường cỡ nào, để quyết định TeraFam nên định vị thế nào và chào giá theo mô hình nào.</p>
+<h2 id="doc-nhanh">Đọc nhanh</h2>
 
 <div class="box">
-<p><strong>Trả lời ngắn.</strong> Chỗ đứng có bằng chứng ủng hộ là <em>nguồn nguyên liệu nội địa có hồ sơ truy xuất từng lô, kèm kiểm nghiệm và gia công</em>, bán cho bên mua không tự có vùng trồng. Chỗ đứng đó chỉ thành lập khi TeraFam trình ra được giấy tờ. Hiện hồ sơ năng lực của TeraFam chưa có giấy nào.</p>
+<p><strong>Câu hỏi.</strong> TeraFam (nhà cung ứng nguyên liệu nông nghiệp và nông sản sơ chế, hồ sơ nói 300+ ha ở bốn vùng) nên nhìn thị trường thế nào, so với ai, và đi bước nào để phát triển mạnh hơn. Bản đầu của báo cáo này dùng khung của sản phẩm phần mềm (đối thủ, tính năng, giá niêm yết) và bị đánh giá là sơ sài. Với ngành sản xuất nông nghiệp, thứ cần nhìn là ví tiền của người mua, kinh tế mỗi ha, biên theo từng khâu của chuỗi, vốn và chứng nhận, rồi lộ trình mở rộng theo vụ. Bản này làm lại theo khung đó; phần đối thủ và pháp lý của bản đầu nằm ở phụ lục.</p>
 </div>
 
 <ol>
-<li><strong>Nên nhắm vào ai.</strong> Thương hiệu TPCN không có nhà máy, nhà máy đông dược vừa và nhỏ, nhà xuất khẩu sấy. Chưa nên coi các nhà dược lớn là khách chính của nguyên liệu: báo cáo thường niên 2025 của Traphaco và OPC cho thấy họ có vùng GACP-WHO riêng (13 và 12 vùng, số ha không công bố) <span class="b c">CONFIRMED</span>; OPC bán nguyên liệu ra ngoài chỉ 9.418 triệu đồng trên 1.124.546 triệu doanh thu, tức 0,84% <span class="b c">CONFIRMED</span> <span class="b i">INFERENCE</span> (mình đã mở lại báo cáo OPC và tính phép chia). Dược Hậu Giang có chi nhánh dược liệu và coi OEM là trụ cột tăng trưởng mới <span class="b c">CONFIRMED</span>, nhưng hiện trạng vùng trồng của họ chưa xác nhận được (mốc duy nhất là bài báo năm 2014), nên họ trước hết là đối thủ ở tầng gia công. Imexpharm: không có dữ liệu về vùng trồng, chưa xếp được <span class="b u">UNVERIFIED</span>. Đây là suy luận từ ba doanh nghiệp đọc được báo cáo, không phải kết luận về cả nhóm dược lớn <span class="b i">INFERENCE</span>.</li>
-<li><strong>Vì sao chỗ đứng này có cơ sở.</strong> Thông tư 32/2025 buộc cơ sở kinh doanh dược liệu giữ hồ sơ truy xuất cho mỗi lần nhập và xuất, và Công văn 2054/YDCT-QLD (03/08/2026) yêu cầu Sở Y tế siết kiểm tra nguồn gốc <span class="b c">CONFIRMED</span>. Quyết định 1976/QĐ-TTg ngày 13/10/2026 đặt mục tiêu tự chủ tối thiểu 20% nhu cầu dược liệu vào 2030 và 25% vào 2035, kèm mã định danh vùng trồng và truy xuất <span class="b c">CONFIRMED</span> (mình đọc lại bản PDF). Nhu cầu ước 80.000 đến 100.000 tấn mỗi năm, gần 70% nhập khẩu <span class="b s">SECONDARY</span> (VnEconomy 09/12/2025, trích "thống kê của ngành Y tế", không có văn bản gốc).</li>
-<li><strong>Điều kiện bắt buộc trước khi chào hàng.</strong> Giấy chứng nhận GACP (hoặc cam kết Mẫu 07 cho vùng không GACP), phiếu kiểm nghiệm theo lô gồm kim loại nặng, dư lượng BVTV, nấm mốc, giấy công bố tiêu chuẩn chất lượng, danh mục cây trồng và phạm vi GMP của nhà máy. Hồ sơ không nêu cây nào, nên chưa phân biệt được đó là dược liệu hay thực phẩm.</li>
-<li><strong>Về giá chào.</strong> Dữ liệu công khai không đủ để đưa một con số. Không có bảng giá công khai cho cao chiết, bột dược liệu, giá bao tiêu còn hiệu lực hay giá nhập từ Trung Quốc, Ấn Độ <span class="b u">REFUSED</span>. Báo cáo này không đề xuất mức giá. Mục 5 liệt kê các <em>mô hình giá</em> đang có trên thị trường kèm ví dụ, và nói TeraFam cần cung cấp dữ liệu gì (giá thành, cây trồng, chứng nhận) thì mới tính được.</li>
-<li><strong>Quy mô.</strong> Chuỗi tính ở mục 8 cho dược liệu thô: TAM khoảng 240 đến 400 triệu USD mỗi năm, SAM (phần nguồn nội địa) khoảng 48 đến 120 triệu USD, SOM 12 tháng của TeraFam khoảng 0,05 đến 1,2 triệu USD. SOM được kiểm lại bằng sức chứa 300 ha. Con số "thị trường dược 7 đến 8,6 tỷ USD" là tổng chi tiêu, không phải TAM nguyên liệu (mục 9).</li>
+<li><strong>Thị trường nguyên liệu nhỏ hơn nhiều so với các con số được trích.</strong> Thị trường dược 7 đến 8,6 tỷ USD và TPCN 0,96 đến 2,1 tỷ USD là tiền chi cuối cùng của người tiêu dùng. Ví tiền nguyên liệu thật nhỏ hơn hàng chục lần: dược liệu thô cả nước khoảng 240 đến 400 triệu USD mỗi năm theo một nguồn duy nhất, và năm hãng dược niêm yết chi cho <em>mọi</em> nguyên vật liệu (gồm hoạt chất, tá dược, bao bì) khoảng 173 đến 219 triệu USD. Hai hãng thật sự dùng dược liệu nhiều nhất, Traphaco và OPC, có vùng GACP riêng (và vẫn nhập một phần). Hệ quả: thị trường bán dược liệu cho bên thứ ba là nhỏ và phân tán (mục 2).</li>
+<li><strong>Đi cả chuỗi không tự động cho biên cao hơn.</strong> Biên gộp thuốc 41 đến 54% so với chế biến nông sản xuất khẩu 22,7%, nhưng chi phí bán hàng và quản lý ăn 41,4% doanh thu của Traphaco; biên ròng các khâu chỉ cách nhau vài điểm (8,4 đến 16,2%). Tự trồng cộng thêm khoảng 2 đến 8 điểm biên gộp so với chỉ làm thành phẩm; giá trị chính là kiểm soát nguồn cung (mục 3).</li>
+<li><strong>Chọn cây là quyết định lớn nhất, và dữ liệu cho thấy bẫy rõ.</strong> Mô thức "sốt giá, đổ xô trồng, mất người mua, giá rơi" lặp lại ở ít nhất 6 ca (đinh lăng, cà gai leo, nghệ, atiso, nghệ bọ cạp, mít). Ba ca có tỷ lệ rõ giảm 59 đến 88% (đinh lăng, cà gai leo, bông atiso); nghệ 2023 giảm khoảng 20 đến 40%; nghệ bọ cạp giảm 50% giá giống; mít chưa có tỷ lệ. Ngoại lệ có bằng chứng là lá atiso của Traphaco: giá thấp (2.300 đ/kg), ổn định, có người mua cố định hơn 2.500 tấn mỗi năm. Doanh thu thô mỗi ha chênh gần 8 lần giữa các cây (72 đến 560 triệu đồng) và chi phí mỗi ha gần như không có nguồn, nên chưa ai biết lãi mỗi ha (mục 4).</li>
+<li><strong>Không có "đối thủ trực tiếp" để so, chỉ có mốc theo từng chỉ số.</strong> Mục 5 chỉ rõ so với ai ở chỉ số nào. Trong 16 chỉ số vận hành, 6 chỉ số cốt lõi (tỷ lệ lô đạt kiểm nghiệm, giao đúng hẹn, giá thành mỗi kg đạt, hợp đồng nhiều năm, vốn lưu động, tập trung khách) không có mốc công khai nào: TeraFam phải tự xây mốc trong hai đến ba vụ đầu.</li>
+<li><strong>Mở rộng chậm và theo bậc.</strong> OPC mất khoảng 9 năm từ "bắt đầu vùng GACP" đến giấy đầu tiên và khoảng 10 năm để đi từ 1 lên 12 vùng; Traphaco đi từ 4 lên 10 cây trong 11 năm; Nafoods xây nhà máy 100.000 tấn/năm khi vùng cung chỉ đủ 10 tấn/ngày so với công suất khoảng 500 tấn/ngày. Quy tắc rút ra: công suất theo sau hợp đồng, không đi trước (mục 5, 6).</li>
+<li><strong>Con đường đề xuất:</strong> bốn giai đoạn có cổng, bắt đầu bằng 30 ngày đóng khoảng trống hồ sơ và kiểm chứng độc lập 300 ha, rồi chọn 3 đến 4 cây theo cam kết mua của người mua thật, rồi hợp đồng đầu tiên và giấy GACP đầu tiên, rồi mới mở rộng theo hợp đồng (mục 7, 8).</li>
 </ol>
 
 <div class="box warn">
-<p><strong>Điều kiện làm kết luận đổi chiều.</strong></p>
-<ul>
-<li>Nếu 300+ ha của TeraFam không phải dược liệu đạt GACP mà là nông sản thực phẩm, thì đối thủ trực tiếp đổi sang nhóm rau quả sấy và xuất khẩu (mục 3, nhóm C), và phần lớn lập luận pháp lý ở trên không áp dụng.</li>
-<li>Nếu TeraFam không có phạm vi GMP cho "dược liệu, bán thành phẩm dược liệu" (Thông tư 28/2025, Điều 4), thì tầng bán thành phẩm và OEM sang kênh nguyên liệu dược không đi được theo cách hồ sơ đang mô tả.</li>
-<li>Nếu giá thực tế của hàng TeraFam thấp hơn nhiều so với 4.000 USD/tấn ngầm định trong con số 400 triệu USD, TAM thu nhỏ khoảng 3 lần (mục 8, độ nhạy).</li>
-</ul>
+<p><strong>Độ tin của bản này.</strong> Phần lớn con số thị trường là <span class="b s">SECONDARY</span> hoặc suy diễn. Chỉ báo cáo thường niên và văn bản nhà nước đọc toàn văn mới được <span class="b c">CONFIRMED</span>. Các khoảng trống lớn nhất (chi phí mỗi ha, giá cao chiết, biên gia công, điều kiện mua của người mua) được liệt kê ở mục 10 kèm cách lấp. Chưa có phỏng vấn người mua nào; mọi đánh giá về người mua dựa trên tài liệu công khai.</p>
 </div>
 
-<h2 id="pham-vi">2. Phạm vi và mẫu</h2>
+<h2 id="khung">1. Cách nhìn đúng cho ngành này</h2>
+<p>Bảy lăng kính thay cho khung phần mềm. Mỗi lăng kính có một câu hỏi, một loại số liệu, và một mục trong báo cáo.</p>
+
+<div class="tw"><table>
+<colgroup><col style="width:7.5%"><col style="width:24.7%"><col style="width:32.3%"><col style="width:25.8%"><col style="width:9.7%"></colgroup>
+<thead><tr><th>#</th><th>Lăng kính</th><th>Câu hỏi</th><th>Thay cho gì ở bản đầu</th><th>Mục</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Ví tiền của người mua</td><td>Ai thực sự trả tiền cho nguyên liệu, bao nhiêu, theo điều kiện nào?</td><td>"Kích thước thị trường 7 đến 8,6 tỷ USD"</td><td>2</td></tr>
+<tr><td>2</td><td>Chuỗi giá trị và biên theo khâu</td><td>Tiền tăng bao nhiêu lần từ vườn tới thành phẩm, và ai giữ phần biên?</td><td>Giá niêm yết của từng đối thủ</td><td>3</td></tr>
+<tr><td>3</td><td>Kinh tế mỗi ha, theo từng cây</td><td>Cây nào cho doanh thu mỗi ha ổn định, có người mua, hợp đất?</td><td>Ma trận tính năng</td><td>4</td></tr>
+<tr><td>4</td><td>Mốc đối sánh theo chỉ số</td><td>Ở chỉ số này nên so với doanh nghiệp nào, mốc là bao nhiêu, tin được đến đâu?</td><td>Bảng "đối thủ trực tiếp"</td><td>5</td></tr>
+<tr><td>5</td><td>Bài học thất bại có tên</td><td>Ai đã làm mô hình tương tự và hỏng ở đâu?</td><td>Rủi ro chung chung</td><td>6</td></tr>
+<tr><td>6</td><td>Lựa chọn khâu và vốn</td><td>TeraFam nên đứng ở khâu nào trước, cần bao nhiêu vốn, vào lúc nào?</td><td>"Định vị 2×2"</td><td>7</td></tr>
+<tr><td>7</td><td>Lộ trình theo vụ và chứng nhận</td><td>Làm gì trong 30 ngày, 4 tháng, 1 năm, 2 năm, và cổng nào chặn mở rộng?</td><td>"Bước tiếp theo: phỏng vấn 5 khách"</td><td>8, 9</td></tr>
+</tbody></table></div>
+
+<h2 id="thi-truong">2. Bức tranh thị trường: tiền thực sự nằm ở đâu</h2>
+
+<figure>
+<img src="chart-wallet.svg" width="820" height="450" alt="Biểu đồ khoảng thấp đến cao theo thang log, đơn vị triệu USD mỗi năm. Chi tiêu và kim ngạch cuối: thị trường dược 7.000 đến 8.580, TPCN 960 đến 2.100, xuất khẩu rau quả chế biến 1.520 đến 2.060. Ví tiền nguyên liệu: dược liệu thô 240 đến 400, mọi nguyên vật liệu của 5 hãng dược 173 đến 219, dược liệu nội địa 48 đến 120. TeraFam: trần doanh thu nguyên liệu 300 ha 0,9 đến 6,6.">
+<figcaption><strong>Hình 1. Từ con số lớn xuống ví tiền nguyên liệu.</strong> Các thanh có định nghĩa khác nhau; chỉ so bậc độ lớn, không cộng. Nguồn: Cục Quản lý Dược, IMARC, Bộ Công Thương, báo cáo thường niên Traphaco và Dược Hậu Giang, tính lại ở phụ lục P8 và mục 3.</figcaption>
+</figure>
+
+<h3>2.1 Cách đọc hình</h3>
+<ul>
+<li><strong>Nhóm xanh dương là tiền chi cuối cùng,</strong> không phải thị trường nguyên liệu. Với dược, thuốc sản xuất trong nước chỉ khoảng 46% giá trị <span class="b s">SECONDARY</span>, và bốn hãng niêm yết cộng lại chỉ khoảng 0,49 tỷ USD doanh thu, nhỏ hơn 14 đến 18 lần số "7 đến 8,6 tỷ USD" <span class="b i">INFERENCE</span> (phụ lục P9).</li>
+<li><strong>Nhóm cam là ví tiền nguyên liệu.</strong> Số duy nhất cho dược liệu thô là khoảng 400 triệu USD mỗi năm cho hơn 100.000 tấn, từ lời một diễn giả <span class="b s">SECONDARY</span>. Năm hãng niêm yết chi 4.418 đến 5.590 tỷ đồng (173 đến 219 triệu USD) cho <em>mọi</em> nguyên vật liệu năm 2025 <span class="b i">INFERENCE</span>. Hai số đọc từ báo cáo thường niên: Traphaco 650,7 tỷ (24,5% doanh thu) và Dược Hậu Giang 2.388,4 tỷ (45,3% doanh thu) <span class="b c">CONFIRMED</span> (thuyết minh chi phí theo yếu tố; mình mở lại cả hai, tổng năm dòng khớp tổng chung, còn thứ tự dòng suy từ bố cục bảng). Ba hãng còn lại (OPC, Domesco, Imexpharm) là ước lượng theo tỷ lệ của hai hãng trên <span class="b i">ASSUMPTION</span>. Phần dược liệu trong các con số này không được tách trong báo cáo nào.</li>
+<li><strong>Cận trên chắc chắn:</strong> dù dược liệu chiếm 30% nguyên vật liệu, ví tiền dược liệu của nhóm niêm yết vẫn dưới khoảng 66 triệu USD mỗi năm <span class="b i">INFERENCE</span> (1,7 nghìn tỷ đồng). Phần còn lại của khoảng 400 triệu USD, nếu số đó đúng, nằm ở nhà máy đông dược không niêm yết, TPCN, bệnh viện, xuất khẩu và thị trường lẻ; không có số cho các nhóm này.</li>
+<li><strong>Thanh "dược liệu mua từ nguồn nội địa" (SAM)</strong> là 20 đến 30% của dược liệu thô. Cận 20% trùng mục tiêu chính sách 2030 của Quyết định 1976/2026 <span class="b c">CONFIRMED</span>; 25 đến 30% là tỷ lệ báo chí nêu cho hiện nay <span class="b s">SECONDARY</span> (phụ lục P8).</li>
+<li><strong>Thanh xanh lá là TeraFam:</strong> trần doanh thu nguyên liệu của 300 ha khoảng 22 đến 168 tỷ đồng (0,85 đến 6,6 triệu USD) trước chi phí, nếu bán hết (mục 4). So sánh: OPC bán nguyên vật liệu ra ngoài chỉ 9,4 tỷ đồng mỗi năm <span class="b c">CONFIRMED</span>. Trần của TeraFam gấp 2,3 đến 18 lần số đó <span class="b i">INFERENCE</span>, nghĩa là TeraFam phải tìm người mua ngoài nhóm dược lớn.</li>
+</ul>
+
+<h3>2.2 Ai mua, và họ thiếu gì</h3>
+<div class="tw"><table>
+<colgroup><col style="width:18.6%"><col style="width:32.4%"><col style="width:29.4%"><col style="width:19.6%"></colgroup>
+<thead><tr><th>Nhóm người mua</th><th>Họ là ai, họ lấy nguyên liệu từ đâu</th><th>Thiếu nguồn nội địa có giấy tờ?</th><th>Mức chắc</th></tr></thead>
+<tbody>
+<tr><td>A1. Đông dược lớn có vùng riêng</td><td>Traphaco: 13 vùng GACP-WHO, doanh thu 2.657 tỷ <span class="b c">CONFIRMED</span>. OPC: 12 vùng GACP-WHO, doanh thu 1.123 tỷ <span class="b c">CONFIRMED</span>. Cả hai vẫn nhập một phần và công khai rủi ro nguyên liệu nhập</td><td>Một phần, ở những cây ngoài danh mục tự trồng (ví dụ nhóm đương quy, xuyên khung: có thể nhập tới 80% <span class="b s">SECONDARY</span>). Không có số tấn thiếu</td><td>Khá chắc về chiều thiếu (lời chính công ty); không có số lượng</td></tr>
+<tr><td>A2. Đông dược vừa và nhỏ</td><td>Mediplantex (doanh thu 367 tỷ, tự nói khoảng 90% nguyên liệu nhập khẩu), Nam Hà, Hải Dương, Phúc Hưng, Fitopharma… Không có vùng GACP riêng</td><td>Thiếu nhiều: dễ bị xếp nhóm thấp khi bán vào bệnh viện</td><td>Thấp đến trung bình; một vài nguồn riêng lẻ</td></tr>
+<tr><td>A3. Bệnh viện công (mua vị thuốc, dược liệu)</td><td>Gói nhỏ, ví dụ "Mua dược liệu 2026 lần 1" của một bệnh viện y học cổ truyền: 7,19 tỷ đồng. Nhóm thầu theo tỷ lệ dược liệu GACP và GMP (Thông tư 07/2024, sau đó Thông tư 40/2025)</td><td>Thiếu nguồn đạt GACP: cả nước chỉ khoảng 500 ha GACP-WHO <span class="b s">SECONDARY</span></td><td>Ví tiền nhỏ, phân tán; người bán là nhà máy hoặc nhà phân phối, không phải nông hộ. Ngưỡng của Thông tư 40/2025 chưa đọc được</td></tr>
+<tr><td>A4. Nhà máy hóa dược lớn</td><td>Dược Hậu Giang (nguyên liệu 2.388 tỷ), Domesco, Imexpharm: chủ yếu hoạt chất nhập khẩu, hơn 200 nhà cung cấp được thẩm định</td><td>Không thuộc dược liệu</td><td>Ví tiền lớn nhưng không phải thị trường dược liệu</td></tr>
+<tr><td>B. TPCN, thương hiệu không nhà máy, OEM/ODM, nhãn riêng chuỗi nhà thuốc</td><td>Nhiều tên, ít số. Vụ MediPhar/MediUSA (cáo trạng 27/03/2026): doanh thu thực hơn 1.762 tỷ, chỉ kê khai thuế khoảng 363 tỷ <span class="b s">SECONDARY</span>. Long Châu 2.517 cửa hàng, Pharmacity 991 cửa hàng <span class="b u">UNVERIFIED</span></td><td>Chưa đo được. Áp lực pháp lý có thể tăng nhu cầu nguyên liệu có giấy tờ, nhưng Nghị định 46/2026 đang tạm ngừng</td><td>Thấp. Có rủi ro tuân thủ và thanh toán ở một số khách</td></tr>
+<tr><td>C. Xuất khẩu nông sản sơ chế</td><td>Nafoods (sấy và tiêu dùng 326 tỷ, mít sấy giòn chủ yếu gia công ngoài), nhà xuất khẩu quế, gia vị, trái cây sấy</td><td>Chưa có chứng cứ thiếu hay dư nguyên liệu thô nội địa cho dược liệu; Trung Quốc chưa mở cửa cho sản phẩm chế biến từ dược liệu Việt Nam (10/2026)</td><td>Thấp</td></tr>
+<tr><td>E. Mỹ phẩm thiên nhiên, đồ uống thảo mộc</td><td>Chỉ có tên (ví dụ Cocoon, Dr Thanh), không có số mua</td><td>Không kết luận</td><td>Không có</td></tr>
+</tbody></table></div>
+
+<h3>2.3 Ba điều rút ra</h3>
+<ol>
+<li>Nhóm duy nhất có chứng cứ trực tiếp về thiếu nguồn nội địa có giấy tờ là đông dược vừa và nhỏ (A2) và bệnh viện (A3) <span class="b i">INFERENCE</span>. Cả hai chi nhỏ và không công bố điều kiện mua.</li>
+<li>Nhóm có ví tiền lớn nhất (Dược Hậu Giang, Domesco, Imexpharm) mua chủ yếu hoạt chất. Nhóm thật sự mua dược liệu (Traphaco, OPC) có vùng GACP riêng, dù vẫn nhập một phần. Cầu dược liệu thô mà bên thứ ba bán được vì vậy nhỏ hơn nhiều con số 400 triệu USD nếu hiểu là "ví tiền mở" <span class="b i">INFERENCE</span>.</li>
+<li>Không nhóm nào có bằng chứng "dư nguồn nội địa có giấy tờ". Mọi nguồn đều nói thiếu hoặc không nói.</li>
+</ol>
+
+<h3>2.4 Điều kiện mua: phần lớn không công bố</h3>
+<ul>
+<li><strong>Không công bố:</strong> MOQ, thời gian duyệt nhà cung cấp, tần suất đặt hàng, hợp đồng nguyên tắc nhiều năm, ngày công nợ riêng cho dược liệu <span class="b u">REFUSED</span>. Ba truy vấn khác nhau chỉ trả về trang pháp lý và trang quảng cáo.</li>
+<li><strong>Đọc được từ báo cáo thường niên:</strong> Dược Hậu Giang nói hơn 200 nhà cung cấp được thẩm định và 100% nguyên liệu đầu vào phải qua kiểm nghiệm trước khi vào dây chuyền <span class="b c">CONFIRMED</span> (áp dụng cho hoạt chất và tá dược). Domesco: đa dạng hóa nhà cung cấp, đàm phán thời gian giao hàng và giá <span class="b c">CONFIRMED</span>.</li>
+<li><strong>Công nợ khác nhau rất xa:</strong> Traphaco trả người bán trung bình 187,9 ngày (2024: 208,6) <span class="b c">CONFIRMED</span>; Dược Hậu Giang khoảng 37 ngày <span class="b i">INFERENCE</span> (365 ÷ vòng quay phải trả 9,9). Cả hai tính trên mọi nhà cung cấp. Với một nhà cung ứng nhỏ, điều khoản thanh toán của khách quyết định vốn lưu động.</li>
+<li><strong>Hai tên dễ nhầm:</strong> "CTCP Dược liệu Trung ương 2 (Phytopharma)" thực tế bán tân dược và dụng cụ y tế, không mua dược liệu. Mediplantex phần lớn là tân dược.</li>
+</ul>
+
+<h2 id="chuoi">3. Chuỗi giá trị: ai giữ biên ở khâu nào</h2>
+
+<h3>3.1 Giá tăng bao nhiêu từ vườn đến thành phẩm</h3>
+<figure>
+<img src="chart-nghe-ladder.svg" width="820" height="370" alt="Thang giá nghệ theo khâu, thang log, đồng mỗi kg sản phẩm: tươi tại vườn 8.000 đến 12.000; tinh bột HTX 30.000 đến 50.000; tươi xuất khẩu 79.815 đến 98.430; bột thô đến tinh bột hộ chế biến 150.000 đến 300.000; chiết xuất xuất khẩu mã HS 130219 438.600 đến 831.300.">
+<figcaption><strong>Hình 2. Thang giá nghệ.</strong> Mỗi bậc khác năm, khác nguồn và khác khối lượng nguyên liệu, nên đây là bậc độ lớn, không phải biên lợi nhuận của một khâu. Nguồn: báo Nông nghiệp và Môi trường, Tridge, báo VnBusiness (giá HTX 2021).</figcaption>
+</figure>
+<ul>
+<li><strong>Hệ số 36 đến 69 lần</strong> giữa nghệ tươi sỉ 12.000 đ/kg và chiết xuất xuất khẩu 17,2 đến 32,6 USD/kg <span class="b i">INFERENCE</span>, nhưng không có tỷ lệ tươi sang chiết xuất nên không phải hệ số trên cùng một khối lượng nguyên liệu. Mã HS 130219 là "nhựa và chiết xuất thực vật khác", không riêng curcumin <span class="b s">SECONDARY</span>.</li>
+<li><strong>Mâu thuẫn trong chính nguồn:</strong> một HTX bán tinh bột nghệ 30.000 đến 50.000 đ/kg, trong khi 15 đến 17,5 kg nghệ tươi ra 1 kg tinh bột và giá thu mua nghệ tươi 7.000 đến 8.000 đ/kg: chỉ riêng nguyên liệu đã 105.000 đến 140.000 đồng. Hai số của cùng một bài không thể cùng đúng <span class="b i">INFERENCE</span>. Không chọn số nào.</li>
+<li><strong>Atiso, chuỗi duy nhất tính được đủ:</strong> lá tươi 5.700 đ/kg (Lâm Đồng 2023) <span class="b s">SECONDARY</span>; một hộp thuốc Boganic 100 viên cần 0,5 kg lá tươi tương đương (50 kg lá mỗi 1 kg cao khô theo hồ sơ đăng ký) nên nguyên liệu lá khoảng 2.850 đồng <span class="b i">INFERENCE</span>; giá hộp 80.000 đồng, hệ số khoảng 28 lần; hoặc 369.000 đồng ở một trang khác, hệ số khoảng 129 lần. Hai giá bán lẻ lệch 4,6 lần <span class="b u">UNVERIFIED</span> (trang bán thuốc trả 403, chỉ thấy qua tóm tắt tìm kiếm). Hệ số này gồm mọi thứ giữa lá và hộp: chiết xuất, hai thành phần khác, tá dược, bao bì, kênh phân phối.</li>
+<li><strong>Mít sấy:</strong> giá xuất khẩu 4,50 đến 11,10 USD/kg (2024) <span class="b s">SECONDARY</span>. Tỷ lệ mít tươi sang mít sấy không có nguồn <span class="b u">REFUSED</span>; thử với tỷ lệ giả định 10:1 thì nguyên liệu chiếm khoảng 4 đến 9% giá xuất khẩu khi mít tươi 1.000 đ/kg, 11 đến 26% khi 3.000 đ/kg, 35 đến 87% khi 10.000 đ/kg và hơn 100% ở mức cao nhất khi 22.000 đ/kg, nghĩa là biên khâu sấy cực nhạy với giá nguyên liệu <span class="b i">ASSUMPTION</span>.</li>
+<li><strong>Không tìm được:</strong> giá cao chiết, bột và tỷ lệ quy đổi cho đinh lăng, cà gai leo, sâm; giá sâm Ngọc Linh theo tuổi. Bài VnEconomy 2022 có tiêu đề "vài chục triệu một lạng" nhưng nội dung nêu 160 triệu/kg (tức 6 triệu/lạng).</li>
+</ul>
+
+<h3>3.2 Biên theo khâu, từ báo cáo tài chính 2025</h3>
+<figure>
+<img src="chart-margins.svg" width="820" height="450" alt="Biên lợi nhuận gộp và ròng năm 2025: Traphaco 53,6 và 10,5; Nam Dược 51,8 và 9,7; Dược Hậu Giang 47,6 và 16,2; OPC 41,4 và 10,4; Domesco 19,8 và 9,6; Nafoods 22,7 và 8,4 phần trăm.">
+<figcaption><strong>Hình 3. Biên gộp cao ở thuốc, nhưng biên ròng của các khâu gần nhau.</strong> Nguồn: báo cáo thường niên 2025 Traphaco, OPC, Domesco; báo chí và trang tổng hợp cho Dược Hậu Giang, Nam Dược; báo cáo của công ty chứng khoán ABS cho Nafoods. Biên gộp và ròng của Nam Dược là <span class="b i">INFERENCE</span> (480,5 ÷ 928; 90 ÷ 928).</figcaption>
+</figure>
+<ul>
+<li><strong>Nguyên nhân biên ròng gần nhau.</strong> Traphaco giữ 53,6 đồng sau giá vốn trên mỗi 100 đồng bán, nhưng chi phí bán hàng 28,5% và quản lý 12,9% (tổng 41,4%) ăn gần hết, còn 10,5 đồng lãi ròng <span class="b c">CONFIRMED</span> (báo cáo tài chính hợp nhất kiểm toán). Nam Dược tương tự: bán hàng 30,7%, quản lý 9,8% <span class="b i">INFERENCE</span>. Phần lớn "biên" của khâu thành phẩm là chi phí kênh (nhà thuốc, bệnh viện, trình dược viên), không phải lợi nhuận.</li>
+<li><strong>Nafoods là mốc thận trọng:</strong> biên gộp 22,7% (2024: 28,2%), biên ròng 8,4% (trước phần cổ đông thiểu số), nợ vay gấp 1,62 lần vốn chủ, chi đầu tư gấp 2,3 lần dòng tiền hoạt động, và hai khách hàng lớn nhất chiếm 64,7% phải thu khách hàng (Q1/2026) <span class="b s">SECONDARY</span>. Mít sấy giòn của họ chủ yếu gia công thương mại bên ngoài, nên họ không giữ biên khâu sấy.</li>
+<li><strong>Định nghĩa không so được tuyệt đối:</strong> biên gộp Imexpharm là 47,5% hay 41,0% tùy nguồn; OPC 41,4% (báo cáo thường niên) hay 47,3% (trang tổng hợp). Mình dùng số của báo cáo thường niên cho OPC và in cả hai cho Imexpharm. Domesco 19,8% khác hẳn nhóm vì cơ cấu hàng hợp tác và hàng nhập; không nên coi là biên chung của khâu thuốc.</li>
+</ul>
+
+<h3>3.3 Bốn khâu: biên, vốn, rủi ro, ai đang giữ</h3>
+<div class="tw"><table>
+<colgroup><col style="width:15.6%"><col style="width:21.1%"><col style="width:22.9%"><col style="width:22.0%"><col style="width:18.3%"></colgroup>
+<thead><tr><th>Khâu</th><th>Biên điển hình (2025)</th><th>Vốn cần</th><th>Rủi ro có bằng chứng</th><th>Ai đang giữ ở Việt Nam</th></tr></thead>
+<tbody>
+<tr><td>1. Trồng, thu hái, sơ chế</td><td>Không có biên gộp của khâu "trồng thuần" từ báo cáo niêm yết nào <span class="b u">REFUSED</span>. Gần nhất: Nafoods 22,7% gộp, 8,4% ròng <span class="b s">SECONDARY</span></td><td>Vốn mùa vụ atiso khoảng 300 triệu đ/ha <span class="b s">SECONDARY</span>; chi phí lập 1 ha vùng GACP đầy đủ <span class="b u">REFUSED</span>; lệ phí GACP 9 triệu đồng/hồ sơ</td><td>Giá tươi biến động rất rộng (mít 1.000 đến 22.000 đ/kg; nghệ 3.000 đến 13.000); thu hoạch 10 tháng sau trồng (atiso, nghệ); mất vụ vì thời tiết</td><td>Nông hộ, HTX; Traphaco, OPC (vùng GACP riêng); Nafoods (vùng chanh dây, cây giống)</td></tr>
+<tr><td>2. Chế biến sơ cấp, sấy, chiết xuất</td><td>Nafoods 22,7% (2024: 28,2%). Chiết xuất curcumin, cao chiết, bột: không có báo cáo tách riêng <span class="b u">REFUSED</span></td><td>Nhà máy chế biến quả 7,4 đến 50 triệu đồng mỗi tấn công suất năm (Nafoods Tây Nguyên 744 tỷ ÷ 100.000 tấn; Antesco 419 tỷ ÷ 33.600 tấn; Sao Mai 500 tỷ ÷ 10.000 tấn) <span class="b i">INFERENCE</span>. Nhà máy chiết xuất GMP riêng <span class="b u">REFUSED</span></td><td>Giá nguyên liệu (biên Nafoods giảm 5,5 điểm); nợ vay; phải thu tập trung vào hai khách</td><td>Nafoods, Antesco, Sao Mai, TH (nhà máy lớn); HTX nhỏ (lò cao atiso 700 triệu đồng cho 1 tấn/ngày)</td></tr>
+<tr><td>3. Thành phẩm thuốc từ dược liệu và TPCN có thương hiệu</td><td>Gộp 41 đến 54% (Domesco 19,8%); sau chi phí bán hàng và quản lý, ròng 9,6 đến 16,2%</td><td>Nhà máy EU-GMP 700 tỷ (Traphaco, 900 triệu viên/năm) đến 1.495 tỷ (Imexpharm, hoàn vốn tối thiểu 7 năm do công ty tự nói); chủ yếu cho tân dược dạng rắn, không phải dược liệu. Vốn lưu động (tồn kho + phải thu) 31 đến 64% doanh thu; tồn kho 112 đến 220 ngày</td><td>Chi phí kênh ăn 41% doanh thu; tồn kho dài ngày; phải thu khoảng 100 ngày (Domesco, OPC)</td><td>Dược Hậu Giang, Traphaco, Imexpharm, Domesco, OPC, Nam Dược và hãng nước ngoài</td></tr>
+<tr><td>4. OEM/ODM, gia công cho bên thứ ba</td><td>Không tìm thấy báo cáo tài chính tách biên gia công <span class="b u">REFUSED</span></td><td>Không có số riêng</td><td>Không tìm thấy</td><td>Dược Hậu Giang coi OEM là trụ cột tăng trưởng; Traphaco CNC bán ngoài 28,3 tỷ; Globalco, Mediphar USA…</td></tr>
+</tbody></table></div>
+
+<h3>3.4 Nếu TeraFam đi cả chuỗi: tính được gì</h3>
+<pre style="overflow-x:auto;background:var(--soft);padding:12px;border-radius:8px;font:.85rem/1.55 ui-monospace,Menlo,Consolas,monospace">Biên gộp hợp nhất = g2 + s × (1 − g2) × g1
+g1 = biên gộp khâu thượng nguồn (trồng, chế biến)
+g2 = biên gộp khâu thành phẩm
+s  = phần giá vốn thành phẩm là nguyên liệu do chính mình cung cấp</pre>
+<div class="tw"><table>
+<colgroup><col style="width:28.0%"><col style="width:14.0%"><col style="width:14.0%"><col style="width:14.0%"><col style="width:30.1%"></colgroup>
+<thead><tr><th>g2 (hãng đối sánh), g1 = 22,7% (Nafoods)</th><th>s = 0,2</th><th>s = 0,4</th><th>s = 0,6</th><th>Ví dụ tính (s = 0,4)</th></tr></thead>
+<tbody>
+<tr><td>41,4% (OPC)</td><td class="num">44,1%</td><td class="num">46,7%</td><td class="num">49,4%</td><td>0,414 + 0,4 × 0,586 × 0,227 = 0,467</td></tr>
+<tr><td>47,6% (Dược Hậu Giang)</td><td class="num">50,0%</td><td class="num">52,4%</td><td class="num">54,7%</td><td>0,476 + 0,4 × 0,524 × 0,227 = 0,524</td></tr>
+<tr><td>53,6% (Traphaco)</td><td class="num">55,7%</td><td class="num">57,8%</td><td class="num">59,9%</td><td>0,536 + 0,4 × 0,464 × 0,227 = 0,578</td></tr>
+</tbody></table></div>
+<ul>
+<li>Đi cả chuỗi cộng thêm khoảng <strong>2 đến 8 điểm</strong> biên gộp so với chỉ làm thành phẩm <span class="b i">INFERENCE</span>, vì thượng nguồn chỉ chiếm <em>s × (1 − g2)</em> bằng 12 đến 35% giá bán. Giá trị chính của tự trồng là kiểm soát nguồn cung và chất lượng; chính OPC và Traphaco mô tả vùng GACP là để chủ động nguồn cung.</li>
+<li><strong>Biến lớn nhất chưa có số: <em>s</em>.</strong> Không hãng niêm yết nào tách tỷ trọng dược liệu trong giá vốn. Cần: giá vốn nguyên liệu trên tổng giá vốn của một sản phẩm cụ thể theo cây đã chọn, giá chuyển nhượng thật, và chi phí kênh của mô hình OEM (nhẹ hơn thương hiệu).</li>
+<li>Nếu thành phẩm vẫn chịu cấu trúc chi phí bán hàng của Traphaco (41,4% doanh thu), biên hợp nhất sau chi phí đó khoảng 14 đến 19% (với g2 của Traphaco) so với biên hoạt động 12,8% của Traphaco đứng một mình <span class="b i">INFERENCE</span>. Chỉ để định cỡ, không phải dự báo.</li>
+</ul>
+
+<h3>3.5 Vốn và vốn lưu động theo khâu</h3>
+<div class="tw"><table>
+<colgroup><col style="width:29.9%"><col style="width:20.7%"><col style="width:19.5%"><col style="width:14.9%"><col style="width:14.9%"></colgroup>
+<thead><tr><th>Doanh nghiệp (khâu)</th><th>(Tồn kho + phải thu) ÷ doanh thu</th><th>Tài sản cố định ÷ doanh thu</th><th>Số ngày tồn kho</th><th>Số ngày phải thu</th></tr></thead>
+<tbody>
+<tr><td>Traphaco (thành phẩm, vùng GACP)</td><td class="num">34,5%</td><td class="num">16,2%</td><td class="num">165</td><td class="num">41</td></tr>
+<tr><td>Dược Hậu Giang (thành phẩm)</td><td class="num">30,6%</td><td class="num">19,2%</td><td class="num">141</td><td class="num">38</td></tr>
+<tr><td>Imexpharm (thành phẩm)</td><td class="num">41,0%</td><td class="num">30,5%</td><td class="num">197</td><td class="num">49</td></tr>
+<tr><td>Domesco (thành phẩm)</td><td class="num">52,0%</td><td class="num">7,1%</td><td class="num">112</td><td class="num">101</td></tr>
+<tr><td>OPC (thành phẩm, 12 vùng GACP)</td><td class="num">63,8%</td><td class="num">17,6%</td><td class="num">220</td><td class="num">92</td></tr>
+<tr><td>Nafoods (chế biến, vùng nguyên liệu)</td><td class="num">27,3%</td><td class="num">35,7%</td><td class="num">49</td><td class="num">54</td></tr>
+</tbody></table></div>
+<p class="src">Tính từ báo cáo tài chính 2025; Traphaco và OPC là <span class="b c">CONFIRMED</span>, còn lại <span class="b s">SECONDARY</span> (trang tổng hợp). Chưa trừ khoản phải trả nhà cung cấp, nên là vốn lưu động "thô". Số ngày phải thu của Domesco và OPC cao một phần vì dùng tổng phải thu ngắn hạn, gồm khoản trả trước.</p>
+<ul>
+<li><strong>Khâu thành phẩm:</strong> vốn cố định nhẹ (7 đến 31% doanh thu) nhưng vốn lưu động nặng (31 đến 64%, tồn kho 112 đến 220 ngày). <strong>Khâu chế biến nông sản (Nafoods):</strong> ngược lại, vốn lưu động 27% nhưng vốn cố định 36% doanh thu, và nợ vay 1,62 lần vốn chủ để tài trợ <span class="b i">INFERENCE</span>.</li>
+<li><strong>Chứng nhận rất rẻ so với nhà máy:</strong> lệ phí GACP 9 triệu đồng/hồ sơ và GMP 30 triệu đồng/cơ sở <span class="b s">SECONDARY</span> (Thông tư 41/2023/TT-BTC, đọc qua trang luật; hiệu lực hiện nay chưa kiểm). Chi phí thật của chứng nhận là tư vấn, chuẩn bị hồ sơ và nâng cấp cơ sở, và số đó không tìm được <span class="b u">REFUSED</span>.</li>
+</ul>
+
+<h2 id="cay">4. Chọn cây gì: kinh tế mỗi ha và bẫy giá</h2>
+<p>Hồ sơ TeraFam không nêu cây trồng, nên đây là bảng 18 ứng viên để chọn, không phải khuyến nghị cuối. Mọi điểm là <span class="b i">INFERENCE</span> với trọng số do mình đặt (cầu 20%, giá ổn định 15%, lợi nhuận mỗi ha 20%, hoàn vốn 10%, ít cạnh tranh 10%, dễ chứng nhận 10%, hợp bốn vùng 15%); ô thiếu dữ liệu chấm 2 và đánh dấu *. Điểm "hợp vùng" là giả định mạnh vì gần như không có nguồn theo vùng.</p>
+
+<h3>4.1 Doanh thu thô mỗi ha và biến cố giá</h3>
+<figure>
+<img src="chart-revenue-ha.svg" width="820" height="440" alt="Doanh thu thô mỗi ha mỗi năm, triệu đồng, trước chi phí: gừng 240 đến 560; chanh dây 188 đến 283; nghệ vàng 72 đến 403; atiso lá 76 đến 287; cà gai leo khô 110 đến 203. Kèm biến cố giá từng ghi nhận.">
+<figcaption><strong>Hình 4. Doanh thu thô mỗi ha = năng suất × giá, chỉ cho các cây có cả hai số có nguồn.</strong> Chưa trừ chi phí. Nguồn: các bài báo nông nghiệp, sổ tay GACP-WHO của HELVETAS và EU 2020 (cà gai leo), tính lại ở phần này.</figcaption>
+</figure>
+<ul>
+<li><strong>Trần 300 ha</strong> theo từng cây (doanh thu thô nếu bán hết): nghệ 21,6 đến 121 tỷ; gừng 72 đến 168 tỷ; atiso lá 22,8 đến 86 tỷ; cà gai leo 33 đến 61 tỷ; chanh dây 56 đến 85 tỷ đồng <span class="b i">INFERENCE</span>. Dải chung 22 đến 168 tỷ (0,85 đến 6,6 triệu USD).</li>
+<li><strong>Chanh dây có một mâu thuẫn mình đã xử lý:</strong> bài báo nêu năng suất 35 đến 45 tấn/ha, nhưng 163.000 tấn trên 10.400 ha cả nước là 15,7 tấn/ha <span class="b s">SECONDARY</span> <span class="b i">INFERENCE</span>. Với 35 đến 45 tấn/ha, doanh thu sẽ là 420 đến 810 triệu; con số 250 đến 350 triệu mà báo cũng nêu khớp với bình quân cả nước. Biểu đồ dùng bình quân cả nước.</li>
+<li><strong>Chưa biết lãi mỗi ha.</strong> Chi phí mỗi ha có nguồn chỉ có ba ca rời rạc (nghệ bọ cạp khoảng 300 triệu/ha do một HTX tự nêu; atiso Lâm Đồng 300 triệu/ha trong bài tự mâu thuẫn; gừng hơn 20 triệu/ha chưa kể công, chỉ qua tóm tắt tìm kiếm). Cần hạch toán thử trên chính đất TeraFam.</li>
+<li><strong>Giá 2026 không có</strong> cho nghệ, gừng, đinh lăng, cà gai leo, atiso; mốc mới nhất là 2024 đến 2025. Cần gọi trực tiếp các đầu mối thu mua.</li>
+</ul>
+
+<h3>4.2 Mô thức bong bóng giá lặp lại</h3>
+<div class="tw"><table>
+<colgroup><col style="width:17.2%"><col style="width:39.1%"><col style="width:23.0%"><col style="width:20.7%"></colgroup>
+<thead><tr><th>Cây, năm</th><th>Diễn biến</th><th>Nguyên nhân theo nguồn</th><th>Nhãn</th></tr></thead>
+<tbody>
+<tr><td>Đinh lăng, 2017–2020</td><td>Giá nguyên liệu đỉnh 27.000 xuống 11.000 đ/kg (−59%); giá giống 40.000–45.000 đ/kg; một nông dân nói khoảng 80% diện tích Hải Hậu bị bỏ. Tây Ninh có một HTX 375 ha đinh lăng (2019), hiện trạng chưa kiểm</td><td>Trồng ồ ạt, giá giống tăng vọt, không ai cam kết mua, yêu cầu thu mua khắt khe (đúng 3 tuổi)</td><td><span class="b s">SECONDARY</span> (báo VietNamNet 2020)</td></tr>
+<tr><td>Cà gai leo, 2015–2016</td><td>80.000–100.000 xuống 15.000–20.000 đ/kg trong khoảng một năm (−81%), sau khi khoảng 60 hộ mở rộng</td><td>Mở rộng ồ ạt, không có đầu ra</td><td><span class="b s">SECONDARY</span>; tươi hay khô không rõ</td></tr>
+<tr><td>Nghệ, 2023</td><td>Quảng Ngãi 04/2023 có hàng nhưng không người mua; giá 10.000 xuống 6.000–8.000 đ/kg</td><td>Dư cung cục bộ</td><td><span class="b s">SECONDARY</span></td></tr>
+<tr><td>Atiso Đà Lạt, 1998–2012</td><td>Bông từ 70.000–100.000 xuống 12.000–15.000 đ/kg; diện tích giảm khoảng 75% (200 ha còn 50 ha)</td><td>Không còn thương lái</td><td><span class="b s">SECONDARY</span> (báo Tuổi Trẻ 2012)</td></tr>
+<tr><td>Nghệ bọ cạp, 2019–2023</td><td>Giá giống 400.000 xuống 200.000 đ/kg trong 4 năm</td><td>Chỉ HTX nêu giá; chưa có người mua độc lập</td><td><span class="b v">VENDOR</span> và <span class="b s">SECONDARY</span></td></tr>
+<tr><td>Chanh dây Gia Lai, 2022–2025; Mít, 2025–2026</td><td>Chanh dây: nông dân mở rộng ồ ạt khi giá tăng, rồi phá vườn thay cà phê, sầu riêng; Gia Lai còn khoảng 5.400 ha, mục tiêu 30.000 ha vào 2030. Mít loại A chỉ 5.000–9.000 đ/kg (05/2026)</td><td>Dư cung; Trung Quốc siết cadimi và "Vàng O" (mít)</td><td><span class="b s">SECONDARY</span></td></tr>
+<tr><td><strong>Ngoại lệ: lá atiso của Traphaco, Sa Pa</strong></td><td>Giá thu mua 2.000 lên 2.300 đ/kg (+15% một vụ); cam kết mua toàn bộ; hơn 2.500 tấn lá mỗi năm, khoảng 65 ha, hơn 160 hộ (2023)</td><td>Người mua cuối cố định, hợp đồng rõ</td><td><span class="b s">SECONDARY</span> (báo Lào Cai 2023)</td></tr>
+</tbody></table></div>
+<p><strong>Quy luật</strong> <span class="b i">INFERENCE</span> từ sáu ca đầu: giá cao ban đầu hút diện tích, thiếu hợp đồng bao tiêu, từ vòng thu hoạch thứ hai giá rơi (ba ca có tỷ lệ rõ: 59 đến 88%; các ca khác nhẹ hơn hoặc chưa có tỷ lệ). Ngoại lệ có bằng chứng là cây có người mua cuối cố định. Với TeraFam, điều này đổi câu hỏi "cây nào lãi nhất" thành <em>"cây nào có người mua cam kết trước khi trồng"</em>.</p>
+
+<h3>4.3 Bảng ứng viên và điểm sơ bộ</h3>
+<p class="src">Mã rút gọn trong bảng: <span class="b c">C</span> CONFIRMED, <span class="b s">S</span> SECONDARY, <span class="b v">V</span> VENDOR, <span class="b i">I</span> INFERENCE hoặc ASSUMPTION, <span class="b u">U</span> chỉ thấy qua tóm tắt tìm kiếm. KTT = không tìm thấy (không có nghĩa bằng 0). Nhóm khách (A dược, B TPCN, C xuất khẩu) là <span class="b i">I</span>.</p>
+<div class="tw"><table>
+<colgroup><col style="width:9.6%"><col style="width:6.1%"><col style="width:22.8%"><col style="width:17.5%"><col style="width:17.5%"><col style="width:20.2%"><col style="width:6.1%"></colgroup>
+<thead><tr><th>Cây</th><th>Khách</th><th>Cầu và cung (có số)</th><th>Giá tại vườn (năm)</th><th>Năng suất và chu kỳ</th><th>Chứng nhận, rủi ro, hợp vùng</th><th>Điểm</th></tr></thead>
+<tbody>
+<tr><td>Chanh dây</td><td>C</td><td>Nhà máy Gia Lai nhận đủ 40% (2024), 50–60% (2025) nguyên liệu <span class="b s">S</span>; xuất khẩu tháng 04/2026 khoảng 29 triệu USD <span class="b u">U</span></td><td>12.000–18.000; đỉnh 26.000–27.000 (06/2025) <span class="b s">S</span></td><td>15,7 tấn/ha cả nước <span class="b i">I</span>; 4–5 tháng đến thu <span class="b u">U</span></td><td>Không áp dụng GACP-WHO <span class="b i">I</span>; dư cung khi mở rộng; hợp Đắk Nông, Đồng Nai <span class="b i">I</span>. Không thuộc nhóm A, B</td><td class="num">3,67</td></tr>
+<tr><td>Nghệ vàng</td><td>A, B, C</td><td>Sản lượng ước 80.000 tấn (2025); xuất gừng, nghệ và gia vị 22.314 tấn, 34,6 triệu USD <span class="b s">S</span>; cầu theo tấn và nhập khẩu KTT</td><td>3.000–13.000 (2020–2024); khoảng 11.000 (11/2024) <span class="b s">S</span></td><td>12–31 tấn/ha/vụ; 280–300 ngày, 1 vụ <span class="b s">S</span></td><td>Vùng mẫu GACP 12 ha tại Bắc Hà <span class="b s">S</span>; giá gấp 4,3 lần; hợp cả bốn vùng <span class="b i">I</span></td><td class="num">3,55</td></tr>
+<tr><td>Diệp hạ châu</td><td>A, B</td><td>OPC có vùng GACP diệp hạ châu đắng (05/2023) <span class="b c">C</span>; nhu cầu theo tấn KTT</td><td>KTT</td><td>45–60 ngày/lứa, trồng quanh năm <span class="b c">C</span> (sổ tay GACP)</td><td>Có sổ tay GACP miễn phí <span class="b c">C</span>; điểm có nhiều ô KTT; hợp Đồng Nai, Đắk Nông <span class="b i">I</span></td><td class="num">3,30*</td></tr>
+<tr><td>Gừng</td><td>B, C, A</td><td>Sản lượng ước 120.000 tấn (2025) <span class="b s">S</span>; nhập khẩu KTT</td><td>8.000–9.000 → 30.000–35.000 (2023) → khoảng 16.000 (2024–25) <span class="b s">S</span></td><td>15–16 tấn/ha (Hướng Hóa 2025) <span class="b s">S</span>; 7–11 tháng <span class="b u">U</span></td><td>Ít chuẩn GACP; giá gấp 4,4 lần rồi −54%; thối củ</td><td class="num">3,23</td></tr>
+<tr><td>Nhân hạt điều</td><td>C</td><td>Nhập điều thô hơn 2,9 triệu tấn (2025) <span class="b s">S</span></td><td>KTT</td><td>Cây lâu năm</td><td>Phải thắng giá thô nhập khoảng 1.550 USD/tấn <span class="b i">I</span>; không phải bài toán 300 ha</td><td class="num">3,08*</td></tr>
+<tr><td>Đông trùng hạ thảo (nuôi cấy)</td><td>B, A</td><td>Chỉ có tóm tắt tìm kiếm <span class="b u">U</span></td><td>Khô 80–100 triệu/kg (2023) <span class="b u">U</span></td><td>40–50 ngày/chu kỳ <span class="b u">U</span></td><td>Không phụ thuộc đất; vốn phòng lạnh lớn; nhiễm tạp, hủy lô. Độ tin thấp nhất bảng</td><td class="num">3,05*</td></tr>
+<tr><td>Ý dĩ</td><td>A, B, C</td><td>Thuộc nhóm nhập tới 80% (với đương quy, tam thất, xuyên khung) <span class="b s">S</span></td><td>KTT</td><td>KTT</td><td>Đắk Nông định hướng khoảng 2.000 ha <span class="b u">U</span>; kinh tế KTT</td><td class="num">2,93*</td></tr>
+<tr><td>Nghệ đen, nghệ bọ cạp</td><td>A, B</td><td>KTT</td><td>Bọ cạp 50.000 (05/2023, Đắk Glong) <span class="b s">S</span></td><td>15–20 tấn/ha sau 18–20 tháng <span class="b s">S</span></td><td>HTX tự nêu 500–700 triệu/ha, chi phí khoảng 300 triệu <span class="b v">V</span>; giống −50% trong 4 năm</td><td class="num">2,93</td></tr>
+<tr><td>Atiso</td><td>A, B</td><td>Traphaco mua hơn 2.500 tấn lá/năm <span class="b s">S</span></td><td>Lá 2.300 (2023); bông 12.000–15.000 (2012) <span class="b s">S</span></td><td>Khoảng 38–50 tấn/ha; 8 lứa lá mỗi vụ <span class="b s">S</span></td><td>Traphaco có GACP; cần độ cao trên 1.000 m: không hợp Tây Ninh, Đồng Nai, Ba Vì <span class="b i">I</span></td><td class="num">2,88</td></tr>
+<tr><td>Cà gai leo</td><td>A, B</td><td>KTT</td><td>Khô 20.000–40.000 (HTX bao tiêu) <span class="b u">U</span></td><td>5,5–5,8 tấn khô/ha/năm, 3–4 lứa <span class="b c">C</span> (sổ tay)</td><td>Có sổ tay GACP; héo xanh vi khuẩn, phải luân canh khác họ cà <span class="b c">C</span>; giá −81%</td><td class="num">2,88*</td></tr>
+<tr><td>Ba kích</td><td>A, B</td><td>KTT</td><td>Tươi 70.000, bóc lõi 120.000 (07/2026, một hộ) <span class="b s">S</span></td><td>Khoảng 50 tấn/ha sau 5 năm <span class="b s">S</span></td><td>Hoàn vốn 4–5 năm; số liệu từ một hộ</td><td class="num">2,85*</td></tr>
+<tr><td>Các cây còn lại</td><td></td><td colspan="4">Giảo cổ lam 2,60* · hà thủ ô đỏ 2,48* · đinh lăng 2,45 · quế 2,45 (xuất 83.433 tấn, 213,9 triệu USD, 8 tháng 2026; cầu Trung Quốc −37,5%) · mít 2,43 · tam thất 2,35 (cây ôn đới, không hợp bốn vùng) · sâm Ngọc Linh 1,60 (không hợp bốn vùng, "giá ảo", người trồng 7 năm chưa có lãi)</td><td></td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Độ nhạy:</strong> với trọng số bằng nhau hoặc nặng giá và lợi nhuận, bốn cây đầu vẫn là chanh dây, nghệ vàng, diệp hạ châu, gừng. Nhưng chênh giữa các cây liền kề thường dưới 0,3 điểm, trong sai số của việc chấm, nên điểm chỉ dùng để lọc, không để xếp hạng.</li>
+<li><strong>Cây bị loại khỏi bảng vì không có dữ liệu:</strong> kim tiền thảo, ích mẫu, thìa canh, cát cánh, nhân trần, trà hoa vàng, hồi, đương quy; trái cây sấy (xoài, chuối, thơm, dừa) chưa có giá, năng suất, tỷ lệ quy đổi. Đây là ô trống, không phải kết luận "không phù hợp".</li>
+</ul>
+
+<h3>4.4 Quy tắc chọn 3 đến 4 cây để thử</h3>
+<ol>
+<li><strong>Người mua cam kết trước.</strong> Mỗi cây chỉ được vào danh sách thử nếu có ít nhất một thư mua có số lượng và cơ chế giá (như lá atiso của Traphaco). Đây là bài học trực tiếp từ sáu ca bong bóng.</li>
+<li><strong>Có quy trình GACP sẵn.</strong> Cà gai leo và diệp hạ châu có sổ tay GACP-WHO trọn bộ miễn phí (HELVETAS và EU 2020, đã đọc toàn văn); OPC đã có vùng diệp hạ châu đắng. Cắt thời gian và rủi ro chuẩn hóa.</li>
+<li><strong>Chu kỳ ngắn trước, dài sau.</strong> Cây thu trong dưới một năm (nghệ, diệp hạ châu, cà gai leo) cho phép sai và sửa; cây 3 đến 5 năm (đinh lăng, ba kích, ý dĩ lâu năm) chỉ sau khi có hợp đồng.</li>
+<li><strong>Đa dạng người mua, đa dạng cây.</strong> Không để cây nào quá nửa diện tích hay doanh thu: cả sáu ca bong bóng đều là cây đơn lẻ.</li>
+<li><strong>Ứng viên để đưa vào phỏng vấn người mua:</strong> nghệ vàng (cầu xuất khẩu và chuỗi curcumin), diệp hạ châu và cà gai leo (nhóm bổ gan, có sổ tay GACP), gừng (chỉ nếu có đầu ra cố định vì biên độ giá lớn), ý dĩ (thuộc nhóm nhập tới 80%, nhưng thiếu dữ liệu kinh tế). Đây là danh sách để kiểm chứng bằng cam kết mua, không phải quyết định cuối <span class="b i">INFERENCE</span>.</li>
+</ol>
+
+<h2 id="doi-sanh">5. Đối sánh: nên nhìn vào đâu</h2>
+<p>Không có doanh nghiệp nào giống hệt TeraFam (vùng trồng, nhà máy, R&amp;D và OEM, bán cho bên thứ ba). Vì vậy đối sánh theo <em>chỉ số</em> và theo <em>mô hình</em>, không theo tên.</p>
+
+<h3>5.1 Bộ mốc: ai tốt cho chỉ số nào</h3>
+<div class="tw"><table>
+<colgroup><col style="width:14.4%"><col style="width:11.1%"><col style="width:27.8%"><col style="width:24.4%"><col style="width:22.2%"></colgroup>
+<thead><tr><th>Doanh nghiệp</th><th>Mô hình</th><th>Mốc tốt cho</th><th>Chỉ tạm cho</th><th>Không dùng cho</th></tr></thead>
+<tbody>
+<tr><td>Traphaco</td><td>(i) nhà dược có vùng trồng</td><td>Trình tự chứng nhận từng cây; giá thu mua cam kết (lá atiso +15% một vụ); tỷ lệ nguyên liệu trong nước 80 đến 90% (khác định nghĩa)</td><td>Tổng số ha, vốn vùng trồng</td><td>Doanh thu mỗi ha (số 36.300 ha là kết quả điều tra tài nguyên, 35.000 ha trong đó là chè dây mọc tự nhiên)</td></tr>
+<tr><td>OPC</td><td>(i)</td><td>Tốc độ cấp GACP (7 vùng trong 05/2023); bán ngoài 0,84%; biên ròng 10,4%; không nợ vay</td><td>Số ha (không công bố)</td><td>Kinh tế mỗi ha</td></tr>
+<tr><td>Nam Dược</td><td>(i)</td><td>Biên gộp thương hiệu đông dược (51,8%); trình tự thử cây theo vùng sinh thái rồi mới xin GACP; lời về chi phí hạ tầng</td><td>Số ha (cát cánh gần 100 ha liên kết)</td><td>Doanh thu mỗi ha</td></tr>
+<tr><td>Dược Hậu Giang</td><td>(i) gần "mua nguyên liệu"</td><td>Quy mô doanh nghiệp mua nguyên liệu; điều kiện thẩm định nhà cung cấp</td><td></td><td>Số ha, tỷ lệ tự cung</td></tr>
+<tr><td>Nafoods</td><td>(ii) chế biến có vùng liên kết</td><td>Biên chế biến 22,7 đến 28,2%; vốn dài hạn từ tổ chức phát triển (IFC, FMO, Finnfund, responsAbility); tỷ trọng xuất khẩu khoảng 88%; cảnh báo công suất vượt vùng; nợ vay trên vốn chủ</td><td>Số ha liên kết (không có tổng; "10.400 ha" là diện tích chanh dây cả nước)</td><td>Cây dược liệu</td></tr>
+<tr><td>Phúc Sinh</td><td>(ii) gom, chế biến, truy xuất</td><td>Gọi vốn ESG hơn 1.000 tỷ trong khoảng một năm; 5 năm đến chứng nhận Rainforest Alliance (2009–2014); khoảng 10.000 nông dân được tập huấn</td><td>Số ha (một nguồn nêu hơn 20.000 ha <span class="b u">U</span>)</td><td>Thảo dược</td></tr>
+<tr><td>Arjuna Natural (Ấn Độ)</td><td>(iii) nhà chiết xuất B2B</td><td>Biên ròng nhà chiết xuất B2B 14,5 đến 24,1%; nợ/vốn chủ hữu hình 0,13 đến 0,15; xuất khẩu khoảng 80% <span class="b v">V</span>; 67% doanh thu từ một sản phẩm (curcumin)</td><td></td><td>Số ha, tự cung (không có). Doanh thu: 395,7 crore (pháp nhân, <span class="b c">C</span>) hay trên 500 crore (nhóm, hãng nói)</td></tr>
+<tr><td>Synthite (Ấn Độ)</td><td>(iii) chiết xuất gia vị</td><td>Nguyên liệu 68% giá vốn; ngay cả nhà chiết xuất hàng đầu cũng chỉ nhắm kiểm soát tới 40% nguyên liệu (số năm 2013 đến 2015)</td><td>Doanh thu (số cũ)</td><td>Số ha</td></tr>
+<tr><td>Sami-Sabinsa (Ấn Độ, Mỹ)</td><td>(iii)</td><td>Bộ chứng nhận người mua TPCN quốc tế đòi (FSSC 22000, NSF GMP, USP GMP) <span class="b u">U</span></td><td>Số ha (hai nguồn lệch gấp 2)</td><td>Doanh thu</td></tr>
+<tr><td>Korea Ginseng Corp</td><td>(iii) canh tác hợp đồng</td><td>774 ha từ hơn 1.700 hộ (2022) <span class="b u">U</span>: một chuỗi vài trăm ha đủ cho một thương hiệu nếu cây giá trị cao</td><td>Năng suất 7,8 tấn/ha</td><td>Doanh thu mỗi ha</td></tr>
+<tr><td>Vùng GAP Vân Nam (Trung Quốc)</td><td>(iii)</td><td>Định cỡ vùng GAP: 39 vùng, khoảng 1.632 ha, 10 loại, trong hai năm từ 10/2023 <span class="b s">S</span></td><td></td><td></td></tr>
+<tr><td>Betrimex, Vinamit, Vinut, Lavifood</td><td>(ii)</td><td colspan="3">Không có dữ liệu mở được <span class="b u">REFUSED</span></td></tr>
+</tbody></table></div>
+<p class="src">Cách đếm ha khác nhau và không cộng được: sở hữu hoặc thuê trực tiếp; diện tích hợp đồng liên kết; diện tích vùng đạt chứng nhận; diện tích điều tra tài nguyên của cả vùng. Chỗ nào không biết cách đếm thì ghi "không rõ". Khi doanh nghiệp công bố "300 ha", người mua sẽ hỏi cách đếm nào.</p>
+
+<h3>5.2 Bảng điểm vận hành: 16 chỉ số TeraFam tự đo được</h3>
+<div class="tw"><table>
+<colgroup><col style="width:3.3%"><col style="width:20.7%"><col style="width:21.7%"><col style="width:22.8%"><col style="width:22.8%"><col style="width:8.7%"></colgroup>
+<thead><tr><th>#</th><th>Chỉ số (công thức)</th><th>Mốc thấp</th><th>Mốc trung bình</th><th>Mốc cao</th><th>Độ tin</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Ha đạt GACP ÷ tổng ha vận hành</td><td>0,8% (cả nước, khoảng 500 ÷ 59.000)</td><td>1,8% (Lào Cai, 118,7 ÷ 6.555)</td><td>Không có mốc cấp doanh nghiệp</td><td><span class="b i">I</span></td></tr>
+<tr><td>2</td><td>Tỷ lệ lô đạt kiểm nghiệm lần đầu</td><td colspan="3">Không có mốc công khai</td><td></td></tr>
+<tr><td>3</td><td>Giao đúng hẹn, đủ lượng</td><td colspan="3">Không có mốc công khai</td><td></td></tr>
+<tr><td>4</td><td>Năng suất so mốc theo cây</td><td>Lào Cai 4,6 tấn/ha (hỗn hợp); chanh dây cả nước 15,7</td><td>Atiso Sa Pa khoảng 38 tấn lá tươi/ha</td><td>Sâm Hàn 7,8 tấn/ha <span class="b u">U</span>; ớt hợp đồng của Synthite 2,2 <span class="b u">U</span></td><td><span class="b i">I</span></td></tr>
+<tr><td>5</td><td>Giá thành mỗi kg đạt</td><td colspan="3">Không có mốc. Chỉ có giá thu mua tham chiếu: lá atiso 2.300; đinh lăng 27.000 xuống 11.000; chanh dây 16.000–17.000, đỉnh 26.000–27.000</td><td></td></tr>
+<tr><td>6</td><td>Doanh thu có hợp đồng nhiều năm</td><td colspan="3">Không có mốc. Định tính: hộ ở Si Ma Cai không muốn bao tiêu 10 năm <span class="b u">U</span></td><td></td></tr>
+<tr><td>7</td><td>Số ngày vốn lưu động (tồn kho + phải thu − phải trả)</td><td colspan="3">Chưa trích; mốc phần tồn kho và phải thu ở mục 3.5</td><td></td></tr>
+<tr><td>8</td><td>Tỷ trọng top 3 khách</td><td colspan="3">Không có mốc công khai (Arjuna: 67% doanh thu từ một sản phẩm; Nafoods: hai khách chiếm 64,7% phải thu)</td><td></td></tr>
+<tr><td>9a</td><td>Biên gộp, chế biến trái cây</td><td>22,7% (Nafoods 2025)</td><td></td><td>28,2% (Nafoods 2024)</td><td><span class="b s">S</span></td></tr>
+<tr><td>9b</td><td>Biên gộp, thương hiệu thuốc, TPCN</td><td>khoảng 42% (Traphaco, 6 tháng 2026)</td><td></td><td>50,6% (Nam Dược 2024), 53,6% (Traphaco 2025)</td><td><span class="b s">S</span></td></tr>
+<tr><td>9c</td><td>Biên gộp, nguyên liệu thô dược liệu</td><td colspan="3">Không có mốc (không công ty niêm yết nào tách riêng)</td><td></td></tr>
+<tr><td>10</td><td>Biên ròng</td><td>7,0% (Nafoods 2025, sau thiểu số)</td><td>9,6 đến 16,2% (các hãng thuốc)</td><td>24,1% (Arjuna FY24; FY25: 14,5%)</td><td><span class="b s">S</span> <span class="b c">C</span></td></tr>
+<tr><td>11</td><td>Nợ vay ÷ vốn chủ</td><td>0,00 (OPC, DHG); 0,13 (Arjuna)</td><td>1,06 (Nafoods cuối 2024)</td><td>1,62 (Nafoods cuối 2025)</td><td><span class="b s">S</span></td></tr>
+<tr><td>12</td><td>Tỷ lệ nguyên liệu tự cung, vùng kiểm soát</td><td>Synthite mục tiêu 40% (hiện thấp hơn)</td><td>Traphaco trên 80% nội địa (không phải tự cung)</td><td>Traphaco 90% nội địa theo tấn (2017)</td><td><span class="b v">V</span> <span class="b s">S</span></td></tr>
+<tr><td>13</td><td>Tỷ trọng doanh thu bán ngoài (B2B, xuất khẩu)</td><td>Traphaco CNC 2,2% (mục tiêu 2024); OPC 0,84% nguyên liệu</td><td>KGC xuất khẩu 15% <span class="b u">U</span></td><td>Nafoods 88%; Arjuna khoảng 80% <span class="b v">V</span></td><td><span class="b s">S</span></td></tr>
+<tr><td>14</td><td>Nguyên liệu thực mua ÷ công suất nhà máy</td><td>Nafoods Tây Nguyên khoảng 2% (10 ÷ 500 tấn/ngày, 06/2025)</td><td>Quicornac 40% (2024)</td><td>Quicornac 50–60% (2025)</td><td><span class="b s">S</span></td></tr>
+<tr><td>15</td><td>Giá thu mua cam kết so với thị trường</td><td colspan="3">Không có mốc chuẩn. Traphaco đinh lăng cao hơn thị trường trên 10% <span class="b u">U</span>; lá atiso +300 đ (+15%)</td><td></td></tr>
+<tr><td>16</td><td>Vốn đầu tư ÷ công suất (nguyên liệu-năm)</td><td>7,44 triệu đồng/tấn-năm (Nafoods Tây Nguyên)</td><td>Antesco 12,5; Sao Mai 50 (theo thành phẩm, khác loại)</td><td></td><td><span class="b i">I</span></td></tr>
+</tbody></table></div>
+<p><strong>Đọc bảng này thế nào.</strong> Sáu chỉ số cốt lõi (2, 3, 5, 6, 7, 8) không có mốc công khai nào; phần lớn ô còn lại chỉ có một hoặc hai điểm từ các doanh nghiệp khác định nghĩa. Không có mốc nào là chuẩn ngành. TeraFam sẽ phải dựng mốc nội bộ trong hai đến ba vụ đầu và lấy mốc ngoài qua phỏng vấn khách <span class="b i">INFERENCE</span>.</p>
+
+<h3>5.3 Mất bao lâu để đi từng bước</h3>
+<figure>
+<img src="chart-timeline.svg" width="820" height="440" alt="Đường thời gian: Traphaco GreenPlan 2010, 4 cây đăng ký GACP 2013, 29 ha bao tiêu 2016, cúc hoa vàng có giấy GACP 2023, 10 cây 2024. OPC bắt đầu vùng GACP 2006, giấy GACP đầu tiên 2015, thêm 7 vùng 2023, 12 vùng 2025. Nafoods duyệt dự án 2017, giai đoạn 1 chạy 2022, mua 10 tấn mỗi ngày so với công suất khoảng 500 năm 2025. Nam Dược thử cát cánh 2014, phòng phong đạt GACP 2020.">
+<figcaption><strong>Hình 5. Mở rộng theo bậc, không theo đường thẳng.</strong> Nguồn: báo cáo thường niên OPC 2023 (<span class="b c">CONFIRMED</span>, các mốc do chính công ty nêu), trang tình huống của một trường đại học về Traphaco (<span class="b v">VENDOR</span>), báo Công Thương, báo Nông nghiệp và Môi trường, VCCI (<span class="b s">SECONDARY</span>).</figcaption>
+</figure>
+<ul>
+<li><strong>Từ 0 đến giấy GACP đầu tiên:</strong> OPC khoảng 9 năm (2006 "tiên phong" đến 2015, nếu 2006 là mốc bắt đầu); Nam Dược khoảng 6 năm từ thử nghiệm cát cánh (2014) đến vùng phòng phong (2020), hai cây khác nhau nên chỉ là bậc độ lớn <span class="b i">INFERENCE</span>. Cây một vụ mỗi năm cần ít nhất một vụ trước khi có giấy (cúc hoa vàng, cấp 29/12/2023).</li>
+<li><strong>Từ một đến nhiều cây:</strong> OPC 1 lên 12 vùng trong khoảng 10 năm, trong đó 7 vùng gộp trong một lần 05/2023; Traphaco 4 lên 10 cây trong 11 năm (khoảng 0,6 đến 0,7 cây mỗi năm). Tốc độ có thể dồn, nhưng không nhanh.</li>
+<li><strong>Từ 300 ha lên 1.000 ha:</strong> không doanh nghiệp dược nào công bố chuỗi ha theo năm <span class="b u">REFUSED</span>. Điểm tham chiếu ngoài dược: Nafoods lập kế hoạch 3.000 ha liên kết với IFC (2019); KGC 774 ha cho cây 6 năm; Vân Nam khoảng 1.632 ha trong hai năm.</li>
+<li><strong>Từ duyệt dự án đến nhà máy chạy:</strong> Nafoods khoảng 5,5 năm (02/2017 đến 08/2022), vốn giai đoạn 1 là 104 tỷ; giai đoạn 2 lên tổng 744 tỷ cho 100.000 tấn/năm.</li>
+<li><strong>Trở ngại theo lời chính doanh nghiệp:</strong> niềm tin của nông dân (Traphaco); hạ tầng "rất tốn kém", đất phải sạch kim loại nặng, thử nghiệm thất bại nhiều lần trước khi tìm được vùng hợp (Nam Dược); đất rừng thiếu hướng dẫn thuê (sâm Ngọc Linh, Quảng Nam).</li>
+</ul>
+
+<h2 id="that-bai">6. Bài học thất bại có tên</h2>
+<div class="tw"><table>
+<colgroup><col style="width:18.1%"><col style="width:35.1%"><col style="width:23.4%"><col style="width:23.4%"></colgroup>
+<thead><tr><th>Ca</th><th>Điều đã xảy ra (số có nguồn)</th><th>Nguyên nhân theo nguồn</th><th>Quy tắc cho TeraFam <span class="b i">INFERENCE</span></th></tr></thead>
+<tbody>
+<tr><td>Nafoods Tây Nguyên và Quicornac, chanh dây</td><td>Nhà máy Nafoods công suất gần 500 tấn/ngày, mua khoảng 10 tấn/ngày (06/2025), nghĩa là khoảng 2% công suất; Quicornac nguyên liệu đáp ứng 40% (2024), 50–60% (2025). Cùng lúc Nafoods nâng tổng vốn tổ hợp lên 744 tỷ cho 100.000 tấn/năm. Công ty vẫn có lãi (LNST 2024: 118,1 tỷ) <span class="b s">S</span></td><td>Nông dân mở rộng ồ ạt cuối 2022–2023 khi giá tăng, giá rớt rồi phá vườn thay cà phê, sầu riêng</td><td>Công suất theo sau hợp đồng. Giữ nông dân khi giá lên và xuống bằng giá sàn, giá thưởng</td></tr>
+<tr><td>HAGL Agrico</td><td>Lỗ lũy kế 8.648 tỷ đồng (09/2024) và hơn 501 triệu USD (06/2026), hai số khác đơn vị và khác thời điểm, chưa đối chiếu; kiểm toán EY nêu không chắc chắn trọng yếu về hoạt động liên tục. Cao su đã trồng 15.192 ha nhưng chỉ khai thác hiệu quả 4.932 ha (32%) <span class="b s">S</span>. Cây ăn trái và cao su, không phải dược liệu</td><td>Giá hàng hóa sụt sau khi đã đầu tư lớn; vườn chuối lâu năm năng suất kém; khấu hao trên cả diện tích chưa khai thác; vay ngoại tệ</td><td>Theo dõi tỷ lệ ha đủ điều kiện thu hoạch trên ha đã trồng; tránh vay ngoại tệ cho cây dài ngày</td></tr>
+<tr><td>"Trồng sâm trên giấy", Kon Tum</td><td>Một tập đoàn nói đã trồng hơn 600 ha trên hơn 7.000 ha "sở hữu"; huyện Tu Mơ Rông xác nhận cả huyện chỉ khoảng 60 ha do dân trồng; xác nhận hành chính bị thu hồi (06/01/2023) <span class="b s">S</span></td><td>Khai báo diện tích không khớp thực địa</td><td>Người mua sẽ kiểm chứng "300+ ha" tại thực địa. Chuẩn bị bản đồ, quyền sử dụng đất, cây, tuổi, giai đoạn</td></tr>
+<tr><td>Đinh lăng Nam Định</td><td>Giá nguyên liệu đỉnh 27.000 xuống 11.000 đ/kg; khoảng 80% diện tích Hải Hậu bị bỏ (lời một nông dân) <span class="b s">S</span></td><td>Trồng ồ ạt; giá giống 40.000–45.000 đ/kg; trung gian ép giá; thu mua khắt khe</td><td>Không bán giống và không mở rộng vùng nông hộ khi chưa có hợp đồng mua</td></tr>
+<tr><td>Trung Tiến, Quảng Ninh</td><td>Dự án trồng cây dược liệu và cây ăn quả bị kết luận thanh tra sai phạm đất đai và khoáng sản; hết hạn gia hạn (31/12/2018) mà không triển khai <span class="b s">S</span></td><td>Theo kết luận thanh tra của tỉnh: san gạt, đào và bán đất (kể cả xuất hóa đơn cho dự án khác), làm mất lớp đất màu; hết thời hạn gia hạn mà không triển khai. Báo cáo này không suy ra động cơ</td><td>Hồ sơ đất và cây trồng sạch từ đầu</td></tr>
+<tr><td>Không tìm được</td><td>Ca đông trùng hạ thảo, chuỗi sâm khác hay "bao tiêu đổ vỡ" dược liệu có tên và số tiền: không tìm được qua công cụ này <span class="b u">REFUSED</span>. Đây là "chưa tìm thấy", không phải "không có"</td><td></td><td></td></tr>
+</tbody></table></div>
+<p><strong>Phân loại nguyên nhân</strong> <span class="b s">SECONDARY</span>: đòn bẩy nợ và nợ ngoại tệ khi cây dài ngày chưa cho thu (HAGL); giá nông sản lên xuống làm nông dân bỏ (đinh lăng, chanh dây); công bố diện tích không khớp (Kon Tum); công suất nhà máy vượt vùng nguyên liệu (Nafoods Tây Nguyên); vướng pháp lý đất rừng (sâm Quảng Nam); sai phạm sử dụng đất (Trung Tiến).</p>
+
+<h2 id="lua-chon">7. Lựa chọn khâu cho TeraFam</h2>
+<p>Hồ sơ nói TeraFam làm cả ba tầng. Câu hỏi thực tế là làm tầng nào <em>trước</em>. Bảng dưới so bốn lựa chọn theo các lăng kính trên; mọi đánh giá là <span class="b i">INFERENCE</span> từ dữ liệu ở mục 2 đến 6.</p>
+<div class="tw"><table>
+<colgroup><col style="width:18.0%"><col style="width:19.0%"><col style="width:22.0%"><col style="width:22.0%"><col style="width:19.0%"></colgroup>
+<thead><tr><th>Lựa chọn</th><th>Biên và vốn</th><th>Cầu có bằng chứng, người đang giữ</th><th>Cổng pháp lý, khớp TeraFam</th><th>Rủi ro chính, độ tin</th></tr></thead>
+<tbody>
+<tr><td><strong>A. Nguyên liệu thô, sơ chế, bán theo lô và bao tiêu</strong></td><td>Biên: gần nhất 22,7% gộp (Nafoods), ròng 8,4%. Vốn: vùng và sơ chế; vốn lưu động nhẹ hơn thuốc</td><td>Cầu: đông dược vừa và nhỏ, bệnh viện thiếu nguồn có giấy tờ. Cạnh tranh: nông hộ, HTX; Traphaco, OPC có vùng riêng</td><td>Giấy GACP hoặc cam kết Mẫu 07, hồ sơ lô (Thông tư 32/2025 Điều 12–13), công bố tiêu chuẩn. Dùng trực tiếp 300 ha</td><td>Bong bóng giá; phụ thuộc 1 đến 2 người mua. Độ tin trung bình</td></tr>
+<tr><td><strong>B. Bán thành phẩm trung gian: bột, cao, dịch chiết cho TPCN, OEM, đông dược</strong></td><td>Biên: không có số trong nước <span class="b u">REFUSED</span>; nhà chiết xuất B2B nước ngoài ròng 14,5 đến 24,1% (một nguồn). Vốn: thiết bị chiết xuất và GMP, không có số</td><td>Cầu: TPCN nhiều thương hiệu nhưng không có số mua; rủi ro khách (MediPhar). Cạnh tranh: OPC bán cao chiết; Traphaco CNC; Arjuna ở nước ngoài</td><td>Thông tư 28/2025 Điều 4 khoản 16: cơ sở dược liệu, cao, cốm, bột, dịch chiết làm nguyên liệu và bán thành phẩm TPBVSK phải áp dụng GMP tương ứng. Phạm vi GMP của nhà máy SPM chưa biết</td><td>Chưa có mốc giá; GMP phạm vi sai là chặn hoàn toàn. Độ tin thấp</td></tr>
+<tr><td><strong>C. OEM/ODM thành phẩm</strong></td><td>Biên: không có số. Giá công khai duy nhất: nang cứng đóng lọ 322 đến 158 đ/viên theo lô, bảng 2022, khách cấp nguyên liệu. Vốn: dùng nhà máy kế thừa</td><td>Cầu: Dược Hậu Giang coi OEM là trụ cột tăng trưởng, tức tranh công suất; Nafoods thuê ngoài sấy</td><td>GMP đúng dạng bào chế; hồ sơ đăng ký; chất lượng khách (thương hiệu không nhà máy có rủi ro pháp lý)</td><td>Cạnh tranh nhà dược lớn trống công suất; khách rủi ro tuân thủ và thanh toán. Độ tin thấp đến trung bình</td></tr>
+<tr><td><strong>D. Sấy, chế biến trái cây và thảo mộc cho xuất khẩu</strong></td><td>Biên: 22,7% gộp, 8,4% ròng, nợ 1,62 lần vốn chủ (Nafoods). Vốn: 7,4 đến 50 triệu đồng mỗi tấn công suất năm</td><td>Cầu: Nafoods thuê ngoài sấy mít (326 tỷ nhóm sấy), nhưng mít giá đáy và Trung Quốc siết chuẩn</td><td>HACCP, ISO 22000, FSSC; chi phí không có số. Chỉ khớp nếu danh mục cây của TeraFam có quả</td><td>Phụ thuộc Trung Quốc; biên sấy nhạy với giá nguyên liệu. Độ tin trung bình</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<p><strong>Thứ tự đề xuất</strong> <span class="b i">INFERENCE</span>:</p>
+<ol>
+<li><strong>A trước, B ngay sau, trên 2 đến 3 cây có người mua cam kết.</strong> A tạo hồ sơ lô, giấy GACP và quan hệ khách; B tăng giá trị và gắn khách chặt hơn, nhưng chỉ sau khi xác nhận phạm vi GMP và thấy ít nhất một thư mua cao chiết hay bột.</li>
+<li><strong>C chỉ khi có ít nhất một khách OEM ký</strong> và phạm vi GMP khớp dạng bào chế. Không đầu tư công suất OEM trước khi có hợp đồng.</li>
+<li><strong>D là một cược riêng,</strong> chỉ nên xem xét nếu danh mục cây có quả, và theo bài học Nafoods thì nhà máy lớn không đi trước vùng nguyên liệu.</li>
+<li><strong>Không tự mở thương hiệu thành phẩm trong giai đoạn đầu.</strong> Phần lớn biên khâu thương hiệu bị chi phí kênh ăn (41% doanh thu ở Traphaco); đi cả chuỗi cộng thêm chỉ 2 đến 8 điểm biên gộp.</li>
+</ol>
+</div>
+
+<h2 id="lo-trinh">8. Lộ trình phát triển mạnh hơn: bốn giai đoạn có cổng</h2>
+<p>Các cổng dưới đây là tiêu chí <em>đề xuất</em> <span class="b i">ASSUMPTION</span>, bám vào các mốc và ca thất bại ở mục 5 và 6; TeraFam đặt ngưỡng cuối cùng. Chi phí chỉ ghi khi có nguồn.</p>
+
+<div class="tw"><table>
+<colgroup><col style="width:13.5%"><col style="width:37.5%"><col style="width:26.0%"><col style="width:22.9%"></colgroup>
+<thead><tr><th>Giai đoạn</th><th>Việc phải làm</th><th>Cổng để qua giai đoạn sau</th><th>Chi phí biết được, mốc tham chiếu</th></tr></thead>
+<tbody>
+<tr><td><strong>0. Đóng khoảng trống hồ sơ</strong><br>30 ngày</td><td>
+<ul>
+<li>Danh mục cây: từng lô, diện tích, tuổi cây, giai đoạn, vùng.</li>
+<li>Kiểm chứng độc lập 300+ ha: bản đồ tọa độ, quyền sử dụng đất, cây thực tế; ghi rõ cách đếm (sở hữu, thuê, liên kết).</li>
+<li>Chứng nhận hiện có và phạm vi GMP của nhà máy kế thừa SPM (dược, TPBVSK, nguyên liệu dược liệu).</li>
+<li>Phiếu kiểm nghiệm của 3 lô gần nhất: kim loại nặng, dư lượng BVTV, vi sinh, aflatoxin.</li>
+<li>Giá thành mỗi kg của hai vụ gần nhất; công suất, tồn kho, khách hiện tại.</li>
+<li>Đăng ký lưu hành của thuốc BVTV sinh học và phân vi sinh (chưa kiểm).</li>
+</ul></td><td>Hồ sơ đủ tám mục trên; ha được kiểm chứng; biết chính xác phạm vi GMP</td><td>Không cần vốn lớn. Ca Kon Tum (xác nhận 600 ha, thực tế khoảng 60 ha) cho thấy người mua sẽ kiểm</td></tr>
+<tr><td><strong>1. Chọn cây và chứng minh có người mua</strong><br>tháng 1 đến 4</td><td>
+<ul>
+<li>Chọn 3 đến 4 cây theo quy tắc 4.4, đối chiếu với cây TeraFam đã có.</li>
+<li>Phỏng vấn 5 người mua đúng nhóm (2 TPCN, 2 đông dược vừa và nhỏ, 1 xuất khẩu); xin thư mua có số lượng và cơ chế giá.</li>
+<li>Lập hồ sơ lô mẫu theo Điều 13; công bố tiêu chuẩn chất lượng tại cơ quan y tế cấp tỉnh (từ 01/01/2026 theo Điều 22 Thông tư 32/2025).</li>
+<li>Bán thử 1 đến 2 lô nhỏ cho 2 đến 3 người mua để đo tỷ lệ đạt kiểm nghiệm lần đầu, giao đúng hẹn, giá thực nhận.</li>
+<li>Nộp hồ sơ GACP cho 1 đến 2 cây (dùng sổ tay có sẵn cho cà gai leo, diệp hạ châu).</li>
+</ul></td><td>Mỗi cây ưu tiên có ít nhất 2 thư mua; lô thử đạt kiểm nghiệm lần đầu; hồ sơ GACP đã nộp</td><td>Lệ phí GACP 9 triệu đồng/hồ sơ, thẩm định 30 ngày <span class="b u">U</span>; GMP 30 triệu/cơ sở. Hỗ trợ GACP 100% tối đa 200 triệu/dự án của Lào Cai không áp dụng cho bốn tỉnh của TeraFam; chính sách các tỉnh này chưa kiểm</td></tr>
+<tr><td><strong>2. Hợp đồng đầu tiên, giấy GACP đầu tiên</strong><br>tháng 4 đến 12</td><td>
+<ul>
+<li>Ký hợp đồng khung với người mua, có giá sàn và giá thưởng (mô hình Traphaco: lá atiso 2.000 lên 2.300 đ/kg).</li>
+<li>Bắt đầu đo 16 chỉ số ở mục 5.2; lập mốc nội bộ cho 6 chỉ số không có mốc công khai.</li>
+<li>Nhận giấy GACP đầu tiên; mở cây thứ hai.</li>
+<li>Giữ không khách nào quá khoảng một nửa doanh thu.</li>
+<li>Nếu cần vốn: tìm nguồn vốn dài hạn có điều kiện truy xuất, ESG (Nafoods: IFC, FMO, Finnfund, responsAbility; Phúc Sinh: &amp;Green Fund 25 triệu USD, FMO 15 triệu USD, tài trợ không hoàn lại 575.000 EUR cho đào tạo và truy xuất).</li>
+</ul></td><td>≥ 2 vụ giao đúng hẹn; ≥ 1 giấy GACP; biên gộp thực đo được theo tầng; không khách nào quá khoảng 50% doanh thu</td><td>Thời gian có giấy GACP: không có số; cây một vụ mỗi năm cần ít nhất một vụ (cúc hoa vàng, cấp 29/12/2023). Chi phí tư vấn chứng nhận <span class="b u">REFUSED</span></td></tr>
+<tr><td><strong>3. Mở rộng theo hợp đồng</strong><br>năm thứ 2</td><td>
+<ul>
+<li>Chỉ mở thêm ha khi phần đã ký hợp đồng mua đủ lớn so với sản lượng dự kiến.</li>
+<li>Xin phạm vi GMP cho bán thành phẩm (bột, cao) nếu có thư mua; chưa đầu tư công suất OEM khi chưa có khách ký.</li>
+<li>Quyết định có đi tiếp lên thành phẩm có thương hiệu hay giữ làm nhà cung ứng.</li>
+<li>Theo dõi tỷ lệ nguyên liệu mua thực so với công suất nhà máy (bài học Nafoods).</li>
+</ul></td><td>Tỷ lệ đất trồng mới mỗi vụ không vượt tỷ lệ đã có hợp đồng; nhà máy không chạy dưới mức an toàn vì thiếu nguyên liệu</td><td>Nhà máy chế biến quả 7,4 đến 50 triệu đồng mỗi tấn công suất năm; nhà máy EU-GMP thuốc 700 đến 1.495 tỷ (không phải dược liệu)</td></tr>
+</tbody></table></div>
+
+<h3>8.1 Câu hỏi cho năm cuộc phỏng vấn người mua</h3>
+<p>Mỗi câu lấp một ô trống ở mục 10. Mình chưa liên hệ ai.</p>
+<ol>
+<li>Anh chị đang mua cây nào, từ ai, bao nhiêu mỗi năm, và một lô điển hình là bao nhiêu kg? (lấp MOQ, tần suất đặt hàng)</li>
+<li>Giá đang mua là bao nhiêu mỗi kg, tươi hay khô, cùng quy cách? Giá có chốt theo vụ không? (lấp giá hiện hành 2026)</li>
+<li>Anh chị yêu cầu giấy tờ gì: GACP, cam kết Mẫu 07, phiếu kiểm nghiệm nào, hồ sơ lô gì? (lấp điều kiện thẩm định)</li>
+<li>Thời gian từ lấy mẫu đến duyệt nhà cung cấp là bao lâu? Có audit tại vườn không? (lấp thời gian duyệt)</li>
+<li>Điều khoản thanh toán: bao nhiêu ngày công nợ? (lấp vốn lưu động)</li>
+<li>Tỷ lệ lô bị trả hoặc loại, và nguyên nhân phổ biến? (lấp chỉ số 2)</li>
+<li>Anh chị có cam kết mua nhiều năm không, và với điều kiện giá thế nào? (lấp chỉ số 6, 15)</li>
+<li>Nếu có nhà cung cấp trong nước có hồ sơ truy xuất từng lô, anh chị trả thêm bao nhiêu so với hàng nhập? (lấp chênh giá GACP so thường, không có nguồn)</li>
+</ol>
+
+<h3>8.2 Thí nghiệm rẻ để chứng minh trước khi đầu tư</h3>
+<ol>
+<li><strong>Thư mua có số lượng:</strong> xin cam kết bằng văn bản từ ít nhất hai người mua cho mỗi cây ưu tiên. Rẻ nhất, và là bài học chung của mọi ca bong bóng.</li>
+<li><strong>Bán thử một lô nhỏ</strong> cho người mua đã biết TeraFam, kèm hồ sơ lô đầy đủ, để đo tỷ lệ đạt kiểm nghiệm lần đầu và giá thực nhận.</li>
+<li><strong>Xin báo giá thật</strong> từ 3 đến 4 nhà gia công và nhà bán dược liệu cho cùng một gói (cùng cây, cùng lô), để có mốc giá cho tầng bán thành phẩm và OEM mà báo cáo này đang thiếu.</li>
+<li><strong>Bán trước</strong> cho một khách đã biết: có người xuống tiền trước khi sản phẩm tồn tại là tín hiệu mạnh nhất.</li>
+</ol>
+
+<h2 id="kenh">9. Kênh tiếp cận và hỗ trợ</h2>
+<div class="tw"><table>
+<colgroup><col style="width:27.2%"><col style="width:28.3%"><col style="width:20.7%"><col style="width:23.9%"></colgroup>
+<thead><tr><th>Kênh</th><th>Thời điểm gần nhất, ai tổ chức</th><th>Tới nhóm người mua</th><th>Nhãn</th></tr></thead>
+<tbody>
+<tr><td>Vietnam Medi-Pharm Expo lần 24, khu nguyên liệu dược và hội thảo "đa dụng của dược liệu Việt Nam"</td><td>30/07 đến 01/08/2026, TP.HCM, VINEXAD; khoảng 300 doanh nghiệp, 380 gian</td><td>A, B</td><td><span class="b s">S</span> (VCCI). Đã qua; tìm kỳ kế tiếp</td></tr>
+<tr><td>VIETRAMED EXPO (hội chợ quốc gia dược liệu, y dược cổ truyền)</td><td>21 đến 23/11/2024, Cục Quản lý Y, Dược cổ truyền và VIETFAIR; hơn 300 đơn vị. Kỳ 2026: không tìm thấy</td><td>A, bệnh viện y học cổ truyền, B</td><td><span class="b s">S</span></td></tr>
+<tr><td>Hội nghị kết nối giao thương sản phẩm dược liệu</td><td>12 đến 15/11/2025, Hà Nội, Liên minh HTX Việt Nam và Cục Xúc tiến thương mại; gần 50 gian, phía bán nhiều hơn phía mua, không nêu hợp đồng</td><td>A, B, C</td><td><span class="b s">S</span></td></tr>
+<tr><td>Vietfood &amp; Beverage – Propack Vietnam 2026 (VIP Buyer)</td><td>06 đến 08/08/2026, TP.HCM; kỳ Hà Nội 04 đến 07/11/2026 <span class="b u">U</span></td><td>C (nông sản sơ chế, trái cây sấy, trà)</td><td><span class="b s">S</span></td></tr>
+<tr><td>Mạng đấu thầu quốc gia (muasamcong), bán vào bệnh viện</td><td>Liên tục; nhà thầu phải là doanh nghiệp đủ điều kiện kinh doanh dược; nhóm GACP và GMP quyết định xếp hạng</td><td>A3 (bệnh viện)</td><td><span class="b s">S</span></td></tr>
+<tr><td>Đăng ký cơ sở với Hải quan Trung Quốc (GACC)</td><td>Công văn 16/03/2026; mã có hiệu lực 5 năm</td><td>C (sang Trung Quốc)</td><td><span class="b s">S</span> <span class="b u">U</span></td></tr>
+<tr><td>Viện Dược liệu (Bộ Y tế): hợp tác kỹ thuật theo dự án (đã ký với Trường Sinh Group ngày 14/08/2026)</td><td>Đối tác kỹ thuật và R&amp;D, không phải người mua</td><td>Giống, quy trình trồng, sơ chế</td><td><span class="b s">S</span></td></tr>
+</tbody></table></div>
+
+<h3>9.1 Chương trình hỗ trợ</h3>
+<ul>
+<li><strong>Trung ương:</strong> chương trình mục tiêu quốc gia 2026–2035 có nội dung "hỗ trợ phát triển vùng trồng dược liệu quý"; Quyết định 1250/QĐ-TTg (09/07/2026) <span class="b c">CONFIRMED</span> (đợt 1). Chương trình của Bộ Y tế theo Quyết định 1102/QĐ-BYT (21/04/2026): mức hỗ trợ và điều kiện chưa đọc được <span class="b u">UNVERIFIED</span>.</li>
+<li><strong>Cấp tỉnh:</strong> Lào Cai, Nghị quyết 24/2026/NQ-HĐND (hiệu lực 22/08/2026): hỗ trợ tối đa 70% chi phí trồng mới (trần 100 triệu đồng/ha cây thường, 1 tỷ/ha cây quý), 100% chi phí chứng nhận GACP (trần 200 triệu/dự án), tối đa 50% máy sơ chế (trần 10 tỷ/dự án, điều kiện GMP và công suất từ 3 tấn/ngày) <span class="b s">S</span>. Đà Nẵng có cơ chế cho sâm Ngọc Linh <span class="b u">U</span>. Chính sách của Tây Ninh, Đồng Nai, Đắk Nông, Ba Vì: chưa kiểm, nên là việc đầu tiên cần làm.</li>
+<li><strong>Vốn và tín dụng:</strong> Nghị định 260/2026 và 263/2026 (hỗ trợ lãi vay 70% cho doanh nghiệp công nghệ cao, khu nông nghiệp ứng dụng công nghệ cao, hiệu lực 01/07/2026) <span class="b u">U</span>; Agribank giảm lãi suất 1 đến 2%/năm từ 08/2026 đến 2028 <span class="b u">U</span>; OCOP 2026–2030 <span class="b u">U</span>. Chưa biết dự án của TeraFam có thuộc diện không.</li>
+</ul>
+
+<h2 id="khoang-trong">10. Khoảng trống bằng chứng và cách lấp</h2>
+<div class="tw"><table>
+<colgroup><col style="width:32.9%"><col style="width:24.7%"><col style="width:42.4%"></colgroup>
+<thead><tr><th>Khoảng trống</th><th>Ảnh hưởng tới quyết định</th><th>Cách lấp</th></tr></thead>
+<tbody>
+<tr><td>Chi phí đầu tư và chăm sóc mỗi ha có nguồn; lãi mỗi ha</td><td>Chọn cây, định giá, thu hồi vốn</td><td>Hạch toán thử trên đất TeraFam; đối chiếu với 2 đến 3 HTX</td></tr>
+<tr><td>Giá tại vườn và giá sỉ năm 2026</td><td>Giá chào, TAM</td><td>Phỏng vấn người mua; xin báo giá thật; bản tin giá của Bộ và Sở Nông nghiệp (PDF có trong kết quả tìm, chưa mở)</td></tr>
+<tr><td>Giá cao chiết, bột; tỷ lệ quy đổi tươi, khô, cao</td><td>Lựa chọn B, biên tầng 2</td><td>Xin báo giá nhà bán nguyên liệu; số hải quan theo mã HS; số liệu của chính nhà máy SPM</td></tr>
+<tr><td>Điều kiện mua của người mua: MOQ, công nợ, thời gian duyệt, hợp đồng nhiều năm</td><td>Vốn lưu động, thiết kế hợp đồng</td><td>Năm cuộc phỏng vấn ở mục 8.1</td></tr>
+<tr><td>Danh sách nhà máy đông dược đạt GMP hiện hành; số cơ sở TPCN hiện hành; quy mô OEM/ODM</td><td>Quy mô nhóm A2, B, C</td><td>Danh sách GMP của Cục Quản lý Y dược cổ truyền (chưa mở được); cơ sở dữ liệu Cục An toàn thực phẩm</td></tr>
+<tr><td>Số ha và tỷ lệ tự cung của Traphaco, OPC, Dược Hậu Giang, Nam Dược</td><td>Mốc đối sánh mật độ vùng</td><td>Báo cáo phát triển bền vững của Traphaco; hỏi trực tiếp tại hội chợ</td></tr>
+<tr><td>Chi phí tư vấn chứng nhận GACP, HACCP, FSSC, VietGAP, GlobalGAP; thời gian thực tế</td><td>Kế hoạch giai đoạn 1 và 2</td><td>Báo giá từ 2 đến 3 tổ chức tư vấn; hỏi OPC, Nam Dược qua hội thảo</td></tr>
+<tr><td>Ngưỡng GACP và GMP trong Thông tư 40/2025 (đấu thầu bệnh viện)</td><td>Khả năng vào kênh bệnh viện</td><td>Đọc văn bản gốc (thuvienphapluat.vn chặn truy cập); hỏi nhà thầu dược liệu</td></tr>
+<tr><td>Phạm vi GMP của nhà máy kế thừa SPM; cây trồng; giấy chứng nhận</td><td>Cổng pháp lý của lựa chọn B, C</td><td>Giai đoạn 0</td></tr>
+<tr><td>Hoa quả sấy: xoài, chuối, thơm, dừa; mít sấy; tỷ lệ quy đổi tươi sang sấy</td><td>Lựa chọn D</td><td>Một lượt tìm riêng; số hải quan mã HS 0813</td></tr>
+</tbody></table></div>
+<p><strong>Nguồn bị chặn hoặc không đọc được, ảnh hưởng tới kết luận:</strong> thuvienphapluat.vn và dauthau.asia (403, nên một số văn bản chỉ có bản thứ cấp); báo cáo kiểm toán 2025 của Dược Hậu Giang là PDF ảnh; báo cáo tài chính gốc của Imexpharm, Nam Dược, Nafoods không có đường tải; ITC Trade Map, UN Comtrade (không có số hải quan dược liệu); báo cáo TRAFFIC (401); trang Cục Quản lý Y dược cổ truyền. Báo cáo TeraFam này cũng không có phỏng vấn nào.</p>
+
+<h2 id="phu-luc-dau">Phụ lục</h2>
+<p>Các phần dưới là nội dung của bản đầu (đối thủ, giá niêm yết, pháp lý, TAM·SAM·SOM) cộng danh sách số bị từ chối in và các chỗ đã sửa, gộp cả hai đợt. Số mục giữ nguyên số của bản đầu và có tiền tố P (P3 là mục 3 của bản đầu).</p>
+
+
+<h2 id="p2">P2. Phạm vi và mẫu</h2>
 <ul>
 <li><strong>Đối tượng:</strong> TeraFam theo hồ sơ năng lực tiếng Việt (terafam.com.vn). Toàn bộ nội dung hồ sơ là lời hãng tự nói <span class="b v">VENDOR</span>.</li>
 <li><strong>Hồ sơ nói:</strong> chuỗi khép kín 6 mắt xích (đất, đầu vào, canh tác, nhà máy, R&amp;D, sản phẩm); 300+ ha ở Tây Ninh, Đồng Nai, Đắk Nông, Ba Vì; nhà máy phân bón vi sinh và thuốc BVTV sinh học; kế thừa năng lực nhà máy dược và TPCN SPM hơn 25 năm; ba tầng cung ứng (nguyên liệu thô, bán thành phẩm, thành phẩm đóng gói); ba mô hình hợp tác (cung ứng theo lô, bao tiêu theo diện tích, OEM/ODM).</li>
@@ -120,15 +509,15 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <li><strong>Địa lý:</strong> chỉ Việt Nam. Phân khúc C được hiểu là doanh nghiệp Việt Nam xuất khẩu dược liệu và nông sản sơ chế, không nghiên cứu thị trường nước ngoài <span class="b i">ASSUMPTION</span>.</li>
 <li><strong>Loại trừ theo yêu cầu:</strong> không nghiên cứu founder, lãnh đạo hay mạng xã hội của đối thủ. Tên người trong nguồn chỉ xuất hiện khi họ phát biểu với tư cách cơ quan hoặc chuyên gia.</li>
 <li><strong>Mẫu đối thủ:</strong> 17 đơn vị, chọn bằng truy vấn tiếng Việt theo từng nhóm. Nhóm A: cung ứng dược liệu cho nhà máy dược. Nhóm B: nguyên liệu, bán thành phẩm, gia công TPCN. Nhóm C: nông sản sơ chế và bao tiêu. Chưa phủ được: nhà gia công TPCN lớn có báo cáo tài chính, nhà cung cấp cao chiết, nhà nhập khẩu dược liệu.</li>
-<li><strong>Không phải nghiên cứu khách hàng:</strong> chưa có phỏng vấn người mua, chưa có khảo sát. Phần "người mua chê gì" dựa vào phát biểu của cơ quan nhà nước, nhà khoa học và báo chí (mục 6).</li>
+<li><strong>Không phải nghiên cứu khách hàng:</strong> chưa có phỏng vấn người mua, chưa có khảo sát. Phần "người mua chê gì" dựa vào phát biểu của cơ quan nhà nước, nhà khoa học và báo chí (mục P6).</li>
 <li><strong>Tỷ giá:</strong> 25.500 VND/USD <span class="b i">ASSUMPTION</span> (khoảng 25.100 đến 26.000). Chỉ tham chiếu từ đoạn tóm tắt công cụ tìm kiếm <span class="b u">UNVERIFIED</span>. Mọi quy đổi VND sang USD dùng tỷ giá này.</li>
 </ul>
 
-<h2 id="doi-thu">3. Bảng tổng quan đối thủ</h2>
+<h2 id="p3">P3. Bảng tổng quan đối thủ</h2>
 <p class="src">Đọc theo hàng. Cột "Sống trong" là kênh nơi sản phẩm và thông tin xuất hiện; đây là thị trường B2B nên không có rating ứng dụng. Số tuyệt đối tính bằng VND trừ khi ghi khác. Chữ in nghiêng trong cột Giá là mô hình giá, không phải giá niêm yết.</p>
 
 <div class="tw"><table>
-<colgroup><col style="width:150px"><col style="width:90px"><col style="width:200px"><col style="width:260px"><col style="width:290px"><col style="width:330px"></colgroup>
+<colgroup><col style="width:11.4%"><col style="width:6.8%"><col style="width:15.2%"><col style="width:19.7%"><col style="width:22.0%"><col style="width:25.0%"></colgroup>
 <thead><tr><th>Sản phẩm / đơn vị</th><th>Segment</th><th>Sống trong</th><th>Giá (entry → top)</th><th>Funding / quy mô</th><th>Ghi chú đắt nhất</th></tr></thead>
 <tbody>
 <tr class="grp"><td colspan="6">Nhóm A: dược liệu cho nhà máy dược và đông dược (phần lớn là bên mua tự cung)</td></tr>
@@ -156,11 +545,11 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <tr class="me"><td>TeraFam</td><td>A, B, C</td><td><span class="b v">VENDOR</span> hồ sơ năng lực và terafam.com.vn</td><td>Chưa có bảng giá công khai <span class="b u">REFUSED</span></td><td>300+ ha ở 4 vùng <span class="b v">VENDOR</span>. Doanh thu, funding, công suất không nêu</td><td>Điểm khác duy nhất nhìn thấy trong số đối thủ: <em>một đơn vị nói mình bán cả ba tầng cho bên thứ ba</em>. Điểm yếu: mọi con số đều là lời hãng, và hồ sơ không nêu chứng nhận nào</td></tr>
 </tbody></table></div>
 
-<h2 id="ma-tran">4. Ma trận năng lực</h2>
+<h2 id="p4">P4. Ma trận năng lực</h2>
 <p>Cùng một thang cho mọi đơn vị. <strong>V</strong> vùng trồng riêng. <strong>N</strong> nhà máy chế biến riêng. <strong>Ch</strong> chứng nhận GACP hoặc GMP công bố. <strong>T</strong> truy xuất nguồn gốc công bố. <strong>R</strong> R&amp;D hoặc chuẩn hóa hoạt chất. <strong>O</strong> OEM/ODM. <strong>B</strong> mô hình bao tiêu. <strong>G</strong> bảng giá công khai. C chỉ cho ô có văn bản gốc (báo cáo thường niên) hoặc bảng giá mở được. P cho ô chỉ có nguồn một phía hoặc hãng tự nói. ? là chưa đủ bằng chứng, không phải "không có".</p>
 
 <div class="tw"><table>
-<colgroup><col style="width:200px"><col style="width:120px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:90px"><col style="width:130px"></colgroup>
+<colgroup><col style="width:20.2%"><col style="width:12.1%"><col style="width:9.1%"><col style="width:9.1%"><col style="width:9.1%"><col style="width:9.1%"><col style="width:9.1%"><col style="width:9.1%"><col style="width:13.1%"></colgroup>
 <thead><tr><th>Đơn vị</th><th>V</th><th>N</th><th>Ch</th><th>T</th><th>R</th><th>O</th><th>B</th><th>G</th></tr></thead>
 <tbody>
 <tr><td>Traphaco (+CNC, Sapa)</td><td>C (8 đến 13 vùng, ha ?)</td><td>C</td><td>C</td><td>P</td><td>P</td><td>P</td><td>C</td><td>?</td></tr>
@@ -184,12 +573,12 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <p><strong>Vì sao không vẽ bản đồ định vị 2×2.</strong> Bản đồ Value × Functionality cần một thang tính năng chung <em>và</em> giá năm so sánh được. Thị trường này không có: giá nguyên liệu ngoài hàng lẻ gần như không công bố, và ma trận ở trên còn nhiều ô ?. Nếu đặt các ô ? bằng 0 thì bản đồ chỉ phản ánh ai công bố nhiều chứ không phản ánh ai giỏi, và nếu đặt logo theo cảm tính thì người đọc không cãi được. Khi TeraFam có giá thành và có số liệu chào giá của ít nhất 4 đối thủ ở cùng một gói (ví dụ cùng một dược liệu, cùng lô 1 tấn), bản đồ mới đáng vẽ.</p>
 </div>
 
-<h2 id="gia">5. Giá và mô hình giá</h2>
+<h2 id="p5">P5. Giá và mô hình giá</h2>
 <p>Báo cáo này <strong>không đề xuất giá</strong> cho TeraFam. Dưới đây là giá đã quan sát, kèm ngày và loại giá, rồi các mô hình giá đang được dùng.</p>
 
 <h3>5.1 Giá quan sát được (VND/kg trừ khi ghi khác)</h3>
 <div class="tw"><table>
-<colgroup><col style="width:150px"><col style="width:320px"><col style="width:170px"><col style="width:180px"><col style="width:260px"></colgroup>
+<colgroup><col style="width:13.9%"><col style="width:29.6%"><col style="width:15.7%"><col style="width:16.7%"><col style="width:24.1%"></colgroup>
 <thead><tr><th>Mặt hàng</th><th>Giá</th><th>Loại giá và ngày</th><th>Nhãn</th><th>Chỗ cần cẩn thận</th></tr></thead>
 <tbody>
 <tr><td>Đinh lăng</td><td>Lá: lẻ 90.000, sỉ 55.000. Rễ tươi: lẻ 120.000, sỉ 80.000</td><td>Người bán dược liệu nhỏ, 17/12/2021</td><td><span class="b v">VENDOR</span></td><td>Trang 2026 chỉ ghi "từ 120.000". Giá trúng thầu bệnh viện cùng thời kỳ: 181.650 đến 200.025 đ/kg (đã phức chế, có VAT) <span class="b c">CONFIRMED</span> là giá ghi trong hồ sơ trúng thầu</td></tr>
@@ -224,12 +613,12 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <h3>5.3 Mô hình nào khớp với ba mô hình hợp tác của TeraFam</h3>
 <ul>
 <li><strong>Cung ứng theo lô</strong> khớp với mô hình 1 và 7: báo giá theo kg, bậc thang theo MOQ, ghi rõ tươi hay khô, tách riêng phí kiểm nghiệm.</li>
-<li><strong>Bao tiêu theo diện tích</strong> khớp với mô hình 2, 3, 5: cần quyết ai chịu rủi ro giá. Bằng chứng ở mục 6 cho thấy hợp đồng dài khiến nông dân ngại ký và giá rơi làm bỏ diện tích (đinh lăng Hải Hậu bỏ tới 80%, <span class="b u">UNVERIFIED</span>).</li>
+<li><strong>Bao tiêu theo diện tích</strong> khớp với mô hình 2, 3, 5: cần quyết ai chịu rủi ro giá. Bằng chứng ở mục P6 cho thấy hợp đồng dài khiến nông dân ngại ký và giá rơi làm bỏ diện tích (đinh lăng Hải Hậu bỏ tới 80%, <span class="b u">UNVERIFIED</span>).</li>
 <li><strong>OEM/ODM</strong> khớp với mô hình 7: phí gia công theo viên hoặc gói, bậc thang theo lô, tách khỏi nguyên liệu như Globalco. Các nhà máy có GMP đều "liên hệ báo giá", nên chưa có mốc so.</li>
 <li>Để ra số cho cả ba, TeraFam cần cung cấp: giá thành theo kg của từng cây, năng suất thực, tỷ lệ hao hụt sau sơ chế, chi phí kiểm nghiệm theo lô, công suất nhà máy.</li>
 </ul>
 
-<h2 id="khach">6. Bằng chứng từ phía mua</h2>
+<h2 id="p6">P6. Bằng chứng từ phía mua</h2>
 <div class="box warn">
 <p><strong>Giới hạn.</strong> Gần như không tìm được lời phàn nàn công khai, có tên, của một nhà máy dược hay thương hiệu TPCN về một nhà cung cấp cụ thể. Không có review kiểu G2, không có khảo sát mua hàng. Phần dưới là phát biểu của cơ quan nhà nước, nhà khoa học và báo chí, nên tất cả ở mức gián tiếp. Phần lớn đã mở trang nhưng chỉ ở mức <span class="b s">SECONDARY</span>.</p>
 </div>
@@ -253,7 +642,7 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 
 <h3>6.3 Nỗi đau cụ thể của người mua</h3>
 <div class="tw"><table>
-<colgroup><col style="width:150px"><col style="width:520px"><col style="width:200px"></colgroup>
+<colgroup><col style="width:17.2%"><col style="width:59.8%"><col style="width:23.0%"></colgroup>
 <thead><tr><th>Nỗi đau</th><th>Bằng chứng tìm được</th><th>Mức</th></tr></thead>
 <tbody>
 <tr><td>Thiếu hồ sơ</td><td>Công văn 2054/2026 và danh sách vi phạm 2025 nêu thiếu số lô, hạn dùng, số đăng ký, giấy phép nhập khẩu. Ước chỉ khoảng 1.400 trên 60.000 tấn nhập có nguồn gốc rõ (2017)</td><td>Công văn: <span class="b c">CONFIRMED</span>. Còn lại <span class="b u">UNVERIFIED</span></td></tr>
@@ -273,9 +662,9 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 <li><strong>Không tìm được thất bại có tên.</strong> Không tìm thấy doanh nghiệp dược cụ thể đã đầu tư vùng trồng cộng nhà máy rồi rút lui. Vì vậy không kết luận "mô hình khép kín thất bại ở Việt Nam"; chỉ có rủi ro cấu trúc ở đầu ra, vốn, hợp đồng dài và niềm tin.</li>
 </ul>
 
-<h2 id="luat">7. Pháp lý: điều TeraFam phải đáp ứng và hiện chưa nêu</h2>
+<h2 id="p7">P7. Pháp lý: điều TeraFam phải đáp ứng và hiện chưa nêu</h2>
 <div class="tw"><table>
-<colgroup><col style="width:190px"><col style="width:430px"><col style="width:250px"></colgroup>
+<colgroup><col style="width:21.8%"><col style="width:49.4%"><col style="width:28.7%"></colgroup>
 <thead><tr><th>Yêu cầu</th><th>Nội dung (nguồn)</th><th>Hồ sơ TeraFam</th></tr></thead>
 <tbody>
 <tr><td>Giấy tờ nguồn gốc dược liệu</td><td>Thông tư 32/2025/TT-BYT, hiệu lực 01/07/2025, thay Thông tư 38/2021. Điều 12: hàng nhập cần C/O từng lô; hàng trong nước đạt GACP cần giấy chứng nhận GACP; hàng trong nước không GACP cần cam kết địa điểm nuôi trồng, thu hái theo Mẫu 07 <span class="b c">CONFIRMED</span> (bản PDF để trống số và ngày ký, số hiệu lấy từ cổng tỉnh)</td><td>Không nêu. Hồ sơ nói truy xuất ngược về vùng trồng và vụ thu hoạch <span class="b v">VENDOR</span>. Truy xuất nội bộ khác với giấy GACP bên mua cần xuất trình khi bị thanh tra <span class="b i">INFERENCE</span></td></tr>
@@ -291,7 +680,7 @@ tr.me td{outline:2px solid var(--accent);outline-offset:-2px}
 
 <p><strong>Chưa đọc được nguyên văn:</strong> Luật 44/2024/QH15, phần sau của Nghị định 163/2025, Thông tư 21/2026, Thông tư 40/2025, Dược điển Việt Nam (giới hạn kim loại nặng và dư lượng). Nguồn bị chặn: thuvienphapluat.vn (403 kể cả qua đường vòng), hoatieu.vn (403), vbpl.moj.gov.vn (không phân giải), vietlaw.quochoi.vn (trang rỗng).</p>
 
-<h2 id="tam">8. TAM · SAM · SOM</h2>
+<h2 id="p8">P8. TAM · SAM · SOM</h2>
 <p>Chuỗi tính viết thành phép nhân với giả định in ra. Số của hãng phân tích là kích thước của thị trường; chuỗi này mới là kích thước <em>của TeraFam</em>. Người đọc được phép đổi giả định, không đổi được phép tính. Chỉ <strong>phân khúc A (dược liệu thô)</strong> đủ đầu vào để tính cả chuỗi. Phân khúc B và C chỉ tính được từng phần và nói rõ chỗ thiếu.</p>
 
 <h3>8.1 Phân khúc A: dược liệu thô cho thuốc và TPCN</h3>
@@ -300,7 +689,7 @@ SAM = TAM × tỷ lệ nguồn nội địa (phần TeraFam thật sự cạnh t
 SOM = SAM × tỷ lệ TeraFam giành được trong 12 tháng</pre>
 
 <div class="tw"><table>
-<colgroup><col style="width:210px"><col style="width:140px"><col style="width:140px"><col style="width:140px"><col style="width:330px"></colgroup>
+<colgroup><col style="width:21.9%"><col style="width:14.6%"><col style="width:14.6%"><col style="width:14.6%"><col style="width:34.4%"></colgroup>
 <thead><tr><th>Bước</th><th>Thấp</th><th>Cơ sở</th><th>Cao</th><th>Nhãn và giả định</th></tr></thead>
 <tbody>
 <tr><td>Nhu cầu dược liệu (nghìn tấn/năm)</td><td class="num">60</td><td class="num">80</td><td class="num">100</td><td><span class="b s">SECONDARY</span> ba nguồn lệch nhau: 60.000 đến 80.000 (báo VietnamPlus 09/2026), 80.000 đến 100.000 (VnEconomy 12/2025), hơn 100.000 (một diễn giả, 08/2025). Bộ Y tế đang "rà soát đánh giá" nhu cầu, tức chưa có số chính thức. Chưa rõ tươi hay khô</td></tr>
@@ -315,11 +704,11 @@ SOM = SAM × tỷ lệ TeraFam giành được trong 12 tháng</pre>
 <h4>Kiểm tra SOM bằng sức chứa 300 ha</h4>
 <pre style="overflow-x:auto;background:var(--soft);padding:12px;border-radius:8px;font:.85rem/1.55 ui-monospace,Menlo,Consolas,monospace">Trần doanh thu = 300 ha × năng suất (tấn/ha) × giá bán (đ/kg)</pre>
 <div class="tw"><table>
-<colgroup><col style="width:200px"><col style="width:130px"><col style="width:130px"><col style="width:130px"><col style="width:330px"></colgroup>
+<colgroup><col style="width:21.7%"><col style="width:14.1%"><col style="width:14.1%"><col style="width:14.1%"><col style="width:35.9%"></colgroup>
 <thead><tr><th>Đầu vào</th><th>Thấp</th><th>Cơ sở</th><th>Cao</th><th>Nhãn</th></tr></thead>
 <tbody>
 <tr><td>Năng suất (tấn/ha/vụ)</td><td class="num">2</td><td class="num">4</td><td class="num">5</td><td><span class="b i">ASSUMPTION</span>. Mốc tham chiếu duy nhất: Lào Cai 30.180 tấn ÷ 6.555 ha ≈ 4,6 tấn/ha, hỗn hợp loài, tươi hay khô không rõ, nhiều diện tích dưới tán rừng <span class="b s">SECONDARY</span>. Hồ sơ TeraFam không nêu cây trồng nên đây không phải ước lượng sản lượng của họ</td></tr>
-<tr><td>Giá bán (đ/kg)</td><td class="num">12.000</td><td class="num">30.000</td><td class="num">65.000</td><td><span class="b i">ASSUMPTION</span> bám vào mục 5: mức thu mua của OPC, trung vị của khoảng sỉ, mức sỉ giảo cổ lam và cà gai leo 2021</td></tr>
+<tr><td>Giá bán (đ/kg)</td><td class="num">12.000</td><td class="num">30.000</td><td class="num">65.000</td><td><span class="b i">ASSUMPTION</span> bám vào mục P5: mức thu mua của OPC, trung vị của khoảng sỉ, mức sỉ giảo cổ lam và cà gai leo 2021</td></tr>
 <tr><td><strong>Trần doanh thu</strong></td><td class="num"><strong>7,2 tỷ</strong> (0,28 triệu USD)</td><td class="num"><strong>36 tỷ</strong> (1,41 triệu USD)</td><td class="num"><strong>97,5 tỷ</strong> (3,82 triệu USD)</td><td><span class="b i">INFERENCE</span>. Giả định cả 300 ha là dược liệu bán được hết, một vụ mỗi năm</td></tr>
 </tbody></table></div>
 <p>SOM ở trên (0,05 / 0,44 / 1,2 triệu USD) nằm trong các trần này (0,28 / 1,41 / 3,82), nên không vô lý về mặt sức chứa. Hai chuỗi dùng hai mốc giá khác nhau (4.000 USD/tấn so với khoảng 470 đến 2.550 USD/tấn của giá sỉ), nên chỉ so để thấy cỡ, không cộng.</p>
@@ -346,9 +735,9 @@ SOM = SAM × tỷ lệ TeraFam giành được trong 12 tháng</pre>
 <li><strong>SAM và SOM của C:</strong> không ước lượng được, vì thiếu tỷ trọng sản phẩm sấy, bột, cao trong xuất khẩu và chưa biết TeraFam có sản phẩm xuất khẩu nào.</li>
 </ul>
 
-<h2 id="tu-duoi-len">9. Thử số hãng phân tích từ dưới lên</h2>
+<h2 id="p9">P9. Thử số hãng phân tích từ dưới lên</h2>
 <div class="tw"><table>
-<colgroup><col style="width:260px"><col style="width:340px"><col style="width:300px"></colgroup>
+<colgroup><col style="width:28.9%"><col style="width:37.8%"><col style="width:33.3%"></colgroup>
 <thead><tr><th>Phép thử</th><th>Tính</th><th>Kết luận</th></tr></thead>
 <tbody>
 <tr><td>Thị trường dược 7,0 đến 8,58 tỷ USD (Cục Quản lý Dược, Fortune, IMARC)</td><td>Cộng doanh thu 2025 của bốn nhà sản xuất niêm yết: DHG 5.266,9 + IMP 2.441 + DMC 2.067 + TRA 2.657 = 12.431,9 tỷ đồng ≈ 487,5 triệu USD <span class="b c">CONFIRMED</span> từng số, <span class="b i">INFERENCE</span> tổng. 7.000 ÷ 487,5 = 14,4 lần; 8.580 ÷ 487,5 = 17,6 lần</td><td>Lệch hơn một bậc độ lớn. Thuốc sản xuất trong nước chỉ khoảng 46% giá trị (Cục Quản lý Dược, 12/2025), nhập thuốc thành phẩm gần 4,4 tỷ USD năm 2024. Đây là <strong>tổng chi tiêu</strong>, không phải TAM nguyên liệu, và mình không dùng nó để tính TAM</td></tr>
@@ -357,7 +746,7 @@ SOM = SAM × tỷ lệ TeraFam giành được trong 12 tháng</pre>
 <tr><td>"Thị trường dược 7 tỷ USD"</td><td>Cùng một con số "7 tỷ USD" được dùng cho năm 2022 (bài 10/2023), 2025 (bài 12/2025) và tháng 08/2026 (Bộ trưởng Y tế)</td><td>Hoặc có một năm gắn sai, hoặc thị trường đứng yên theo USD. Chưa giải được; không dùng để suy tăng trưởng</td></tr>
 </tbody></table></div>
 
-<h2 id="tu-choi">10. Số bị từ chối in</h2>
+<h2 id="p10">P10. Số bị từ chối in</h2>
 <p>Những con số lan truyền mà mình không truy được nguồn gốc. Mục này có mặt để người đọc biết con số nào <em>không</em> nên trích lại.</p>
 <ul>
 <li><strong>"Việt Nam nhập 70%, 80%, 80 đến 90%, trên 90% dược liệu".</strong> Bốn số, ít nhất ba khái niệm khác nhau: dược liệu, nguyên liệu bào chế thuốc (gồm hoạt chất hóa dược) và nguyên liệu thuốc nói chung. Dược Hậu Giang và OPC viết "80 đến 90%" cho nguyên liệu làm thuốc, chủ yếu hoạt chất. Số "gần 70%" cho dược liệu chỉ truy được tới câu "theo thống kê của ngành Y tế" của một bài báo, không có văn bản. Mình in "70 đến 80% theo lượng" với nhãn <span class="b s">SECONDARY</span>, không in như số chính thức.</li>
@@ -375,52 +764,53 @@ SOM = SAM × tỷ lệ TeraFam giành được trong 12 tháng</pre>
 <li><strong>Số "562,9 tỷ USD" thị trường TPCN Việt Nam 2021</strong> trên một trang tư vấn: lớn hơn GDP, không rõ đơn vị.</li>
 </ul>
 
-<h2 id="sua">11. Chỗ đã sửa khi đối chiếu chéo</h2>
+
+<h3 id="p10b">P10 (tiếp). Số bị từ chối in thêm ở đợt 2</h3>
+<ul>
+<li><strong>Lãi mỗi ha lan truyền, không có bảng chi phí:</strong> đinh lăng "520 đến 580 triệu đồng/ha/năm" và "hơn 360 triệu đồng mỗi 1.000 m2 trong 3 năm" (tức 3,6 tỷ/ha); sâm Ngọc Linh "40 tỷ đồng/ha trong 5 năm"; cà gai leo "300 triệu đồng/ha/năm" (mâu thuẫn với giá 4.000 đ/kg trong cùng bài); atiso Lâm Đồng: lợi nhuận "trên 217 triệu đồng/ha" và "80 đến 90 triệu mỗi 1.000 m2" (tức 800 đến 900 triệu/ha) trong cùng một bài, lệch 3,7 đến 4,1 lần. Không dùng.</li>
+<li><strong>"10.400 ha, 163.000 tấn chanh dây":</strong> là diện tích và sản lượng cả nước, không phải của Nafoods. Đọc nhầm sẽ gán cho Nafoods.</li>
+<li><strong>"Vài chục triệu đồng một lạng sâm Ngọc Linh":</strong> tiêu đề một bài báo; nội dung bài nêu 160 triệu đồng/kg, tức khoảng 6 triệu đồng/lạng.</li>
+<li><strong>Giá bán lẻ Boganic 100 viên:</strong> 80.000 hay 369.000 đồng tùy trang; mít sấy Vinamit: 161.333 hay 440.000 đồng/kg. Lệch 2,7 đến 4,6 lần, không chọn.</li>
+<li><strong>Tinh bột nghệ bán 30.000 đến 50.000 đ/kg:</strong> thấp hơn chi phí nguyên liệu tươi suy ra từ chính bài đó (105.000 đến 140.000 đồng). Không dùng.</li>
+<li><strong>Tỷ lệ nội địa của Traphaco "trên 80%" và "90%":</strong> hai số cùng chỉ nguyên liệu nội địa, khác năm và khác định nghĩa (số tấn hay số loại); không phải tỷ lệ tự cung.</li>
+<li><strong>Số lợi nhuận ròng của trang tổng hợp stockanalysis:</strong> luôn thấp hơn lợi nhuận sau thuế trong báo cáo tài chính gốc (Traphaco 216,8 so với 278,4 tỷ). Không dùng trang này cho lợi nhuận.</li>
+<li><strong>Lợi nhuận Nafoods 2025:</strong> 145,3, 145,6 hay 173,3 tỷ tùy bảng (sau hay trước cổ đông thiểu số, bảng nguồn lệch dòng). Biểu đồ dùng 8,4% (173,3 ÷ 2.063,7) cho biên ròng trước thiểu số và 7,0% sau thiểu số.</li>
+<li><strong>Doanh thu Arjuna Natural:</strong> trên 500 crore (nhóm, hãng nói) so với 395,7 crore (pháp nhân, xếp hạng tín nhiệm). IFC ghi cả 8 và 10 triệu USD cho cùng khoản. Số hộ liên kết của Nafoods: 2.000 hoặc hơn 2.500.</li>
+<li><strong>Lỗ lũy kế HAGL Agrico:</strong> 8.648 tỷ đồng (09/2024), 9.762 tỷ (Q3/2025, <span class="b u">UNVERIFIED</span>), hơn 501 triệu USD (06/2026); khác đơn vị, khác thời điểm, chưa đối chiếu với báo cáo tài chính.</li>
+<li><strong>"Quyết định 1954/QĐ-TTg":</strong> xem P10 ở trên.</li>
+</ul>
+<h2 id="p11">P11. Chỗ đã sửa khi đối chiếu chéo</h2>
 <ol>
 <li><strong>Tỷ lệ nhập khẩu và diện tích GACP.</strong> Một agent gắn CONFIRMED, agent kia gắn UNVERIFIED. Mình mở lại hai trang. VnEconomy 09/12/2025 đúng là viết "theo thống kê của ngành Y tế, nhu cầu 80.000 đến 100.000 tấn mỗi năm, gần 70% phải nhập khẩu", và số 60 đến 70 vùng GACP là lời một giám đốc trung tâm của Viện Dược liệu. VnBusiness 27/08/2025 có câu "hơn 60 vùng trồng đạt GACP-WHO với diện tích trên 500 ha" nhưng không gán người nói. Cả hai đều là báo chí, nên hạ về <span class="b s">SECONDARY</span>. Hệ quả: 500 ha GACP cả nước chỉ có một nguồn và không nên dùng như số chính thức.</li>
 <li><strong>Quyết định 1976/QĐ-TTg.</strong> Có hai văn bản cùng số hiệu: ngày 30/10/2013 (quy hoạch dược liệu, đặt 80% vào 2030) và ngày 13/10/2026 (chiến lược y học cổ truyền, tự chủ tối thiểu 20% vào 2030 và 25% vào 2035). Mình tải lại bản PDF 2026 và xác nhận hai mốc 20% và 25%. Cẩn thận khi trích: số hiệu trùng nhau nhưng nội dung khác hẳn.</li>
 <li><strong>OPC bán nguyên liệu 0,8%.</strong> Mình mở lại báo cáo thường niên OPC 2025: dòng "doanh thu bán nguyên vật liệu" là 9.899 triệu (2024) và 9.418 triệu (2025); 9.418 ÷ 1.124.546 = 0,84%. Khớp với kết quả của agent.</li>
-<li><strong>Quyết định "1954/QĐ-TTg".</strong> Một agent trích từ báo, không agent nào khác thấy; chuyển vào mục 10.</li>
+<li><strong>Quyết định "1954/QĐ-TTg".</strong> Một agent trích từ báo, không agent nào khác thấy; chuyển vào mục P10.</li>
 <li><strong>Mâu thuẫn mình không giải được:</strong> Viettimes 3,1% so với 1,5%; lợi nhuận Nafoods 145,3 so với 145,6 so với 173,3 tỷ (lệch dòng trong bảng nguồn); lợi nhuận trước thuế của DHG 940,99 so với 1.020,4 tỷ; hai bài gán "70 ha sâm" cho hai chủ thể khác nhau. Không số nào dùng để kết luận.</li>
 <li><strong>Lỗi của chính mình.</strong> Trong brief mình đã viết tiêu chí thứ chín là "chiều ngược lại" mà không có nghĩa rõ; agent hỏi lại, mình bỏ tiêu chí đó. Bộ nhãn của các nhánh bằng chứng cũng được đổi lại cho thống nhất khi tổng hợp.</li>
 </ol>
 
-<h2 id="rui-ro">12. Rủi ro và khoảng trống</h2>
-<h3>Rủi ro với TeraFam</h3>
-<ul>
-<li><strong>Chứng nhận.</strong> Không có GACP, GMP phạm vi dược liệu, phiếu kiểm nghiệm và giấy công bố tiêu chuẩn thì định vị "truy xuất và an toàn" chỉ là khẩu hiệu.</li>
-<li><strong>Khách lớn có nguồn riêng.</strong> Trong ba nhà dược có báo cáo thường niên đọc được (Traphaco, OPC, DHG), Traphaco và OPC có vùng GACP riêng và OPC bán nguyên liệu ra ngoài chỉ 0,84% doanh thu; DHG đang mở rộng OEM. Từ đó suy ra thị trường nguyên liệu bán ra ngoài của nhóm này nhỏ <span class="b i">INFERENCE</span>.</li>
-<li><strong>Rủi ro đầu ra của bao tiêu.</strong> Bằng chứng ở mục 6.4 cho thấy hợp đồng dài và giá rơi là điểm dễ vỡ.</li>
-<li><strong>Quy mô.</strong> 300 ha bằng khoảng 0,5% diện tích dược liệu cả nước (≈ 59.000 ha, <span class="b s">SECONDARY</span> không rõ nguồn gốc số) và cùng bậc độ lớn với toàn bộ diện tích GACP cả nước nếu số 500 ha là đúng <span class="b i">INFERENCE</span>. Đây là phép so để biết cỡ; chỉ có nghĩa nếu 300 ha là dược liệu đạt GACP, mà hồ sơ không nói vậy.</li>
-<li><strong>Phụ thuộc chính sách.</strong> Hướng chính sách đang nghiêng về nội địa, GACP và truy xuất, nhưng chính Chính phủ đã hạ mục tiêu tự chủ từ 80% (2013) xuống tối thiểu 20% (2026) <span class="b c">CONFIRMED</span>: mục tiêu mới thấp hơn cho thấy năng lực nội địa không đạt mục tiêu cũ <span class="b i">INFERENCE</span>.</li>
-</ul>
 
-<h3>Khoảng trống bằng chứng của báo cáo</h3>
-<ul>
-<li>Số ha vùng GACP của Traphaco, OPC, DHG: cả ba báo cáo thường niên chỉ nêu số vùng, không nêu số ha.</li>
-<li>Giá cao chiết, bột; phí gia công theo lô; giá bao tiêu còn hiệu lực; giá nhập từ Trung Quốc và Ấn Độ.</li>
-<li>Tỷ trọng đông dược trong thị trường dược; số nhà máy đông dược đạt GMP hiện hành; số cơ sở TPCN hiện hành; quy mô OEM/ODM; giá trị nhập dược liệu theo hải quan; xuất khẩu dược liệu và trái cây sấy.</li>
-<li>Nguồn bị chặn hoặc không đọc được: Mordor, Fortune, Statista, Euromonitor, IQVIA (chỉ có số qua báo chí); ITC Trade Map, UN Comtrade, trang Hải quan theo mã HS; cơ sở dữ liệu Cục An toàn thực phẩm và danh sách GMP của Cục Quản lý Y dược cổ truyền; báo cáo thường niên Nam Dược (phông lỗi); báo cáo 2025 của DHG ở phần ban điều hành (PDF dạng ảnh); các trang luật nêu ở mục 7. Hệ quả: mọi con số thị trường ở mục 8 ngoài rau quả xuất khẩu đều là <span class="b s">SECONDARY</span> hoặc suy diễn.</li>
-</ul>
-
-<h2 id="buoc-tiep">13. Bước tiếp theo</h2>
-<p>Bản research nói chỗ đứng tồn tại, nhưng không chứng minh có người trả tiền. Trước khi tốn nguồn lực, nên xác thực ít nhất một trong các cách sau, xếp theo độ rẻ. Đây là các thí nghiệm đề xuất, không bắt buộc, và mình chưa liên hệ ai.</p>
+<h3 id="p11b">P11 (tiếp). Chỗ đã sửa khi đối chiếu ở đợt 2</h3>
 <ol>
-<li><strong>Lấy dữ liệu từ chính TeraFam (rẻ nhất, mở khóa mọi thứ):</strong> danh mục cây trồng; chứng nhận hiện có (GACP, GMP, VietGAP, hữu cơ, phạm vi của nhà máy SPM); phiếu kiểm nghiệm gần nhất; giá thành theo kg từng cây; công suất; khách hiện tại. Với bấy nhiêu mới tính lại được SAM, SOM và vẽ được bản đồ định vị.</li>
-<li><strong>Nói chuyện với 5 người mua đúng nhóm:</strong> 2 thương hiệu TPCN không nhà máy, 2 nhà máy đông dược vừa và nhỏ, 1 nhà xuất khẩu sấy. Hỏi họ đang mua gì, từ ai, giá nào, giấy tờ nào bị hỏi khi thanh tra, và điều gì khiến họ đổi nhà cung cấp.</li>
-<li><strong>Xin báo giá thật từ 3 đến 4 nhà gia công và nhà bán dược liệu</strong> cho cùng một gói (cùng dược liệu, cùng lô), để có mốc giá cho tầng 2 và tầng 3 mà bản này đang thiếu.</li>
-<li><strong>Bán trước</strong> cho một khách đã biết TeraFam: có người xuống tiền trước khi sản phẩm tồn tại là tín hiệu mạnh nhất.</li>
+<li><strong>Chanh dây.</strong> Một bài nêu năng suất 35 đến 45 tấn/ha; 163.000 tấn trên 10.400 ha cả nước chỉ là 15,7 tấn/ha. Con số doanh thu 250 đến 350 triệu đồng/ha mà báo nêu khớp với bình quân cả nước, không khớp với 35 đến 45 tấn. Biểu đồ dùng bình quân.</li>
+<li><strong>Nguyên vật liệu của Traphaco và Dược Hậu Giang.</strong> Một agent báo 650,7 và 2.388,4 tỷ đồng. Mình mở lại hai báo cáo thường niên: trích văn bản tách bố cục bảng, và 2.388,4 xuất hiện cạnh nhãn "chi phí dịch vụ mua ngoài" dù dòng đúng phải là nguyên liệu, vật liệu (dòng đầu của năm dòng). Tổng năm dòng khớp tổng chung (Dược Hậu Giang 4.513,0; Traphaco 1.947,6 tỷ) nên giữ, nhưng thứ tự dòng là suy từ bố cục.</li>
+<li><strong>"36.300 ha vùng nguyên liệu của Traphaco".</strong> Phân rã trên chính trang đó cho thấy 35.000 ha là chè dây, khớp kết quả điều tra tài nguyên 2009–2011, không phải diện tích Traphaco trồng hay kiểm soát. Không dùng làm quy mô.</li>
+<li><strong>Báo cáo OPC.</strong> Dòng "doanh thu bán nguyên vật liệu" đọc lại: 9.418 triệu đồng (2025), 9.899 triệu (2024), tức 0,84% doanh thu.</li>
+<li><strong>Công cụ tìm kiếm sai.</strong> Một lần tìm trả lời "không có Thông tư 32/2025 về thuốc cổ truyền"; văn bản gốc trên cổng chính phủ đã được đọc và có thật.</li>
+<li><strong>Nhãn CONFIRMED với báo chí.</strong> Một số bài báo được agent gắn CONFIRMED trong khi chỉ đọc bản tóm tắt tự động; mình hạ về SECONDARY (xem thêm P11 mục 1 ở trên).</li>
+<li><strong>Mâu thuẫn chưa giải:</strong> lợi nhuận gộp OPC 464,9 so với 531,5 tỷ và Imexpharm 47,5% so với 41,0% (định nghĩa khác nhau); lợi nhuận trước thuế Dược Hậu Giang 940,99 so với 1.020,4 tỷ; hai bài gán cùng "70 ha sâm" cho hai chủ thể khác nhau.</li>
 </ol>
-
-<h2 id="phuong-phap">14. Phương pháp</h2>
+<h2 id="p14">P14. Phương pháp</h2>
 <ul>
 <li>Ba nhánh bằng chứng chạy song song với cùng phạm vi và ngày cắt: (1) đối thủ và giá, (2) nỗi đau người mua, chứng cứ vi phạm và pháp lý, (3) quy mô thị trường và dòng vốn. Mỗi nhánh nhận cùng một bộ nhãn và yêu cầu ghi số bị từ chối in.</li>
 <li>Phiên chính tổng hợp, tự tính lại mọi phép toán (TAM, SAM, SOM, tỷ giá, tỷ lệ), và mở lại các nguồn có thể đảo kết luận: Quyết định 1976/2026, báo cáo thường niên OPC 2025, hai trang báo về tỷ lệ nhập và diện tích GACP. Bản tóm tắt của agent là đầu mối, không phải bằng chứng.</li>
 <li>Báo chí đã mở trang nhưng chỉ đọc bản tóm tắt tự động của trang đó được gắn <span class="b s">SECONDARY</span>, không gắn CONFIRMED. Chỉ văn bản PDF gốc được đọc toàn văn mới được CONFIRMED.</li>
 <li>Báo cáo không dùng số của hãng phân tích làm TAM; không đề xuất giá; không suy "không có bằng chứng" thành "không có". Mọi ô ? trong ma trận là chưa đủ bằng chứng.</li>
-<li><strong>Tự chấm (1 đến 5):</strong> phạm vi 4; độ phủ bằng chứng 3 (nhiều khoảng trống ở mục 12); bằng chứng nghịch 4; độ chính xác phép tính 4 (đã tính lại bằng chương trình và tay); độ hữu ích cho quyết định 3 (kết luận về định vị đủ mạnh, kết luận về giá còn thiếu dữ liệu từ chính TeraFam).</li>
+<li><strong>Tự chấm (1 đến 5):</strong> phạm vi 4; độ phủ bằng chứng 3 (nhiều khoảng trống ở mục P12); bằng chứng nghịch 4; độ chính xác phép tính 4 (đã tính lại bằng chương trình và tay); độ hữu ích cho quyết định 3 (kết luận về định vị đủ mạnh, kết luận về giá còn thiếu dữ liệu từ chính TeraFam).</li>
 <li><strong>Chưa làm:</strong> phỏng vấn người mua, xin báo giá thật, đọc nguyên văn các văn bản pháp luật bị chặn, bản đồ định vị 2×2. Ngày truy cập tất cả nguồn: 2026-11-13.</li>
 </ul>
+
+
 
 </main>
 </body>
