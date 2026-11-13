@@ -36,27 +36,27 @@ done
 Mỗi skill là một `SKILL.md` kèm file tham chiếu; cài bằng URL:
 ```bash
 S=$BASE/skills
-hermes -p saitama  skills install $S/social-playbook/SKILL.md
-hermes -p yugi skills install $S/voice-dossier/SKILL.md
-hermes -p ran skills install $S/social-playbook/SKILL.md
-hermes -p ran skills install $S/linkedin-post/SKILL.md
-hermes -p ran skills install $S/youtube-packaging/SKILL.md
-hermes -p teppi  skills install $S/short-video-script/SKILL.md
-hermes -p usop skills install $S/copy-editing/SKILL.md
-hermes -p wiz skills install $S/engagement-inbox/SKILL.md
-hermes -p xaiyan skills install $S/measurement-loop/SKILL.md
+hermes -p saitama  skills install $S/social-playbook/SKILL.md --yes
+hermes -p yugi skills install $S/voice-dossier/SKILL.md --yes
+hermes -p ran skills install $S/social-playbook/SKILL.md --yes
+hermes -p ran skills install $S/linkedin-post/SKILL.md --yes
+hermes -p ran skills install $S/youtube-packaging/SKILL.md --yes
+hermes -p teppi  skills install $S/short-video-script/SKILL.md --yes
+hermes -p usop skills install $S/copy-editing/SKILL.md --yes
+hermes -p wiz skills install $S/engagement-inbox/SKILL.md --yes
+hermes -p xaiyan skills install $S/measurement-loop/SKILL.md --yes
 # Zoro: 4 skill; impeccable có thêm `reference/`. Cài SKILL.md rồi tải phần còn lại theo manifest vào thư mục skill của profile.
 for s in html-banner-design email-newsletter-design bento-carousel-design-v3 impeccable; do
-  hermes -p zoro skills install $S/$s/SKILL.md
+  hermes -p zoro skills install $S/$s/SKILL.md --yes
   curl -fsSL $BASE/manifest.txt | grep "^skills/$s/" | while read p; do
     f="${p#skills/$s/}"; [ "$f" = SKILL.md ] && continue
     mkdir -p "$HOME/.hermes/profiles/zoro/skills/$s/$(dirname "$f")"; curl -fsSL "$BASE/$p" -o "$HOME/.hermes/profiles/zoro/skills/$s/$f"; done
 done
 # Vail: 1 skill, `ad-teardown` (chỉ có SKILL.md)
-hermes -p vail skills install $S/ad-teardown/SKILL.md
+hermes -p vail skills install $S/ad-teardown/SKILL.md --yes
 # Team SEO: Teppi thêm 2 skill viết bài; Lelouch 3 skill; Edward 3 skill. Mỗi skill có `references/`: cài SKILL.md rồi tải phần còn lại theo manifest.
 seo_install() { r=$1; s=$2
-  hermes -p $r skills install $S/$s/SKILL.md
+  hermes -p $r skills install $S/$s/SKILL.md --yes
   curl -fsSL $BASE/manifest.txt | grep "^skills/$s/" | while read p; do
     f="${p#skills/$s/}"; [ "$f" = SKILL.md ] && continue
     mkdir -p "$HOME/.hermes/profiles/$r/skills/$s/$(dirname "$f")"; curl -fsSL "$BASE/$p" -o "$HOME/.hermes/profiles/$r/skills/$s/$f"; done; }
@@ -88,11 +88,11 @@ hermes -p <r> config set agent.disabled_toolsets '[...]'                # danh s
 | lelouch | file, web, search, skills, vision, code_execution, memory, clarify | `[browser, terminal, delegation, cronjob, image_gen, video_gen, computer_use, x_search, tts, connections]` |
 | edward | file, web, search, skills, vision, terminal, memory, clarify | `[browser, code_execution, delegation, cronjob, image_gen, video_gen, computer_use, x_search, tts, connections]` |
 
-Lý do: không role nào được tự đăng, điều khiển trình duyệt hay nối tài khoản ứng dụng (`connections`); chỉ Saitama có `cronjob` (nhắc lập kế hoạch tuần); chỉ Xaiyan, Lelouch và Zoro có `code_execution` (Lelouch tính số trong báo cáo tháng từ file Ông Chủ xuất; SOUL của Lelouch cấm gọi mạng, cài thư viện, đọc `.env` hay `~/.hermes` và ghi ngoài `work/seo/`; quyền này chờ Ông Chủ xác nhận; Xaiyan chạy `tools/readout_stats.py` để tính trung vị và tỉ lệ từ CSV, không được cài thư viện hay gọi mạng, chỉ đọc file Ông Chủ gửi; Zoro xem dưới); Teppi, Xaiyan, Zoro, Vail, Lelouch và Edward có `vision` (đọc ảnh chụp); không role nào bật `video`. Usop không có `memory` để mỗi lần kiểm là kiểm mới. Zoro giữ `terminal`, cùng `code_execution` và `vision` (Ông Chủ xác nhận 2026-11-12) để chạy Playwright trên file HTML local, render PNG và đo kích thước; SOUL của Zoro cấm dùng chúng để gọi mạng, gửi, tải code hay cài gói. Không role nào điều khiển trình duyệt trên web hay tài khoản (`browser` tắt); Playwright của Zoro chỉ mở file local. Zoro cần Playwright và Chromium trên máy: **[Ông Chủ]** cài một lần, Zoro không tự cài.
+Lý do: không role nào được tự đăng, điều khiển trình duyệt hay nối tài khoản ứng dụng (`connections`); chỉ Saitama có `cronjob` (nhắc lập kế hoạch tuần); chỉ Xaiyan, Lelouch và Zoro có `code_execution` (Lelouch tính số trong báo cáo tháng từ file Ông Chủ xuất; SOUL của Lelouch cấm gọi mạng, cài thư viện, đọc `.env` hay `~/.hermes` và ghi ngoài `work/seo/`; Ông Chủ duyệt 2026-11-13; Xaiyan chạy `tools/readout_stats.py` để tính trung vị và tỉ lệ từ CSV, không được cài thư viện hay gọi mạng, chỉ đọc file Ông Chủ gửi; Zoro xem dưới); Teppi, Xaiyan, Zoro, Vail, Lelouch và Edward có `vision` (đọc ảnh chụp); không role nào bật `video`. Usop không có `memory` để mỗi lần kiểm là kiểm mới. Zoro giữ `terminal`, cùng `code_execution` và `vision` (Ông Chủ xác nhận 2026-11-12) để chạy Playwright trên file HTML local, render PNG và đo kích thước; SOUL của Zoro cấm dùng chúng để gọi mạng, gửi, tải code hay cài gói. Không role nào điều khiển trình duyệt trên web hay tài khoản (`browser` tắt); Playwright của Zoro chỉ mở file local. Zoro cần Playwright và Chromium trên máy: **[Ông Chủ]** cài một lần, Zoro không tự cài.
 
 Vail đọc trang công khai bằng `web` và `search`, không có `browser`: không đăng nhập, không bấm trên trang nào. Vail giữ `terminal` (Ông Chủ quyết 2026-11-12) để chạy `tools/fetch_clip.sh` và làm việc khác không gây hại. Script tải một clip công khai bằng yt-dlp (chỉ link https tới một video trên YouTube, TikTok, Facebook, Instagram; link kênh, playlist, link chuyển hướng bị từ chối; không cookie, không đăng nhập; tối đa 10 phút, 720p, 45 MB) hoặc nhận file tối đa 10 phút trong `work/intel/clips/` hay trong bộ nhớ đệm video của Hermes (clip gửi vào topic; đường đi này chưa kiểm trên bản Hermes thật), rồi cắt khung hình có giờ để Vail đọc bằng `vision`, kèm phụ đề hoặc lời do whisper chép trên máy. Danh sách đầy đủ việc gây hại bị cấm nằm trong SOUL của Vail (ví dụ đăng nhập, đọc cookie hay key, gửi dữ liệu ra ngoài, cài gói, ghi file ngoài `work/intel/`); việc không gây hại thì được làm (Ông Chủ, 2026-11-12). Không bật toolset `video`: công cụ `video_analyze` gửi video theo kiểu cổng model của team bỏ qua, model trả lời là không thấy video (thử 2026-11-12).
 
-Edward giữ `terminal` (theo nguyên tắc "không gây hại thì không cấm" của Ông Chủ; chờ Ông Chủ xác nhận, tắt thì Edward làm bằng `web`) để đọc trang công khai bằng `curl` chỉ GET và HEAD, chỉ `https://` tới website được giao và trang đối thủ trong `work/intel/doi-thu.md`, không `-L`, không localhost hay địa chỉ nội bộ (mã trạng thái, chuyển hướng, robots.txt, sitemap) và kiểm JSON-LD; SOUL của Edward cấm gửi form, gọi API có key, gửi sitemap hay URL cho công cụ tìm kiếm, và ghi file ngoài `work/seo/`.
+Edward giữ `terminal` (theo nguyên tắc "không gây hại thì không cấm" của Ông Chủ; Ông Chủ duyệt 2026-11-13) để đọc trang công khai bằng `curl` chỉ GET và HEAD, chỉ `https://` tới website được giao và trang đối thủ trong `work/intel/doi-thu.md`, không `-L`, không localhost hay địa chỉ nội bộ (mã trạng thái, chuyển hướng, robots.txt, sitemap) và kiểm JSON-LD; SOUL của Edward cấm gửi form, gọi API có key, gửi sitemap hay URL cho công cụ tìm kiếm, và ghi file ngoài `work/seo/`.
 
 **[Ông Chủ]** cài một lần trên máy chạy Hermes: `yt-dlp`, `ffmpeg`, `deno` (yt-dlp cần nó để đọc đủ định dạng YouTube) và, nếu muốn chép lời cho clip không có phụ đề, lệnh `whisper` (openai-whisper) với model `large-v3-turbo` đã tải sẵn. Vail không tự cài. Kiểm: trong topic Vail gửi một link YouTube Shorts công khai của đối thủ; Vail phải chạy script, đọc `hook.jpg` và viết teardown có bảng cảnh theo giờ. TikTok và Reels chưa được thử qua script; lỗi thì Vail ghi "chưa xem clip".
 
